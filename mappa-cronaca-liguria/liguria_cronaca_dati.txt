@@ -1,0 +1,978 @@
+/*
+ * Dati della Mappa Cronaca Liguria — ORA! Liguria Media Monitor
+ * ----------------------------------------------------------------
+ * Questo file contiene SOLO i dati (nessuna logica). La mappa
+ * (liguria_cronaca_map_stradale.html) lo carica con
+ * <script src="liguria_cronaca_dati.txt"></script> e legge la
+ * variabile INCIDENTS_DATA qui sotto.
+ *
+ * IMPORTANTE: i due file vanno tenuti nella STESSA CARTELLA.
+ * Se sposti l'HTML, sposta anche questo file (e viceversa).
+ *
+ * Perché .txt e non .js o .json: è codice JavaScript (per questo
+ * <script src> lo esegue correttamente anche aprendo l'HTML con
+ * doppio clic, senza un server — testato), ma alcuni sistemi di
+ * download bloccano i file .js per sicurezza prima ancora che tu
+ * possa scaricarli. .json invece verrebbe scaricato ma non si
+ * potrebbe caricare con fetch() in un file aperto con doppio clic
+ * (i browser bloccano il fetch locale per CORS su file://) — la
+ * mappa risulterebbe vuota. .txt evita entrambi i problemi.
+ * Il contenuto resta comunque dati puri in formato JSON-compatibile:
+ * se un giorno servirà un vero .json (es. per ospitare la mappa su
+ * un sito con server), basta copiare l'array qui sotto (tutto ciò
+ * che sta tra le quadre [ ] incluse) in un file .json a parte.
+ *
+ * Per aggiungere un nuovo fatto: copia un blocco { ... } esistente,
+ * incollalo prima della "]" finale, cambia i valori. Campi:
+ *   id           — testo univoco, senza spazi (es. "genova-foce")
+ *   comune       — nome del comune e via/piazza se nota
+ *   data         — data del fatto in formato leggibile
+ *   categoria    — una tra: "rapine", "violenze", "omicidi", "altro"
+ *   titolo       — titolo breve mostrato in scheda e popup
+ *   descrizione  — 2-4 frasi di riassunto
+ *   fonti        — elenco di { nome, url }, anche più di una fonte
+ *   dataISO      — data del fatto in formato "AAAA-MM-GG" (usata dal
+ *                  filtro data della mappa; per i fatti con data incerta
+ *                  usa la data dell'evento, non quella di un esito successivo)
+ *   lat, lon     — coordinate del punto sulla mappa (numeri decimali)
+ *   approssimato — true/false: la posizione è stimata, non precisa
+ *   precisione   — testo mostrato in scheda che spiega la stima
+ *                  (facoltativo: ometti la riga se non serve)
+ */
+
+window.INCIDENTS_DATA = [
+  {
+    id: "albenga-lungomare-1lug",
+    comune: "Albenga — lungomare",
+    data: "1 luglio 2026",
+    dataISO: "2026-07-01",
+    categoria: "violenze",
+    titolo: "Aggredita e minacciata di morte sul lungomare",
+    descrizione: "Una giovane donna è stata trascinata verso la spiaggia da un uomo, tirata per i capelli e costretta in ginocchio, con minacce di morte. Un passante è intervenuto permettendo di allertare le autorità; l'aggressore è fuggito, indagini in corso.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/01/albenga-ragazza-aggredita-e-minacciata-sul-lungomare-712177/" } ],
+    lat: 44.04297, lon: 8.224502,
+    approssimato: true,
+    precisione: "lungomare indicato dalla fonte, punto esatto non specificato — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1074 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-corso-italia",
+    comune: "Genova — Corso Italia (lungomare)",
+    data: "2 luglio 2026",
+    dataISO: "2026-07-02",
+    categoria: "violenze",
+    titolo: "Movida violenta sul lungomare: rissa in un locale, 23enne ferito",
+    descrizione: "Durante una rissa scoppiata in un locale di corso Italia, un 23enne ha riportato una ferita lacero-contusa alla fronte ed è stato trasportato in codice giallo al San Martino. Indagini in corso da parte delle forze dell'ordine.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/02/movida-violenta-a-genova-risse-e-rapine-in-pieno-centro-e-sul-lungomare_472dc891-c5ff-4dc3-9950-d7656743e788.html" } ],
+    lat: 44.391434, lon: 8.965829,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 947 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-de-ferrari",
+    comune: "Genova — Piazza De Ferrari (centro)",
+    data: "2 luglio 2026",
+    dataISO: "2026-07-02",
+    categoria: "rapine",
+    titolo: "Movida violenta in centro: rapinato del telefono in piazza De Ferrari",
+    descrizione: "Tre persone hanno aggredito un 43enne in piazza De Ferrari per rubargli il telefonino, causandogli un trauma facciale; è stato ricoverato in codice giallo al Galliera. Stesso episodio di movida violenta segnalato insieme alla rissa di corso Italia.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/02/movida-violenta-a-genova-risse-e-rapine-in-pieno-centro-e-sul-lungomare_472dc891-c5ff-4dc3-9950-d7656743e788.html" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/aggredito-in-piazza-de-ferrari-per-rapinargli-il-cellulare-43enne-in-ospedale/2026/07/02/643280/" }
+    ],
+    lat: 44.407369, lon: 8.933935,
+    approssimato: false,
+    precisione: "piazza indicata dalla fonte — coordinate stimate manualmente — posizione verificata il 25/08 con OpenStreetMap Nominatim"
+  },
+  {
+    id: "genova-molassana-furgone",
+    comune: "Genova, Molassana — Via Fossato di Cicala",
+    data: "2 luglio 2026",
+    dataISO: "2026-07-02",
+    categoria: "altro",
+    titolo: "Trovato morto in un furgone un 53enne scomparso da 5 giorni",
+    descrizione: "Un uomo di 53 anni, di cui si erano perse le tracce da circa cinque giorni, è stato trovato senza vita all'interno del furgone aziendale in via Fossato di Cicala. Le cause del decesso restavano da accertare al momento della pubblicazione: incluso come fatto sotto indagine, non come reato accertato.",
+    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/07/02/giallo-a-molassana-trovato-cadavere-in-un-furgone/859794" } ],
+    lat: 44.444382, lon: 8.962747,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 914 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-sampierdarena-maxirissa",
+    comune: "Genova, Sampierdarena — via Cantore/piazza Montano",
+    data: "4 luglio 2026",
+    dataISO: "2026-07-04",
+    categoria: "violenze",
+    titolo: "Maxi rissa notturna a Sampierdarena, una ferita al volto",
+    descrizione: "Un gruppo di otto giovani italiani e sudamericani (18-27 anni) è stato coinvolto in una rissa dopo la movida; una donna ha riportato ferite al volto ed è stata trasportata in codice giallo. Tutti gli otto sono stati identificati dalla polizia.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/04/rissa-allalba-a-sampierdarena-otto-ragazzi-identificati_74272236-b041-4cb4-972f-df065bed4ba8.html" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/insicurezza-a-genova-altra-maxi-rissa-a-sampierdarena-fra-sudamericani-e-italiani/2026/07/04/643438/" }
+    ],
+    lat: 44.412874, lon: 8.888162,
+    approssimato: true,
+    precisione: "zona indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 782 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-san-martino-stampella",
+    comune: "Genova — Policlinico San Martino",
+    data: "4 luglio 2026",
+    dataISO: "2026-07-04",
+    categoria: "violenze",
+    titolo: "Minaccia medici con una stampella al San Martino",
+    descrizione: "Un uomo di 36 anni, contrariato per non poter essere operato subito nel reparto Malattie Infettive, ha minacciato medici e infermieri con una stampella e danneggiato una porta. È stato bloccato e arrestato dalla polizia.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/04/pretende-di-essere-operato-nel-reparto-malattie-infettive-e-minaccia-medici_d6801cf9-b4d9-4129-9c16-c186b8db351b.html" } ],
+    lat: 44.409469, lon: 8.973088,
+    approssimato: false,
+    precisione: "ospedale indicato dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1050 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "savona-spiaggia-accoltellamento",
+    comune: "Savona — spiaggia libera del Prolungamento",
+    data: "5 luglio 2026",
+    dataISO: "2026-07-05",
+    categoria: "omicidi",
+    titolo: "Accoltellato in spiaggia a Savona, muore in ospedale",
+    descrizione: "Durante una lite in un accampamento di fortuna sulla spiaggia, un uomo di 36-37 anni è stato accoltellato all'addome in pieno giorno davanti a bagnanti. Trasportato in gravi condizioni al San Paolo e operato, è morto nella notte tra il 5 e il 6 luglio. Un uomo si è successivamente costituito ed è indagato per omicidio.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/06/morto-luomo-accoltellato-in-spiaggia-a-savona-si-cerca-lomicida_4af536c2-7dd8-4822-aa29-c56d01377c34.html" },
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/16/omicidio-savona-spiaggia-custodia-cautelare-renato-mastroianni-715689/" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/marocchino-accoltellato-in-spiaggia-libera-a-savona-in-pieno-giorno-morto-nella-notte/2026/07/06/643525/" }
+    ],
+    lat: 44.283209, lon: 8.445371,
+    approssimato: true,
+    precisione: "spiaggia indicata dalla fonte, punto esatto non specificato — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 3680 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-multedo-spiaggia",
+    comune: "Genova, Multedo — spiaggia libera",
+    data: "5 luglio 2026",
+    dataISO: "2026-07-05",
+    categoria: "violenze",
+    titolo: "Aggredito e rapinato del telefono in spiaggia a Multedo",
+    descrizione: "Un giovane di 22 anni è stato picchiato e colpito con sassi in testa da un gruppo di connazionali sulla spiaggia libera, che gli hanno rubato il cellulare. È stato trasportato in ospedale in codice giallo; la polizia indaga su un possibile legame con una lite avvenuta poco prima nello stesso gruppo.",
+    fonti: [
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/06/genova-multedo-aggressione-pietrate-spiaggia-rapina-giovane-ferito-713389/" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/insicurezza-a-multedo-22enne-nordafricano-aggredito-e-rapinato-in-spiaggia-dopo-lite-fra-connazionali/2026/07/06/643610/" }
+    ],
+    lat: 44.426763, lon: 8.829091,
+    approssimato: true,
+    precisione: "spiaggia indicata dalla fonte, punto esatto non specificato — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 891 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "sanremo-via-hope",
+    comune: "Sanremo — via Hope",
+    data: "6 luglio 2026",
+    dataISO: "2026-07-06",
+    categoria: "omicidi",
+    titolo: "Donna trovata morta in casa, fermato il figlio",
+    descrizione: "Una donna di circa 59 anni è stata trovata morta nella sua abitazione con segni compatibili con una colluttazione; un vicino ha riferito di aver sentito una lite violenta. Il figlio, che aveva dato l'allarme, è stato posto sotto fermo per omicidio volontario aggravato dalla Procura di Imperia.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/07/-donna-morta-a-sanremo-figlio-sottoposto-a-fermo-per-omicidio-_163c979c-d15a-4076-9e7e-758e792a371b.html" },
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/08/omicidio-sanremo-filippo-oldani-morte-madre-arrestato-713905/" }
+    ],
+    lat: 43.813345, lon: 7.763929,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1276 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-sestri-ponente-giornalisti",
+    comune: "Genova, Sestri Ponente — piazza Baracca",
+    data: "6 luglio 2026",
+    dataISO: "2026-07-06",
+    categoria: "violenze",
+    titolo: "Giornalisti aggrediti a margine di una fiaccolata per la sicurezza",
+    descrizione: "Durante tensioni tra una fiaccolata per la sicurezza e un contro-presidio a Sestri Ponente, un fotografo e un giornalista sono stati aggrediti fisicamente e verbalmente; a uno di loro è stato rubato il cellulare. La sindaca di Genova ha condannato pubblicamente l'episodio.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/07/tensioni-alla-fiaccolata-per-la-sicurezza-a-genova-giornalisti-aggrediti_f1b6f8da-9a8e-49ad-833d-33946342b695.html" } ],
+    lat: 44.425116, lon: 8.849372,
+    approssimato: true,
+    precisione: "piazza indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 743 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "savona-anziano-spara-moglie",
+    comune: "Savona — abitazione (indirizzo non specificato)",
+    data: "6 luglio 2026",
+    dataISO: "2026-07-06",
+    categoria: "omicidi",
+    titolo: "Ultranovantenne spara alla moglie durante una lite domestica",
+    descrizione: "Al termine di una lite domestica, un uomo di quasi 90-99 anni (le fonti differiscono lievemente sull'età) ha sparato alla moglie, ferendola gravemente; la donna è stata trasferita in condizioni critiche in ospedale. L'uomo è stato successivamente posto in custodia.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/06/ultranovantenne-spara-alla-moglie-durante-lite-donna-in-condizioni-critiche_51fdd4eb-a1a9-4baf-8901-232729d3c5e4.html" },
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/10/savona-tentato-omicidio-uomo-sparato-moglie-rsa-carcere-714393/" }
+    ],
+    lat: 44.307, lon: 8.483,
+    approssimato: true,
+    precisione: "comune stimato, indirizzo non reso noto dalla fonte — coordinate lasciate alla stima manuale: la query di geocoding automatico non ha restituito un punto affidabile"
+  },
+  {
+    id: "chiavari-sestri-due-episodi",
+    comune: "Chiavari e Sestri Levante (vie non specificate)",
+    data: "7 luglio 2026",
+    dataISO: "2026-07-07",
+    categoria: "violenze",
+    titolo: "Due aggressioni nella notte tra Chiavari e Sestri Levante",
+    descrizione: "Nella stessa notte si sono registrati due episodi distinti nel Tigullio: a Chiavari un 25enne è stato aggredito, mentre a Sestri Levante una 15enne è stata soccorsa dai sanitari. La fonte non riporta ulteriori dettagli sulla dinamica dei due episodi.",
+    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/07/07/chiavari-aggredito-25enne-sestri-soccorsa-15enne/860368" } ],
+    lat: 44.31757, lon: 9.324456,
+    approssimato: true,
+    precisione: "dettagli limitati: la fonte non specifica vie né dinamica — punto sul centro di Chiavari — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 280 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-quinto-spiaggia-rissa",
+    comune: "Genova, Quinto — spiaggia (zona non ulteriormente specificata)",
+    data: "7 luglio 2026",
+    dataISO: "2026-07-07",
+    categoria: "violenze",
+    titolo: "Maxi rissa in spiaggia a Quinto tra un gruppo di giovani",
+    descrizione: "Un gruppo di 12-15 giovani ha dato vita a una violenta rissa di massa sulla spiaggia nel tardo pomeriggio, usando ombrelloni come armi e tentando di prelevare bottiglie di vetro dai cassonetti della raccolta differenziata per lanciarle, in una zona affollata di bagnanti e famiglie. All'arrivo della polizia, allertata dai testimoni, i responsabili si erano già dileguati; nessun ferito o fermo segnalato dalla fonte.",
+    fonti: [ { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/69107-rissa-spiaggia-quinto-ombrelli-bottiglie-ragazzi.html" } ],
+    lat: 44.38588, lon: 9.016359,
+    approssimato: true,
+    precisione: "spiaggia di Quinto indicata dalla fonte, punto esatto non specificato — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1349 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-cornigliano-amt",
+    comune: "Genova, Cornigliano — deposito AMT",
+    data: "8 luglio 2026",
+    dataISO: "2026-07-08",
+    categoria: "violenze",
+    titolo: "Autista di bus AMT picchiato da un passeggero",
+    descrizione: "Un conducente è stato aggredito a calci e pugni da un passeggero che non era sceso al capolinea, riportando ferite ed escoriazioni. È stato trasportato in ospedale in codice giallo; l'episodio ha portato a scioperi sindacali per la sicurezza dei lavoratori.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/10/genova-aggressione-autista-amt-un-giovane-ferito-denuncia-714321/" } ],
+    lat: 44.41613, lon: 8.871799,
+    approssimato: true,
+    precisione: "deposito indicato dalla fonte — coordinate stimate manualmente — posizione verificata il 25/08 con OpenStreetMap Nominatim"
+  },
+  {
+    id: "sestri-levante-orecchio",
+    comune: "Sestri Levante — davanti alla stazione",
+    data: "13 luglio 2026",
+    dataISO: "2026-07-13",
+    categoria: "violenze",
+    titolo: "Rissa per un debito, orecchio staccato a morsi",
+    descrizione: "Due uomini di 42 e 50 anni sono venuti alle mani per un debito davanti alla stazione. Durante lo scontro il 42enne ha staccato con un morso l'orecchio del rivale, trasportato in ospedale; l'aggressore è accusato di lesioni gravi.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/13/sestri-levante-rissa-davanti-alla-stazione-orecchio-staccato-a-morsi-ad-un-uomo/" } ],
+    lat: 44.27604, lon: 9.397377,
+    approssimato: false,
+    precisione: "stazione indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 339 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "rapallo-manganello",
+    comune: "Rapallo (via non specificata)",
+    data: "14 luglio 2026",
+    dataISO: "2026-07-14",
+    categoria: "violenze",
+    titolo: "Uomo armato di manganello morde e aggredisce un agente",
+    descrizione: "Un 42enne in stato di ebbrezza ha girato per le strade di Rapallo armato di manganello; alla polizia ha danneggiato un'auto di servizio e in ospedale ha morso e preso a calci un agente, venendo arrestato per resistenza e lesioni.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/15/rapallo-uomo-armato-manganello-aggressione-agente-polizia-715553/" } ],
+    lat: 44.349208, lon: 9.23161,
+    approssimato: true,
+    precisione: "centro comune — nessuna via nota — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 225 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-voltri-lungomare-minorenni",
+    comune: "Genova, Voltri — lungomare",
+    data: "15 luglio 2026",
+    dataISO: "2026-07-15",
+    categoria: "rapine",
+    titolo: "Tre minorenni rapinano un giovane sul lungomare di Voltri",
+    descrizione: "Tre minori di 14 e 16 anni hanno accerchiato un giovane con la scusa di una sigaretta, minacciandolo per farsi consegnare un braccialetto e strappandogli una collana d'oro da 800 euro. Sono stati rintracciati dalla polizia e portati al centro di prima accoglienza.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/15/rapinano-giovane-per-strada-a-genova-arrestati-due-quattordicenni_afb6ce92-e5e1-451c-bd78-40e16385233b.html" } ],
+    lat: 44.428584, lon: 8.754233,
+    approssimato: true,
+    precisione: "lungomare indicato dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1604 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-cornigliano-tentato-omicidio",
+    comune: "Genova, Cornigliano — via Cornigliano",
+    data: "15 luglio 2026",
+    dataISO: "2026-07-15",
+    categoria: "omicidi",
+    titolo: "Tentato omicidio a Cornigliano nella notte",
+    descrizione: "Un uomo di 45 anni ha colpito un connazionale al volto con il collo di una bottiglia, poi lo ha gettato a terra facendogli sbattere la testa e ha continuato a colpirlo. La vittima è stata ricoverata con prognosi riservata; l'aggressore è stato arrestato per tentato omicidio.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/tentato-omicidio-a-genova-cornigliano-arrestato-45enne-del-bangladesh/2026/07/15/644380/" } ],
+    lat: 44.416017, lon: 8.873325,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 125 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-sampierdarena-malfettani",
+    comune: "Genova, Sampierdarena — via Malfettani",
+    data: "15 luglio 2026",
+    dataISO: "2026-07-15",
+    categoria: "rapine",
+    titolo: "Strappa una collana a un operaio, bloccato da un poliziotto libero dal servizio",
+    descrizione: "Un 25enne ha strappato una collana d'oro dal collo di un operaio vicino al proprio magazzino. Un agente di polizia in moto, libero dal servizio, ha assistito alla scena e ha bloccato immediatamente il rapinatore.",
+    fonti: [ { nome: "GenovaToday (ripubblicazione verificata su altre testate)", url: "https://www.genovatoday.it/cronaca/rapina-sampierdarena-strappo-collana.html" } ],
+    lat: 44.414229, lon: 8.889498,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente. Articolo originale GenovaToday non raggiungibile in automatico (errore 403): dettagli verificati tramite ripubblicazioni su altre testate — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 982 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-pegli-bus71",
+    comune: "Genova, Pegli/Val Varenna — bus linea 71",
+    data: "17 luglio 2026",
+    dataISO: "2026-07-17",
+    categoria: "violenze",
+    titolo: "Rissa e lancio di pietre contro un bus a Pegli",
+    descrizione: "Un gruppo di circa nove minorenni, dopo una lite scoppiata a bordo di un autobus, è stato fatto scendere dall'autista; una volta fuori ha lanciato pietre e bottiglie contro il mezzo, rompendo i finestrini. La polizia indaga con le telecamere di bordo.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/18/rissa-e-colpi-di-pietre-sul-bus-indaga-la-polizia_fd24ae97-e76e-4e3f-aec6-db4ff026d090.html" } ],
+    lat: 44.427161, lon: 8.814922,
+    approssimato: true,
+    precisione: "zona indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 2544 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-san-fruttuoso-scippo",
+    comune: "Genova, San Fruttuoso — via Barrili",
+    data: "18 luglio 2026",
+    dataISO: "2026-07-18",
+    categoria: "rapine",
+    titolo: "Scippa una collana e resiste ai carabinieri sul bus",
+    descrizione: "Un 22enne ha strappato una collana d'oro dal collo di una donna di 50 anni ed è salito su un autobus per fuggire; raggiunto dai carabinieri, ha resistito colpendoli con calci e pugni. È stato arrestato per scippo e resistenza a pubblico ufficiale.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/insicurezza-a-s-fruttuoso-22enne-egiziano-strappa-collana-a-donna-arrestato/2026/07/18/644672/" } ],
+    lat: 44.405235, lon: 8.965378,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 973 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-bersaglieri-autista",
+    comune: "Genova, zona Principe — via Bersaglieri d'Italia",
+    data: "19 luglio 2026",
+    dataISO: "2026-07-19",
+    categoria: "violenze",
+    titolo: "Aggredisce a pugni l'autista di un bus a lunga percorrenza",
+    descrizione: "Un uomo di 37 anni, dopo un diverbio per il rifiuto di mostrare un documento, ha colpito al volto un autista e danneggiato il parabrezza del mezzo; all'arrivo della polizia ha tentato di scalciare gli agenti. Ottavo episodio di violenza sui bus genovesi in pochi giorni secondo le fonti.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/19/danneggia-bus-e-inveisce-contro-autista-un-arresto_385b0261-ea03-4b64-9ca4-62e908e189ce.html" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/insicurezza-senegalese-picchia-autista-bus-danneggia-mezzo-e-colpisce-poliziotti-arrestato/2026/07/19/644748/" }
+    ],
+    lat: 44.416004, lon: 8.919804,
+    approssimato: true,
+    precisione: "zona indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 633 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-carignano-supermercato",
+    comune: "Genova, Carignano — supermercato (via non specificata)",
+    data: "19 luglio 2026",
+    dataISO: "2026-07-19",
+    categoria: "rapine",
+    titolo: "Ruba in un supermercato e aggredisce gli addetti alla sicurezza",
+    descrizione: "Un uomo di 41 anni ha rubato bevande alcoliche in un supermercato di Carignano e ha aggredito violentemente due addetti alla sicurezza e un passante intervenuto. È stato rintracciato e arrestato dai carabinieri su un autobus.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/20/punta-coltello-a-negoziante-per-rapinarlo-un-arresto_47636c3f-e46f-4de5-9908-cf8de812b5d0.html" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/insicurezza-a-carignano-algerino-rapina-supermercato-poi-picchia-vigilantes-e-carabinieri-arrestato/2026/07/20/644873/" }
+    ],
+    lat: 44.4017, lon: 8.937117,
+    approssimato: true,
+    precisione: "supermercato indicato dalla fonte, via non specificata — coordinate stimate manualmente — posizione verificata il 25/08 con OpenStreetMap Nominatim"
+  },
+  {
+    id: "genova-paraggi-sestri-aggressioni",
+    comune: "Santa Margherita Ligure (Paraggi) e Sestri Levante (vie non specificate)",
+    data: "19 luglio 2026",
+    dataISO: "2026-07-19",
+    categoria: "violenze",
+    titolo: "Due aggressioni nella notte tra Paraggi e Sestri Levante",
+    descrizione: "Nella notte si sono verificate due distinte aggressioni: una davanti a un locale a Paraggi (Santa Margherita Ligure), l'altra in viale Dante a Sestri Levante. In entrambi i casi le persone coinvolte sono state soccorse dal 118; sono intervenuti anche i Carabinieri.",
+    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/07/19/paraggi-e-sestri-due-aggressioni-notte-di-emergenze-per-il-118/862373" } ],
+    lat: 44.311573, lon: 9.208602,
+    approssimato: true,
+    precisione: "dettagli limitati: punto su Paraggi/Santa Margherita Ligure, secondo evento a Sestri Levante non geolocalizzato separatamente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 2640 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-sampierdarena-minimarket",
+    comune: "Genova, Sampierdarena — minimarket (via non specificata)",
+    data: "20 luglio 2026",
+    dataISO: "2026-07-20",
+    categoria: "rapine",
+    titolo: "Rapina un minimarket con un coltello, torna con una mazza",
+    descrizione: "Un 27enne armato di coltello ha rapinato un minimarket ottenendo circa 2.000 euro; poco dopo è tornato con una mazza minacciando di nuovo i titolari e danneggiando l'arredo. È stato arrestato dai carabinieri per rapina, danneggiamento e resistenza.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/20/punta-coltello-a-negoziante-per-rapinarlo-un-arresto_47636c3f-e46f-4de5-9908-cf8de812b5d0.html" },
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/20/genova-rapina-mano-armata-negozio-sampierdarena-coltello-arrestato-716273/" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/insicurezza-a-sampierdarena-marocchino-punta-coltello-contro-negoziante-e-lo-rapina-arrestato/2026/07/20/644871/" }
+    ],
+    lat: 44.412689, lon: 8.892931,
+    approssimato: true,
+    precisione: "minimarket indicato dalla fonte, via non specificata — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 580 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "pietra-ligure-supermercato",
+    comune: "Pietra Ligure — supermercato (via non specificata)",
+    data: "20 luglio 2026",
+    dataISO: "2026-07-20",
+    categoria: "rapine",
+    titolo: "Rapina un supermercato e aggredisce il vigilante in fuga",
+    descrizione: "Un 24enne con precedenti ha rapinato un supermercato e, nel tentativo di fuggire, ha aggredito e colpito più volte il vigilante addetto alla sorveglianza. I carabinieri sono intervenuti rapidamente e lo hanno arrestato.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/20/pietra-ligure-rapina-aggressioe-vigilante-un-arresto-716293/" } ],
+    lat: 44.14891, lon: 8.283704,
+    approssimato: true,
+    precisione: "centro comune — nessuna via nota — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 280 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-via-fillak-collane",
+    comune: "Genova, tra Sampierdarena e Certosa — via Walter Fillak",
+    data: "20 luglio 2026",
+    dataISO: "2026-07-20",
+    categoria: "rapine",
+    titolo: "Due 15enni derubano coetanei delle collane d'oro in via Fillak",
+    descrizione: "Due minorenni di 15 anni hanno avvicinato con un pretesto due giovani in via Fillak e strappato loro violentemente due collane d'oro, minacciando chi tentava di riprendersele. Identificati dalla polizia, sono stati denunciati per rapina in concorso.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/21/ragazzini-rapinano-due-giovani-in-via-fillak-identificati-e-denunciati_5c07e604-c395-4ef9-9027-276c59f5b36c.html" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/via-fillak-15enni-italiano-e-africano-derubano-ragazzini-delle-collanine-doro-denunciati/2026/07/21/644975/" }
+    ],
+    lat: 44.421767, lon: 8.887702,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 717 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "santa-margherita-orologi",
+    comune: "Santa Margherita Ligure (via non specificata)",
+    data: "21 luglio 2026",
+    dataISO: "2026-07-21",
+    categoria: "rapine",
+    titolo: "Scippati due orologi di lusso da 72mila euro a turisti svizzeri",
+    descrizione: "Un uomo ha strappato due orologi di lusso, del valore complessivo di circa 72mila euro, dal polso di due turisti svizzeri, fuggendo poi verso il confine francese. È stato arrestato durante la fuga.",
+    fonti: [ { nome: "GenovaToday (ripubblicazione verificata su altre testate)", url: "https://www.genovatoday.it/cronaca/santa-margherita-scippo-orologi.html" } ],
+    lat: 44.328102, lon: 9.192707,
+    approssimato: true,
+    precisione: "centro comune — via non specificata dalla fonte. Articolo originale GenovaToday non raggiungibile in automatico (errore 403): dettagli verificati tramite ripubblicazioni su altre testate — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1645 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-via-monti-furgone",
+    comune: "Genova, Sampierdarena — zona via Monti",
+    data: "22 luglio 2026",
+    dataISO: "2026-07-22",
+    categoria: "rapine",
+    titolo: "Sale su un furgone di operai, li aggredisce e ruba attrezzi",
+    descrizione: "Una donna di 40 anni è salita su un furgone parcheggiato e, scoperta dagli operai, li ha aggrediti a pugni e morsi; ha poi lanciato attrezzi rompendo i vetri del mezzo ed è fuggita con degli utensili. È stata arrestata per rapina e lesioni personali.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/genova-sale-su-un-furgone-aggredisce-due-operai-e-fugge-arrestata-una-40enne/2026/07/22/645215/" } ],
+    lat: 44.414774, lon: 8.891143,
+    approssimato: true,
+    precisione: "zona indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1030 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "sanremo-tentata-violenza-spiaggia",
+    comune: "Sanremo — spiaggia zona Antenna",
+    data: "23 luglio 2026",
+    dataISO: "2026-07-23",
+    categoria: "violenze",
+    titolo: "Tenta di aggredire sessualmente una turista che dormiva in tenda",
+    descrizione: "Una donna che dormiva da sola in una tenda in spiaggia è stata aggredita da un uomo di 30 anni. È riuscita a fuggire e ad allertare le autorità, che lo hanno poi arrestato grazie a telecamere e descrizione.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/23/sanremo-tentata-violenza-sessuale-sulla-spiaggia-un-arresto/" } ],
+    lat: 43.836298, lon: 7.777266,
+    approssimato: true,
+    precisione: "spiaggia indicata dalla fonte, punto esatto non specificato — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 2840 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-treno-zaino",
+    comune: "Genova — treno regionale in arrivo a Genova Principe",
+    data: "25 luglio 2026",
+    dataISO: "2026-07-25",
+    categoria: "rapine",
+    titolo: "Minaccia un 15enne sul treno per rubargli lo zaino",
+    descrizione: "Un uomo di 30 anni ha tentato di rapinare un 15enne minacciandolo e afferrando il suo zaino mentre il ragazzo era in bagno sul treno; il minore è riuscito a fuggire e avvisare il capotreno. L'uomo è stato arrestato dalla Polfer all'arrivo a Genova Principe.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/minaccia-e-strattona-15enne-sul-treno-per-rubargli-lo-zaino-straniero-arrestato-da-polfer/2026/07/25/645624/" } ],
+    lat: 44.416532, lon: 8.921955,
+    approssimato: true,
+    precisione: "fatto avvenuto in treno, punto sulla stazione di arrivo (Genova Principe) — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 776 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "loano-piazza-cadorna",
+    comune: "Loano — piazza Cadorna",
+    data: "26 luglio 2026",
+    dataISO: "2026-07-26",
+    categoria: "violenze",
+    titolo: "17enne accoltellato all'addome in piazza durante una lite",
+    descrizione: "Un ragazzo di 17 anni è stato accoltellato all'addome durante una rissa scoppiata per futili motivi. È stato operato in ospedale e non è più in pericolo di vita; i carabinieri stanno esaminando le telecamere della zona.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/27/accoltellamento-loano-giovane-gravi-condizioni-indagini-carabinieri-717297/" } ],
+    lat: 44.129844, lon: 8.26115,
+    approssimato: false,
+    precisione: "piazza indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 739 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-pegli-mercatino",
+    comune: "Genova, Pegli — largo Calasetta (mercatino)",
+    data: "27 luglio 2026",
+    dataISO: "2026-07-27",
+    categoria: "rapine",
+    titolo: "Ruba borse al mercatino di Pegli, due arresti",
+    descrizione: "Un uomo ha rubato borse in pelle da un banco del mercatino e, quando il titolare ha cercato di recuperare la merce, lo ha spintonato opponendo resistenza; un secondo uomo ha commesso un furto simile poco dopo reagendo a sua volta con violenza. Entrambi sono stati arrestati.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/insicurezza-a-pegli-49enne-senegalese-rapina-banco-al-mercatino-arrestato/2026/07/27/645793/" } ],
+    lat: 44.424433, lon: 8.815037,
+    approssimato: false,
+    precisione: "mercatino indicato dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 3427 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-voltri-camozzini",
+    comune: "Genova, Voltri — via Camozzini",
+    data: "28 luglio 2026",
+    dataISO: "2026-07-28",
+    categoria: "rapine",
+    titolo: "Rapina un passante e tenta una rapina in un negozio",
+    descrizione: "Un 54enne ha rapinato un passante del cellulare usando spray al peperoncino e ha poi tentato una rapina in un negozio della zona, aggredendo i dipendenti con la stessa arma. È stato arrestato.",
+    fonti: [
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/29/genova-rapina-voltri-un-uomo-arrestato-negozio-passante-717769/" },
+      { nome: "GenovaToday (ripubblicazione verificata su altre testate)", url: "https://www.genovatoday.it/cronaca/voltri-rapine-arrestato.html" }
+    ],
+    lat: 44.427371, lon: 8.743119,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente. Dettagli GenovaToday verificati anche tramite ripubblicazioni su altre testate (accesso diretto bloccato, errore 403) — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 2215 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "alassio-spacciatore",
+    comune: "Alassio — via Milite Ignoto",
+    data: "29 luglio 2026",
+    dataISO: "2026-07-29",
+    categoria: "violenze",
+    titolo: "Fermato per spaccio, aggredisce i carabinieri",
+    descrizione: "Un ventenne colto mentre cedeva droga a un uomo ha tentato la fuga e, durante il fermo, ha colpito più volte i carabinieri divincolandosi. Nella fuga ha abbandonato due involucri di cocaina, recuperati dagli agenti. È stato arrestato.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/30/alassio-un-arresto-spacciatore-aggressione-carabinieri-717889/" } ],
+    lat: 44.005913, lon: 8.17067,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 666 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "savona-aggredisce-agenti",
+    comune: "Savona — centro (via non specificata)",
+    data: "29 luglio 2026",
+    dataISO: "2026-07-29",
+    categoria: "violenze",
+    titolo: "Aggredisce gli agenti durante un controllo di polizia",
+    descrizione: "Due uomini fermati dopo segnalazioni di urla in centro città sono stati sottoposti a controllo; uno dei due, 42 anni, ha reagito aggredendo gli agenti. È stato arrestato per violenza, lesioni e resistenza a pubblico ufficiale.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/29/savona-poliziotto-aggredito-controllo-arrestato-uomo-717741/" } ],
+    lat: 44.309, lon: 8.477,
+    approssimato: true,
+    precisione: "centro comune — nessuna via nota — coordinate lasciate alla stima manuale: la query di geocoding automatico non ha restituito un punto affidabile"
+  },
+  {
+    id: "genova-vittorio-veneto-linciaggio",
+    comune: "Genova, Sampierdarena — piazza Vittorio Veneto",
+    data: "30 luglio 2026",
+    dataISO: "2026-07-30",
+    categoria: "rapine",
+    titolo: "Tenta di strappare una collana a una donna, rischia il linciaggio",
+    descrizione: "Un uomo ha tentato di rapinare una donna di una collana in pieno giorno in piazza; bloccato dal marito della vittima e da alcuni passanti, ha reagito con spray urticante prima di essere fermato e arrestato dalla polizia.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/07/31/tenta-di-rapinare-una-donna-e-rischia-il-linciaggio-arrestato_8a98e8f5-438b-49b1-a7da-24e557799ccf.html" } ],
+    lat: 44.411737, lon: 8.888271,
+    approssimato: false,
+    precisione: "piazza indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1486 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-via-del-campo",
+    comune: "Genova, centro storico — via del Campo",
+    data: "31 luglio 2026",
+    dataISO: "2026-07-31",
+    categoria: "rapine",
+    titolo: "Strappa con violenza una collana a un passante nel centro storico",
+    descrizione: "Un 22enne ha rapinato un passante strappandogli con violenza una collana dal collo. È stato identificato grazie alle telecamere di videosorveglianza e arrestato dalla polizia locale.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/insicurezza-nel-centro-storico-nordafricano-rapina-passante-arrestato-grazie-a-telecamere/2026/07/31/645994/" } ],
+    lat: 44.412419, lon: 8.92823,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 159 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "la-spezia-canaletto",
+    comune: "La Spezia — quartiere Canaletto",
+    data: "1 agosto 2026",
+    dataISO: "2026-08-01",
+    categoria: "rapine",
+    titolo: "Minorenni armati di coltello rapinano un'anziana in casa",
+    descrizione: "Due minorenni hanno suonato insistentemente al citofono di un'anziana; una volta aperta la porta, l'hanno minacciata con un coltello mentre l'altro rubava denaro e oggetti d'oro in casa. Sono stati identificati e denunciati dalla polizia.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/01/minorenni-armate-di-coltello-rapinano-unanziana-in-casa-alla-spezia_cffb7dfc-9413-408d-9aa4-8c241b4a2346.html" } ],
+    lat: 44.112602, lon: 9.841971,
+    approssimato: true,
+    precisione: "quartiere indicato dalla fonte, via non specificata — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 2689 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-borgoratti-incendio",
+    comune: "Genova, Borgoratti — via Tanini",
+    data: "1 agosto 2026",
+    dataISO: "2026-08-01",
+    categoria: "altro",
+    titolo: "Ruba in un negozio chiuso e appicca un incendio",
+    descrizione: "Un 34enne ha forzato l'ingresso di un negozio chiuso, rubato alcuni oggetti e poi appiccato un incendio usando materiali infiammabili trovati sul posto. È stato arrestato dalla polizia mentre fuggiva con gli arnesi del furto.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/ruba-e-incendia-negozio-di-via-tanini-34enne-egiziano-arrestato-dalla-polizia/2026/08/01/646003/" } ],
+    lat: 44.402308, lon: 8.990036,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1063 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "ventimiglia-spiaggia-oberdan",
+    comune: "Ventimiglia — spiaggia presso passeggiata Oberdan",
+    data: "1 agosto 2026",
+    dataISO: "2026-08-01",
+    categoria: "omicidi",
+    titolo: "Sparano a un uomo in spiaggia a Ventimiglia",
+    descrizione: "Durante una lite per futili motivi, un uomo di 37 anni è stato colpito da più colpi di pistola a una gamba e ai glutei sulla spiaggia. Due persone sono state fermate il 4 agosto per tentato omicidio aggravato in concorso e detenzione illegale di arma.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/08/spararono-a-cittadino-libico-in-spiaggia-a-ventimiglia-sottoposti-a-fermo_8b3412c7-3c81-444e-9c22-a0f8f9be4730.html" } ],
+    lat: 43.787936, lon: 7.609463,
+    approssimato: true,
+    precisione: "spiaggia indicata dalla fonte, punto esatto non specificato — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 258 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "albenga-via-mille-2ago",
+    comune: "Albenga — via dei Mille",
+    data: "2 agosto 2026",
+    dataISO: "2026-08-02",
+    categoria: "violenze",
+    titolo: "Violenta rissa in centro città",
+    descrizione: "Una violenta rissa tra più persone è scoppiata nel pomeriggio in via dei Mille, con coinvolgimento anche di un incidente stradale durante l'alterco. L'intervento dei carabinieri ha ripristinato l'ordine pubblico.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/03/rissa-in-via-dei-mille-ad-albenga-carabinieri-trovano-i-responsabili/" } ],
+    lat: 44.048408, lon: 8.217659,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 271 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "ponente-notte-risse",
+    comune: "Albenga, Finale Ligure e Alassio (lungomari)",
+    data: "2 agosto 2026",
+    dataISO: "2026-08-02",
+    categoria: "violenze",
+    titolo: "Notte di risse sulla riviera, quattro episodi in poche ore",
+    descrizione: "In una sola notte si sono verificate quattro risse distinte tra Albenga, Finale Ligure e Alassio: quattro persone (19, 27, 40 anni e un altro giovane) sono state soccorse e medicate per ferite lievi negli ospedali della zona.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/02/nottata-di-risse-sulla-riviera-ligure-quattro-in-poco-piu-di-due-ore_11596a8e-4fc0-4d01-a618-131a99897731.html" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/notte-di-risse-nella-riviera-di-ponente-feriti-tra-albenga-finale-ligure-e-alassio/2026/08/02/646093/" }
+    ],
+    lat: 44.008011, lon: 8.173027,
+    approssimato: true,
+    precisione: "fatti multipli su tre comuni diversi — punto indicativo su Albenga, il primo comune citato dalle fonti — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 5613 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "savona-darsena-motociclista",
+    comune: "Savona — zona Darsena",
+    data: "2 agosto 2026",
+    dataISO: "2026-08-02",
+    categoria: "altro",
+    titolo: "Ignora l'alt della polizia e rischia di investire un agente",
+    descrizione: "Un motociclista di 36 anni non si è fermato a un controllo di polizia e, guidando spericolatamente, ha rischiato di investire un agente. Identificato tramite le telecamere, è stato condannato a 8 mesi con rito direttissimo.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/05/savona-fuga-polizia-rischio-investito-poliziotto-718845/" } ],
+    lat: 44.308805, lon: 8.487308,
+    approssimato: true,
+    precisione: "zona indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 202 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-bolzaneto-cellulare",
+    comune: "Genova, Bolzaneto — supermercato (via non specificata)",
+    data: "3 agosto 2026",
+    dataISO: "2026-08-03",
+    categoria: "rapine",
+    titolo: "Rubano un cellulare da 1.500 euro in un supermercato",
+    descrizione: "Due uomini hanno rubato un cellulare di grande valore in un supermercato di Bolzaneto; inseguiti da un dipendente e da un militare libero dal servizio, sono stati bloccati e arrestati mentre tentavano la fuga in auto.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/03/rubano-in-negozi-a-genova-tre-persone-arrestate_e96dbb29-64e9-4014-a4e9-be4482bd68af.html" } ],
+    lat: 44.458679, lon: 8.901468,
+    approssimato: true,
+    precisione: "supermercato indicato dalla fonte, via non specificata — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 4102 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-foce-supermercato",
+    comune: "Genova, Foce — supermercato (via non specificata)",
+    data: "3 agosto 2026",
+    dataISO: "2026-08-03",
+    categoria: "rapine",
+    titolo: "Ruba cibo e alcolici e aggredisce i dipendenti di un supermercato",
+    descrizione: "Un uomo di 49 anni ha rubato alimenti e bevande alcoliche in un supermercato della Foce e ha aggredito i dipendenti che avevano tentato di fermarlo. È stato arrestato per rapina impropria.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/03/rubano-in-negozi-a-genova-tre-persone-arrestate_e96dbb29-64e9-4014-a4e9-be4482bd68af.html" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/insicurezza-alla-foce-49enne-africano-rapina-un-supermercato-arrestato-dai-carabinieri/2026/08/03/661148/" }
+    ],
+    lat: 44.399433, lon: 8.94898,
+    approssimato: true,
+    precisione: "supermercato indicato dalla fonte, via non specificata — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 390 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-centro-noleggio-auto",
+    comune: "Genova, centro — via Gramsci/via XX Settembre/piazza Caricamento",
+    data: "5 agosto 2026",
+    dataISO: "2026-08-05",
+    categoria: "rapine",
+    titolo: "Noleggiano un'auto e la usano per rubare nei negozi del centro",
+    descrizione: "Una coppia ha noleggiato un suv all'aeroporto di Genova senza restituirlo, usandolo per compiere furti in vari negozi del centro e per derubare una turista svizzera in piazza Caricamento. Sono stati sorpresi con una borsa schermata anti-taccheggio e arrestati dalla polizia locale.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/05/noleggiano-auto-non-la-restituiscono-e-la-usano-per-rubare-nei-negozi_c59c7f4c-e158-4940-8a4b-66cc18735ee4.html" } ],
+    lat: 44.409772, lon: 8.928723,
+    approssimato: true,
+    precisione: "più punti nel centro cittadino — coordinate stimate su piazza Caricamento — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 148 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "sestri-levante-stazione-auto",
+    comune: "Sestri Levante — zona stazione ferroviaria",
+    data: "5 agosto 2026",
+    dataISO: "2026-08-05",
+    categoria: "rapine",
+    titolo: "Ruba da un'auto e aggredisce proprietario e carabinieri",
+    descrizione: "Un 22enne, sorpreso a rubare oggetti da un'auto parcheggiata, ha aggredito il proprietario ed è fuggito; raggiunto dai carabinieri ha opposto resistenza aggredendo anche i militari. È stato arrestato per rapina impropria e resistenza.",
+    fonti: [
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/marocchino-ruba-in-auto-e-aggredisce-proprietario-e-carabinieri-intervenuti-arrestato/2026/08/08/670070/" },
+      { nome: "GenovaToday (ripubblicazione verificata su altre testate)", url: "https://www.genovatoday.it/cronaca/sestri-levante-furto-auto-aggressione.html" }
+    ],
+    lat: 44.27604, lon: 9.397377,
+    approssimato: true,
+    precisione: "zona stazione indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 283 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-dinegro-kaoba",
+    comune: "Genova, Dinegro — discoteca Kaoba (Terminal Traghetti)",
+    data: "8 agosto 2026",
+    dataISO: "2026-08-08",
+    categoria: "violenze",
+    titolo: "Rissa con coltello e bottiglie alla discoteca Kaoba",
+    descrizione: "Il locale è stato evacuato per l'uso di spray urticante; è scoppiata una rissa all'esterno in cui un giovane è rimasto ferito da un coltello e da cocci di bottiglia, con altri quattro clienti feriti poco dopo. Il Questore ha disposto la chiusura del locale per 10 giorni, citando anche episodi precedenti.",
+    fonti: [
+      { nome: "Liguria24", url: "https://www.liguria24.it/2026/08/13/risse-aggressioni-e-violenza-chiusa-di-nuovo-per-10-giorni-la-discoteca-kaoba-a-dinegro/866434" },
+      { nome: "GenovaToday (ripubblicazione verificata su altre testate)", url: "https://www.genovatoday.it/cronaca/chiude-discoteca-sicurezza.html" }
+    ],
+    lat: 44.41397, lon: 8.912219,
+    approssimato: false,
+    precisione: "locale indicato dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 646 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-centro-storico-ultras",
+    comune: "Genova, centro storico — piazza delle Erbe / piazza San Giorgio",
+    data: "8 agosto 2026",
+    dataISO: "2026-08-08",
+    categoria: "violenze",
+    titolo: "Scontri notturni tra una trentina di ultras in centro storico",
+    descrizione: "Un gruppo di circa trenta ultras locali, alcuni già colpiti da Daspo, ha organizzato quella che le fonti descrivono come una spedizione punitiva contro tifosi del Deportivo La Coruna, con il volto travisato e spranghe di metallo; sono stati lanciati anche petardi e fumogeni, causando il panico tra gli avventori della movida e la chiusura anticipata di alcuni locali. Nessun ferito ricoverato né fermo segnalato dalla fonte al momento della pubblicazione; la Procura è stata informata e il caso coinvolge l'Osservatorio nazionale sulle manifestazioni sportive.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/08/scontri-nella-notte-in-centro-storico-a-genova-tra-una-trentina-di-ragazzi_abe1ce45-1f58-4d96-b899-763c063309ad.html" } ],
+    lat: 44.406254, lon: 8.932458,
+    approssimato: true,
+    precisione: "zona indicata dalla fonte (piazza delle Erbe/piazza San Giorgio), punto esatto non specificato — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 399 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "loano-yacht-abuso",
+    comune: "Loano — yacht ormeggiato in porto",
+    data: "9 agosto 2026",
+    dataISO: "2026-08-09",
+    categoria: "violenze",
+    titolo: "Abusa di una hostess a bordo di uno yacht",
+    descrizione: "Uno skipper di 30 anni ha abusato sessualmente di una hostess di equipaggio a bordo di uno yacht e ha tentato di aggredire una seconda ragazza, che è riuscita a fuggire. È stato arrestato all'aeroporto di Genova mentre tentava di imbarcarsi.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/10/abusa-di-due-hostess-a-bordo-di-uno-yacht-arrestato-skipper-spagnolo_69ed03af-a93f-4975-a6e4-33af2c0295b1.html" } ],
+    lat: 44.13309, lon: 8.263711,
+    approssimato: true,
+    precisione: "porto indicato dalla fonte, punto esatto dell'imbarcazione non specificato — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 320 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "rapallo-stazione-pietre",
+    comune: "Rapallo — stazione ferroviaria",
+    data: "9 agosto 2026",
+    dataISO: "2026-08-09",
+    categoria: "violenze",
+    titolo: "Fatti scendere dal treno senza biglietto, lanciano pietre e aggrediscono la polizia",
+    descrizione: "Due persone fatte scendere dal treno perché senza biglietto hanno lanciato pietre contro le strutture della stazione e aggredito gli agenti intervenuti; alcuni residenti sono intervenuti per aiutare la polizia a bloccarli. Uno è stato arrestato, l'altro denunciato.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/stranieri-senza-biglietto-fatti-scendere-poi-lanciano-pietre-rapallini-si-ribellano-e-aiutano-poliziotti/2026/08/10/670218/" } ],
+    lat: 44.351171, lon: 9.231315,
+    approssimato: false,
+    precisione: "stazione indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 357 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-molassana-bisagno",
+    comune: "Genova, Molassana — via Piacenza (torrente Bisagno)",
+    data: "12 agosto 2026",
+    dataISO: "2026-08-12",
+    categoria: "violenze",
+    titolo: "Rissa su un bus, ventenne spinto nel torrente Bisagno",
+    descrizione: "Una rissa tra gruppi di giovani, nata per un presunto tentativo di furto di cellulare a bordo di un bus, è proseguita in strada; un ventenne è stato spinto giù da un muretto nel letto del torrente, riportando trauma cranico e contusioni.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/13/rissa-sul-bus-e-poi-in-strada-ventenne-spintonato-nel-torrente-bisagno_59c96dc4-c48a-4bcd-9ff4-6fcee319e0ab.html" } ],
+    lat: 44.440001, lon: 8.962841,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 760 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-lagaccio-bastonate",
+    comune: "Genova — via del Lagaccio",
+    data: "13 agosto 2026",
+    dataISO: "2026-08-13",
+    categoria: "violenze",
+    titolo: "Preso a bastonate in strada da un gruppo di persone",
+    descrizione: "Un uomo di 35 anni è stato accerchiato e aggredito a bastonate, calci e pugni da un gruppo di quattro-cinque persone scese da un'auto; ha riportato fratture e ferite alla testa, trasportato in codice rosso. Gli aggressori sono fuggiti prima dell'arrivo della polizia, che sospetta un'azione organizzata.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/14/preso-a-bastonate-in-strada-a-genova-indaga-la-polizia_8472fefb-acd0-4dd3-9de7-6e3b835a9016.html" },
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/14/genova-aggredito-per-strada-e-malmenato-al-lagaccio-ipotesi-spedizione-punitiva/" }
+    ],
+    lat: 44.41808, lon: 8.918618,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 780 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-murcarolo-zaini",
+    comune: "Genova, Quinto — spiaggia di Murcarolo",
+    data: "14 agosto 2026",
+    dataISO: "2026-08-14",
+    categoria: "rapine",
+    titolo: "Ruba zaini in spiaggia, inseguito e fermato dai bagnanti",
+    descrizione: "Tre persone hanno rubato due zaini a bagnanti sulla spiaggia; notati dai presenti, sono stati inseguiti mentre veniva allertato il 112. I carabinieri hanno arrestato uno dei tre, mentre i complici sono fuggiti.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/14/ruba-zaini-in-spiaggia-inseguito-e-fermato-dai-bagnanti_d8aa4814-af52-4511-8a98-9e2fd9487bbb.html" } ],
+    lat: 44.383758, lon: 9.023839,
+    approssimato: true,
+    precisione: "spiaggia indicata dalla fonte, punto esatto non specificato — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 908 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-xx-settembre-gioielli",
+    comune: "Genova — via XX Settembre",
+    data: "14 agosto 2026",
+    dataISO: "2026-08-14",
+    categoria: "rapine",
+    titolo: "Ruba gioielli in un negozio e morde l'addetto alla vigilanza",
+    descrizione: "Una donna di 25 anni ha provato a rubare gioielli in un negozio indossandoli in camerino. Scoperta da un addetto alla vigilanza, lo ha spinto e morso a un braccio prima di essere bloccata. È stata arrestata per rapina impropria e resistenza.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/14/genova-ruba-in-un-negozio-di-via-xx-settembre-e-morde-laddetto-alla-vigilanza/" } ],
+    lat: 44.406996, lon: 8.935102,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 188 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "laigueglia-discoteca-collana",
+    comune: "Laigueglia — discoteca (via non specificata)",
+    data: "14 agosto 2026",
+    dataISO: "2026-08-14",
+    categoria: "rapine",
+    titolo: "Turista derubato con uno strappo della collana d'oro",
+    descrizione: "Due giovani di 23 e 29 anni hanno strappato con un colpo secco la collana d'oro dal collo di un turista in discoteca, passandosela per nasconderla. I carabinieri li hanno arrestati entrambi e recuperato il gioiello.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/14/laigueglia-turista-derubato-della-collana-doro-in-discoteca-due-arresti/" } ],
+    lat: 43.978826, lon: 8.157351,
+    approssimato: true,
+    precisione: "discoteca indicata dalla fonte, via non specificata — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 6026 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "porto-venere-piaggi",
+    comune: "Porto Venere — acque antistanti il porto",
+    data: "fatto: 15 agosto · esito autopsia: 24 agosto 2026",
+    dataISO: "2026-08-15",
+    categoria: "altro",
+    titolo: "Morto in mare a Porto Venere, l'autopsia rivela tre ferite da elica",
+    descrizione: "Un 21enne caduto da un gommone il 15 agosto è stato ritrovato senza vita dopo cinque giorni di ricerche. L'autopsia ha rilevato tre profonde ferite parallele alla testa, compatibili con un'elica: la Procura indaga sulla dinamica. Non risulta, al momento, un'ipotesi di reato confermata: incluso come fatto sotto indagine, non come reato accertato.",
+    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/08/24/sebastiano-piaggi-lesito-dellautopsia-tre-profonde-ferite-alla-testa-provocate-da-unelica/867918/" } ],
+    lat: 44.05066, lon: 9.834459,
+    approssimato: true,
+    precisione: "punto in mare stimato al largo del porto — fatto avvenuto prima del periodo monitorato — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 671 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-borgoratti-bus-minaccia",
+    comune: "Genova, Borgoratti — piazza della Rotonda",
+    data: "15 agosto 2026",
+    dataISO: "2026-08-15",
+    categoria: "violenze",
+    titolo: "Passeggero minaccia di morte l'autista di un bus AMT",
+    descrizione: "Un passeggero infastidito da un'attesa di 45 minuti ha minacciato di morte l'autista, citando altre violenze contro il personale AMT. Ha preso a calci i sedili e a pugni i finestrini danneggiando l'interno del mezzo; l'autista ha richiesto assistenza medica per lo choc.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/15/genova-ancora-un-conducente-amt-aggredito-sullautobus/" } ],
+    lat: 44.408072, lon: 8.988459,
+    approssimato: true,
+    precisione: "piazza indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1604 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-san-teodoro-accoltella",
+    comune: "Genova, San Teodoro — Salita San Francesco da Paola",
+    data: "15 agosto 2026",
+    dataISO: "2026-08-15",
+    categoria: "omicidi",
+    titolo: "Accoltella la sorella, poi precipita dalla finestra e muore",
+    descrizione: "Il giorno di Ferragosto un uomo di 26-36 anni (le fonti differiscono lievemente sull'età) avrebbe ferito con una coltellata la sorella durante una lite in appartamento, procurandole ferite non gravi; poco dopo è precipitato dai piani alti dello stabile, morendo sul colpo. Non è chiaro se si tratti di suicidio o caduta accidentale; l'uomo aveva problemi psichiatrici secondo le fonti.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/15/-accoltella-sua-sorella-poi-precipita-dalla-finestra-e-muore-_1b98fb2a-8272-4b6e-91dc-32fd30a941eb.html" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/san-teodoro-ragazza-accoltellata-in-casa-il-fratello-muore-dopo-una-caduta-dal-sesto-piano/2026/08/15/670454/" }
+    ],
+    lat: 44.41874, lon: 8.914221,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1843 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "albenga-inseguimento",
+    comune: "Albenga — Via dei Mille",
+    data: "21 agosto 2026",
+    dataISO: "2026-08-21",
+    categoria: "altro",
+    titolo: "Fugge a un controllo e ferisce un agente, 20enne arrestato",
+    descrizione: "In via dei Mille un 20enne è scappato a un controllo dando origine a un inseguimento; nella fuga ha causato danneggiamenti e lesioni a un pubblico ufficiale. È stato arrestato per fuga pericolosa, danneggiamento e lesioni.",
+    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/08/21/inseguimento-in-via-dei-mille-ad-albenga-20enne-arrestato-per-fuga-pericolosa-danneggiamento-e-lesioni-a-pubblico-ufficiale/867478/" } ],
+    lat: 44.048408, lon: 8.217659,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 271 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "la-spezia-umbertino",
+    comune: "La Spezia — Corso Cavour (quartiere Umbertino)",
+    data: "21 agosto 2026",
+    dataISO: "2026-08-21",
+    categoria: "rapine",
+    titolo: "Insegue e aggredisce tre turiste per rapinarle, arrestato",
+    descrizione: "Un uomo di 37 anni ha inseguito tre turiste francesi chiedendo denaro e carte di credito, affrontandole violentemente dentro una cartoleria. È stato bloccato dalla Polizia Locale durante l'aggressione.",
+    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/08/21/insegue-e-aggredisce-tre-giovani-turiste-per-farsi-consegnare-soldi-e-carte-di-credito-arrestato-dalla-polizia-locale/867483/" } ],
+    lat: 44.108416, lon: 9.813228,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1204 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-via-orefici",
+    comune: "Genova — Via degli Orefici (centro storico)",
+    data: "22 agosto 2026, ore 19:20",
+    dataISO: "2026-08-22",
+    categoria: "rapine",
+    titolo: "Rapina con coltello in via degli Orefici, arrestato 35enne",
+    descrizione: "Un uomo di 35 anni ha rubato merce da un negozio in via degli Orefici; scoperto dalla commessa, ha estratto un coltello dalla tasca minacciandola per garantirsi la fuga. La merce, del valore di 85 euro, è stata recuperata dagli agenti. L'arrestato, irregolare sul territorio e con precedenti penali, è stato trasferito al carcere di Marassi.",
+    fonti: [
+      { nome: "GenovaToday", url: "https://www.genovatoday.it/cronaca/rapina-coltello-via-orefici-arresto.html" },
+      { nome: "Virgilio Notizie (ripubblicazione)", url: "https://www.virgilio.it/notizie/paura-per-una-commessa-a-genova-minacciata-con-coltello-durante-un-tentato-furto-arrestato-35enne-1777848" }
+    ],
+    lat: 44.409109, lon: 8.930974,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — coordinate stimate manualmente. genovatoday.it blocca l'accesso automatico (errore 403): dettagli verificati tramite la ripubblicazione su Virgilio Notizie — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 239 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "andora-aggressione",
+    comune: "Andora (via non specificata dalla fonte)",
+    data: "23 agosto 2026",
+    dataISO: "2026-08-23",
+    categoria: "violenze",
+    titolo: "Aggressione ad Andora, il sindaco: “atto feroce e ingiustificato”",
+    descrizione: "Il sindaco di Andora ha condannato pubblicamente una violenta aggressione avvenuta in paese. La pagina originale non è stata raggiungibile in automatico per estrarre i dettagli completi della dinamica.",
+    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/08/23/aggressione-ad-andora-parole-di-condanna-del-sindaco-un-atto-feroce-e-ingiusticato/867743/" } ],
+    lat: 43.951929, lon: 8.145649,
+    approssimato: true,
+    precisione: "centro comune — nessuna via nota (fonte non raggiungibile per il testo completo) — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 480 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "genova-levante",
+    comune: "Genova, zona Levante (comune/via non specificati dalla fonte)",
+    data: "24 agosto 2026",
+    dataISO: "2026-08-24",
+    categoria: "violenze",
+    titolo: "Narcotizza il compagno per derubarlo, arrestata 57enne",
+    descrizione: "Per mesi avrebbe sciolto gocce di un potente sonnifero nel cibo del compagno per poi sottrargli portafoglio, carte e smartphone; contestati anche minacce e uno schiaffo. Arrestata una donna di 57 anni.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/24/per-mesi-narcotizza-il-marito-e-lo-deruba-arrestata_9afe48ae-3ff8-43d3-9166-f70d9f761b61.html" },
+      { nome: "Liguria24", url: "https://www.liguria24.it/2026/08/24/sonnifero-nel-cibo-minacce-e-schiaffi-57enne-in-carcere-per-maltrattamenti-al-compagno/867881/" }
+    ],
+    lat: 44.3975, lon: 8.96,
+    approssimato: true,
+    precisione: "comune stimato (zona Levante genovese) — nessuna via nota — coordinate lasciate alla stima manuale: la query di geocoding automatico non ha restituito un punto affidabile"
+  },
+  {
+    id: "chiavari-piazza-orto",
+    comune: "Chiavari — Piazza dell'Orto",
+    data: "24 agosto 2026",
+    dataISO: "2026-08-24",
+    categoria: "violenze",
+    titolo: "20enne aggredito in piazza dell'Orto, ricoverato in codice giallo",
+    descrizione: "Un ragazzo di 20 anni è stato aggredito in piazza dell'Orto e trasportato in ospedale in codice giallo. La dinamica non è ancora stata resa nota nei dettagli.",
+    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/08/24/chiavari-20enne-aggredito-in-piazza-dellorto-in-ospedale-in-codice-giallo/867782/" } ],
+    lat: 44.316065, lon: 9.322763,
+    approssimato: false,
+    precisione: "via/piazza indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 181 m rispetto alla stima manuale precedente)"
+  },
+  {
+    id: "ventimiglia-bevera-anziano-ragazzini",
+    comune: "Ventimiglia, frazione Bevera — via della Stazione",
+    data: "24 agosto 2026",
+    dataISO: "2026-08-24",
+    categoria: "violenze",
+    titolo: "Rimprovera un gruppo di ragazzini, anziano spinto e ferito alla testa",
+    descrizione: "Un uomo di 69 anni ha ripreso un gruppo di minorenni che stava creando disturbo in via della Stazione, nella frazione di Bevera. Secondo le fonti sarebbe stato colpito e spinto, cadendo e battendo violentemente la testa sull'asfalto; ha riportato un trauma cranico con emorragia ed è stato trasportato in ambulanza all'ospedale Borea di Sanremo in prognosi riservata. Indagini in corso da parte della Polizia di Frontiera; nessun fermo al momento della pubblicazione delle fonti.",
+    fonti: [
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/25/ventimiglia-anziano-aggredito-gruppo-ragazzini-ferito-722081/" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/ventimiglia-anziano-aggredito-da-un-gruppo-di-ragazzini-e-grave/2026/08/25/670980/" }
+    ],
+    lat: 43.825053, lon: 7.578355,
+    approssimato: true,
+    precisione: "frazione Bevera indicata dalla fonte, via della Stazione non trovata come via distinta su OpenStreetMap (probabile piccola via locale non mappata) — coordinate sul centro della frazione Bevera via geocoding reale (OpenStreetMap Nominatim, 25/08)"
+  }
+
+];
