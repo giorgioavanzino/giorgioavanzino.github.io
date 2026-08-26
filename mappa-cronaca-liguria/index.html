@@ -157,7 +157,7 @@
         <h1>Mappa della cronaca nera in Liguria</h1>
       </div>
     </div>
-    <p class="subtitle">Rilevazione di cronaca nera in Liguria (fatti segnalati da <strong>ANSA Liguria</strong>, <strong>Liguria24</strong>, <strong>LiguriaOggi</strong>, <strong>Liguria Notizie</strong> e <strong>GenovaToday</strong>, <strong>1 luglio – 24 agosto 2026</strong>) su una mappa reale a livello di via — zoomabile e trascinabile come Google Maps, con base OpenStreetMap.</p>
+    <p class="subtitle">Rilevazione di cronaca nera in Liguria (fatti segnalati da <strong>ANSA Liguria</strong>, <strong>Liguria24</strong>, <strong>LiguriaOggi</strong>, <strong>Liguria Notizie</strong> e <strong>GenovaToday</strong>, <strong>1 luglio – 26 agosto 2026</strong>) su una mappa reale a livello di via — zoomabile e trascinabile come Google Maps, con base OpenStreetMap.</p>
     <div class="toolbar" id="toolbar"><span class="toolbar-label">Filtra per categoria</span></div>
     <div class="date-filter">
       <span class="toolbar-label">Filtra per data</span>
@@ -204,7 +204,7 @@
         </ul>
       </div>
     </div>
-    <span class="updated">Rilevazione generata il 24 agosto 2026, estesa al periodo 1 luglio – 24 agosto 2026 il 25 agosto 2026 · ORA! Liguria Media Monitor</span>
+    <span class="updated">Rilevazione generata il 24 agosto 2026, estesa al periodo 1 luglio – 24 agosto 2026 il 25 agosto 2026, aggiornata al 26 agosto 2026 · ORA! Liguria Media Monitor</span>
   </footer>
 </div>
 
@@ -1163,6 +1163,39 @@
       lat: 43.825053, lon: 7.578355,
       approssimato: true,
       precisione: "frazione Bevera indicata dalla fonte, via della Stazione non trovata come via distinta su OpenStreetMap (probabile piccola via locale non mappata) — coordinate sul centro della frazione Bevera via geocoding reale (OpenStreetMap Nominatim, 25/08)"
+      },
+    {
+      id: "genova-vicoli-de-ferrari-accoltellato",
+      comune: "Genova, centro storico — vicoli, tra via XX Settembre e piazza De Ferrari",
+      data: "22 agosto 2026, poco dopo l'una di notte",
+      dataISO: "2026-08-22",
+      categoria: "violenze",
+      titolo: "Accoltellato nei vicoli, chiede aiuto ai passanti a De Ferrari",
+      descrizione: "Un giovane è stato colpito con un'arma da taglio in più parti del corpo nei vicoli del centro storico; ferito, è riuscito a raggiungere via XX Settembre/piazza De Ferrari chiedendo aiuto ai passanti, ed è stato trasportato in codice giallo all'ospedale Galliera. Le fonti riportano dettagli discordanti sulla vittima (un giovane di origini romene senza fissa dimora secondo Primocanale e LiguriaOggi; un 22enne marocchino secondo Telenord): non è chiaro se si tratti dello stesso episodio raccontato in modo diverso da fonti diverse o di due fatti distinti avvenuti la stessa notte nella stessa zona. Aggressore non identificato, indagini dei carabinieri in corso.",
+      fonti: [
+        { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/22/genova-ragazzo-accoltellato-nel-centro-storico-721789/" },
+        { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/70721-ragazzo-accoltellato-in-strada-piazza-de-ferrari.html" },
+        { nome: "Telenord", url: "https://telenord.it/genova-violenza-nei-vicoli-22enne-accoltellato-schiena-107652" }
+      ],
+      lat: 44.406996, lon: 8.935102,
+      approssimato: true,
+      precisione: "zona indicata dalle fonti (vicoli del centro storico / via XX Settembre-piazza De Ferrari), punto esatto non specificato — coordinate stimate manualmente riusando il punto già geocodato di via XX Settembre (vedi genova-xx-settembre-gioielli): il geocoder reale (Claude in Chrome + Nominatim) non era raggiungibile in questa sessione notturna, poiché il dispositivo dell'utente non risultava connesso all'orario dello scheduled task — fonti con dettagli discordanti su età/nazionalità della vittima, vedi descrizione"
+    },
+    {
+      id: "pieve-di-teco-torrente-arroscia",
+      comune: "Pieve di Teco — torrente Arroscia (via Sottotenente Luigi Eula)",
+      data: "24 agosto 2026 (scomparso la sera, corpo ritrovato nelle ore successive)",
+      dataISO: "2026-08-24",
+      categoria: "altro",
+      titolo: "Scompare la sera e viene trovato morto nel torrente Arroscia",
+      descrizione: "Un uomo di 54 anni residente in Alta Valle Arroscia si è allontanato da casa la sera del 24 agosto; il corpo è stato ritrovato nel torrente Arroscia nelle ore successive. La causa della morte non è nota al momento della pubblicazione delle fonti: i carabinieri non escludono alcuna ipotesi (incidente, gesto volontario o altra causa). Incluso come fatto sotto indagine, non come reato accertato.",
+      fonti: [
+        { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/25/pieve-di-teco-cadavere-ritrovato-indagini-in-corso-722097/" },
+        { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/pieve-di-teco-trovato-morto-nel-torrente-arroscia-un-uomo-di-54-anni/2026/08/25/670983/" }
+      ],
+      lat: 44.0554, lon: 7.9073,
+      approssimato: true,
+      precisione: "comune indicato dalla fonte (via Sottotenente Luigi Eula/torrente Arroscia, Pieve di Teco) — coordinate stimate manualmente sul centro del comune: il geocoder reale non era raggiungibile in questa sessione (nessun dispositivo/browser connesso, scheduled task notturno) — causa della morte non ancora determinata dalle fonti al momento della pubblicazione"
     }
 
   ];
