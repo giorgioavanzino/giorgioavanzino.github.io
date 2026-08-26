@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Liste d'attesa in miglioramento, sistema fermo da anni — ORA! Liguria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Roboto+Flex:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  /*
+   * Stesso sistema di stile di spunti_mercato_lavoro_Q1_2026.html:
+   * tema chiaro unico, sfondo grigio tenue, pannelli bianchi con angoli
+   * molto arrotondati e ombra netta, accento giallo ORA!, Poppins per il
+   * testo e Roboto Flex 900 per titoli e numeri.
+   */
+  :root{
+    --ground:#edf0f2; --surface:#f2f4f8; --surface-solid:#ffffff; --surface-2:#e6e9ef;
+    --ink:#000000; --ink-soft:#4c4f55; --ink-faint:#888d96; --line:#dfe3ea;
+    --yellow:#ffd957; --accent-ink:#14120a; --accent-soft:#fff2cc;
+    --shadow:4px 4px 12px rgba(0,0,0,0.2);
+    --accent2:#C0392B; --navy:#1D335C; --accent:#2E8B8B;
+    --green:#2E7D32; --amber:#B7791F; --grey:#9CA3AF;
+    --src-mdl:#000000; --src-bi:#4c4f55; --src-best:#ffd957;
+    color-scheme: light;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--ground);}
+  body{color:var(--ink);font-family:"Poppins",-apple-system,"Segoe UI",Arial,Helvetica,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;}}
+
+  header.page{max-width:1280px;margin:0 auto;padding:28px 24px 20px;display:flex;flex-direction:column;gap:12px;border-bottom:1px solid var(--line);}
+  .header-row{display:flex;align-items:center;gap:16px;}
+  .logo-badge{width:62px;height:62px;border-radius:14px;flex:none;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--yellow);display:flex;align-items:center;justify-content:center;font-family:"Roboto Flex","Poppins",sans-serif;font-weight:900;font-size:13px;color:var(--ink);letter-spacing:-.02em;}
+  .eyebrow-top{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--ink);}
+  .eyebrow-top::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--yellow);flex:none;}
+  header h1{font-family:"Roboto Flex","Poppins",sans-serif;font-weight:900;font-size:clamp(24px,3.4vw,36px);margin:7px 0 0;letter-spacing:-.01em;text-wrap:balance;color:var(--ink);}
+  p.subtitle{margin:0;color:var(--ink-soft);font-size:15px;max-width:80ch;line-height:1.55;}
+  p.subtitle strong{color:var(--ink);font-weight:600;}
+  .badge-row{display:flex;gap:10px;flex-wrap:wrap;}
+  .badge{display:inline-flex;align-items:center;font-family:"Roboto Flex","Poppins",sans-serif;font-size:12.5px;font-weight:900;padding:8px 14px;border-radius:8px;background:var(--surface-solid);color:var(--ink);border:1.5px solid var(--ink);box-shadow:var(--shadow);}
+
+  .wrap{max-width:1280px;margin:0 auto;padding:22px 24px 60px;}
+
+  .legend-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:4px 0 0;font-size:12.5px;color:var(--ink-faint);}
+  .legend-row .lg{display:flex;align-items:center;gap:6px;}
+  .legend-row .dot{width:10px;height:10px;border-radius:3px;display:inline-block;border:1px solid var(--line);}
+
+  .hero{background:var(--ink);color:#fff;border-radius:24px;padding:26px 28px;margin:20px 0 34px;box-shadow:var(--shadow);}
+  .hero .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#fff;font-weight:700;margin-bottom:8px;}
+  .hero .eyebrow::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--yellow);flex:none;}
+  .hero h2{font-family:"Roboto Flex","Poppins",sans-serif;font-weight:900;margin:0 0 12px 0;font-size:clamp(19px,2.4vw,25px);line-height:1.3;color:#fff;letter-spacing:-.01em;text-wrap:balance;}
+  .hero p{margin:0;font-size:14px;line-height:1.65;color:#d9dce1;max-width:88ch;}
+  .hero .stat-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;}
+  .hero .stat{background:#141414;border:1px solid #2a2a2a;border-radius:12px;padding:12px 16px;min-width:158px;}
+  .hero .stat .n{font-family:"Roboto Flex","Poppins",sans-serif;font-size:23px;font-weight:900;color:var(--yellow);letter-spacing:-.01em;}
+  .hero .stat .l{font-size:11.5px;color:#a9adb5;margin-top:3px;line-height:1.4;}
+
+  section.block{margin-top:38px;}
+  .theme-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  h2.section-title{display:inline-flex;align-items:center;gap:9px;font-family:"Roboto Flex","Poppins",sans-serif;font-size:17px;font-weight:900;letter-spacing:-.005em;color:var(--ink);margin:0;text-wrap:balance;}
+  h2.section-title::before{content:"";width:11px;height:11px;border-radius:3px;background:var(--yellow);flex:none;}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  @media (max-width:880px){.grid{grid-template-columns:1fr;}}
+
+  .card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:18px 20px 16px;position:relative;}
+  .card h3{margin:0 0 5px 0;font-family:"Roboto Flex","Poppins",sans-serif;font-size:15px;font-weight:900;line-height:1.35;color:var(--ink);padding-right:100px;letter-spacing:-.005em;}
+  .card .sub{font-size:12.5px;color:var(--ink-soft);margin-bottom:13px;line-height:1.5;}
+  .card .sub b{color:var(--ink);font-weight:600;}
+  .source{font-size:11px;color:var(--ink-faint);margin-top:12px;padding-top:9px;border-top:1px dashed var(--line);text-align:right;}
+
+  .src-tag{position:absolute;top:16px;right:16px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:#fff;padding:3px 9px;border-radius:8px;white-space:nowrap;}
+  .src-tag.mdl{background:var(--src-mdl);color:#fff;}
+  .src-tag.bi{background:var(--src-bi);color:#fff;}
+  .src-tag.best{background:var(--src-best);color:var(--accent-ink);}
+
+  .bg-row{display:flex;align-items:center;gap:9px;margin:7px 0;font-size:12.5px;}
+  .bg-label{width:150px;flex-shrink:0;color:var(--ink-soft);line-height:1.35;}
+  .bg-label b{color:var(--ink);font-weight:700;}
+  .bg-track{flex:1;background:var(--surface-2);border-radius:6px;height:16px;position:relative;overflow:hidden;}
+  .bg-track.diverging{overflow:visible;}
+  .bg-track.diverging::before{content:'';position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--ink);opacity:.28;z-index:2;}
+  .bg-fill{position:absolute;top:0;height:100%;border-radius:5px;}
+  .bg-value{width:82px;flex-shrink:0;text-align:right;font-family:"Roboto Flex","Poppins",sans-serif;font-weight:900;color:var(--ink);font-size:12.5px;letter-spacing:-.005em;}
+  .bg-group{margin-bottom:15px;}
+  .bg-group .gtitle{font-size:11px;color:var(--ink-faint);font-weight:600;margin-bottom:5px;text-transform:uppercase;letter-spacing:.07em;}
+
+  /* righe indicatore (scheda CREA per dimensione) — stessa griglia tipografica delle bg-row */
+  .ind-row{display:flex;align-items:flex-start;gap:9px;margin:7px 0;font-size:12.5px;padding-bottom:7px;border-bottom:1px dashed var(--line);}
+  .ind-row:last-child{border-bottom:none;padding-bottom:0;}
+  .ind-dot{width:10px;height:10px;border-radius:3px;flex:none;margin-top:3px;border:1px solid var(--line);}
+  .ind-dot.green{background:var(--green);}
+  .ind-dot.red{background:var(--accent2);}
+  .ind-txt{flex:1;color:var(--ink-soft);line-height:1.4;}
+  .ind-txt b{color:var(--ink);font-weight:600;}
+  .ind-arrow{font-family:"Roboto Flex","Poppins",sans-serif;font-weight:900;font-size:12.5px;flex:none;}
+  .ind-arrow.up{color:var(--green);}
+  .ind-arrow.down{color:var(--accent2);}
+
+  .link-card{background:var(--surface-solid);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:16px 20px;margin-bottom:12px;}
+  .link-card .tesi{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:#fff;background:var(--ink);padding:3px 10px;border-radius:8px;margin-bottom:9px;margin-right:6px;}
+  .link-card p{margin:0;font-size:13.5px;line-height:1.65;color:var(--ink-soft);}
+  .link-card p b{color:var(--ink);font-weight:600;}
+  .link-card .fatto{font-weight:700;color:var(--accent2);}
+
+  .table-wrap{overflow:hidden;border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);background:var(--surface-solid);}
+  .table-wrap.scrollx{overflow-x:auto;}
+  table{width:100%;border-collapse:collapse;font-size:13px;background:var(--surface-solid);}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap;}
+  th{background:var(--ink);color:#fff;font-family:"Roboto Flex","Poppins",sans-serif;font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.04em;}
+  td b{font-family:"Roboto Flex","Poppins",sans-serif;font-weight:900;}
+  tr:last-child td{border-bottom:none;}
+  tr:hover td{background:var(--surface);}
+  tr.hl td{background:var(--accent-soft);}
+  tr.hl:hover td{background:var(--accent-soft);}
+  .pill{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:#fff;padding:2px 8px;border-radius:8px;}
+  .pill.mdl{background:var(--src-mdl);color:#fff;} .pill.bi{background:var(--src-bi);color:#fff;} .pill.best{background:var(--src-best);color:var(--accent-ink);}
+
+  footer{max-width:1280px;margin:34px auto 0;padding:18px 22px;background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);font-size:13px;color:var(--ink-soft);line-height:1.65;}
+  footer h4{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);font-weight:600;}
+  .footer-shell{max-width:1280px;margin:0 auto;padding:0 24px 56px;}
+</style>
+</head>
+<body>
+
+<header class="page">
+  <div class="header-row">
+    <div class="logo-badge">ORA!</div>
+    <div>
+      <span class="eyebrow-top">ORA! Liguria · Sanità</span>
+      <h1>Liste d'attesa in miglioramento, performance del sistema ferma da anni</h1>
+    </div>
+  </div>
+  <p class="subtitle">Due fonti ufficiali incrociate su un'unica pagina: <strong>Agenas</strong> (Bollettino sui Tempi di Attesa n. 0, dati al 30/06/2026) e <strong>C.R.E.A. Sanità</strong> ("Livelli di tutela della Salute: le Performance Regionali", XIV edizione 2026). Ogni scheda è etichettata con la fonte da cui viene il dato.</p>
+  <div class="badge-row">
+    <span class="badge">2 fonti ufficiali</span>
+    <span class="badge">3 sezioni tematiche</span>
+    <span class="badge">Confronto con tutte le altre regioni</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="legend-row">
+    <span>Fonti:</span>
+    <span class="lg"><span class="dot" style="background:var(--src-mdl);"></span> Agenas, Bollettino Liste di Attesa n.0 (dati al 30/06/2026)</span>
+    <span class="lg"><span class="dot" style="background:var(--src-bi);"></span> C.R.E.A. Sanità, Indice di Performance (XIV ed. 2026)</span>
+    <span class="lg"><span class="dot" style="background:var(--src-best);"></span> C.R.E.A. Sanità, indagine cittadini PREMs (XIV ed. 2026)</span>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">Il dato che vale un titolo</div>
+    <h2>La Liguria è, con la Lombardia, l'unica regione italiana a migliorare in modo significativo sia sulle prime visite sia sugli esami diagnostici — ma la performance complessiva del sistema è ferma da sei anni.</h2>
+    <p>Tra il I semestre 2025 e il I semestre 2026 le prime visite erogate entro i tempi passano dal 63,2% all'82,9% (Italia: 76,4%→78,5%) e gli esami diagnostici dal 70,8% all'85,8% (Italia: 82,8%→84,6%). Ma l'Indice di Performance CREA Sanità, che misura la tenuta strutturale del sistema su 22 indicatori, colloca la Liguria all'8° posto su 21 regioni con appena +0,01 punti percentuali dal 2019: tra le variazioni più basse in Italia.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">63,2% → 82,9%</div><div class="l">prime visite entro i tempi, Liguria</div></div>
+      <div class="stat"><div class="n">70,8% → 85,8%</div><div class="l">esami diagnostici entro i tempi, Liguria</div></div>
+      <div class="stat"><div class="n">48%</div><div class="l">Indice di Performance CREA Sanità, Liguria (8ª/21)</div></div>
+      <div class="stat"><div class="n">+0,01 p.p.</div><div class="l">variazione indice performance 2019→2025</div></div>
+    </div>
+  </div>
+
+  <!-- 1. LISTE D'ATTESA -->
+  <section class="block">
+    <div class="theme-head"><h2 class="section-title">1. Liste d'attesa</h2></div>
+    <div class="grid">
+
+      <div class="card">
+        <span class="src-tag mdl">Agenas</span>
+        <h3>Prime visite, Liguria: due semestri a confronto</h3>
+        <div class="sub">Quota % di prime visite erogate entro i tempi massimi previsti dalla classe di priorità</div>
+        <div class="bg-row"><div class="bg-label">I sem. 2025</div><div class="bg-track"><div class="bg-fill" style="left:0;width:63.2%;background:var(--grey);"></div></div><div class="bg-value">63,2%</div></div>
+        <div class="bg-row"><div class="bg-label">I sem. 2026</div><div class="bg-track"><div class="bg-fill" style="left:0;width:82.9%;background:var(--green);"></div></div><div class="bg-value"><b>82,9%</b></div></div>
+        <div class="sub" style="margin-top:6px;">+19,7 punti percentuali in un anno: il miglioramento più marcato tra tutte le regioni italiane insieme alla Lombardia (+9,5 p.p.).</div>
+        <div class="source">Bollettino Agenas n.0, tav. Prime Visite</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag mdl">Agenas</span>
+        <h3>Prime visite entro i tempi, I sem. 2026</h3>
+        <div class="sub">Confronto territoriale, percentuale sul totale prime visite</div>
+        <div class="bg-row"><div class="bg-label">Veneto (max)</div><div class="bg-track"><div class="bg-fill" style="left:0;width:91.5%;background:var(--accent);"></div></div><div class="bg-value">91,5%</div></div>
+        <div class="bg-row"><div class="bg-label"><b>Liguria</b></div><div class="bg-track"><div class="bg-fill" style="left:0;width:82.9%;background:var(--green);"></div></div><div class="bg-value"><b>82,9%</b></div></div>
+        <div class="bg-row"><div class="bg-label">Lombardia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:81.8%;background:var(--navy);"></div></div><div class="bg-value">81,8%</div></div>
+        <div class="bg-row"><div class="bg-label">Italia (totale)</div><div class="bg-track"><div class="bg-fill" style="left:0;width:78.5%;background:var(--grey);"></div></div><div class="bg-value">78,5%</div></div>
+        <div class="bg-row"><div class="bg-label">P.A. Trento (min)</div><div class="bg-track"><div class="bg-fill" style="left:0;width:54.7%;background:var(--accent2);"></div></div><div class="bg-value">54,7%</div></div>
+        <div class="source">Bollettino Agenas n.0, tav. Prime Visite — tabella completa nella sezione sottostante</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag mdl">Agenas</span>
+        <h3>Esami diagnostici, Liguria: due semestri a confronto</h3>
+        <div class="sub">Quota % di esami diagnostici erogati entro i tempi massimi previsti dalla classe di priorità</div>
+        <div class="bg-row"><div class="bg-label">I sem. 2025</div><div class="bg-track"><div class="bg-fill" style="left:0;width:70.8%;background:var(--grey);"></div></div><div class="bg-value">70,8%</div></div>
+        <div class="bg-row"><div class="bg-label">I sem. 2026</div><div class="bg-track"><div class="bg-fill" style="left:0;width:85.8%;background:var(--green);"></div></div><div class="bg-value"><b>85,8%</b></div></div>
+        <div class="sub" style="margin-top:6px;">+15,0 punti percentuali in un anno, a fronte di un +1,8 p.p. della media nazionale (82,8%→84,6%).</div>
+        <div class="source">Bollettino Agenas n.0, tav. Esami Diagnostici</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag mdl">Agenas</span>
+        <h3>Esami diagnostici entro i tempi, I sem. 2026</h3>
+        <div class="sub">Confronto territoriale, percentuale sul totale esami diagnostici</div>
+        <div class="bg-row"><div class="bg-label">Veneto (max)</div><div class="bg-track"><div class="bg-fill" style="left:0;width:97.1%;background:var(--accent);"></div></div><div class="bg-value">97,1%</div></div>
+        <div class="bg-row"><div class="bg-label"><b>Liguria</b></div><div class="bg-track"><div class="bg-fill" style="left:0;width:85.8%;background:var(--green);"></div></div><div class="bg-value"><b>85,8%</b></div></div>
+        <div class="bg-row"><div class="bg-label">Lombardia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:85.5%;background:var(--navy);"></div></div><div class="bg-value">85,5%</div></div>
+        <div class="bg-row"><div class="bg-label">Italia (totale)</div><div class="bg-track"><div class="bg-fill" style="left:0;width:84.6%;background:var(--grey);"></div></div><div class="bg-value">84,6%</div></div>
+        <div class="bg-row"><div class="bg-label">Puglia (min)</div><div class="bg-track"><div class="bg-fill" style="left:0;width:63.5%;background:var(--accent2);"></div></div><div class="bg-value">63,5%</div></div>
+        <div class="source">Bollettino Agenas n.0, tav. Esami Diagnostici — tabella completa nella sezione sottostante</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag mdl">Agenas</span>
+        <h3>Prescrizioni in classe di priorità P, Liguria</h3>
+        <div class="sub">Quota % di prescrizioni "programmabili" (entro 120 giorni) sul totale — valore più alto indica minore urgenza media delle richieste</div>
+        <div class="bg-row"><div class="bg-label">I sem. 2025</div><div class="bg-track"><div class="bg-fill" style="left:0;width:26.3%;background:var(--grey);"></div></div><div class="bg-value">26,3%</div></div>
+        <div class="bg-row"><div class="bg-label">I sem. 2026</div><div class="bg-track"><div class="bg-fill" style="left:0;width:31.8%;background:var(--amber);"></div></div><div class="bg-value">31,8%</div></div>
+        <div class="bg-row"><div class="bg-label">Media Italia 2025</div><div class="bg-track"><div class="bg-fill" style="left:0;width:38.1%;background:var(--navy);"></div></div><div class="bg-value">38,1%</div></div>
+        <div class="sub" style="margin-top:6px;">La Liguria resta sotto la media nazionale 2025 sulla quota di prescrizioni programmabili: la pressione sulle classi più urgenti (U/B/D) resta relativamente più alta.</div>
+        <div class="source">Bollettino Agenas n.0, § classe di priorità</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag mdl">Agenas</span>
+        <h3>Le due regioni "in controtendenza positiva"</h3>
+        <div class="sub">Regioni che migliorano in modo significativo sia su prime visite sia su esami diagnostici, I sem. 2025 → I sem. 2026</div>
+        <div class="bg-row"><div class="bg-label"><b>Liguria</b> — prime visite</div><div class="bg-track diverging"><div class="bg-fill" style="left:50%;width:39%;background:var(--green);"></div></div><div class="bg-value">+19,7 p.p.</div></div>
+        <div class="bg-row"><div class="bg-label"><b>Liguria</b> — esami diagn.</div><div class="bg-track diverging"><div class="bg-fill" style="left:50%;width:30%;background:var(--green);"></div></div><div class="bg-value">+15,0 p.p.</div></div>
+        <div class="bg-row"><div class="bg-label">Lombardia — prime visite</div><div class="bg-track diverging"><div class="bg-fill" style="left:50%;width:19%;background:var(--navy);"></div></div><div class="bg-value">+9,5 p.p.</div></div>
+        <div class="bg-row"><div class="bg-label">Lombardia — esami diagn.</div><div class="bg-track diverging"><div class="bg-fill" style="left:50%;width:15%;background:var(--navy);"></div></div><div class="bg-value">+7,7 p.p.</div></div>
+        <div class="source">Bollettino Agenas n.0, sintesi nazionale</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TABELLA LISTE D'ATTESA -->
+  <section class="block">
+    <h2 class="section-title">Liste d'attesa — tutte le regioni</h2>
+    <p class="subtitle" style="margin:8px 0 14px;">Percentuale di prime visite ed esami diagnostici erogati entro i tempi previsti dalla classe di priorità. Riga Liguria evidenziata.</p>
+    <div class="table-wrap scrollx">
+      <table>
+        <thead><tr><th>Regione</th><th>Prime visite I sem 2025</th><th>Prime visite I sem 2026</th><th>Esami I sem 2025</th><th>Esami I sem 2026</th></tr></thead>
+        <tbody>
+          <tr><td>Piemonte</td><td>69,4%</td><td>71,5%</td><td>82,5%</td><td>81,7%</td></tr>
+          <tr><td>Valle d'Aosta</td><td>78,7%</td><td>77,7%</td><td>73,2%</td><td>69,2%</td></tr>
+          <tr><td>Lombardia</td><td>72,3%</td><td>81,8%</td><td>77,8%</td><td>85,5%</td></tr>
+          <tr><td>P.A. Bolzano</td><td>72,7%</td><td>78,5%</td><td>82,8%</td><td>77,2%</td></tr>
+          <tr><td>P.A. Trento</td><td>63,1%</td><td>54,7%</td><td>76,7%</td><td>77,0%</td></tr>
+          <tr><td>Veneto</td><td>90,4%</td><td>91,5%</td><td>96,2%</td><td>97,1%</td></tr>
+          <tr><td>Friuli Venezia Giulia</td><td>63,3%</td><td>67,9%</td><td>76,1%</td><td>80,4%</td></tr>
+          <tr class="hl"><td><b>Liguria</b></td><td><b>63,2%</b></td><td><b>82,9%</b></td><td><b>70,8%</b></td><td><b>85,8%</b></td></tr>
+          <tr><td>Emilia-Romagna</td><td>72,8%</td><td>77,2%</td><td>83,3%</td><td>88,3%</td></tr>
+          <tr><td>Toscana</td><td>77,7%</td><td>77,2%</td><td>91,7%</td><td>89,6%</td></tr>
+          <tr><td>Umbria</td><td>58,5%</td><td>63,7%</td><td>54,2%</td><td>62,0%</td></tr>
+          <tr><td>Marche</td><td>93,2%</td><td>94,5%</td><td>89,6%</td><td>92,4%</td></tr>
+          <tr><td>Lazio</td><td>94,6%</td><td>91,6%</td><td>90,5%</td><td>89,7%</td></tr>
+          <tr><td>Abruzzo</td><td>76,1%</td><td>73,5%</td><td>76,1%</td><td>65,3%</td></tr>
+          <tr><td>Molise</td><td>88,1%</td><td>88,8%</td><td>86,2%</td><td>88,6%</td></tr>
+          <tr><td>Campania</td><td>84,7%</td><td>84,5%</td><td>96,2%</td><td>96,0%</td></tr>
+          <tr><td>Puglia</td><td>53,2%</td><td>55,7%</td><td>59,3%</td><td>63,5%</td></tr>
+          <tr><td>Basilicata</td><td>92,1%</td><td>98,9%</td><td>90,3%</td><td>94,6%</td></tr>
+          <tr><td>Calabria</td><td>90,7%</td><td>86,6%</td><td>88,0%</td><td>84,7%</td></tr>
+          <tr><td>Sicilia</td><td>87,2%</td><td>79,7%</td><td>75,9%</td><td>71,9%</td></tr>
+          <tr><td>Sardegna</td><td>69,2%</td><td>64,1%</td><td>73,7%</td><td>78,3%</td></tr>
+          <tr><td><b>Italia (totale)</b></td><td><b>76,4%</b></td><td><b>78,5%</b></td><td><b>82,8%</b></td><td><b>84,6%</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 2. PERFORMANCE CREA SANITÀ -->
+  <section class="block">
+    <div class="theme-head"><h2 class="section-title">2. Performance del sistema sanitario</h2></div>
+    <div class="grid">
+
+      <div class="card">
+        <span class="src-tag bi">CREA Sanità</span>
+        <h3>Indice di Performance generale, 2025</h3>
+        <div class="sub">Indice normalizzato 0-1, costruito su 22 indicatori e Expert Panel di 114 stakeholder</div>
+        <div class="bg-row"><div class="bg-label">Veneto (max)</div><div class="bg-track"><div class="bg-fill" style="left:0;width:64%;background:var(--accent);"></div></div><div class="bg-value">0,64</div></div>
+        <div class="bg-row"><div class="bg-label"><b>Liguria</b></div><div class="bg-track"><div class="bg-fill" style="left:0;width:48%;background:var(--amber);"></div></div><div class="bg-value"><b>0,48</b></div></div>
+        <div class="bg-row"><div class="bg-label">Piemonte</div><div class="bg-track"><div class="bg-fill" style="left:0;width:48%;background:var(--navy);"></div></div><div class="bg-value">0,48</div></div>
+        <div class="bg-row"><div class="bg-label">Lombardia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:47%;background:var(--navy);"></div></div><div class="bg-value">0,47</div></div>
+        <div class="bg-row"><div class="bg-label">Calabria (min)</div><div class="bg-track"><div class="bg-fill" style="left:0;width:36%;background:var(--accent2);"></div></div><div class="bg-value">0,36</div></div>
+        <div class="sub" style="margin-top:6px;">Liguria 8ª su 21 regioni, nel terzo gruppo (42-49%) insieme a Emilia-Romagna, Piemonte, Sardegna, Lombardia, Lazio, Abruzzo e Umbria.</div>
+        <div class="source">CREA Sanità XIV ed. 2026, Schede Regione</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag bi">CREA Sanità</span>
+        <h3>Liguria: performance per categoria di stakeholder</h3>
+        <div class="sub">Valutazione media per categoria del panel CREA, indice 0-1</div>
+        <div class="bg-row"><div class="bg-label">Professioni sanitarie</div><div class="bg-track"><div class="bg-fill" style="left:0;width:54%;background:var(--accent);"></div></div><div class="bg-value">0,54</div></div>
+        <div class="bg-row"><div class="bg-label">Management aziendale</div><div class="bg-track"><div class="bg-fill" style="left:0;width:53%;background:var(--accent);"></div></div><div class="bg-value">0,53</div></div>
+        <div class="bg-row"><div class="bg-label">Industria Life Sciences</div><div class="bg-track"><div class="bg-fill" style="left:0;width:46%;background:var(--navy);"></div></div><div class="bg-value">0,46</div></div>
+        <div class="bg-row"><div class="bg-label">Istituzioni</div><div class="bg-track"><div class="bg-fill" style="left:0;width:45%;background:var(--navy);"></div></div><div class="bg-value">0,45</div></div>
+        <div class="bg-row"><div class="bg-label">Utenti</div><div class="bg-track"><div class="bg-fill" style="left:0;width:43%;background:var(--amber);"></div></div><div class="bg-value">0,43</div></div>
+        <div class="sub" style="margin-top:6px;">Sono proprio gli utenti/cittadini a dare la valutazione più bassa: 0,43, contro lo 0,54 delle professioni sanitarie.</div>
+        <div class="source">CREA Sanità XIV ed. 2026, Scheda Regione Liguria</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag bi">CREA Sanità</span>
+        <h3>Variazione Indice di Performance, Liguria 2019→2025</h3>
+        <div class="sub">Punti percentuali, scala centrata sullo zero</div>
+        <div class="bg-row"><div class="bg-label">Liguria</div><div class="bg-track diverging"><div class="bg-fill" style="left:50%;width:2%;background:var(--grey);"></div></div><div class="bg-value">+0,01 p.p.</div></div>
+        <div class="sub" style="margin-top:6px;">Sostanzialmente invariata in sei anni: la Liguria è, insieme a Lombardia, Emilia-Romagna e Piemonte, tra le regioni con la variazione più bassa d'Italia — nonostante un punto di partenza già a metà classifica.</div>
+        <div class="source">CREA Sanità XIV ed. 2026, Scheda Regione Liguria</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag best">CREA Sanità</span>
+        <h3>Percezione di miglioramento del SSN, Liguria</h3>
+        <div class="sub">% di cittadini liguri che percepisce un miglioramento del servizio, media aree indagate</div>
+        <div class="bg-row"><div class="bg-label">Liguria</div><div class="bg-track"><div class="bg-fill" style="left:0;width:21.8%;background:var(--amber);"></div></div><div class="bg-value">21,8%</div></div>
+        <div class="sub" style="margin-top:6px;">Dettaglio per tipologia di servizio nella sezione 3.</div>
+        <div class="source">CREA Sanità XIV ed. 2026, indagine PREMs</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DETTAGLIO DIMENSIONI -->
+  <section class="block">
+    <h2 class="section-title">Liguria: dettaglio per dimensione e indicatore</h2>
+    <p class="subtitle" style="margin:8px 0 14px;">Scheda Regione CREA Sanità: confronto con la media nazionale (colore) e andamento rispetto al 2019 (freccia). <span class="lg" style="display:inline-flex;align-items:center;gap:5px;"><span class="ind-dot green" style="display:inline-block;"></span>migliore della media</span> · <span class="lg" style="display:inline-flex;align-items:center;gap:5px;"><span class="ind-dot red" style="display:inline-block;"></span>peggiore della media</span> · <span class="ind-arrow up">▲</span> migliorato dal 2019 · <span class="ind-arrow down">▼</span> peggiorato dal 2019</p>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Innovazione</h3>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Quota di Case di Comunità con almeno un servizio attivo</span><span class="ind-arrow up">▲</span></div>
+        <div class="ind-row"><span class="ind-dot red"></span><span class="ind-txt">Tasso di utilizzo del Fascicolo Sanitario Elettronico</span></div>
+        <div class="ind-row"><span class="ind-dot red"></span><span class="ind-txt">Quota di interventi con tecniche mininvasive</span></div>
+      </div>
+
+      <div class="card">
+        <h3>Equità</h3>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Quota di persone che rinunciano a prestazioni sanitarie</span><span class="ind-arrow up">▲</span></div>
+        <div class="ind-row"><span class="ind-dot red"></span><span class="ind-txt">Quota prestazioni priorità B eseguite nei tempi previsti</span><span class="ind-arrow down">▼</span></div>
+        <div class="ind-row"><span class="ind-dot red"></span><span class="ind-txt">Tasso di mobilità passiva DRG bassa/media complessità</span></div>
+      </div>
+
+      <div class="card">
+        <h3>Sociale</h3>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Over 75 non autosufficienti in trattamento residenziale</span><span class="ind-arrow up">▲</span></div>
+        <div class="ind-row"><span class="ind-dot red"></span><span class="ind-txt">Disabili/anziani con assistenza domiciliare integrata</span></div>
+        <div class="ind-row"><span class="ind-dot red"></span><span class="ind-txt">Quota distretti con integrazione socio-sanitaria</span></div>
+      </div>
+
+      <div class="card">
+        <h3>Economico-finanziaria</h3>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Spesa sanitaria pubblica pro capite: gap vs media UE</span><span class="ind-arrow up">▲</span></div>
+        <div class="ind-row"><span class="ind-dot red"></span><span class="ind-txt">Incidenza spesa consumi sanitari privati delle famiglie</span></div>
+        <div class="ind-row"><span class="ind-dot red"></span><span class="ind-txt">Spesa sanitaria totale pro capite standardizzata</span></div>
+      </div>
+
+      <div class="card">
+        <h3>Appropriatezza</h3>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Interventi oncologici (mammella/prostata/polmone) in strutture con casistica adeguata</span><span class="ind-arrow up">▲</span></div>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Ospedalizzazione evitabile per patologie croniche</span></div>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Adesione ai programmi di prevenzione</span></div>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Accessi al PS nei giorni feriali (codici bianco/verde)</span><span class="ind-arrow up">▲</span></div>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Anziani trattati in Assistenza Domiciliare Integrata</span><span class="ind-arrow down">▼</span></div>
+      </div>
+
+      <div class="card">
+        <h3>Esiti</h3>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Mortalità evitabile: giorni perduti standardizzati pro capite</span><span class="ind-arrow up">▲</span></div>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Indice di salute mentale</span></div>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Speranza di vita senza limitazioni funzionali (over 65)</span><span class="ind-arrow up">▲</span></div>
+        <div class="ind-row"><span class="ind-dot green"></span><span class="ind-txt">Qualità di vita percepita in termini di salute</span></div>
+        <div class="ind-row"><span class="ind-dot red"></span><span class="ind-txt">Popolazione che adotta stili di vita corretti</span><span class="ind-arrow down">▼</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TABELLA PERFORMANCE INDEX -->
+  <section class="block">
+    <h2 class="section-title">Indice di Performance CREA Sanità — tutte le regioni (2025)</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Regione</th><th>Indice di performance</th></tr></thead>
+        <tbody>
+          <tr><td>Veneto</td><td><b>0,64</b></td></tr>
+          <tr><td>P.A. Trento</td><td>0,62</td></tr>
+          <tr><td>Toscana</td><td>0,56</td></tr>
+          <tr><td>Friuli Venezia Giulia</td><td>0,55</td></tr>
+          <tr><td>Marche</td><td>0,53</td></tr>
+          <tr><td>P.A. Bolzano</td><td>0,51</td></tr>
+          <tr><td>Emilia-Romagna</td><td>0,48</td></tr>
+          <tr class="hl"><td><b>Liguria</b></td><td><b>0,48</b></td></tr>
+          <tr><td>Piemonte</td><td>0,48</td></tr>
+          <tr><td>Sardegna</td><td>0,47</td></tr>
+          <tr><td>Lombardia</td><td>0,47</td></tr>
+          <tr><td>Lazio</td><td>0,45</td></tr>
+          <tr><td>Abruzzo</td><td>0,43</td></tr>
+          <tr><td>Umbria</td><td>0,42</td></tr>
+          <tr><td>Puglia</td><td>0,39</td></tr>
+          <tr><td>Basilicata</td><td>0,37</td></tr>
+          <tr><td>Campania</td><td>0,37</td></tr>
+          <tr><td>Valle d'Aosta</td><td>0,37</td></tr>
+          <tr><td>Sicilia</td><td>0,36</td></tr>
+          <tr><td>Molise</td><td>0,36</td></tr>
+          <tr><td>Calabria</td><td><b>0,36</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 3. CITTADINI -->
+  <section class="block">
+    <div class="theme-head"><h2 class="section-title">3. Cosa dicono i cittadini liguri</h2></div>
+    <div class="grid">
+
+      <div class="card">
+        <span class="src-tag best">CREA Sanità</span>
+        <h3>Soddisfazione dei cittadini liguri</h3>
+        <div class="sub">Scala 0-10, per tipologia di servizio</div>
+        <div class="bg-row"><div class="bg-label">Facilità reperire farmaci</div><div class="bg-track"><div class="bg-fill" style="left:0;width:88%;background:var(--accent);"></div></div><div class="bg-value">8,8</div></div>
+        <div class="bg-row"><div class="bg-label">MMG e guardia medica</div><div class="bg-track"><div class="bg-fill" style="left:0;width:82%;background:var(--accent);"></div></div><div class="bg-value">8,2</div></div>
+        <div class="bg-row"><div class="bg-label">Assist. non autosufficienti</div><div class="bg-track"><div class="bg-fill" style="left:0;width:79%;background:var(--amber);"></div></div><div class="bg-value">7,9</div></div>
+        <div class="bg-row"><div class="bg-label">Ricoveri in residenze</div><div class="bg-track"><div class="bg-fill" style="left:0;width:78%;background:var(--amber);"></div></div><div class="bg-value">7,8</div></div>
+        <div class="bg-row"><div class="bg-label">Ricovero osp. programmato</div><div class="bg-track"><div class="bg-fill" style="left:0;width:75%;background:var(--amber);"></div></div><div class="bg-value">7,5</div></div>
+        <div class="bg-row"><div class="bg-label">Prestazioni ambulatoriali</div><div class="bg-track"><div class="bg-fill" style="left:0;width:74%;background:var(--amber);"></div></div><div class="bg-value">7,4</div></div>
+        <div class="bg-row"><div class="bg-label">Prevenzione</div><div class="bg-track"><div class="bg-fill" style="left:0;width:72%;background:var(--amber);"></div></div><div class="bg-value">7,2</div></div>
+        <div class="bg-row"><div class="bg-label">Assistenza a domicilio</div><div class="bg-track"><div class="bg-fill" style="left:0;width:72%;background:var(--amber);"></div></div><div class="bg-value">7,2</div></div>
+        <div class="bg-row"><div class="bg-label">Osp. non programmata</div><div class="bg-track"><div class="bg-fill" style="left:0;width:70%;background:var(--amber);"></div></div><div class="bg-value">7,0</div></div>
+        <div class="source">CREA Sanità XIV ed. 2026, indagine PREMs — Scheda Regione Liguria</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag best">CREA Sanità</span>
+        <h3>Percezione di miglioramento, Liguria</h3>
+        <div class="sub">% di cittadini che percepisce un miglioramento, per tipologia</div>
+        <div class="bg-row"><div class="bg-label">Facilità reperire farmaci</div><div class="bg-track"><div class="bg-fill" style="left:0;width:32.4%;background:var(--accent);"></div></div><div class="bg-value">32,4%</div></div>
+        <div class="bg-row"><div class="bg-label">Ricovero osp. programmato</div><div class="bg-track"><div class="bg-fill" style="left:0;width:26.7%;background:var(--accent);"></div></div><div class="bg-value">26,7%</div></div>
+        <div class="bg-row"><div class="bg-label">Osp. non programmata</div><div class="bg-track"><div class="bg-fill" style="left:0;width:24.2%;background:var(--amber);"></div></div><div class="bg-value">24,2%</div></div>
+        <div class="bg-row"><div class="bg-label">Prevenzione</div><div class="bg-track"><div class="bg-fill" style="left:0;width:25.7%;background:var(--amber);"></div></div><div class="bg-value">25,7%</div></div>
+        <div class="bg-row"><div class="bg-label">MMG e guardia medica</div><div class="bg-track"><div class="bg-fill" style="left:0;width:23.7%;background:var(--amber);"></div></div><div class="bg-value">23,7%</div></div>
+        <div class="bg-row"><div class="bg-label">Prestazioni ambulatoriali</div><div class="bg-track"><div class="bg-fill" style="left:0;width:17.9%;background:var(--amber);"></div></div><div class="bg-value">17,9%</div></div>
+        <div class="bg-row"><div class="bg-label">Assistenza a domicilio</div><div class="bg-track"><div class="bg-fill" style="left:0;width:17.2%;background:var(--amber);"></div></div><div class="bg-value">17,2%</div></div>
+        <div class="bg-row"><div class="bg-label">Assist. non autosufficienti</div><div class="bg-track"><div class="bg-fill" style="left:0;width:16.7%;background:var(--accent2);"></div></div><div class="bg-value">16,7%</div></div>
+        <div class="bg-row"><div class="bg-label">Ricoveri in residenze</div><div class="bg-track"><div class="bg-fill" style="left:0;width:11.5%;background:var(--accent2);"></div></div><div class="bg-value">11,5%</div></div>
+        <div class="source">CREA Sanità XIV ed. 2026, indagine PREMs — Scheda Regione Liguria</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TABELLA PERCEZIONE MIGLIORAMENTO -->
+  <section class="block">
+    <h2 class="section-title">Percezione di miglioramento del SSN — tutte le regioni</h2>
+    <p class="subtitle" style="margin:8px 0 14px;">% di cittadini che percepisce un miglioramento del servizio, per tipologia. Regioni a bassa numerosità campionaria accorpate come nella fonte (Valle d'Aosta con Piemonte, P.A. Trento con P.A. Bolzano, Molise con Abruzzo, Basilicata con Puglia).</p>
+    <div class="table-wrap scrollx">
+      <table>
+        <thead><tr><th>Regione</th><th>Osp. non progr.</th><th>Ricovero progr.</th><th>Prevenzione</th><th>Ambulatoriali</th><th>MMG/guardia med.</th><th>Residenze</th><th>Domicilio</th><th>Non autosuff.</th><th>Farmaci</th></tr></thead>
+        <tbody>
+          <tr><td><b>Italia (totale)</b></td><td>18,6%</td><td>17,4%</td><td>23,5%</td><td>18,4%</td><td>20,1%</td><td>14,5%</td><td>14,6%</td><td>16,8%</td><td>30,0%</td></tr>
+          <tr><td>Piemonte</td><td>12,6%</td><td>14,0%</td><td>20,3%</td><td>17,2%</td><td>19,0%</td><td>15,1%</td><td>14,6%</td><td>18,6%</td><td>29,8%</td></tr>
+          <tr><td>Valle d'Aosta*</td><td>12,6%</td><td>14,0%</td><td>20,3%</td><td>17,2%</td><td>19,0%</td><td>15,1%</td><td>14,6%</td><td>18,6%</td><td>29,8%</td></tr>
+          <tr><td>Lombardia</td><td>20,7%</td><td>22,3%</td><td>30,2%</td><td>22,5%</td><td>21,2%</td><td>17,3%</td><td>17,4%</td><td>21,4%</td><td>33,1%</td></tr>
+          <tr><td>P.A. Bolzano</td><td>10,5%</td><td>11,1%</td><td>7,3%</td><td>4,8%</td><td>9,5%</td><td>5,9%</td><td>5,9%</td><td>5,9%</td><td>16,7%</td></tr>
+          <tr><td>P.A. Trento*</td><td>10,5%</td><td>11,1%</td><td>7,3%</td><td>4,8%</td><td>9,5%</td><td>5,9%</td><td>5,9%</td><td>5,9%</td><td>16,7%</td></tr>
+          <tr><td>Veneto</td><td>25,0%</td><td>21,1%</td><td>36,4%</td><td>19,8%</td><td>14,6%</td><td>13,8%</td><td>18,6%</td><td>22,0%</td><td>32,6%</td></tr>
+          <tr><td>Friuli Venezia Giulia</td><td>15,4%</td><td>24,0%</td><td>15,6%</td><td>15,2%</td><td>25,0%</td><td>5,6%</td><td>4,8%</td><td>9,5%</td><td>36,4%</td></tr>
+          <tr class="hl"><td><b>Liguria</b></td><td><b>24,2%</b></td><td><b>26,7%</b></td><td><b>25,7%</b></td><td><b>17,9%</b></td><td><b>23,7%</b></td><td><b>11,5%</b></td><td><b>17,2%</b></td><td><b>16,7%</b></td><td><b>32,4%</b></td></tr>
+          <tr><td>Emilia-Romagna</td><td>19,0%</td><td>20,4%</td><td>17,9%</td><td>16,2%</td><td>21,2%</td><td>8,2%</td><td>15,5%</td><td>15,0%</td><td>21,4%</td></tr>
+          <tr><td>Toscana</td><td>20,0%</td><td>22,2%</td><td>18,3%</td><td>17,6%</td><td>17,2%</td><td>7,7%</td><td>13,3%</td><td>13,8%</td><td>23,0%</td></tr>
+          <tr><td>Umbria</td><td>25,0%</td><td>35,0%</td><td>20,8%</td><td>16,0%</td><td>29,6%</td><td>20,0%</td><td>16,7%</td><td>5,9%</td><td>34,6%</td></tr>
+          <tr><td>Marche</td><td>15,2%</td><td>6,3%</td><td>17,6%</td><td>16,7%</td><td>18,9%</td><td>17,2%</td><td>13,8%</td><td>7,1%</td><td>40,5%</td></tr>
+          <tr><td>Lazio</td><td>20,2%</td><td>17,4%</td><td>32,6%</td><td>21,6%</td><td>23,5%</td><td>14,7%</td><td>12,6%</td><td>11,8%</td><td>34,0%</td></tr>
+          <tr><td>Abruzzo</td><td>30,3%</td><td>20,6%</td><td>26,5%</td><td>22,5%</td><td>24,4%</td><td>32,0%</td><td>18,5%</td><td>23,1%</td><td>35,0%</td></tr>
+          <tr><td>Molise*</td><td>30,3%</td><td>20,6%</td><td>26,5%</td><td>22,5%</td><td>24,4%</td><td>32,0%</td><td>18,5%</td><td>23,1%</td><td>35,0%</td></tr>
+          <tr><td>Campania</td><td>18,2%</td><td>15,6%</td><td>25,6%</td><td>17,4%</td><td>20,9%</td><td>11,8%</td><td>15,8%</td><td>16,5%</td><td>30,8%</td></tr>
+          <tr><td>Puglia</td><td>20,4%</td><td>13,5%</td><td>21,8%</td><td>21,4%</td><td>22,3%</td><td>14,3%</td><td>16,1%</td><td>19,5%</td><td>29,4%</td></tr>
+          <tr><td>Basilicata*</td><td>20,4%</td><td>13,5%</td><td>21,8%</td><td>21,4%</td><td>22,3%</td><td>14,3%</td><td>16,1%</td><td>19,5%</td><td>29,4%</td></tr>
+          <tr><td>Calabria</td><td>16,7%</td><td>18,4%</td><td>22,2%</td><td>17,8%</td><td>19,6%</td><td>18,8%</td><td>15,8%</td><td>17,6%</td><td>32,6%</td></tr>
+          <tr><td>Sicilia</td><td>15,7%</td><td>14,9%</td><td>20,5%</td><td>15,8%</td><td>18,6%</td><td>14,0%</td><td>12,0%</td><td>12,6%</td><td>31,1%</td></tr>
+          <tr><td>Sardegna</td><td>10,5%</td><td>8,3%</td><td>17,9%</td><td>14,3%</td><td>11,9%</td><td>18,2%</td><td>12,1%</td><td>22,6%</td><td>22,0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="subtitle" style="margin:10px 2px 0;font-size:12px;">* regione accorpata alla riga precedente per bassa numerosità campionaria, come da fonte CREA Sanità.</p>
+  </section>
+
+  <!-- COLLEGAMENTI AL PROGRAMMA -->
+  <section class="block">
+    <div class="theme-head"><h2 class="section-title">Collegamenti alle tesi ORA!</h2></div>
+
+    <div class="link-card">
+      <span class="tesi">Agenas + CREA Sanità</span><span class="tesi">Tesi Salute e Servizi Sanitari</span>
+      <p>Il miglioramento sulle liste d'attesa è reale e va riconosciuto: la Liguria è tra le due sole regioni italiane a migliorare in modo significativo sia sulle prime visite sia sugli esami diagnostici. Ma l'Indice di Performance CREA Sanità mostra che <span class="fatto">la tenuta strutturale del sistema è ferma da sei anni</span> (+0,01 p.p. dal 2019): un correttivo emergenziale su un solo indicatore non basta a invertire una traiettoria di lungo periodo che riguarda spesa, equità e innovazione.</p>
+    </div>
+
+    <div class="link-card">
+      <span class="tesi">CREA Sanità — dimensione Equità</span><span class="tesi">Tesi Salute e Servizi Sanitari</span>
+      <p>Sono proprio gli utenti, tra le cinque categorie di stakeholder intervistate dal panel CREA, a dare alla Liguria la valutazione più bassa (<span class="fatto">0,43 su 1</span>, contro lo 0,54 delle professioni sanitarie): un divario tra il punto di vista di chi eroga il servizio e quello di chi lo riceve che merita attenzione politica, non solo comunicativa.</p>
+    </div>
+
+    <div class="link-card">
+      <span class="tesi">CREA Sanità — indagine cittadini</span><span class="tesi">Tema nuovo — assistenza domiciliare e residenziale</span>
+      <p>Le due aree con la percezione di miglioramento più bassa in Liguria sono i <span class="fatto">ricoveri in residenza (11,5%)</span> e l'<span class="fatto">assistenza alle persone non autosufficienti (16,7%)</span>: proprio le prestazioni rivolte alla popolazione anziana, in una regione che è tra le più anziane d'Italia.</p>
+    </div>
+
+  </section>
+
+</div>
+
+<div class="footer-shell">
+<footer>
+  <h4>Fonti e nota metodologica</h4>
+  Pagina generata per ORA! Liguria a partire da due fonti: <span class="pill mdl">Agenas</span> Agenzia Nazionale per i Servizi Sanitari Regionali, "Bollettino sui Tempi di Attesa n. 0", dati al 30/06/2026 · <span class="pill bi">CREA</span> / <span class="pill best">CREA</span> C.R.E.A. Sanità, "Livelli di tutela della Salute: le Performance Regionali", XIV edizione 2026 (Indice di Performance su 22 indicatori e 6 dimensioni; indagine cittadini PREMs su soddisfazione e percezione di miglioramento). I dati sulle liste d'attesa riguardano le prestazioni di primo accesso erogate entro i tempi massimi previsti dalla classe di priorità di prescrizione. I colori verde/rosso negli indicatori CREA indicano lo scostamento dalla media nazionale; le frecce l'andamento rispetto al 2019.
+</footer>
+</div>
+
+</body>
+</html>
