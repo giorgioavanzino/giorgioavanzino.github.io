@@ -73,6 +73,7 @@
   .src-tag.mdl{background:var(--src-mdl);color:#fff;}
   .src-tag.bi{background:var(--src-bi);color:#fff;}
   .src-tag.best{background:var(--src-best);color:var(--accent-ink);}
+  .src-tag.bdi{background:var(--navy);color:#fff;}
 
   .bg-row{display:flex;align-items:center;gap:9px;margin:7px 0;font-size:12.5px;}
   .bg-label{width:150px;flex-shrink:0;color:var(--ink-soft);line-height:1.35;}
@@ -114,7 +115,7 @@
   tr.hl td{background:var(--accent-soft);}
   tr.hl:hover td{background:var(--accent-soft);}
   .pill{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:#fff;padding:2px 8px;border-radius:8px;}
-  .pill.mdl{background:var(--src-mdl);color:#fff;} .pill.bi{background:var(--src-bi);color:#fff;} .pill.best{background:var(--src-best);color:var(--accent-ink);}
+  .pill.mdl{background:var(--src-mdl);color:#fff;} .pill.bi{background:var(--src-bi);color:#fff;} .pill.best{background:var(--src-best);color:var(--accent-ink);} .pill.bdi{background:var(--navy);color:#fff;}
 
   footer{max-width:1280px;margin:34px auto 0;padding:18px 22px;background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);font-size:13px;color:var(--ink-soft);line-height:1.65;}
   footer h4{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);font-weight:600;}
@@ -131,10 +132,10 @@
       <h1>Liste d'attesa in miglioramento, performance del sistema ferma da anni</h1>
     </div>
   </div>
-  <p class="subtitle">Due fonti ufficiali incrociate su un'unica pagina: <strong>Agenas</strong> (Bollettino sui Tempi di Attesa n. 0, dati al 30/06/2026) e <strong>C.R.E.A. Sanità</strong> ("Livelli di tutela della Salute: le Performance Regionali", XIV edizione 2026). Ogni scheda è etichettata con la fonte da cui viene il dato.</p>
+  <p class="subtitle">Quattro fonti ufficiali incrociate su un'unica pagina: <strong>Agenas</strong> (Bollettino sui Tempi di Attesa n. 0, dati al 30/06/2026), <strong>C.R.E.A. Sanità</strong> ("Livelli di tutela della Salute: le Performance Regionali", XIV edizione 2026), <strong>Banca d'Italia</strong> ("L'economia della Liguria", giugno 2026) e <strong>Istat</strong> (BesT 2025, benessere equo e sostenibile). Ogni scheda è etichettata con la fonte da cui viene il dato.</p>
   <div class="badge-row">
-    <span class="badge">2 fonti ufficiali</span>
-    <span class="badge">3 sezioni tematiche</span>
+    <span class="badge">4 fonti ufficiali</span>
+    <span class="badge">4 sezioni tematiche</span>
     <span class="badge">Confronto con tutte le altre regioni</span>
   </div>
 </header>
@@ -144,8 +145,9 @@
   <div class="legend-row">
     <span>Fonti:</span>
     <span class="lg"><span class="dot" style="background:var(--src-mdl);"></span> Agenas, Bollettino Liste di Attesa n.0 (dati al 30/06/2026)</span>
-    <span class="lg"><span class="dot" style="background:var(--src-bi);"></span> C.R.E.A. Sanità, Indice di Performance (XIV ed. 2026)</span>
-    <span class="lg"><span class="dot" style="background:var(--src-best);"></span> C.R.E.A. Sanità, indagine cittadini PREMs (XIV ed. 2026)</span>
+    <span class="lg"><span class="dot" style="background:var(--src-bi);"></span> C.R.E.A. Sanità, XIV ed. 2026 (Indice di Performance e indagine cittadini)</span>
+    <span class="lg"><span class="dot" style="background:var(--navy);"></span> Banca d'Italia, "L'economia della Liguria" (giu. 2026, dati 2025)</span>
+    <span class="lg"><span class="dot" style="background:var(--src-best);"></span> Istat, BesT 2025 (benessere territoriale)</span>
   </div>
 
   <div class="hero">
@@ -310,7 +312,7 @@
       </div>
 
       <div class="card">
-        <span class="src-tag best">CREA Sanità</span>
+        <span class="src-tag bi">CREA Sanità</span>
         <h3>Percezione di miglioramento del SSN, Liguria</h3>
         <div class="sub">% di cittadini liguri che percepisce un miglioramento del servizio, media aree indagate</div>
         <div class="bg-row"><div class="bg-label">Liguria</div><div class="bg-track"><div class="bg-fill" style="left:0;width:21.8%;background:var(--amber);"></div></div><div class="bg-value">21,8%</div></div>
@@ -415,7 +417,7 @@
     <div class="grid">
 
       <div class="card">
-        <span class="src-tag best">CREA Sanità</span>
+        <span class="src-tag bi">CREA Sanità</span>
         <h3>Soddisfazione dei cittadini liguri</h3>
         <div class="sub">Scala 0-10, per tipologia di servizio</div>
         <div class="bg-row"><div class="bg-label">Facilità reperire farmaci</div><div class="bg-track"><div class="bg-fill" style="left:0;width:88%;background:var(--accent);"></div></div><div class="bg-value">8,8</div></div>
@@ -431,7 +433,7 @@
       </div>
 
       <div class="card">
-        <span class="src-tag best">CREA Sanità</span>
+        <span class="src-tag bi">CREA Sanità</span>
         <h3>Percezione di miglioramento, Liguria</h3>
         <div class="sub">% di cittadini che percepisce un miglioramento, per tipologia</div>
         <div class="bg-row"><div class="bg-label">Facilità reperire farmaci</div><div class="bg-track"><div class="bg-fill" style="left:0;width:32.4%;background:var(--accent);"></div></div><div class="bg-value">32,4%</div></div>
@@ -485,6 +487,138 @@
     <p class="subtitle" style="margin:10px 2px 0;font-size:12px;">* regione accorpata alla riga precedente per bassa numerosità campionaria, come da fonte CREA Sanità.</p>
   </section>
 
+  <!-- 4. MORTALITÀ, DOTAZIONE E MOBILITÀ SANITARIA -->
+  <section class="block">
+    <div class="theme-head"><h2 class="section-title">4. Mortalità, dotazione e mobilità sanitaria</h2></div>
+    <div class="grid">
+
+      <div class="card">
+        <span class="src-tag best">Istat BesT</span>
+        <h3>Speranza di vita e mortalità, Liguria vs Italia</h3>
+        <div class="sub">Indicatori Bes dei territori 2025 — per la mortalità, valori più bassi indicano un livello di benessere migliore</div>
+        <div class="bg-group">
+          <div class="gtitle">Speranza di vita alla nascita, 2024 (anni)</div>
+          <div class="bg-row"><div class="bg-label">Liguria</div><div class="bg-track"><div class="bg-fill" style="left:0;width:83.5%;background:var(--accent);"></div></div><div class="bg-value">83,5</div></div>
+          <div class="bg-row"><div class="bg-label">Italia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:83.4%;background:var(--grey);"></div></div><div class="bg-value">83,4</div></div>
+        </div>
+        <div class="bg-group">
+          <div class="gtitle">Mortalità evitabile 0-74 anni, 2022 (per 10.000)</div>
+          <div class="bg-row"><div class="bg-label">Liguria</div><div class="bg-track"><div class="bg-fill" style="left:0;width:51.3%;background:var(--accent);"></div></div><div class="bg-value">17,1</div></div>
+          <div class="bg-row"><div class="bg-label">Italia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:52.8%;background:var(--grey);"></div></div><div class="bg-value">17,6</div></div>
+        </div>
+        <div class="bg-group">
+          <div class="gtitle">Mortalità per tumore 20-64 anni, 2022 (per 10.000)</div>
+          <div class="bg-row"><div class="bg-label">Liguria</div><div class="bg-track"><div class="bg-fill" style="left:0;width:43.2%;background:var(--accent);"></div></div><div class="bg-value">7,2</div></div>
+          <div class="bg-row"><div class="bg-label">Italia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:45.6%;background:var(--grey);"></div></div><div class="bg-value">7,6</div></div>
+        </div>
+        <div class="source">Istat, BesT 2025 Liguria, Tavola 1</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag best">Istat BesT</span>
+        <h3>Dotazione sanitaria, Liguria vs Italia</h3>
+        <div class="sub">Posti letto e personale medico, valori per 10.000 abitanti</div>
+        <div class="bg-group">
+          <div class="gtitle">Posti letto per specialità ad elevata assistenza, 2022</div>
+          <div class="bg-row"><div class="bg-label">Liguria</div><div class="bg-track"><div class="bg-fill" style="left:0;width:42%;background:var(--green);"></div></div><div class="bg-value">4,2</div></div>
+          <div class="bg-row"><div class="bg-label">Italia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:32%;background:var(--grey);"></div></div><div class="bg-value">3,2</div></div>
+        </div>
+        <div class="bg-group">
+          <div class="gtitle">Medici specialisti, 2023</div>
+          <div class="bg-row"><div class="bg-label">Liguria</div><div class="bg-track"><div class="bg-fill" style="left:0;width:79.6%;background:var(--green);"></div></div><div class="bg-value">39,8</div></div>
+          <div class="bg-row"><div class="bg-label">Italia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:68.2%;background:var(--grey);"></div></div><div class="bg-value">34,1</div></div>
+        </div>
+        <div class="bg-group">
+          <div class="gtitle">Posti letto negli ospedali, 2022</div>
+          <div class="bg-row"><div class="bg-label">Liguria</div><div class="bg-track"><div class="bg-fill" style="left:0;width:72.2%;background:var(--green);"></div></div><div class="bg-value">36,1</div></div>
+          <div class="bg-row"><div class="bg-label">Italia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:66.6%;background:var(--grey);"></div></div><div class="bg-value">33,3</div></div>
+        </div>
+        <div class="sub" style="margin-top:6px;">Sulla carta la Liguria ha più posti letto e più medici specialisti della media italiana, trainata soprattutto da Genova.</div>
+        <div class="source">Istat, BesT 2025 Liguria, Tavola 11</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag best">Istat BesT</span>
+        <h3>Emigrazione ospedaliera: il rovescio della medaglia</h3>
+        <div class="sub">Quota di ricoveri di residenti avvenuti in una struttura di un'altra regione, 2023</div>
+        <div class="bg-row"><div class="bg-label"><b>Liguria</b></div><div class="bg-track"><div class="bg-fill" style="left:0;width:61.2%;background:var(--accent2);"></div></div><div class="bg-value"><b>15,3%</b></div></div>
+        <div class="bg-row"><div class="bg-label">Nord Ovest</div><div class="bg-track"><div class="bg-fill" style="left:0;width:27.2%;background:var(--grey);"></div></div><div class="bg-value">6,8%</div></div>
+        <div class="bg-row"><div class="bg-label">Italia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:34.4%;background:var(--grey);"></div></div><div class="bg-value">8,6%</div></div>
+        <div class="sub" style="margin-top:6px;">Nonostante la buona dotazione di posti letto e medici, quasi un ricovero su sei di un residente ligure avviene fuori regione: più del doppio della media del Nord Ovest.</div>
+        <div class="source">Istat, BesT 2025 Liguria, Tavola 11</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag bdi">Banca d'Italia</span>
+        <h3>Il costo della mobilità sanitaria passiva</h3>
+        <div class="sub">Costo del servizio sanitario sostenuto per i residenti liguri, confronto con l'Italia</div>
+        <div class="bg-row"><div class="bg-label"><b>Liguria</b></div><div class="bg-track"><div class="bg-fill" style="left:0;width:78.4%;background:var(--amber);"></div></div><div class="bg-value"><b>2.745 €</b></div></div>
+        <div class="bg-row"><div class="bg-label">Italia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:72.1%;background:var(--grey);"></div></div><div class="bg-value">2.523 €</div></div>
+        <div class="sub" style="margin-top:6px;">Costo pro capite 2024, +3,2% nel 2025 (Italia +3,3%). Il saldo di mobilità sanitaria interregionale è negativo per <b>73 milioni di euro</b> nel 2024: i liguri curati in altre regioni costano alla Liguria più di quanto la regione incassi curando pazienti provenienti da fuori.</div>
+        <div class="source">Banca d'Italia, "L'economia della Liguria" 2026, § La sanità e Tav. a5.8</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag bdi">Banca d'Italia</span>
+        <h3>PNRR Sanità: a che punto siamo</h3>
+        <div class="sub">Stato di attivazione delle strutture territoriali previste dal Piano, fine 2025</div>
+        <div class="bg-row"><div class="bg-label">Case di Comunità attive</div><div class="bg-track"><div class="bg-fill" style="left:0;width:64.7%;background:var(--amber);"></div></div><div class="bg-value">22 su 34</div></div>
+        <div class="bg-row"><div class="bg-label">Ospedali di Comunità</div><div class="bg-track"><div class="bg-fill" style="left:0;width:18.2%;background:var(--accent2);"></div></div><div class="bg-value">2 su 11</div></div>
+        <div class="bg-row"><div class="bg-label">Centrali Op. Territoriali</div><div class="bg-track"><div class="bg-fill" style="left:0;width:100%;background:var(--green);"></div></div><div class="bg-value">17 su 17</div></div>
+        <div class="sub" style="margin-top:6px;">Delle 22 Case di Comunità attive, solo 4 offrono già tutti i servizi con personale adeguato. In linea con gli obiettivi PNRR: l'Assistenza Domiciliare Integrata (oltre il 10% degli over 65) e la telemedicina, che ha coinvolto quasi 11.000 pazienti a fronte di un obiettivo regionale stimato di circa 7.600.</div>
+        <div class="source">Banca d'Italia, "L'economia della Liguria" 2026, § La sanità</div>
+      </div>
+
+      <div class="card">
+        <span class="src-tag bdi">Banca d'Italia</span>
+        <h3>Fascicolo Sanitario Elettronico: il divario digitale</h3>
+        <div class="sub">Utilizzo del FSE da parte dei cittadini liguri, 2025</div>
+        <div class="bg-group">
+          <div class="gtitle">Ha dato il consenso alla consultazione del proprio FSE</div>
+          <div class="bg-row"><div class="bg-label">Liguria</div><div class="bg-track"><div class="bg-fill" style="left:0;width:15%;background:var(--accent2);"></div></div><div class="bg-value">15%</div></div>
+          <div class="bg-row"><div class="bg-label">Italia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:45%;background:var(--grey);"></div></div><div class="bg-value">45%</div></div>
+        </div>
+        <div class="bg-group">
+          <div class="gtitle">Tra chi ha il FSE alimentato, lo ha consultato</div>
+          <div class="bg-row"><div class="bg-label">Liguria</div><div class="bg-track"><div class="bg-fill" style="left:0;width:9%;background:var(--accent2);"></div></div><div class="bg-value">&lt;10%</div></div>
+          <div class="bg-row"><div class="bg-label">Italia</div><div class="bg-track"><div class="bg-fill" style="left:0;width:27%;background:var(--grey);"></div></div><div class="bg-value">27%</div></div>
+        </div>
+        <div class="source">Banca d'Italia, "L'economia della Liguria" 2026, § La sanità</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TABELLA COSTI SANITARI -->
+  <section class="block">
+    <h2 class="section-title">Costi del servizio sanitario in Liguria — dettaglio 2024</h2>
+    <p class="subtitle" style="margin:8px 0 14px;">Costi sostenuti dalle strutture sanitarie ubicate in Liguria, per natura della spesa. Variazioni percentuali sull'anno precedente (2024/23) e stimate per il 2025 (2025/24, dati ancora provvisori).</p>
+    <div class="table-wrap scrollx">
+      <table>
+        <thead><tr><th>Voce di spesa</th><th>Liguria, mln € (2024)</th><th>Var. % 24/23</th><th>Var. % 25/24 (stima)</th><th>Italia, mln € (2024)</th><th>Var. % 24/23</th><th>Var. % 25/24 (stima)</th></tr></thead>
+        <tbody>
+          <tr><td><b>Costi sostenuti dalle strutture liguri</b></td><td><b>4.071</b></td><td>+4,7%</td><td>+3,4%</td><td><b>149.476</b></td><td>+3,8%</td><td>+3,3%</td></tr>
+          <tr><td>Gestione diretta</td><td>2.967</td><td>+5,5%</td><td>+5,6%</td><td>104.059</td><td>+4,0%</td><td>+4,0%</td></tr>
+          <tr><td>— acquisto di beni</td><td>771</td><td>+4,7%</td><td>+8,4%</td><td>27.432</td><td>+8,7%</td><td>+6,0%</td></tr>
+          <tr><td>— spese per il personale</td><td>1.258</td><td>+4,3%</td><td>+6,6%</td><td>40.787</td><td>+2,9%</td><td>+4,5%</td></tr>
+          <tr><td>— spese per servizi</td><td>557</td><td>+3,2%</td><td>+7,7%</td><td>20.130</td><td>+4,1%</td><td>+5,0%</td></tr>
+          <tr><td>— altri costi</td><td>381</td><td>+15,3%</td><td>-6,9%</td><td>15.710</td><td>-0,7%</td><td>-2,1%</td></tr>
+          <tr><td>Enti convenzionati e accreditati</td><td>1.103</td><td>+2,8%</td><td>-2,9%</td><td>45.072</td><td>+3,4%</td><td>+2,2%</td></tr>
+          <tr><td>— farmaceutica convenzionata</td><td>189</td><td>+0,7%</td><td>+3,7%</td><td>8.182</td><td>+2,5%</td><td>+4,0%</td></tr>
+          <tr><td>— assistenza sanitaria di base</td><td>154</td><td>+0,8%</td><td>-0,6%</td><td>6.871</td><td>+2,2%</td><td>0,0%</td></tr>
+          <tr><td>— ospedaliera accreditata</td><td>224</td><td>+2,5%</td><td>-22,5%</td><td>9.468</td><td>+1,7%</td><td>+0,4%</td></tr>
+          <tr><td>— specialistica</td><td>134</td><td>+6,5%</td><td>-15,6%</td><td>5.539</td><td>+2,2%</td><td>-0,8%</td></tr>
+          <tr><td>— riabilitativa, integrativa e protesica</td><td>149</td><td>+2,0%</td><td>+2,2%</td><td>3.715</td><td>+3,3%</td><td>+4,8%</td></tr>
+          <tr><td>— altra assistenza</td><td>252</td><td>+4,5%</td><td>+11,8%</td><td>10.975</td><td>+7,3%</td><td>+4,4%</td></tr>
+          <tr class="hl"><td><b>Saldo mobilità sanitaria interregionale</b></td><td><b>-73</b></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td><b>Costi per i residenti (pro capite, €)</b></td><td><b>2.745</b></td><td>+4,7%</td><td>+3,2%</td><td><b>2.523</b></td><td>+3,8%</td><td>+3,3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="subtitle" style="margin:10px 2px 0;font-size:12px;">Il saldo di mobilità sanitaria interregionale è negativo quando il costo sostenuto per curare i residenti liguri in altre regioni supera i ricavi ottenuti curando pazienti non residenti in Liguria. I costi non sono rettificati per il pay-back su dispositivi medici e farmaceutica.</p>
+    <p class="subtitle" style="margin:6px 2px 0;font-size:12px;">Fonte: Banca d'Italia, "L'economia della Liguria" 2026, Tavola a5.8.</p>
+  </section>
+
   <!-- COLLEGAMENTI AL PROGRAMMA -->
   <section class="block">
     <div class="theme-head"><h2 class="section-title">Collegamenti alle tesi ORA!</h2></div>
@@ -511,7 +645,7 @@
 <div class="footer-shell">
 <footer>
   <h4>Fonti e nota metodologica</h4>
-  Pagina generata per ORA! Liguria a partire da due fonti: <span class="pill mdl">Agenas</span> Agenzia Nazionale per i Servizi Sanitari Regionali, "Bollettino sui Tempi di Attesa n. 0", dati al 30/06/2026 · <span class="pill bi">CREA</span> / <span class="pill best">CREA</span> C.R.E.A. Sanità, "Livelli di tutela della Salute: le Performance Regionali", XIV edizione 2026 (Indice di Performance su 22 indicatori e 6 dimensioni; indagine cittadini PREMs su soddisfazione e percezione di miglioramento). I dati sulle liste d'attesa riguardano le prestazioni di primo accesso erogate entro i tempi massimi previsti dalla classe di priorità di prescrizione. I colori verde/rosso negli indicatori CREA indicano lo scostamento dalla media nazionale; le frecce l'andamento rispetto al 2019.
+  Pagina generata per ORA! Liguria a partire da quattro fonti: <span class="pill mdl">Agenas</span> Agenzia Nazionale per i Servizi Sanitari Regionali, "Bollettino sui Tempi di Attesa n. 0", dati al 30/06/2026 · <span class="pill bi">CREA</span> C.R.E.A. Sanità, "Livelli di tutela della Salute: le Performance Regionali", XIV edizione 2026 (Indice di Performance su 22 indicatori e 6 dimensioni; indagine cittadini PREMs su soddisfazione e percezione di miglioramento) · <span class="pill bdi">BI</span> Banca d'Italia, "L'economia della Liguria", Economie regionali n.7, giugno 2026 (§ La sanità e Tav. a5.8, Costi del servizio sanitario) · <span class="pill best">BesT</span> Istat, "Il benessere equo e sostenibile dei territori — Liguria 2025", dominio Salute e Qualità dei servizi. I dati sulle liste d'attesa riguardano le prestazioni di primo accesso erogate entro i tempi massimi previsti dalla classe di priorità di prescrizione. I colori verde/rosso negli indicatori CREA indicano lo scostamento dalla media nazionale; le frecce l'andamento rispetto al 2019. Gli indicatori Istat BesT sono standardizzati dall'Istat per il confronto territoriale; per il dettaglio metodologico si veda la nota metodologica del Report BesT.
 </footer>
 </div>
 
