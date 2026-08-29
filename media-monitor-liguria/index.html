@@ -158,7 +158,7 @@
     <h1>Ora! Liguria - Media Monitor</h1>
     <p class="subtitle">Sedute del <strong>Consiglio Regionale della Liguria</strong> e del <strong>Consiglio Comunale di Genova</strong> con i temi commentabili per ORA!, piu' la rassegna stampa filtrata sulle quattro province liguri. Seleziona una data dal menu per rivedere una seduta passata; di default e' mostrata la piu' recente.</p>
     <div class="head-meta">
-      <span class="chip-updated">Aggiornato: 29 agosto 2026, 09:10</span>
+      <span class="chip-updated">Aggiornato: 29 agosto 2026, 20:35</span>
     </div>
   </header>
 
@@ -184,7 +184,7 @@
   <section class="panel">
     <div class="panel-head">
       <h2>Ultime notizie dai media</h2>
-      <span class="n spacer">aggiornato al 29/08/2026, 09:10</span>
+      <span class="n spacer">aggiornato al 29/08/2026, 20:35</span>
     </div>
     <p class="note">Testate monitorate: Il Secolo XIX, GenovaToday, Primocanale, ANSA Liguria (tutte le province), Liguria24, Genova24, Riviera24 (Imperia), Citta' della Spezia (La Spezia). Le notizie con tema evidenziato sono collegabili a una posizione ORA! esistente; quelle etichettate &ldquo;Di tendenza&rdquo; sono le piu' seguite anche senza un aggancio diretto al programma.</p>
 
@@ -333,6 +333,29 @@ const COMUNE_DATA = {
 };
 
 const NEWS_DATA = [
+  { data: "29/08/2026", fonte: "Primocanale", titolo: "Salis sale alla Guardia ma trova il gelo dei sindaci: la crisi Amt irrompe in processione", url: "https://www.primocanale.it/politica/70937-salis-guardia-trova-gelo-sindaci-crisi-amt-irrompe.html",
+    badges: ["Infrastrutture","Spesa pubblica"],
+    provincia: "Genova",
+    angolo: "Alla tradizionale Festa della Madonna della Guardia, la sindaca Salis ha incontrato un'accoglienza fredda da parte dei sindaci dell'Alta Val Polcevera, in aperta protesta contro il piano di tagli AMT e l'aumento della compartecipazione richiesta ai Comuni; il clima segue le dimissioni di Giancarlo Campora dalle deleghe in Città Metropolitana. La tesi ORA! Infrastrutture (proposta 1, Efficientamento del TPL) chiede rinnovo del parco mezzi e aumento reale dell'offerta, non una contrazione del servizio scaricata sui territori con meno voce in capitolo; la tesi Spesa Pubblica (proposta 3, Razionalizzazione delle partecipate) chiede controlli indipendenti su AMT prima di ogni nuovo impegno finanziario. Per ORA! la freddezza istituzionale mostrata in processione è solo la fotografia di un problema che resta irrisolto nel merito: senza un audit pubblico dei conti AMT e un piano pluriennale condiviso tra Regione, Comune e Città Metropolitana, ogni gesto simbolico non sposta di un centimetro la sostanza della crisi." },
+  { data: "29/08/2026", fonte: "Città della Spezia", titolo: "Natale: «Bucci aumenta di 5 milioni la spesa per le segreterie: si potevano assumere 70 medici»", url: "https://www.cittadellaspezia.com/2026/08/29/natale-bucci-aumenta-di-5-milioni-la-spesa-per-le-segreterie-si-potevano-assumere-70-medici-669722/",
+    badges: ["Spesa pubblica"],
+    angolo: "Il segretario regionale del Pd Davide Natale accusa la Giunta Bucci di aver stanziato oltre 5 milioni di euro aggiuntivi per il personale delle segreterie politiche, i collaboratori e le assunzioni interinali, calcolando che con quella cifra si sarebbero potuti assumere circa 70 medici o 150 infermieri, oppure ristrutturare 170 alloggi ERP oggi sfitti. La tesi ORA! Spesa Pubblica distingue nettamente la spesa improduttiva (moltiplicazione di strutture politiche, incarichi, poltrone) dagli investimenti che aggrediscono davvero i nodi del Paese, a partire dalla sanità, dove l'Italia spende meno della media UE. La Regione replica che si tratta di arretrati contrattuali dovuti per legge: per ORA!, coerentemente con il proprio metodo di giudicare la spesa \"sulla strada dei fatti\", la Regione deve pubblicare la scomposizione integrale del decreto — quanto è dovuto per contratto e quanto è ampliamento discrezionale della struttura politica, unico punto su cui si misurerebbe la fondatezza dell'accusa." },
+  { data: "29/08/2026", fonte: "Liguria24 (fonte: Genova24)", titolo: "Regione, la maggioranza: «Dal Pd sempre e solo falsità. Nessuna mancetta, ma soldi per adeguamenti contrattuali»", url: "https://www.liguria24.it/2026/08/29/regione-la-maggioranza-dal-pd-sempre-e-solo-falsita-nessuna-mancetta-ma-soldi-per-adeguamenti-contrattuali/868677/",
+    badges: ["Spesa pubblica","Infrastrutture"],
+    provincia: "Genova",
+    angolo: "I capigruppo di maggioranza respingono l'accusa di Natale definendola una bugia e rivendicano che il decreto contestato copre solo arretrati contrattuali dovuti a tutti i dipendenti regionali; nella stessa nota rivendicano di aver stanziato 40 milioni di euro per puntellare il capitale di AMT e di garantire un aumento fino a 110 milioni per il riparto nazionale del trasporto pubblico. La tesi ORA! Spesa Pubblica (proposta 3, Razionalizzazione delle partecipate) chiede controlli indipendenti prima di ogni nuovo impegno finanziario sulle partecipate, non solo l'annuncio degli importi; la tesi Infrastrutture (proposta 1) chiede che le risorse si traducano in aumento reale dell'offerta, non in un tamponamento contabile del debito AMT. Per ORA! resta inevasa da entrambe le parti la stessa domanda: dove sono l'audit pubblico sui conti AMT e il piano pluriennale di finanziamento del TPL, senza i quali ogni cifra sbandierata resta propaganda priva di verifica indipendente." },
+  { data: "29/08/2026", fonte: "Liguria24 (fonte: LevanteNews)", titolo: "Rapallo: «Tunnel Fontanabuona, progetto vecchio, costoso e inutile»", url: "https://www.liguria24.it/2026/08/29/rapallo-tunnel-fontanabuona-progetto-vecchio-costoso-e-inutile/868670/",
+    badges: ["Infrastrutture","Ambiente"],
+    provincia: "Genova",
+    angolo: "Unione Popolare di Rapallo ribadisce la propria netta opposizione al Tunnel Rapallo-Fontanabuona, bollandolo come un progetto vecchio, costosissimo e privo di utilità, in nome della tutela ambientale della vallata. Il comunicato ORA! sul Ponte sullo Stretto rivendica il metodo della \"strada dei fatti\": valutare le grandi opere su dati demografici, flussi di traffico, impatti economici e ambientali, senza pregiudizi ideologici né pro né contro; la tesi Infrastrutture, applicata al medesimo Tunnel solo due giorni fa dall'archivio ORA!, ne chiedeva invece un cronoprogramma vincolante, trattandosi di un'opera già finanziata dal 2021 con 230 milioni di euro come compensazione del Ponte Morandi. Per ORA! un'opposizione di principio senza citare un dato aggiornato su traffico e impatto ambientale è tanto ideologica quanto l'entusiasmo acritico della politica che vuole il cantiere a ogni costo: la vallata merita una valutazione tecnica pubblica e aggiornata, non slogan contrapposti." },
+  { data: "29/08/2026", fonte: "Riviera24", titolo: "Velox di Porra, l'amministrazione non cambia idea «Va ridiscusso»", url: "https://www.riviera24.it/2026/08/velox-di-porra-lamministrazione-non-cambia-idea-va-ridiscusso-975017/",
+    badges: ["Di tendenza"],
+    provincia: "Imperia",
+    angolo: "Il sindaco di Ventimiglia Di Muro ha ottenuto un nuovo confronto in Prefettura sul dispositivo di rilevazione della velocità di Porra, proponendo di spostarlo nell'abitato di Trucco dove ravvisa un'esigenza di sicurezza più concreta per pedoni e attività commerciali. Non esiste una posizione ORA! dedicata alla collocazione dei singoli autovelox comunali: la notizia è segnalata per completezza di copertura sulla provincia di Imperia e perché tocca un tema di interesse diffuso — il confine tra autovelox come strumento di sicurezza stradale e come strumento \"per fare cassa\", esplicitamente richiamato dallo stesso sindaco — più che per un aggancio diretto al programma." },
+  { data: "29/08/2026", fonte: "Liguria24 (fonte: IVG)", titolo: "Siccità e clima ancora rovente: in Valbormida è allarme per funghi, castagne e tartufi", url: "https://www.liguria24.it/2026/08/29/siccita-e-clima-ancora-rovente-in-valbormida-e-allarme-per-funghi-castagne-e-tartufi/868676/",
+    badges: ["Agricoltura","Ambiente"],
+    provincia: "Savona",
+    angolo: "La siccità prolungata e le temperature ancora elevate a fine agosto mettono a rischio la stagione di funghi, castagne e tartufi in Alta Valbormida, con i sindaci di Bardineto, Murialdo e Osiglia preoccupati per i proventi dei consorzi che sostengono associazioni e attività dei piccoli paesi. La tesi ORA! Agricoltura, Foreste e Sviluppo Rurale (proposta 3, sostenibilità del territorio rurale) inquadra proprio questo tipo di fragilità: micro-economie locali che dipendono da un'unica stagione naturale, senza diversificazione né margini di resilienza al cambiamento climatico. Non esiste una posizione ORA! dedicata alla raccolta di funghi e tartufi, ma il caso conferma la diagnosi generale della tesi sulla bassa produttività e resilienza del comparto agroforestale ligure, aggravata qui dalla dipendenza climatica di un'intera microeconomia stagionale." },
   { data: "29/08/2026", fonte: "Liguria24", titolo: "Crisi Amt, mancano anche i verificatori per controllare i biglietti: l'azienda avvia una selezione", url: "https://www.genova24.it/2026/08/crisi-amt-verificatori-biglietti-lotta-evasione-473198/",
     badges: ["Infrastrutture","Spesa pubblica"],
     provincia: "Genova",
