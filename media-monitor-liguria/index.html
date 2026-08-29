@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ora! Liguria - Media Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Roboto+Flex:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  /*
+   * Tema unico chiaro, coerente con ora-italia.it (nessuna modalita' scura).
+   * Palette e componenti allineati alla "Mappa della cronaca in Liguria".
+   */
+  :root{
+    --ground:#edf0f2;
+    --surface:#f2f4f8;
+    --surface-solid:#ffffff;
+    --surface-2:#e6e9ef;
+    --ink:#000000;
+    --ink-soft:#4c4f55;
+    --ink-faint:#888d96;
+    --line:#dfe3ea;
+    --accent:#ffd957;
+    --accent-ink:#14120a;
+    --accent-soft:#fff2cc;
+    --link:#1b4fb0;
+    --shadow:4px 4px 12px rgba(0,0,0,0.2);
+    color-scheme:light;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--ground);}
+  body{
+    color:var(--ink);
+    font-family:"Poppins",-apple-system,"Segoe UI",sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;}}
+
+  .shell{max-width:1180px;margin:0 auto;padding:28px 24px 60px;display:flex;flex-direction:column;gap:22px;}
+
+  /* ---------- header ---------- */
+  header.page{display:flex;flex-direction:column;gap:10px;padding-bottom:18px;border-bottom:1px solid var(--line);}
+  .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);font-weight:700;}
+  .eyebrow::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--accent);flex:none;}
+  h1{font-family:"Roboto Flex","Poppins",sans-serif;font-weight:900;font-size:clamp(26px,4vw,40px);margin:0;text-wrap:balance;color:var(--ink);letter-spacing:-0.01em;}
+  .subtitle{color:var(--ink-soft);font-size:15.5px;max-width:78ch;margin:0;}
+  .subtitle code,.note code{background:var(--surface-2);border-radius:4px;padding:1px 6px;font-size:12.5px;}
+  .head-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
+  .chip-updated{display:inline-flex;align-items:center;gap:7px;background:var(--accent-soft);border:1px solid var(--accent);border-radius:8px;padding:5px 12px;font-size:12.5px;font-weight:700;color:var(--ink);}
+  .chip-updated::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none;}
+
+  /* ---------- pannelli ---------- */
+  .panel{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:18px 20px 16px;}
+  .panel-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px;}
+  .panel-head h2{font-family:"Roboto Flex","Poppins",sans-serif;font-size:19px;font-weight:900;margin:0;letter-spacing:-0.01em;}
+  .panel-head .spacer{margin-left:auto;}
+  .panel-head .n{font-size:12px;color:var(--ink-faint);font-weight:600;}
+  select{
+    font-family:"Poppins",sans-serif;font-size:12.5px;font-weight:600;color:var(--ink);
+    background:var(--surface-solid);border:1px solid var(--line);border-radius:8px;
+    padding:6px 10px;color-scheme:light;cursor:pointer;
+  }
+  select:focus-visible{outline:2px solid var(--ink);outline-offset:1px;}
+
+  /* ---------- etichette e liste ---------- */
+  .label{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-faint);margin:0 0 6px;}
+  .label-accent{display:inline-flex;align-items:center;gap:7px;color:var(--ink);}
+  .label-accent::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--accent);flex:none;}
+  ul.temi{margin:0 0 16px;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--ink-soft);}
+  ul.temi li{margin-bottom:2px;}
+  .note{font-size:12.5px;color:var(--ink-faint);line-height:1.6;margin:0 0 14px;}
+
+  /* ---------- chip filtro ---------- */
+  .toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-bottom:16px;}
+  .toolbar-label{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-faint);}
+  .chip{
+    display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:8px;
+    border:1.5px solid var(--ink);background:var(--surface-solid);color:var(--ink);
+    font-family:"Roboto Flex","Poppins",sans-serif;font-size:13px;font-weight:900;
+    cursor:pointer;box-shadow:var(--shadow);transition:background .15s,color .15s,opacity .15s;
+  }
+  .chip[aria-pressed="true"]{background:var(--ink);color:var(--surface-solid);}
+  .chip[aria-pressed="false"]{opacity:.55;}
+  .chip:hover{opacity:.85;}
+  .chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}
+  .filter-status{font-size:12px;font-weight:600;color:var(--ink-soft);}
+
+  /* ---------- card ---------- */
+  .card-list{background:var(--surface-solid);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
+  .card{
+    padding:14px 16px;display:flex;flex-direction:column;gap:7px;
+    border-bottom:1px solid var(--line);border-left:3px solid transparent;
+    transition:background .15s ease,border-color .15s ease;
+  }
+  .card:last-child{border-bottom:none;}
+  .card:hover{background:var(--surface);border-left-color:var(--accent);}
+  .card-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .card-meta{font-size:11.5px;color:var(--ink-faint);font-weight:600;}
+  .card h3{margin:0;font-size:15px;font-weight:700;line-height:1.35;}
+  .card h3 a{color:var(--link);text-decoration:none;}
+  .card h3 a:hover{text-decoration:underline;}
+  .card p.desc{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.55;}
+  .badge{
+    display:inline-flex;align-items:center;font-size:11px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.03em;padding:3px 9px;border-radius:8px;
+  }
+
+  /* ---------- dettaglio ORA! ---------- */
+  details.ora-det{margin:2px 0 0;}
+  details.ora-det summary{
+    font-size:11.5px;font-weight:700;color:var(--ink);cursor:pointer;
+    display:inline-flex;align-items:center;gap:6px;list-style:none;
+    border:1.5px solid var(--ink);border-radius:8px;padding:3px 10px;
+    transition:background .15s ease,color .15s ease;
+  }
+  details.ora-det summary::-webkit-details-marker{display:none;}
+  details.ora-det summary:hover{background:var(--ink);color:var(--surface-solid);}
+  details.ora-det[open] summary{background:var(--ink);color:var(--surface-solid);margin-bottom:8px;}
+  .ora-body{
+    margin:0;font-size:13px;line-height:1.6;color:var(--ink-soft);
+    padding-left:10px;border-left:3px solid var(--accent);
+  }
+
+  .noncorr{font-size:12px;color:var(--ink-faint);line-height:1.55;margin:14px 0 0;}
+  .fonte{font-size:11.5px;margin:8px 0 0;}
+  .fonte a{color:var(--ink-soft);font-weight:600;}
+
+  /* ---------- paginazione ---------- */
+  .pager{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px;flex-wrap:wrap;}
+  .pager .info{font-size:12px;color:var(--ink-soft);font-weight:600;}
+  .pager button{
+    font-family:"Poppins",sans-serif;font-size:12px;font-weight:700;color:var(--ink);
+    background:var(--surface-solid);border:1.5px solid var(--ink);border-radius:8px;
+    padding:5px 12px;cursor:pointer;transition:background .15s ease,color .15s ease;
+  }
+  .pager button:hover:not(:disabled){background:var(--ink);color:var(--surface-solid);}
+  .pager button:disabled{opacity:.4;cursor:default;border-color:var(--line);}
+
+  .empty{font-size:13px;color:var(--ink-soft);padding:16px 14px;text-align:center;border:1.5px dashed var(--line);border-radius:12px;}
+
+  /* ---------- footer ---------- */
+  footer.notes{font-size:12.5px;color:var(--ink-soft);line-height:1.6;padding:16px 20px;}
+  footer.notes .updated{font-size:11.5px;color:var(--ink-faint);}
+
+  @media (max-width:640px){
+    .shell{padding:20px 14px 44px;gap:16px;}
+    .panel{padding:16px 14px 14px;border-radius:18px;}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <header class="page">
+    <span class="eyebrow">ORA! Liguria &middot; Media Monitor</span>
+    <h1>Ora! Liguria - Media Monitor</h1>
+    <p class="subtitle">Sedute del <strong>Consiglio Regionale della Liguria</strong> e del <strong>Consiglio Comunale di Genova</strong> con i temi commentabili per ORA!, piu' la rassegna stampa filtrata sulle quattro province liguri. Seleziona una data dal menu per rivedere una seduta passata; di default e' mostrata la piu' recente.</p>
+    <div class="head-meta">
+      <span class="chip-updated">Aggiornato: 29 agosto 2026, 09:10</span>
+    </div>
+  </header>
+
+  <!-- REGIONE LIGURIA -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Consiglio Regionale Liguria</h2>
+      <select id="regione-select" class="spacer" aria-label="Seleziona data seduta Consiglio Regionale"></select>
+    </div>
+    <div id="regione-content"></div>
+  </section>
+
+  <!-- COMUNE DI GENOVA -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Consiglio Comunale di Genova</h2>
+      <select id="comune-select" class="spacer" aria-label="Seleziona data seduta Consiglio Comunale"></select>
+    </div>
+    <div id="comune-content"></div>
+  </section>
+
+  <!-- RASSEGNA STAMPA -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Ultime notizie dai media</h2>
+      <span class="n spacer">aggiornato al 29/08/2026, 09:10</span>
+    </div>
+    <p class="note">Testate monitorate: Il Secolo XIX, GenovaToday, Primocanale, ANSA Liguria (tutte le province), Liguria24, Genova24, Riviera24 (Imperia), Citta' della Spezia (La Spezia). Le notizie con tema evidenziato sono collegabili a una posizione ORA! esistente; quelle etichettate &ldquo;Di tendenza&rdquo; sono le piu' seguite anche senza un aggancio diretto al programma.</p>
+
+    <div class="toolbar">
+      <span class="toolbar-label">Filtra per provincia</span>
+      <button id="filter-tutte" type="button" class="chip prov-filter-btn" data-provincia="" aria-pressed="true">Tutte</button>
+      <button type="button" class="chip prov-filter-btn" data-provincia="Imperia" aria-pressed="false">Imperia</button>
+      <button type="button" class="chip prov-filter-btn" data-provincia="Savona" aria-pressed="false">Savona</button>
+      <button type="button" class="chip prov-filter-btn" data-provincia="Genova" aria-pressed="false">Genova</button>
+      <button type="button" class="chip prov-filter-btn" data-provincia="La Spezia" aria-pressed="false">La Spezia</button>
+      <span id="filter-status" class="filter-status">Mostrando: tutte le province</span>
+    </div>
+
+    <div id="news-content"></div>
+    <div id="news-pager" class="pager"></div>
+  </section>
+
+  <footer class="panel notes">
+    <p style="margin:0;">Questa pagina viene aggiornata due volte al giorno (9:00 e 20:00) dal monitor automatico di ORA! Liguria, che controlla i comunicati dei consigli, la rassegna stampa e li confronta con l'archivio posizioni ORA!.</p>
+  </footer>
+
+</div>
+
+<script>
+const REGIONE_DATA = {
+  "2026-08-04": {
+    label: "4 agosto 2026",
+    fonte: "https://www.regione.liguria.it/homepage-consiglio/consiglio-regionale/archivio-comunicati-stampa-del-consiglio.html",
+    temi: [
+      "Nomine dei rappresentanti regionali nei parchi liguri",
+      "Situazione ex Ilva Cornigliano: informativa sui tavoli tecnici con sindacati e Governo",
+      "Nuova diga foranea di Genova: costi lievitati, rilievi Anac, rinvio in commissione",
+      "Ordine del giorno unanime su ex Ilva Cornigliano: continuità produttiva e occupazionale",
+      "Fondo regionale per l'occupazione delle persone con disabilità",
+      "Incentivi e investimenti alle botteghe dell'entroterra",
+      "Distaccamenti nautici dei Vigili del Fuoco in Liguria",
+      "Sicurezza nel Municipio Centro Est di Genova (tossicodipendenza)",
+      "Materiale di scavo dello scolmatore del Bisagno, non idoneo al ripascimento",
+      "Esclusione di Comuni liguri dal nuovo elenco dei Comuni montani"
+    ],
+    commentabili: [
+      { badges: ["Sviluppo economico","Lavoro"],
+        titolo: "Ex Ilva Cornigliano",
+        riassunto: "Il Consiglio ha approvato all'unanimità un ordine del giorno che impegna la Giunta a tutelare la continuità produttiva e occupazionale dello stabilimento, dopo l'informativa dell'assessore Piana sui tavoli tecnici con sindacati, Confindustria, Comune di Taranto e Regione Puglia.",
+        testo: "Position Paper ORA! Liguria \"Il futuro dello stabilimento ex Ilva di Cornigliano\" (agosto 2026): l'organico è sceso da 2.596 addetti (2006) a 974 (2025), con produzione oggi a 400-500mila tonnellate contro un'autorizzazione AIA per 2,2 milioni. ORA! sostiene l'Impostazione B (scorporo del dossier da Taranto, modifica solo procedurale dell'Accordo di Programma 2005 per restituire le aree, riconversione strutturale modello Confindustria), condizionata a garanzie occupazionali esplicite e a una clausola vincolante di mantenimento di banda stagnata e zincatura — Cornigliano è l'unico stabilimento italiano a produrre banda stagnata, un monopolio nazionale di prodotto. A sostegno della riconversione, il paper cita il precedente Ansaldo Energia e le 17 manifestazioni di interesse raccolte da Confindustria (~400.000 mq, ~800 addetti). Angolo: appoggiare l'ODG sulla continuità occupazionale ma chiedere che il Consiglio espliciti le sei richieste operative del position paper — scorporo da Taranto, tutela vincolante di banda stagnata/zincatura, trasparenza sui numeri occupazionali, copertura finanziaria delle bonifiche a carico di chi ha inquinato, cronoprogramma pubblico." },
+      { badges: ["Infrastrutture","Trasparenza"],
+        titolo: "Diga foranea di Genova",
+        riassunto: "Dibattito in aula sulla nuova diga foranea di Genova: i costi sono lievitati rispetto alla stima iniziale di 1,3 miliardi di euro, con rilievi di Anac e della magistratura; l'approfondimento è stato rinviato in commissione a partire da settembre.",
+        testo: "Tesi ORA! Spesa Pubblica: l'Italia destina il 54% del PIL alla spesa pubblica (contro il 43% medio OCSE) ma solo il 6,8% agli investimenti fissi lordi, con una qualità della PA percepita tra le più basse d'Europa a fronte di questo prelievo — per ORA! il problema non è solo quanto si spende ma come, e le partecipate/opere pubbliche vanno sottoposte a controlli indipendenti e trasparenza sui costi (principio applicato dalla tesi anche al TUSP sulle partecipate pubbliche). Nessun comunicato ORA! dedicato specificamente alla diga foranea. Angolo: prima del voto in commissione, chiedere pubblicazione dei dati tecnici sullo scostamento dai 1,3 miliardi iniziali e un monitoraggio indipendente degli extra-costi, coerentemente con la richiesta generale ORA! di spesa pubblica di qualità e verificabile." },
+      { badges: ["Salute"],
+        titolo: "Sicurezza Centro Est / tossicodipendenza",
+        riassunto: "Question time Pastorino-Ripamonti sulla presa in carico sanitaria delle persone con tossicodipendenza nel Municipio Centro Est di Genova, in un contesto di crescente allarme per la sicurezza nella zona.",
+        testo: "Tesi ORA! Salute e Servizi Sanitari: la medicina territoriale davvero operativa (intercettare i bisogni prima che diventino emergenze ospedaliere) è una delle proposte cardine, insieme al \"principio di garanzia\" — se il pubblico non riesce a garantire una prestazione nei tempi dovuti, il cittadino non va lasciato solo. Il tema si lega anche al dato, richiamato dalla tesi Spesa Pubblica, di una densità di infermieri italiana (6,53 ogni 1.000 abitanti) sotto la media UE27 (7,53), con un fabbisogno stimato di 200.000 infermieri aggiuntivi. Angolo: la presa in carico della tossicodipendenza nel Centro Est è un caso da manuale di bisogno che sfugge alla medicina territoriale e ricade sull'emergenza/sicurezza urbana; chiedere risorse stabili e strutturali per i servizi territoriali della zona, non solo interventi spot dopo l'allarme sicurezza." }
+    ],
+    nonCorrispondenti: "Nomine nei parchi, incentivi entroterra, distaccamenti VVF, materiale scavo Bisagno e classificazione Comuni montani: nessuna posizione ORA! dedicata in archivio."
+  },
+  "2026-07-27": {
+    label: "27 luglio 2026",
+    fonte: "https://www.regione.liguria.it/homepage-consiglio/consiglio-regionale/archivio-comunicati-stampa-del-consiglio.html",
+    temi: [
+      "DDL 121 \"Disposizioni di adeguamento dell'ordinamento regionale\" approvato (18-13): terminologia disabilità, promozione lavoro, criteri fondi trasporto scolastico, parcheggi strutture ricettive, alloggi ERP anche a Forze Armate, liquidità trasporto pubblico, immersioni in mare, autorizzazioni paesaggistiche nei Comuni senza PUC, anticipazioni liquidità enti strumentali, albo rievocazioni storiche",
+      "Emendamenti al DDL 121: +100mila fondo legalità/antimafia, vasche antincendio nei Comuni, manutenzione rivi e torrenti, 30mila per centenario Pertini, sostegno Comuni esclusi da montanità (FOSMIT), 180mila per auto infermieristica Area 2, prossimità territoriale nella rete sanitaria",
+      "Ordine del giorno unanime sul nuovo Piano regionale per il Diritto allo studio",
+      "Assestamento di bilancio 2026-2028 approvato (18-13): +241,7 mln, di cui sanità +132,3 mln e trasporti/viabilità +17,2 mln; incluso lo stanziamento da 700mila euro per beni confiscati alla mafia",
+      "Respinto l'ordine del giorno per rimodulare l'aumento delle tariffe nelle residenze universitarie Aliseo",
+      "Approvato all'unanimità l'ordine del giorno per dotare di alloggi universitari strutturali il polo di Imperia",
+      "Approvato all'unanimità il piano di ricognizione sugli impianti di climatizzazione nelle strutture sanitarie liguri",
+      "Respinto l'ordine del giorno per il monitoraggio dei tempi di attesa delle ambulanze nei pronto soccorso",
+      "Approvato all'unanimità un protocollo per percorsi protetti in pronto soccorso per pazienti oncologici e immunodepressi",
+      "Approvato all'unanimità lo stanziamento di almeno 2 milioni di euro per il caro-affitti 2026",
+      "Approvati all'unanimità il sostegno ai Comuni esclusi dal Fondo nazionale montagna e ai piccoli gestori degli acquedotti"
+    ],
+    commentabili: [
+      { badges: ["Casa","Istruzione"],
+        titolo: "Alloggi universitari Imperia, caro-affitti e tariffe Aliseo",
+        riassunto: "Approvato all'unanimità l'ordine del giorno per dotare di alloggi universitari strutturali il polo di Imperia e lo stanziamento di almeno 2 milioni di euro per il caro-affitti 2026; respinto invece l'ordine del giorno per rimodulare l'aumento delle tariffe nelle residenze universitarie Aliseo.",
+        testo: "Tesi ORA! Crisi Abitativa: tra il 2010 e il 2023 in Europa gli affitti sono saliti più rapidamente dei redditi, e a pagare il prezzo più alto sono giovani, studenti fuori sede e lavoratori urbani; tra le proposte principali c'è proprio l'aumento degli studentati oltre gli obiettivi già fissati dal PNRR — le risorse del Piano Casa del Governo (970 milioni 2026-2030 per ERP) sono giudicate dalla tesi modeste rispetto a un fabbisogno stimato di circa 500.000 alloggi sociali a livello nazionale. Angolo: sostenere con convinzione l'ODG sugli alloggi universitari di Imperia e lo stanziamento caro-affitti come coerenti con questa linea, ma segnalare che il respingimento della rimodulazione delle tariffe Aliseo va nella direzione opposta, proprio sugli studenti fuori sede che la tesi individua come i più esposti." },
+      { badges: ["Salute"],
+        titolo: "Climatizzazione sanitaria, percorsi oncologici e tempi ambulanze",
+        riassunto: "Approvati all'unanimità il piano di ricognizione sugli impianti di climatizzazione nelle strutture sanitarie liguri e un protocollo per percorsi protetti in pronto soccorso per pazienti oncologici e immunodepressi; respinto il monitoraggio dei tempi di attesa delle ambulanze nei pronto soccorso.",
+        testo: "Tesi ORA! Salute e Servizi Sanitari: la sanità italiana, secondo ORA!, non si sta inceppando per caso ma perché finanziata meno di quanto richiederebbero l'invecchiamento della popolazione e l'aumento dei bisogni di cura (spesa sanitaria pubblica al 6,3% del PIL nel 2024); nel 2023 oltre il 7% della popolazione ha rinunciato a cure necessarie, principalmente per le liste d'attesa. La tesi chiede più risorse stabili (non una tantum) e trasparenza sui dati di sistema come condizione di base. Angolo: apprezzare il piano di climatizzazione e il protocollo oncologico come misure di buon senso approvate all'unanimità, ma criticare con nettezza il respingimento del monitoraggio sui tempi di attesa delle ambulanze — senza dati pubblici sulle liste d'attesa non si può nemmeno misurare il problema che la tesi ORA! chiede di risolvere." },
+      { badges: ["Spesa pubblica"],
+        titolo: "Assestamento di bilancio (+241,7 mln, sanità +132,3 mln)",
+        riassunto: "Approvato con 18 voti a favore e 13 contrari l'assestamento di bilancio 2026-2028: +241,7 milioni di euro complessivi, di cui 132,3 milioni per la sanità e 17,2 milioni per trasporti e viabilità, incluso uno stanziamento di 700mila euro per i beni confiscati alla mafia.",
+        testo: "Tesi ORA! Spesa Pubblica: l'Italia spende relativamente meno della media UE in sanità (6,5% del PIL contro il 7,3% UE) e in istruzione (3,9% contro 4,7%), mentre spende relativamente di più in protezione sociale e servizi generali della PA; la tesi chiede di spostare la composizione della spesa da corrente/improduttiva verso investimenti di qualità, in particolare sanità (assistenza territoriale, infermieristica) e investimenti. Angolo: valutare con favore la priorità data alla sanità nell'assestamento (+132,3 mln, oltre metà del totale), coerente con la richiesta ORA! di colmare il gap italiano sulla spesa sanitaria; chiedere però evidenza pubblica che l'incremento vada su assunzioni mirate e servizi territoriali, non solo su voci di spesa corrente già esistenti." }
+    ],
+    nonCorrispondenti: "Terminologia disabilità, parcheggi strutture ricettive, immersioni in mare, albo rievocazioni storiche, fondo antimafia locale, Comuni montani/FOSMIT e sostegno ai piccoli gestori degli acquedotti: nessuna posizione ORA! dedicata in archivio."
+  }
+};
+
+const COMUNE_DATA = {
+  "2026-08-04": {
+    label: "4 agosto 2026",
+    fonte: "https://smart.comune.genova.it/articoli-comunicati-stampa/consiglio-comunale-del-4-agosto",
+    temi: [
+      "III adeguamento programma triennale lavori pubblici 2026-2028 (60 ODG, approvata 22 voti)",
+      "Regolamento opere di urbanizzazione da soggetti privati (approvato 21 voti, opposizione astenuta)",
+      "Parere contrario a variante piano cave per ex cava Conte (approvato 21 voti)",
+      "Riqualificazione aree Genova-Campasso/Terzo Valico, parcheggio via Ferri (unanimità)",
+      "Lettera dell'assessora Beghin ai CIV: polemica su autonomia e trasparenza",
+      "Inquinamento acustico notturno a Molassana (cantiere scolmatore Bisagno)",
+      "Imputabilità minori: contrarietà della Giunta al ddl del Governo",
+      "Tagli alle linee AMT 5/6 per Erzelli, nuovo orario estivo"
+    ],
+    commentabili: [
+      { badges: ["Giustizia","Diritti civili"],
+        titolo: "Imputabilità minori",
+        riassunto: "Interrogazione a risposta immediata sulla contrarietà della Giunta comunale al disegno di legge del Governo sull'imputabilità dei minori, con richiesta di investire su prevenzione ed educazione anziché su un abbassamento della soglia.",
+        testo: "Le tesi ORA! disponibili non trattano specificamente l'imputabilità dei minori: la tesi Giustizia si concentra su sicurezza urbana, tempi dei processi e criminalità organizzata; la tesi Diritti Civili propone un modello di cittadinanza fondato su libertà individuale e tolleranza delle diversità, senza affrontare la giustizia minorile. Nessun comunicato ORA! dedicato in archivio. Angolo: coerentemente con l'impostazione generale ORA! (dati prima delle giudizi, attenzione alla prevenzione più che alla sola repressione, come nella tesi Giustizia sulla sicurezza urbana), la Giunta genovese chiede di investire su prevenzione ed educazione anziché abbassare la soglia di imputabilità — un orientamento compatibile con la linea ORA!, ma va dichiarato esplicitamente come primo orientamento cauto, non come posizione di partito già consolidata su questo specifico tema." },
+      { badges: ["Infrastrutture","Comuni"],
+        titolo: "Opere pubbliche e urbanizzazione",
+        riassunto: "Approvati il III adeguamento del programma triennale dei lavori pubblici 2026-2028 (60 ordini del giorno presentati, 22 voti favorevoli) e il nuovo regolamento per le opere di urbanizzazione da soggetti privati (21 voti, opposizione astenuta).",
+        testo: "La tesi Comuni, Province e Regioni non è stata recuperata integralmente in archivio (solo il rimando generale al Titolo V della Costituzione su riparto di competenze e autonomia finanziaria degli enti locali), quindi non offre un aggancio specifico su regolamenti urbanistici comunali. Si applica però il principio generale della tesi Spesa Pubblica: l'Italia investe solo il 6,8% del PIL in investimenti fissi lordi, sotto le necessità del Paese, e ogni euro di spesa in opere pubbliche va sottoposto a controlli di qualità ed efficienza. Angolo: valutare con cautela il merito urbanistico (serve la fonte diretta prima di un commento impegnativo), ma segnalare in generale che un piano triennale di lavori pubblici così ampio (60 ODG) merita un monitoraggio pubblico sull'effettivo stato di avanzamento, non solo sull'approvazione formale." }
+    ],
+    nonCorrispondenti: "Lettera ai CIV/commercio, inquinamento acustico Molassana, tagli linee AMT Erzelli e parere cava Conte: nessuna posizione ORA! dedicata in archivio."
+  },
+  "2026-07-28": {
+    label: "28 luglio 2026",
+    fonte: "https://smart.comune.genova.it/articoli-comunicati-stampa/consiglio-comunale-del-28-luglio",
+    temi: [
+      "ODG straordinario \"fuorisacco\" unanime: salvaguardia dei servizi di trasporto pubblico Navebus e Taxibus",
+      "Mozione d'ordine di solidarietà alla comunità LGBTQ+ di Berlino dopo l'attentato al Pride",
+      "Modifica del regolamento Tari: rate di pagamento da 4 a 5 (approvata 23 voti)",
+      "Nuove tariffe Tari 2026, aumento del 5,7% (approvata 22 voti)",
+      "Salvaguardia equilibri di bilancio - VIII variazione ai documenti previsionali (approvata 21 voti)",
+      "Adesione al riaffidamento dei carichi ad Agenzia Entrate-Riscossione (approvata 21 voti)",
+      "Interrogazione su delibera DGC 185/2026 di contrasto all'omolesbobitransfobia",
+      "Interrogazioni su: cantiere IREN a Pegli, convegno per i 25 anni del G8 di Genova (dichiarazioni controverse), sopralluogo Regione all'istituto Brignole di Struppa, episodio di violenza in val Varenna, orari serali del servizio Ecovan, incidente mortale in via Righetti, sicurezza del personale AMT dopo le aggressioni"
+    ],
+    commentabili: [
+      { badges: ["Diritti civili"],
+        titolo: "Delibera DGC 185/2026 contro l'omolesbobitransfobia",
+        riassunto: "Interrogazione sulla delibera di Giunta comunale 185/2026, che prevede il contrasto all'omolesbobitransfobia e la possibile costituzione di parte civile del Comune nei procedimenti per reati d'odio.",
+        testo: "Tesi ORA! Diritti Civili: ORA! propone un modello di cittadinanza fondato sul riconoscimento della libertà individuale e sulla tolleranza delle diversità religiose, sessuali e culturali, con proposte esplicite su matrimonio egualitario e famiglie omogenitoriali; la tesi richiama anche il principio di Stato laico, per cui le leggi non devono seguire precetti religiosi né posizioni confessionali su temi di diritti civili. Angolo: sostenere pienamente la delibera 185/2026 e l'eventuale costituzione di parte civile del Comune nei procedimenti per reati d'odio, come applicazione concreta e coerente della linea ORA! sulla tutela delle diversità, distinguendo però — per onestà intellettuale — tra il principio generale già scritto nella tesi e il merito tecnico-giuridico specifico della costituzione di parte civile, che andrebbe verificato caso per caso." },
+      { badges: ["Fiscalità"],
+        titolo: "Tari: rate e tariffe 2026 (+5,7%)",
+        riassunto: "Approvate la modifica del regolamento Tari (rate di pagamento da 4 a 5, 23 voti favorevoli) e le nuove tariffe 2026 con un aumento del 5,7% (22 voti favorevoli).",
+        testo: "La tesi ORA! Tassazione e Fiscalità si concentra sui grandi tributi nazionali (IRPEF, IRES, IVA, contributi) e non tratta specificamente i tributi locali come la Tari, ma il principio di fondo — riequilibrare il carico fiscale ed eliminare micro-tasse/inefficienze a basso ritorno — è coerente con quello della tesi Spesa Pubblica, che chiede di valutare ogni euro di prelievo in base all'efficienza del servizio reso, non solo all'importo. Angolo: un aumento del 5,7% delle tariffe Tari va valutato con cautela e accettato solo se accompagnato da dati pubblici e verificabili sul miglioramento della raccolta differenziata e dei costi del servizio, coerentemente con il principio ORA! di \"spendere meglio, non solo di più\" più che con una posizione già scritta sui tributi locali." },
+      { badges: ["Infrastrutture"],
+        titolo: "Salvaguardia Navebus e Taxibus",
+        riassunto: "Approvato all'unanimità un ordine del giorno \"fuorisacco\" straordinario per la salvaguardia dei servizi di trasporto pubblico Navebus e Taxibus.",
+        testo: "Tesi ORA! Infrastrutture, Trasporti e Mobilità: in Italia il trasporto pubblico locale offre metà del servizio della media europea e sette spostamenti su dieci avvengono ancora in auto privata per assenza di alternative; tra le proposte principali c'è l'efficientamento del TPL con rinnovo del parco mezzi, aumento dell'offerta e una tassa di scopo dedicata a finanziare infrastrutture rapide di trasporto di massa. Angolo: sostenere con convinzione l'ODG unanime a tutela di Navebus e Taxibus come coerente con la linea ORA! di difesa e potenziamento del TPL, ma chiedere che la salvaguardia sia accompagnata da un piano di finanziamento strutturale (non solo emergenziale), sul modello della tassa di scopo proposta dalla tesi." }
+    ],
+    nonCorrispondenti: "Cantiere IREN Pegli, convegno G8, sopralluogo istituto Brignole, sicurezza Val Varenna, orari Ecovan, incidente via Righetti e sicurezza personale AMT: nessuna posizione ORA! dedicata in archivio."
+  }
+};
+
+const NEWS_DATA = [
+  { data: "29/08/2026", fonte: "Liguria24", titolo: "Crisi Amt, mancano anche i verificatori per controllare i biglietti: l'azienda avvia una selezione", url: "https://www.genova24.it/2026/08/crisi-amt-verificatori-biglietti-lotta-evasione-473198/",
+    badges: ["Infrastrutture","Spesa pubblica"],
+    provincia: "Genova",
+    angolo: "Mentre Amt taglia corse e chiede sacrifici per uscire dalla crisi finanziaria, mancano anche i verificatori dei titoli di viaggio: la lotta all'evasione tariffaria resta ferma, una selezione interna partirà solo a settembre e ulteriori iniziative sono rimandate al completamento della composizione negoziata della crisi. La tesi ORA! Spesa Pubblica (proposta 3, Razionalizzazione delle partecipate) chiede controlli indipendenti sulle società pubbliche prima di ogni nuovo impegno finanziario; la tesi Infrastrutture (proposta 1) chiede efficientamento reale del servizio, non solo tagli. Per ORA! il paradosso è emblematico: si riducono le corse per motivi di bilancio mentre si rinuncia a un'entrata potenziale, i biglietti evasi, per carenza di personale di controllo. Prima di tagliare ulteriormente il servizio agli utenti, Amt dovrebbe dimostrare di aver esaurito le leve sul lato delle entrate, a partire dai controlli." },
+  { data: "28/08/2026", fonte: "Liguria24 (fonte: Genova24)", titolo: "Amt, il movimento voluto da Bucci Liguria Insieme: «Il piano aziendale non penalizzi l'entroterra»", url: "https://www.genova24.it/2026/08/amt-liguria-insieme-473211/",
+    badges: ["Infrastrutture","Spesa pubblica"],
+    provincia: "Genova",
+    angolo: "Liguria Insieme, il movimento civico voluto dal presidente di Regione Marco Bucci, chiede con una nota congiunta dei coordinatori Campora, Bogliolo e Bucilli un cambio di rotta radicale sui tagli Amt ventilati nelle ultime settimane, ponendo in cima la salvaguardia dei collegamenti con l'entroterra e i piccoli centri. La tesi ORA! Infrastrutture (proposta 1) chiede efficientamento del TPL tramite rinnovo del parco mezzi e aumento reale dell'offerta, non tagli scaricati sui territori più deboli; la tesi Spesa Pubblica (proposta 3, Razionalizzazione delle partecipate) chiede controlli indipendenti su Amt prima di nuovi impegni finanziari. Per ORA! è significativo che anche un movimento vicino alla maggioranza regionale chieda di salvaguardare l'entroterra: conferma che il problema è trasversale agli schieramenti, ma restano appelli generici finché non arrivano un audit pubblico sui costi Amt e un piano pluriennale condiviso tra Regione, Comune e Città Metropolitana." },
+  { data: "28/08/2026", fonte: "Primocanale", titolo: "Festa dell'Unità, il ritorno a Genova parte in sordina: a Caricamento poca partecipazione e tanti assenti", url: "https://www.primocanale.it/politica/70920-festa-dell%E2%80%99unit%C3%A0,-il-ritorno-a-genova-parte-in-sordina-a-caricamento-poca-partecipazione-e-tanti-assenti.html",
+    badges: ["Di tendenza"],
+    provincia: "Genova",
+    angolo: "Il ritorno della Festa dell'Unità del Pd in piazza Caricamento dopo nove anni di assenza segna un rilancio simbolico della kermesse politica genovese, ma la prima giornata registra scarsa partecipazione e diverse assenze eccellenti. Non esiste una posizione ORA! dedicata alle feste di partito; la notizia è riportata per l'interesse che genera nel dibattito politico locale sulla tenuta organizzativa del centrosinistra genovese in vista delle prossime scadenze elettorali." },
+  { data: "28/08/2026", fonte: "Primocanale", titolo: "Acquedotto Roja, 50 milioni per il raddoppio tra Sanremo e Imperia", url: "https://www.primocanale.it/politica/70914-acquedotto-roja,-50-milioni-per-il-raddoppio-tra-sanremo-e-imperia.html",
+    badges: ["Infrastrutture","Spesa pubblica"],
+    provincia: "Imperia",
+    angolo: "Finanziati 38 dei 50 milioni necessari (fondi SFNIISSI/PNRR, i restanti 12 a carico di Rivieracqua) per sostituire con una condotta terrestre di 15,7 km l'unico tratto ancora sottomarino dell'acquedotto Roja tra Sanremo e Imperia, che garantisce il 65% dell'acqua della provincia; lavori entro il 2030, dopo che l'inverno 2025 aveva reso per oltre un mese impossibile intervenire sulla tubazione marina. La tesi ORA! Spesa Pubblica distingue un investimento infrastrutturale produttivo, con obiettivo misurabile e cofinanziamento reale del gestore, da un sussidio a fondo perduto senza ritorno strutturale. Per ORA! questo è il tipo di spesa che il Paese fa troppo poco (solo il 6,8% della spesa pubblica va a investimenti fissi lordi): il solo rilievo riguarda i tempi, quattro anni per un'opera istruita già dal 2023, segno che restano margini di velocizzazione della macchina amministrativa anche quando le risorse ci sono." },
+  { data: "28/08/2026", fonte: "Riviera24", titolo: "Rifiuti a Imperia, il consigliere Bracco chiede di visitare la sede e il deposito della De Vizia", url: "https://www.riviera24.it/2026/08/rifiuti-a-imperia-il-consigliere-bracco-chiede-di-visitare-la-sede-e-il-deposito-della-de-vizia-974965/",
+    badges: ["Trasparenza","Sviluppo economico"],
+    provincia: "Imperia",
+    angolo: "Il consigliere comunale Bracco (con Bozzano) chiede da luglio di visitare sede e deposito della De Vizia, la società a cui il Comune di Imperia affida la raccolta rifiuti, senza mai ricevere risposta; solo l'intervento del Difensore civico regionale ha prodotto un sollecito formale al Comune. La tesi ORA! Sviluppo Economico (§6, Liberalizzazioni e concorrenza) chiede piena accountability dei soggetti che gestiscono servizi pubblici in affidamento, e la tesi Spesa Pubblica chiede controlli indipendenti sulla spesa per servizi esternalizzati. Qui il problema non è nemmeno la gara o il contratto, ma il rifiuto implicito di un'amministrazione di sottoporsi al controllo previsto dal mandato dei consiglieri comunali su un servizio pagato dai cittadini: per ORA! è un caso di trasparenza minima negata, ancora più grave perché riguarda una prerogativa già garantita per legge, non una richiesta discrezionale." },
+  { data: "28/08/2026", fonte: "Riviera24", titolo: "Aggressione di Bevera, Baxa (Futuro Nazionale Ventimiglia): «Segnale di un problema sociale che non può essere ignorato»", url: "https://www.riviera24.it/2026/08/aggressione-di-bevera-baxa-futuro-nazionale-ventimiglia-segnale-di-un-problema-sociale-che-non-puo-essere-ignorato-974946/",
+    badges: ["Giustizia"],
+    provincia: "Imperia",
+    angolo: "Un uomo di 69 anni è stato aggredito alla nuca da un gruppo di giovanissimi, alcuni minorenni, a Bevera (Ventimiglia); Futuro Nazionale chiede di innalzare la responsabilità penale dei minori e misure detentive più severe, richiamando le proposte del generale Vannacci. La tesi ORA! Giustizia inquadra la sicurezza nelle città diversamente da un inasprimento delle pene: dal 2008 le forze dell'ordine hanno perso 15.000 unità e l'età media è salita da 33 a 46 anni, pur avendo l'Italia già uno dei più alti rapporti agenti/popolazione d'Europa, segno che il nodo è organizzativo, non normativo. Per ORA! la risposta passa da più agenti realmente presenti sul territorio, pagati e formati, e da un piano di prevenzione sociale nelle periferie e nei paesi di confine come Ventimiglia, non da un abbassamento generalizzato dell'età imputabile che rischia di restare propaganda politica senza incidere sulle cause reali del fenomeno." },
+  { data: "28/08/2026", fonte: "Liguria24", titolo: "Polemica Meloni-Bonaccini, Arboscello (Pd): «La destra attacca per non rispondere. Ci dica se chi sta peggio oggi vive meglio di 4 anni fa»", url: "https://www.liguria24.it/2026/08/28/polemica-meloni-bonaccini-arboscello-pd-la-destra-attacca-per-non-rispondere-ci-dica-se-chi-sta-peggio-oggi-vive-meglio-di-4-anni-fa/868513/",
+    badges: ["Di tendenza"],
+    provincia: "Savona",
+    angolo: "Il botta e risposta a distanza tra la premier Meloni e il segretario Pd Bonaccini rimbalza anche in Liguria, con il consigliere savonese Arboscello (Pd) che rilancia l'attacco chiedendo alla destra di rispondere nel merito sulle condizioni di vita dei cittadini rispetto a quattro anni fa. Non esiste una posizione ORA! dedicata a questo scambio polemico di livello nazionale; la notizia è riportata per l'ampia eco che genera nel dibattito politico anche a livello locale." },
+  { data: "28/08/2026", fonte: "Città della Spezia", titolo: "Circolo Pertini: «Tempeste sempre più frequenti, nel Calcandola sono presenti sbarramenti artificiali»", url: "https://www.cittadellaspezia.com/2026/08/28/circolo-pertini-tempeste-sempre-piu-frequenti-nel-calcandola-sono-presenti-sbarramenti-artificiali-669583/",
+    badges: ["Ambiente"],
+    provincia: "La Spezia",
+    angolo: "Il circolo Pertini segnala che lungo il torrente Calcandola a Sarzana si sono formati sbarramenti artificiali — accumuli di sassi, terra e mezzi d'opera lasciati nell'alveo da cantieri su tre ponti — che restringono la sezione del corso d'acqua proprio nel periodo di maggior rischio di nubifragi, con il Mar Ligure che quest'estate ha superato per la prima volta i 30 gradi. Non esiste tra le tesi ORA! una posizione dedicata alla manutenzione idraulica dei torrenti; il principio applicabile è quello generale della tesi Spesa Pubblica sulla qualità della spesa per infrastrutture pubbliche, valido anche per la manutenzione post-cantiere. Per ORA! il punto è di metodo: un cantiere che si chiude lasciando ostacoli nell'alveo di un torrente non è un'opera conclusa, e le autorità competenti devono verificare e rimuovere gli sbarramenti prima dell'autunno, non dopo un eventuale evento estremo." },
+  { data: "28/08/2026", fonte: "Genova24", titolo: "Crisi Amt, tensione sui tagli: la sindaca Salis convoca i vertici dell'azienda lunedì mattina", url: "https://www.genova24.it/2026/08/crisi-amt-tagli-salis-convocazione-incontro-473139/",
+    badges: ["Infrastrutture","Spesa pubblica"],
+    provincia: "Genova",
+    angolo: "Il piano di risanamento Amt prevede l'eliminazione di 189 turni sui 1.044 dell'orario invernale 2024-25, un taglio generalizzato del 12% più circa 40 turni scolastici e aggiuntivi, con l'obiettivo di riorganizzare le linee (assi di forza, potenziamento della 20 in vista della futura linea C) accorciando i percorsi per preservare le frequenze. La sindaca Salis ha convocato i vertici Amt (Berruti, Pascale, Robbiano) per lunedì, dopo malumori sulle modalità di comunicazione del piano ai sindacati; il piano definitivo non arriverà prima della seconda settimana di settembre e potrebbe restare provvisorio in attesa della ricapitalizzazione. La tesi ORA! Infrastrutture (proposta 1) chiede rinnovo del parco mezzi e aumento reale dell'offerta, non solo riorganizzazione a parità di risorse; la tesi Spesa Pubblica chiede controlli indipendenti prima di nuovi impegni finanziari sulle partecipate. Per ORA! la riunione di lunedì ha senso solo se porta un audit pubblico dei conti Amt e un piano pluriennale condiviso tra Comune, Regione e Città Metropolitana, non un nuovo rinvio di un mese." },
+  { data: "28/08/2026", fonte: "Primocanale", titolo: "Meglio i Pinguini a Capodanno o gli autobus per l'entroterra? Genova decida le priorità", url: "https://www.primocanale.it/politica/70900-genova-polemica-costi-capodanno-tagli-autobus-amt-entroterra.html",
+    badges: ["Spesa pubblica","Infrastrutture"],
+    provincia: "Genova",
+    angolo: "Primocanale mette a confronto due cifre: il Capodanno 2025/26 con i Pinguini Tattici Nucleari in piazza della Vittoria è costato al Comune circa 1,5 milioni di euro (senza nemmeno la diretta TV), mentre il risparmio previsto dai tagli Amt sulle corse dell'entroterra vale circa 1,3 milioni di euro, una cifra quasi identica, bruciata in una sola notte di festa. La tesi ORA! Spesa Pubblica ricorda che l'Italia investe solo il 6,8% della spesa pubblica in investimenti produttivi: il caso genovese mostra esattamente il problema, una gerarchia delle priorità che antepone un evento di intrattenimento a un servizio pubblico essenziale per studenti, anziani e lavoratori dell'entroterra. Per ORA! la domanda posta dal commento è corretta e non retorica: se una partecipata pubblica è in crisi finanziaria conclamata, la coerenza, già dimostrata da altre città come Milano, impone di ridimensionare le spese discrezionali prima di tagliare i servizi essenziali, non il contrario." },
+  { data: "28/08/2026", fonte: "Riviera24", titolo: "Presidio Amico, continua la querelle politica. Dopo il botta e risposta fra Ciccione e Bracco, Scajola puntualizza", url: "https://www.riviera24.it/2026/08/presidio-amico-continua-la-querelle-politica-dopo-il-botta-e-risposta-fra-ciccione-e-bracco-scajola-puntualizza-974953/",
+    badges: ["Spesa pubblica","Trasparenza"],
+    provincia: "Imperia",
+    angolo: "La querelle sul Presidio Amico di Imperia prosegue: il sindaco Scajola liquida le critiche come \"un gioco che amplifica delle sciocchezze\", mentre il Difensore civico regionale ha girato alla Prefettura la valutazione sulla legittimità del regolamento, sollevata dal consigliere Bracco perché la selezione degli addetti non passerebbe per l'intesa con il Prefetto richiesta dalla legge 94/2009. Il consigliere Ciccione difende il progetto richiamando la recente aggressione a una minore a Porto Maurizio, nella notte tra il 22 e il 23 agosto. Come già segnalato da ORA! il 26 agosto, il principio applicabile resta quello della tesi Spesa Pubblica sui controlli indipendenti prima di impegnare risorse pubbliche: un episodio di violenza reale rende ancora più urgente, non meno, mettere il servizio su basi giuridiche solide, non archiviare le obiezioni come polemica strumentale." },
+  { data: "28/08/2026", fonte: "Riviera24", titolo: "Superkaraoke, la rivolta pacifica degli ambulanti del mercato: «Venerdì andremo a mangiare in Comune»", url: "https://www.riviera24.it/2026/08/superkaraoke-la-rivolta-pacifica-degli-ambulanti-del-mercato-venerdi-andremo-a-mangiare-in-comune-974915/",
+    badges: ["Sviluppo economico"],
+    provincia: "Imperia",
+    angolo: "A Ventimiglia il mercato del venerdì viene diviso e la giornata del 4 settembre cancellata per lasciare spazio al palco del \"Superkaraoke\" con Michelle Hunziker: 330 operatori, secondo Anva Confesercenti, lamentano di non essere stati davvero consultati, con tre proposte scartate e la quarta, avanzata dagli ambulanti stessi, respinta senza un confronto con la Prefettura, che smentisce di aver imposto la sospensione totale. La tesi ORA! Sviluppo Economico ricorda che il 96% delle imprese italiane ha meno di 10 addetti e che l'Italia sconta oneri regolatori superiori del 20% alla media OCSE: categorie di micro-imprenditori come gli ambulanti pagano per prime scelte amministrative decise senza un percorso partecipativo strutturato. Non esiste una posizione ORA! dedicata alla gestione dei mercati rionali; il principio applicabile è quello generale di consultazione preventiva delle categorie economiche prima di decisioni che ne comprimono l'attività." },
+  { data: "28/08/2026", fonte: "Liguria24", titolo: "Emissioni di Italiana Coke, il circolo Pd di Cairo: «I cittadini hanno il diritto di sapere cosa respirano»", url: "https://www.liguria24.it/2026/08/28/emissioni-di-italiana-coke-il-circolo-pd-di-cairo-i-cittadini-hanno-il-diritto-di-sapere-cosa-respirano/868439/",
+    badges: ["Ambiente","Trasparenza"],
+    provincia: "Savona",
+    angolo: "Le fumate nere dalla cokeria di Cairo Montenotte e i superamenti delle soglie di benzene hanno spinto il circolo Pd locale a chiedere trasparenza sui dati, mentre la Provincia di Savona ha avviato un procedimento per acquisire documentazione dall'azienda dopo l'episodio. Non esiste, tra le tesi nazionali ORA!, una posizione dedicata al monitoraggio delle emissioni industriali, ma il position paper ORA! Liguria su Cornigliano segnala lo stesso identico problema per l'ex Ilva: un monitoraggio ambientale \"carente\", denunciato dai comitati locali anche lì da anni. Per ORA! il punto comune ai due casi liguri è strutturale: servono centraline pubbliche indipendenti e dati in tempo reale consultabili dai cittadini, non una richiesta di documenti attivata solo dopo che le fumate sono già diventate un caso mediatico. La trasparenza reattiva, dopo l'episodio, non sostituisce un sistema di controllo preventivo e continuo." },
+  { data: "28/08/2026", fonte: "Città della Spezia", titolo: "Centri sociali di Sarzana, Spilamberti alla giunta: «Bandi ancora bloccati, servono risposte e tempi certi»", url: "https://www.cittadellaspezia.com/2026/08/28/centri-sociali-di-sarzana-spilamberti-alla-giunta-bandi-ancora-bloccati-servono-risposte-e-tempi-certi-669676/",
+    badges: ["Trasparenza","Comuni"],
+    provincia: "La Spezia",
+    angolo: "A Sarzana i bandi per l'affidamento dei centri sociali comunali restano bloccati da anni per presunti problemi catastali e amministrativi mai risolti, mentre l'opposizione denuncia che lo stallo prolunga di fatto gli affidamenti diretti ereditati dal passato. La tesi ORA! Sviluppo Economico (proposta 6, Liberalizzazioni e concorrenza) chiede gare pubbliche per i servizi oggi gestiti fuori mercato, e la tesi Spesa Pubblica chiede controlli indipendenti sulla gestione del patrimonio pubblico prima di nuovi impegni. Il caso di Sarzana è un esempio di manuale: un problema tecnico irrisolto, le anomalie catastali, diventa comodo alibi politico per rinviare l'apertura a procedure trasparenti e concorrenziali. Per ORA! l'amministrazione ha l'obbligo di sanare gli ostacoli amministrativi e pubblicare bandi pubblici con tempi certi, non di usarli come giustificazione permanente per mantenere lo status quo sugli affidamenti." },
+  { data: "27/08/2026", fonte: "Liguria24", titolo: "Tunnel Val Fontanabuona, Romeo e Sanna (Pd): «Basta cantieri, vogliamo vederlo partire»", url: "https://www.liguria24.it/2026/08/27/tunnel-val-fontanabuona-romeo-e-sanna-pd-basta-cantieri-vogliamo-vederlo-partire/868393/",
+    badges: ["Infrastrutture"],
+    provincia: "Genova",
+    angolo: "Il Tunnel della Val Fontanabuona non è un progetto nuovo: nel 2021 è stato inserito tra le opere compensative del Ponte Morandi nell'accordo con Autostrade per l'Italia, con una dotazione iniziale di 230 milioni di euro. Cinque anni dopo, il presidente Bucci promette in visita a Rapallo l'apertura del \"cantiere zero\" entro fine anno, mentre l'opposizione regionale Pd (Romeo, Sanna) chiede di vedere finalmente partire i lavori. La tesi ORA! Spesa Pubblica ricorda che l'Italia destina solo il 6,8% della spesa pubblica a investimenti fissi lordi: il problema qui non sono le risorse, già stanziate da anni, ma la capacità di eseguire. Per ORA! serve un cronoprogramma pubblico e vincolante, con responsabilità politiche esplicite in caso di ulteriori rinvii, non un nuovo annuncio ogni anno su un'opera attesa da una vallata isolata." },
+  { data: "27/08/2026", fonte: "Città della Spezia", titolo: "Opposizione Castelnuovo: «Viabilità, cantieri infiniti e inquinamento in via Caprignano»", url: "https://www.cittadellaspezia.com/2026/08/27/opposizione-castelnuovo-viabilita-cantieri-infiniti-e-inquinamento-in-via-caprignano-669479/",
+    badges: ["Infrastrutture","Ambiente"],
+    provincia: "La Spezia",
+    angolo: "A Castelnuovo Magra due cantieri su via Caprignano restano bloccati da anni: un semaforo mobile riduce la carreggiata senza interventi di messa in sicurezza, mentre i lavori di consolidamento idrogeologico finanziati con fondi PNRR, pur formalmente conclusi, mostrano attrezzature abbandonate, guardrail mai ripristinati e canalizzazione delle acque piovane assente, con rischio di frane e discariche abusive nei canaloni. La tesi ORA! Spesa Pubblica denuncia che l'Italia destina solo il 6,8% della spesa pubblica a investimenti fissi lordi e che la qualità della spesa, non solo la quantità, è il vero nodo: un'opera PNRR \"conclusa sulla carta\" ma pericolosa nei fatti è l'esempio concreto di questo problema. Per ORA! serve una verifica pubblica indipendente sullo stato reale dei lavori finanziati con fondi europei, con responsabilità chiare per chi ha certificato una conclusione che il territorio smentisce quotidianamente." },
+  { data: "27/08/2026", fonte: "Liguria24", titolo: "Savona, nuovo bando per la valorizzazione commerciale e rendere la città più attrattiva", url: "https://www.liguria24.it/2026/08/27/savona-nuovo-bando-per-la-valorizzazione-commerciale-e-rendere-la-citta-piu-attrattiva/868345/",
+    badges: ["Sviluppo economico"],
+    provincia: "Savona",
+    angolo: "Il Comune di Savona stanzia 55mila euro per un bando rivolto a Civ, associazioni di categoria e commercianti, destinato soprattutto all'illuminazione natalizia e alla valorizzazione del tessuto commerciale cittadino. La tesi ORA! Sviluppo Economico ricorda che il 96% delle imprese italiane ha meno di 10 addetti e che il commercio al dettaglio sconta tra i più alti oneri regolatori OCSE: il tessuto commerciale soffre di problemi strutturali (dimensione, accesso al credito, burocrazia), non di scarsa illuminazione nel periodo natalizio. Per ORA! un contributo a fondo perduto di questa scala, per quanto utile nell'immediato ai Civ coinvolti, è il tipico intervento simbolico che rischia di sostituire le riforme di sistema (riduzione degli oneri amministrativi, sostegno vero all'aggregazione tra micro-imprese) di cui il commercio locale avrebbe davvero bisogno per essere competitivo tutto l'anno, non solo a dicembre." },
+  { data: "27/08/2026", fonte: "Primocanale", titolo: "Mascia (Fi): «A Genova Amt fa la festa all'unità del Pd»", url: "https://www.primocanale.it/politica/70880-mascia-fi-a-genova-amt-fa-la-festa-all-unit%C3%A0-del-pd.html",
+    badges: ["Di tendenza"],
+    provincia: "Genova",
+    angolo: "Il capogruppo di Forza Italia Mario Mascia usa la crisi Amt e le dimissioni di Giancarlo Campora dalle deleghe in Città Metropolitana per attaccare la tenuta del Pd genovese, in un clima di scontro interno alla maggioranza che si somma alle tensioni già emerse tra sindaci dell'entroterra, segreterie cittadine e Comune sul piano tagli. La notizia non aggiunge elementi di merito rispetto alla vicenda Amt, già ampiamente commentata da ORA! nei giorni scorsi (necessità di audit indipendente e piano pluriennale prima di nuovi tagli): qui prevale lo scontro politico interno al centrosinistra, seguito dalle testate liguri più per il suo valore di cronaca politica che per contenuti amministrativi inediti." },
+  { data: "26/08/2026", fonte: "Primocanale", titolo: "PD, la crisi AMT fa saltare gli equilibri: Campora lascia le deleghe di Città Metropolitana, tensione alle stelle", url: "https://www.primocanale.it/politica/70846-pd-crisi-amt-campora-lascia-citta-metropolitana-tensione-alle-stelle.html",
+    badges: ["Infrastrutture","Spesa pubblica"],
+    provincia: "Genova",
+    angolo: "La tesi ORA! Infrastrutture, Trasporti e Mobilità (proposta 1, Efficientamento del trasporto pubblico locale) chiede rinnovo del parco mezzi, aumento dell'offerta e una tassa di scopo per il trasporto di massa, non un tavolo di scontro politico sulle responsabilità. Le dimissioni di Giancarlo Campora dalle deleghe in Città Metropolitana, con Ilaria Cavo (Noi Moderati) che difende la sindaca Salis e Andrea Vassallo che difende invece i sindaci dell'entroterra, spostano il dibattito dal merito dei tagli (oltre 200 turni in meno da settembre) alla contesa interna al PD. La tesi ORA! Spesa Pubblica (proposta 3, Razionalizzazione delle partecipate) chiede controlli indipendenti sulle società partecipate come Amt prima di ogni nuovo impegno finanziario. Per ORA! la frattura nel PD conferma che manca ancora un audit indipendente sui conti di Amt e un piano pluriennale di finanziamento condiviso tra Regione, Comune e Città Metropolitana: senza quello, ogni giorno di polemica interna è un giorno in più senza una soluzione strutturale per gli utenti." },
+  { data: "26/08/2026", fonte: "Riviera24", titolo: "Imperia, Presidio Amico al vaglio del prefetto. Consigliere Bracco: «Il comune riveda il regolamento»", url: "https://www.riviera24.it/2026/08/imperia-presidio-amico-al-vaglio-del-prefetto-consigliere-bracco-il-comune-riveda-il-regolamento-974682/",
+    badges: ["Spesa pubblica","Trasparenza"],
+    provincia: "Imperia",
+    angolo: "Non esiste una posizione ORA! dedicata al \"Presidio Amico\" di Imperia, il servizio di vigilanza volontaria istituito dal Comune. Il principio applicabile è quello generale della tesi ORA! Spesa Pubblica, che chiede controlli indipendenti e piena conformità normativa prima di impegnare risorse pubbliche (proposta 3, Razionalizzazione delle partecipate, applicata per analogia a ogni spesa degli enti locali). Il caso imperiese lo conferma: il Difensore civico regionale ha rilevato l'assenza di un'intesa con il Prefetto richiesta dalla legge 94/2009, mentre il consigliere Bracco ha segnalato alla Corte dei conti un possibile danno erariale per i 130mila euro annui destinati a compensi di 400 euro mensili a soggetti che, secondo la normativa sul volontariato, non dovrebbero essere retribuiti. Per ORA! il problema non è l'obiettivo (più sicurezza) ma il metodo: un servizio pubblico impostato senza il quadro normativo corretto rischia di generare contenzioso e di vanificare l'intento stesso della misura." },
+  { data: "26/08/2026", fonte: "Città della Spezia", titolo: "Violenza sessuale e droghe dello stupro, Pucciarelli: «Dal lavoro avviato in Senato un risultato concreto. La Liguria trasforma in protocollo regionale un'idea nata a Sarzana»", url: "https://www.cittadellaspezia.com/2026/08/26/violenza-sessuale-e-droghe-dello-stupro-pucciarelli-dal-lavoro-avviato-in-senato-un-risultato-concreto-la-liguria-trasforma-in-protocollo-regionale-unidea-nata-a-sarzana-669352/",
+    badges: ["Di tendenza"],
+    provincia: "La Spezia",
+    angolo: "Non esiste una posizione ORA! dedicata alla prevenzione delle violenze sessuali facilitate da sostanze (le cosiddette \"droghe dello stupro\"). La notizia è comunque riportata per la sua rilevanza: la senatrice Stefania Pucciarelli (Lega) rivendica che un lavoro avviato in Senato si sia tradotto in un protocollo regionale ligure, nato da un'iniziativa civica di Sarzana, per la formazione del personale dei locali notturni e la distribuzione di kit di rilevamento. È un caso raro di percorso lineare dal livello locale a quello regionale su un tema di sicurezza delle donne che unisce più schieramenti, e per questo la vicenda ha interesse anche fuori dai confini spezzini." },
+  { data: "26/08/2026", fonte: "Primocanale", titolo: "Carburante, logistica genovese travolta dai rincari: 39 milioni di extra costi per i camion", url: "https://www.primocanale.it/porto-e-trasporti/70828-aumento-prezzo-gasolio-impatto-logistica-genova.html",
+    badges: ["Fiscalità","Ambiente"],
+    provincia: "Genova",
+    angolo: "Il comunicato ORA! \"Decreto carburanti: il governo proroga l'errore\" (07/04/2026) aveva già bollato come inefficace la linea delle proroghe una tantum sulle accise, che sottraggono gettito allo Stato senza toccare le cause strutturali del caro-energia (alta tassazione, dipendenza dalle importazioni, assenza del nucleare nel mix energetico, tesi Energia, Ambiente e Sostenibilità). Con lo sconto di 17 centesimi sul gasolio in scadenza il 26 agosto e il governo che valuta l'ennesima proroga, l'Osservatorio dell'Autotrasporto di Genova quantifica l'impatto reale: gasolio passato da 1,7 a 2,1 euro al litro, +280 euro a pieno per un mezzo pesante, circa 7.850 euro annui in più a veicolo e, con 5.000 mezzi al giorno nei porti genovesi, oltre 39 milioni di euro l'anno di extra-costi sul solo nodo logistico genovese. Per ORA! questi numeri confermano che una proroga, per quanto comprensibile nel breve, non è la risposta strutturale: solo il piano pluriennale nucleare più rinnovabili chiesto dalla tesi Energia può ridurre stabilmente i prezzi, riducendo la dipendenza dal gas importato (oggi al 95%)." },
+  { data: "25/08/2026", fonte: "Primocanale", titolo: "Amt, vertice con i sindacati: composizione negoziata non ancora chiusa, tagli del 18%", url: "https://www.primocanale.it/attualit%C3%A0/70832-amt-vertice-con-i-sindacati-composizione-negoziata-non-ancora-chiusa-tagli-del18.html",
+    badges: ["Infrastrutture","Spesa pubblica"],
+    provincia: "Genova",
+    angolo: "La tesi ORA! Infrastrutture, Trasporti e Mobilità (proposta 1, Efficientamento del trasporto pubblico locale) chiede rinnovo del parco mezzi e aumento reale dell'offerta, non una riduzione strutturale del servizio. Il vertice tra AMT e i sindacati conferma i numeri più duri finora emersi: -18% sul servizio urbano (190 turni in meno), -11% sull'extraurbano (30 turni), più altri 40 turni tagliati sui servizi scolastici e non contrattualizzati, per un massimo di 360 bus in strada contemporaneamente. La Composizione Negoziata della Crisi resta bloccata perché una classe di creditori non ha ancora aderito, e Comune e Città Metropolitana erano assenti al tavolo. La tesi ORA! Spesa Pubblica (proposta 3, Razionalizzazione delle partecipate) chiede controlli indipendenti prima di nuovi impegni finanziari: i 40 piccoli mezzi in arrivo con fondi FSC sono un passo minimo rispetto all'entità dei tagli, e senza un audit pubblico sui conti di AMT e un piano pluriennale condiviso tra i livelli di governo la riduzione rischia di diventare strutturale, come già temono gli stessi sindacati." },
+  { data: "25/08/2026", fonte: "Genova24", titolo: "Crisi Amt, come cambia il servizio da settembre: oltre 200 turni in meno e rivoluzione delle linee bus", url: "https://www.genova24.it/2026/08/crisi-amt-servizio-settembre-turni-revisione-rete-linee-472949/",
+    badges: ["Infrastrutture","Spesa pubblica"],
+    provincia: "Genova",
+    angolo: "La tesi ORA! Infrastrutture, Trasporti e Mobilità (proposta 1, Efficientamento del trasporto pubblico locale) chiede rinnovo del parco mezzi, aumento dell'offerta e una tassa di scopo per finanziare il trasporto di massa rapido. Il piano Amt per settembre va nella direzione opposta: oltre 200 turni in meno e una revisione dell'intera rete urbana ed extraurbana, dopo settimane di proteste dei sindaci dell'entroterra (Valle Stura, Alta Valpolcevera) che parlano di isolamento, e con i sindacati ancora in trattativa sulla composizione negoziata degli esuberi. Non è l'efficientamento chiesto da ORA! ma una contrazione pura dell'offerta, l'esatto opposto della proposta di aumentare le corse e rinnovare i mezzi. ORA! chiede che i tagli siano sospesi in attesa di un audit indipendente sui costi di Amt e che si valuti la tassa di scopo proposta dal partito per finanziare stabilmente il servizio, invece di scaricare la crisi finanziaria dell'azienda sugli utenti già più esposti." },
+  { data: "25/08/2026", fonte: "Città della Spezia", titolo: "Legge elettorale, Pd e Italia Viva non ci stanno: \"Centrosinistra compatto per fermare Meloni e Vannacci e il loro futuro assalto al Quirinale\"", url: "https://www.cittadellaspezia.com/2026/08/25/legge-elettorale-pd-e-italia-viva-non-ci-stanno-centrosinistra-compatto-per-fermare-meloni-e-vannacci-e-il-loro-futuro-assalto-al-quirinale-669164/",
+    badges: ["Governance"],
+    provincia: "La Spezia",
+    angolo: "Il comunicato ORA! \"Stabilicum: la stabilità non si costruisce togliendo ai cittadini il diritto di scegliere\" (23/07/2026) esprime già contrarietà netta alla legge elettorale A.C. 2822, approvata dalla Camera il 16 luglio 2026, che introduce liste bloccate e un premio di maggioranza al 40-42% dei voti. ORA! condivide l'obiettivo di stabilità di governo ma giudica sbagliati gli strumenti scelti, perché sacrificano il diritto dei cittadini di scegliere i propri rappresentanti. L'iniziativa del centrosinistra spezzino (Pd e Italia Viva, con Paita, De Fazio, Bonafè e Zaccaria) contro lo Stabilicum, in vista delle amministrative 2027, converge nella sostanza con la posizione ORA! sulle liste bloccate, pur muovendo da una lettura più schierata sul piano dei blocchi politici. Angolo: ORA! ribadisce la propria contrarietà nel merito della legge, indipendentemente da quale schieramento la propone o la contesta." },
+  { data: "25/08/2026", fonte: "Genova24", titolo: "Stanze singole, volano gli affitti per studenti a Genova: in media oltre 400 euro al mese", url: "https://www.genova24.it/2026/08/stanze-singole-affitti-studenti-genova-prezzi-472937/",
+    badges: ["Casa"],
+    provincia: "Genova",
+    angolo: "La tesi ORA! Crisi Abitativa individua nello squilibrio strutturale tra domanda e offerta, aggravato da tempi autorizzativi lunghi e patrimonio pubblico sottoutilizzato, la causa della crisi; tra le proposte principali: \"aumentare gli studentati oltre gli obiettivi già fissati dal PNRR\". Il caso Genova conferma la diagnosi: canone medio di una stanza singola salito a 408 euro al mese (+11,9% annuo, tra i rincari più alti d'Italia), con offerta disponibile comunque in crescita (+44,5%) e pressione di domanda ancora in aumento (+12,3%), in controtendenza rispetto a Milano e Roma dove la domanda si sta raffreddando. Significa che anche un mercato privato vivace non basta a calmierare i prezzi: serve l'intervento strutturale sull'offerta pubblica di studentati che ORA! chiede da tempo, non l'attesa che il mercato si riequilibri da solo come sta accadendo altrove in Italia." },
+  { data: "25/08/2026", fonte: "Riviera24", titolo: "Due avvisi per la selezione dei Garanti dei Diritti degli Anziani e delle Persone Private della Libertà Personale", url: "https://www.riviera24.it/2026/08/due-avvisi-per-la-selezione-dei-garanti-dei-diritti-degli-anziani-e-delle-persone-private-della-liberta-personale-974567/",
+    badges: ["Governance"],
+    provincia: "Imperia",
+    angolo: "Non esiste una posizione ORA! dedicata alla nomina di Garanti comunali indipendenti. Il principio applicabile è quello generale, richiamato dalla tesi Governance, di rafforzamento degli organi di controllo terzi rispetto all'esecutivo: sotto questo profilo l'iniziativa del Comune di Imperia, che introduce un Garante dei Diritti degli Anziani e un Garante delle Persone Private della Libertà Personale, va nella direzione di maggiore attenzione alle fasce fragili. Resta una misura di scala minima, non paragonabile ai nodi strutturali di finanza locale trattati dalle altre tesi ORA!." },
+  { data: "24/08/2026", fonte: "Primocanale", titolo: "Corsa a sindaco in Liguria nel 2027: Savona e Spezia al voto, nodo Salis e Scajola negli altri Comuni", url: "https://www.primocanale.it/politica/70764-comuni-voto-sindaci-savona-spezia-dubbi-genova-imperia-elezioni.html",
+    badges: ["Di tendenza"],
+    angolo: "Nel 2027 si voterà con certezza a Spezia (dove Peracchini attende l'eventuale via libera del Governo al terzo mandato per i sindaci sopra i 15mila abitanti, oggi non in vigore, per ricandidarsi contro il possibile sfidante PD Davide Natale) e a Savona (dove Marco Russo corre per il bis); restano appesi al filo Genova e Imperia, con Silvia Salis corteggiata per un possibile approdo romano e Claudio Scajola nella stessa situazione di attesa sul terzo mandato di Peracchini. Non esiste una posizione ORA! dedicata al toto-nomi delle comunali 2027, ma la notizia è riportata per l'ampio interesse del dibattito politico regionale che genera su tutte e quattro le province liguri; il tema del terzo mandato per i sindaci, se dovesse tornare d'attualità in Parlamento, è un nodo su cui l'archivio ORA! non registra ancora una posizione ufficiale." },
+  { data: "23/08/2026", fonte: "Primocanale", titolo: "Amt, Natale e Tognoni rispondono ai sindaci. Il testo della lettera", url: "https://www.primocanale.it/politica/70749-amt-entroterra-sindaci-pd-natale-tognoni.html",
+    badges: ["Infrastrutture","Spesa pubblica"],
+    provincia: "Genova",
+    angolo: "Lo scontro sui tagli Amt si sposta sul piano politico: il segretario regionale Pd Davide Natale e il segretario metropolitano Francesco Tognoni attribuiscono la crisi esclusivamente alla gestione Bucci (da sindaco e ora da presidente di Regione) e alla mancata copertura regionale del servizio, respingendo le accuse dei sindaci PD dell'entroterra al Comune di Genova; emerge anche che un emendamento del gruppo PD per aumentare il fondo regionale del TPL è stato bocciato in sede di bilancio. La tesi ORA! Infrastrutture, Trasporti e Mobilità (proposta 1) chiede efficientamento del TPL tramite rinnovo del parco mezzi e aumento reale dell'offerta, non un braccio di ferro tra livelli di governo sulle responsabilità politiche; la tesi Spesa Pubblica (proposta 3, Razionalizzazione delle partecipate) chiede controlli indipendenti su società come Amt. Angolo: per ORA! lo scambio di accuse tra Regione, Comune e PD distoglie dal nodo reale — mancano un audit indipendente sui costi di Amt e un piano pluriennale di finanziamento del TPL condiviso tra i livelli di governo, non l'ennesima gara a scaricare la responsabilità politica sull'avversario di turno." },
+  { data: "24/08/2026", fonte: "Genova24", titolo: "Carburanti, è allarme rincari: il taglio sulle accise scade il 26 agosto. Ecco i prezzi a Genova e in Liguria", url: "https://www.genova24.it/2026/08/carburanti-benzina-diesel-taglio-accise-prezzi-genova-liguria-472839/",
+    badges: ["Fiscalità","Ambiente"],
+    provincia: "Genova",
+    angolo: "Il taglio di 17 centesimi sulle accise del gasolio, prorogato dal Governo con un decreto che stanzia altri 20,8 milioni di euro di extra-gettito IVA, scade il 26 agosto mentre il prezzo del gasolio in autostrada ha già superato il record di marzo 2022 (2,204 euro/litro); l'opposizione, con Schlein in testa, chiede una tassazione sugli extra-profitti delle società energetiche, respinta dal governo (Tajani) come misura \"anti-impresa\". Il comunicato ORA! \"Decreto carburanti: il governo proroga l'errore\" (07/04/2026) aveva già bollato come inefficace la linea delle proroghe una tantum, che sottraggono gettito allo Stato senza affrontare le cause strutturali del caro-energia: alta tassazione, dipendenza dalle importazioni, assenza del nucleare nel mix energetico (tesi Energia, Ambiente e Sostenibilità). Angolo: ORA! considera sbagliate entrambe le proposte in campo — sia l'ennesima proroga dello sconto accise sia la tassazione sugli extra-profitti sono misure spot che non toccano la causa strutturale della dipendenza energetica italiana dall'estero (95% del gas importato); la vera riforma resta l'introduzione del nucleare nel mix energetico nazionale, l'unica leva in grado di abbassare stabilmente i prezzi come dimostra il caso francese citato dalla tesi ORA!." },
+  { data: "24/08/2026", fonte: "Riviera24", titolo: "Ventimiglia, Di Muro rimpasta la giunta. Simone Bertolucci nuovo assessore", url: "https://www.riviera24.it/2026/08/ventimiglia-di-muro-rimpasta-la-giunta-simone-bertolucci-nuovo-assessore-974447/",
+    badges: ["Di tendenza"],
+    provincia: "Imperia",
+    angolo: "Dopo le dimissioni dell'assessore Domenico Calimera, il sindaco Flavio Di Muro ha nominato il capogruppo leghista Simone Bertolucci nuovo assessore di Ventimiglia, con deleghe a Polizia Locale, Sicurezza, Ciclo delle Acque e gestione delle Frazioni, mentre il sindaco trattiene per sé Igiene urbana e Grandi opere. Non esiste una posizione ORA! dedicata ai singoli rimpasti di giunta comunale: la notizia è riportata per completezza di copertura sulla provincia di Imperia e perché riguarda l'assetto di governo di uno dei Comuni di confine più rilevanti della Liguria, non per un aggancio diretto al programma." },
+  { data: "24/08/2026", fonte: "Città della Spezia", titolo: "Incarichi di progettazione, Montefiori: \"Allargare la platea dei professionisti ed evitare posizioni di vantaggio per pochi\"", url: "https://www.cittadellaspezia.com/2026/08/24/incarichi-di-progettazione-montefiori-allargare-la-platea-dei-professionisti-ed-evitare-posizioni-di-vantaggio-per-pochi-669080/",
+    badges: ["Sviluppo economico","Comuni"],
+    provincia: "La Spezia",
+    angolo: "Il consigliere PD Andrea Montefiori propone al sindaco della Spezia, anche presidente della Provincia, di superare la prassi degli affidamenti diretti sotto i 140mila euro per gli incarichi di progettazione (ingegneria e architettura), che secondo lui concentra le opportunità sempre sugli stessi professionisti nonostante il principio di rotazione; chiede la formazione di un elenco condiviso tra gli enti del territorio provinciale e, per gli appalti di maggiore rilevanza, procedure negoziate o di evidenza pubblica. La tesi ORA! Sviluppo economico e politica industriale (§6, Liberalizzazioni e concorrenza) chiede esattamente questo tipo di apertura: liberalizzazione dei servizi professionali e gare pubbliche al posto degli affidamenti che consolidano posizioni di vantaggio, nel quadro di un giudizio più ampio sull'Italia come uno dei paesi OCSE con le maggiori restrizioni regolamentari nei servizi professionali. Angolo: ORA! valuta positivamente la proposta perché aggredisce davvero il problema — allargare la platea dei professionisti riduce la rendita di posizione di chi oggi si aggiudica sistematicamente gli incarichi — ma chiede che l'elenco condiviso sia solo un primo passo: l'obiettivo della tesi ORA! resta la gara pubblica come regola per gli affidamenti di maggiore valore, non la semplice rotazione tra un numero più ampio di nominativi scelti discrezionalmente dall'ente." },
+  { data: "24/08/2026", fonte: "Liguria24 (fonte: ivg.it)", titolo: "Finale Ligure, polemica sul patrocinio per la presentazione del libro a difesa dello Stato ebraico", url: "https://www.ivg.it/2026/08/finale-ligure-polemica-sul-patrocinio-per-la-presentazione-del-libro-a-difesa-dello-stato-ebraico/",
+    badges: ["Di tendenza"],
+    provincia: "Savona",
+    angolo: "La consigliere di minoranza Simona Simonetti accusa il Comune di Finale Ligure di aver concesso, a sua insaputa, il patrocinio a un'iniziativa dell'associazione Italia-Israele e, la sera stessa, alla presentazione del libro \"Israele lo stato necessario\", giudicandolo un sostegno incondizionato alle prassi militari israeliane nei territori palestinesi. Non esiste una posizione ORA! dedicata alle scelte di patrocinio comunale su iniziative di politica estera: la notizia è riportata per la sua capacità di polarizzare il dibattito locale nella provincia di Savona, non per un aggancio diretto al programma. Le tesi e i comunicati ORA! sul conflitto israelo-palestinese affrontano il tema a livello di politica estera nazionale (diritto internazionale, riconoscimento della Palestina), non le decisioni amministrative locali sui patrocini." },
+  { data: "24/08/2026", fonte: "Liguria24 (fonte: Genova24)", titolo: "Crisi Amt, la Valle Stura insorge contro i tagli: \"Saltati i bus per le scuole, fermare subito il nuovo orario\"", url: "https://www.genova24.it/2026/08/crisi-amt-valle-stura-comuni-protesta-orari-472863/",
+    badges: ["Infrastrutture","Spesa pubblica"],
+    provincia: "Genova",
+    angolo: "Dopo i sindaci di Campomorone, Ceranesi, Mignanego, Sant'Olcese e Serra Riccò, anche i Comuni di Masone, Campo Ligure, Rossiglione, Tiglieto e Urbe (Valle Stura e Orba) respingono la proposta di riorganizzazione del servizio Amt avanzata il 19 agosto dalla Città Metropolitana, denunciando tagli che vanificherebbero anni di lavoro contro lo spopolamento delle valli e disservizi per il trasporto scolastico. La tesi ORA! Infrastrutture, Trasporti e Mobilità (proposta 1) chiede efficientamento del TPL tramite rinnovo del parco mezzi e aumento reale dell'offerta, non tagli scaricati sui territori più fragili; la tesi Spesa Pubblica (proposta 3, Razionalizzazione delle partecipate) chiede controlli indipendenti su partecipate come Amt, in un Paese dove le società pubbliche impiegano una quota di addetti quasi cinque volte superiore alla Germania. Angolo: per ORA! il nodo non è se tagliare ma come è governata Amt — la crisi si scarica sistematicamente sui territori con meno voce in capitolo mentre mancano controlli indipendenti sui conti della partecipata; ORA! chiede che il piano di riorganizzazione sia sospeso fino alla pubblicazione di un audit indipendente sui costi di Amt, non solo un nuovo negoziato tra Comuni e Città Metropolitana." },
+  { data: "24/08/2026", fonte: "Primocanale", titolo: "Meeting di Rimini, Bucci: \"Intervento a Begato modello nazionale di rigenerazione urbana\"", url: "https://www.primocanale.it/politica/70767-meeting-di-rimini,-bucci-intervento-a-begato-modello-nazionale-di-rigenerazione-urbana.html",
+    badges: ["Casa"],
+    provincia: "Genova",
+    angolo: "Al Meeting di Rimini il presidente Bucci ha presentato la rigenerazione del quartiere di Begato — costruire solo sul costruito, riscatto degli alloggi popolari per chi li abita, ripopolamento dei borghi dell'entroterra grazie al lavoro da remoto — come \"modello nazionale\" contro l'emergenza abitativa. La tesi ORA! Crisi Abitativa inquadra il problema in termini quantitativi: il fabbisogno nazionale stimato è di circa 500.000 alloggi sociali, a fronte di un Piano Casa del Governo che stanzia appena 970 milioni di euro in cinque anni per ERP ed edilizia sociale, cifra giudicata dal partito \"modesta\". Le proposte ORA! (recupero ERP sfitti, banca dati del patrimonio, aggiornamento catastale) chiedono target misurabili, non solo modelli da esportare a parole. Angolo: la rigenerazione di Begato è un caso singolo positivo, ma Bucci non ha fornito numeri su alloggi recuperati, riscatti concessi o risorse stanziate; ORA! chiede che il \"modello\" sia accompagnato da un piano quantificato e da un aggiornamento del patrimonio ERP disponibile, altrimenti resta comunicazione istituzionale senza verifica." },
+  { data: "23/08/2026", fonte: "Città della Spezia", titolo: "Personale Rianimazione, Natale: \"Mancano 14 medici, ne assumono due. E Asl 5 autorizza ogni mese i contratti temporanei\"", url: "https://www.cittadellaspezia.com/2026/08/23/personale-rianimazione-natale-mancano-14-medici-ne-assumono-2-e-asl-5-autorizza-ogni-mese-i-contratti-temporanei-668952/",
+    badges: ["Salute"],
+    provincia: "La Spezia",
+    angolo: "Il consigliere regionale Pd Natale denuncia che in Rianimazione all'ASL 5 mancano 14 medici, il concorso in corso ne prevede l'assunzione di appena 2, e il reparto viene tenuto in piedi da mese in mese con contratti temporanei autorizzati di delibera in delibera. La tesi ORA! \"Salute e Servizi Sanitari\" (proposta 1, Più risorse stabili al SSN, non una tantum; proposta 2, Valorizzazione del personale) chiede esattamente il contrario di questa gestione: la sanità italiana ha già una carenza strutturale di circa 200.000 infermieri rispetto alla media UE (tesi Spesa Pubblica) e non si colma con proroghe mensili. Il dato citato nell'articolo — 41 medici che nell'ultimo concorso regionale hanno scelto La Spezia, segno che il territorio è tornato appetibile — rende ancora più ingiustificabile bandire solo 2 posti: per ORA! serve un piano di assunzioni stabili commisurato al fabbisogno reale, non centellinato." },
+  { data: "23/08/2026", fonte: "Genova24", titolo: "Sicurezza, Futuro Nazionale sfida il governo: \"Meloni mandi l'esercito a Genova\"", url: "https://www.genova24.it/2026/08/sicurezza-futuro-nazionale-sfida-il-governo-meloni-mandi-lesercito-a-genova-472792/",
+    badges: ["Giustizia"],
+    provincia: "Genova",
+    angolo: "Il consigliere comunale di Futuro Nazionale Maresca chiede al Governo di schierare l'Esercito nei punti sensibili di Genova per rafforzare la sicurezza, in un clima di scontro politico sul tema. La tesi ORA! \"Giustizia\" (sezione Sicurezza nelle città) inquadra il problema diversamente: dal 2008 le forze dell'ordine hanno perso 15.000 unità e l'età media è salita da 33 a 46 anni, ma l'Italia ha già tra i più alti rapporti agenti/popolazione d'Europa — segno che il nodo non è quantitativo ma di come si organizza e investe il sistema di sicurezza; le proposte sono più agenti realmente in strada, pagati e formati, e un piano di rigenerazione delle periferie. La tesi \"Difesa\" (proposta 1) chiede anzi la fine delle sovrapposizioni di competenze tra Forze Armate e forze di polizia. Per ORA! l'invocazione dell'Esercito è la risposta simbolica sbagliata a un problema di organizzazione della polizia di prossimità, non di soldati in più." },
+  { data: "23/08/2026", fonte: "Genova24", titolo: "Crisi Amt, Mes (M5S): \"Sostenere sindaci e servizi dell'entroterra. Le difficoltà di oggi figlie delle scelte di ieri\"", url: "https://www.genova24.it/2026/08/crisi-amt-mes-m5s-sostenere-sindaci-e-servizi-dellentroterra-le-difficolta-di-oggi-figlie-delle-scelte-di-ieri-472797/",
+    badges: ["Infrastrutture","Spesa pubblica"],
+    provincia: "Genova",
+    angolo: "Il capogruppo M5S Mes chiede a Regione e Città Metropolitana di sostenere i sindaci dell'entroterra contro i tagli AMT, denunciando che oltre 100 milioni di euro sono stati investiti nei filobus degli Assi di Forza mentre 39 mezzi restano fermi da oltre un anno nella rimessa di Campi perché le infrastrutture non erano pronte, e che il bilancio 2024 non è mai stato approvato dal precedente CdA. La tesi ORA! \"Infrastrutture, Trasporti e Mobilità\" (proposta 1) chiede efficientamento del TPL tramite rinnovo del parco mezzi e aumento reale dell'offerta, non acquisti scollegati dalla capacità di metterli in servizio; la tesi \"Spesa Pubblica\" (proposta 3, Razionalizzazione delle partecipate) chiede controlli indipendenti sulle partecipate come AMT. Per ORA! la richiesta di \"sostegno\" a Regione e Comuni rischia di finanziare ancora una gestione senza responsabilità: prima servono controlli indipendenti su AMT e un piano trasparente su chi paga i tagli, non nuovi trasferimenti a fondo perduto." },
+  { data: "23/08/2026", fonte: "Liguria24", titolo: "Piano di Utilizzo Demaniale, a Varazze raggiunto il 40% di spiagge libere", url: "https://www.liguria24.it/2026/08/23/piano-di-utilizzo-demaniale-a-varazze-raggiunto-il-40-di-spiagge-libere/867689/",
+    badges: ["Sviluppo economico"],
+    provincia: "Savona",
+    angolo: "Il Comune di Varazze annuncia che il nuovo Piano di Utilizzo del Demanio Marittimo porta al 40% la quota di spiagge libere, esito di un confronto durato un anno anche con l'associazione dei balneari locali. La tesi ORA! \"Sviluppo economico e politica industriale\" (§6 Liberalizzazioni e concorrenza) chiede l'applicazione della direttiva Bolkestein alle concessioni balneari ancora protette, per superare i mercati poco contendibili che frenano la produttività italiana (§ Problemi identificati). Ampliare la spiaggia libera va nella direzione giusta perché riduce la quota di costa sottratta alla concorrenza, ma il piano nasce da una trattativa diretta con l'associazione dei concessionari uscenti, non da una procedura di gara: senza bandi competitivi per il restante 60%, il rischio è consolidare le stesse rendite di posizione che la Bolkestein vuole superare. ORA! chiede che Varazze pubblichi tempi e criteri delle prossime assegnazioni delle concessioni residue." },
+  { data: "23/08/2026", fonte: "Riviera24", titolo: "Sanremo, via Tapoletti verso la chiusura alle auto", url: "https://www.riviera24.it/2026/08/sanremo-via-tapoletti-verso-la-chiusura-alle-auto-974229/",
+    badges: ["Di tendenza"],
+    provincia: "Imperia",
+    angolo: "L'amministrazione di Sanremo lavora a una nuova regolamentazione degli accessi nell'area della Pigna (via Tapoletti, piazza San Costanzo, giardini Regina Elena), con telecamere per sanzionare gli ingressi non autorizzati e stalli residenti a rotazione, nell'ambito dei lavori Pnrr-Pinqua di riqualificazione del centro storico. Non esiste una posizione ORA! dedicata a questa specifica misura locale di regolamentazione di sosta e accessi: la notizia è segnalata per completezza di copertura sulla provincia di Imperia, trattandosi di una decisione amministrativa di un certo rilievo per residenti e commercianti della Pigna, non per un aggancio diretto al programma." },
+];
+
+// Palette fissa: un colore per ciascun tema (le 22 tesi ORA! + Trasparenza + Di tendenza),
+// così i badge restano sempre coerenti indipendentemente da chi/quando li aggiunge.
+const TAG_COLORS = {
+  "Lavoro": ["#F7C1C1","#5C1D1D"],
+  "Spesa pubblica": ["#F7CFC1","#5C2E1D"],
+  "Fiscalità": ["#F7DDC1","#5C3E1D"],
+  "Casa": ["#F7ECC1","#5C4E1D"],
+  "Esteri": ["#F5F7C1","#595C1D"],
+  "Pari opportunità": ["#E7F7C1","#495C1D"],
+  "Università": ["#D9F7C1","#395C1D"],
+  "Difesa": ["#CAF7C1","#285C1D"],
+  "Cultura": ["#C1F7C6","#1D5C23"],
+  "Ambiente": ["#C1F7D4","#1D5C33"],
+  "Sviluppo economico": ["#C1F7E2","#1D5C43"],
+  "Immigrazione": ["#C1F7F0","#1D5C54"],
+  "Diritti civili": ["#C1F0F7","#1D545C"],
+  "Giustizia": ["#C1E2F7","#1D435C"],
+  "Infrastrutture": ["#C1D4F7","#1D335C"],
+  "Istruzione": ["#C1C6F7","#1D235C"],
+  "Salute": ["#CAC1F7","#281D5C"],
+  "Innovazione": ["#D9C1F7","#391D5C"],
+  "Unione Europea": ["#E7C1F7","#491D5C"],
+  "Governance": ["#F5C1F7","#591D5C"],
+  "Comuni": ["#F7C1EC","#5C1D4E"],
+  "Agricoltura": ["#F7C1DD","#5C1D3E"],
+  "Trasparenza": ["#F7C1CF","#5C1D2E"],
+  "Di tendenza": ["#FFF6D9","#7A5B00"]
+};
+
+function badgeHtml(tag){
+  const c = TAG_COLORS[tag] || ["#F1EFE8","#3A3A38"];
+  return '<span class="badge" style="background:'+c[0]+';color:'+c[1]+';">'+tag+'</span>';
+}
+
+function detailsHtml(testo){
+  return '<details class="ora-det"><summary>Mostra il dettaglio ORA!</summary><p class="ora-body">'+testo+'</p></details>';
+}
+
+function renderSeduta(containerId, data, colorTitle){
+  const c = document.getElementById(containerId);
+  let html = '';
+  html += '<p class="label">Tutti i temi trattati</p>';
+  html += '<ul class="temi">';
+  data.temi.forEach(function(t){ html += '<li>'+t+'</li>'; });
+  html += '</ul>';
+  html += '<p class="label label-accent">Temi commentabili per ORA!</p>';
+  html += '<div class="card-list">';
+  data.commentabili.forEach(function(item){
+    html += '<article class="card">';
+    html += '<div class="card-top">';
+    item.badges.forEach(function(b){ html += badgeHtml(b); });
+    html += '</div>';
+    html += '<h3>'+item.titolo+'</h3>';
+    if (item.riassunto){ html += '<p class="desc">'+item.riassunto+'</p>'; }
+    if (item.testo){ html += detailsHtml(item.testo); }
+    html += '</article>';
+  });
+  html += '</div>';
+  if (data.nonCorrispondenti){ html += '<p class="noncorr">'+data.nonCorrispondenti+'</p>'; }
+  html += '<p class="fonte"><a href="'+data.fonte+'" target="_blank" rel="noopener">Fonte comunicati ufficiali &#8599;</a></p>';
+  c.innerHTML = html;
+}
+
+function initSelect(selectId, containerId, dataObj, colorTitle){
+  const select = document.getElementById(selectId);
+  const dates = Object.keys(dataObj).sort().reverse();
+  select.innerHTML = dates.map(function(d){ return '<option value="'+d+'">'+dataObj[d].label+'</option>'; }).join('');
+  select.addEventListener('change', function(){ renderSeduta(containerId, dataObj[select.value], colorTitle); });
+  if (dates.length){ renderSeduta(containerId, dataObj[dates[0]], colorTitle); }
+}
+
+initSelect('regione-select','regione-content', REGIONE_DATA, '#534AB7');
+initSelect('comune-select','comune-content', COMUNE_DATA, '#0F6E56');
+
+let selectedProvincia = null;
+let newsPage = 0;
+const NEWS_PER_PAGE = 6;
+
+function renderNews(){
+  const c = document.getElementById('news-content');
+  const pager = document.getElementById('news-pager');
+  const filtered = selectedProvincia ? NEWS_DATA.filter(function(n){ return n.provincia === selectedProvincia; }) : NEWS_DATA;
+  const totalPages = Math.max(1, Math.ceil(filtered.length / NEWS_PER_PAGE));
+  if (newsPage >= totalPages) newsPage = totalPages - 1;
+  if (newsPage < 0) newsPage = 0;
+  const pageItems = filtered.slice(newsPage * NEWS_PER_PAGE, newsPage * NEWS_PER_PAGE + NEWS_PER_PAGE);
+  let html = '';
+  if (!filtered.length){
+    html = '<p class="empty">Nessuna notizia per questa provincia al momento.</p>';
+  } else {
+    html += '<div class="card-list">';
+    pageItems.forEach(function(n){
+      html += '<article class="card">';
+      html += '<div class="card-top">';
+      html += '<span class="card-meta">'+n.data+' &middot; '+n.fonte+(n.provincia?' &middot; '+n.provincia:'')+'</span>';
+      (n.badges||[]).forEach(function(b){ html += badgeHtml(b); });
+      html += '</div>';
+      html += '<h3><a href="'+n.url+'" target="_blank" rel="noopener">'+n.titolo+'</a></h3>';
+      if (n.angolo){ html += detailsHtml(n.angolo); }
+      html += '</article>';
+    });
+    html += '</div>';
+  }
+  c.innerHTML = html;
+
+  let pagerHtml = '';
+  if (filtered.length > NEWS_PER_PAGE){
+    const prevDisabled = newsPage === 0;
+    const nextDisabled = newsPage >= totalPages - 1;
+    pagerHtml += '<button id="news-prev" type="button"'+(prevDisabled?' disabled':'')+'>&larr; Precedenti</button>';
+    pagerHtml += '<span class="info">Pagina '+(newsPage+1)+' di '+totalPages+' ('+filtered.length+' notizie archiviate)</span>';
+    pagerHtml += '<button id="news-next" type="button"'+(nextDisabled?' disabled':'')+'>Successive &rarr;</button>';
+  }
+  pager.innerHTML = pagerHtml;
+  const prevBtn = document.getElementById('news-prev');
+  const nextBtn = document.getElementById('news-next');
+  if (prevBtn) prevBtn.addEventListener('click', function(){ if (newsPage > 0){ newsPage--; renderNews(); } });
+  if (nextBtn) nextBtn.addEventListener('click', function(){ if (newsPage < totalPages - 1){ newsPage++; renderNews(); } });
+}
+
+function updateMapSelection(){
+  document.querySelectorAll('.prov-filter-btn').forEach(function(btn){
+    const provincia = btn.getAttribute('data-provincia');
+    const isSelected = (provincia === '' && !selectedProvincia) || (provincia === selectedProvincia);
+    btn.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+  });
+  document.getElementById('filter-status').textContent = selectedProvincia ? 'Mostrando: ' + selectedProvincia : 'Mostrando: tutte le province';
+}
+
+document.querySelectorAll('.prov-filter-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    const provincia = btn.getAttribute('data-provincia');
+    selectedProvincia = provincia === '' ? null : provincia;
+    newsPage = 0;
+    updateMapSelection();
+    renderNews();
+  });
+});
+
+updateMapSelection();
+renderNews();
+</script>
+</body>
+</html>
