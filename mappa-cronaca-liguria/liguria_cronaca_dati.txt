@@ -901,6 +901,23 @@ window.INCIDENTS_DATA = [
     precisione: "via indicata dalla fonte — coordinate stimate manualmente — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 1204 m rispetto alla stima manuale precedente)"
   },
   {
+    id: "genova-vicoli-de-ferrari-accoltellato",
+    comune: "Genova, centro storico — vicoli, tra via XX Settembre e piazza De Ferrari",
+    data: "22 agosto 2026, poco dopo l'una di notte",
+    dataISO: "2026-08-22",
+    categoria: "violenze",
+    titolo: "Accoltellato nei vicoli, chiede aiuto ai passanti a De Ferrari",
+    descrizione: "Un giovane è stato colpito con un'arma da taglio in più parti del corpo nei vicoli del centro storico; ferito, è riuscito a raggiungere via XX Settembre/piazza De Ferrari chiedendo aiuto ai passanti, ed è stato trasportato in codice giallo all'ospedale Galliera. Le fonti riportano dettagli discordanti sulla vittima (un giovane di origini romene senza fissa dimora secondo Primocanale e LiguriaOggi; un 22enne marocchino secondo Telenord): non è chiaro se si tratti dello stesso episodio raccontato in modo diverso da fonti diverse o di due fatti distinti avvenuti la stessa notte nella stessa zona. Aggressore non identificato, indagini dei carabinieri in corso.",
+    fonti: [
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/22/genova-ragazzo-accoltellato-nel-centro-storico-721789/" },
+      { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/70721-ragazzo-accoltellato-in-strada-piazza-de-ferrari.html" },
+      { nome: "Telenord", url: "https://telenord.it/genova-violenza-nei-vicoli-22enne-accoltellato-schiena-107652" }
+    ],
+    lat: 44.406996, lon: 8.935102,
+    approssimato: true,
+    precisione: "zona indicata dalle fonti (vicoli del centro storico / via XX Settembre-piazza De Ferrari), punto esatto non specificato — coordinate stimate manualmente riusando il punto già geocodato di via XX Settembre (vedi genova-xx-settembre-gioielli): il geocoder reale (Claude in Chrome + Nominatim) non era raggiungibile in questa sessione notturna, poiché il dispositivo dell'utente non risultava connesso all'orario dello scheduled task — fonti con dettagli discordanti su età/nazionalità della vittima, vedi descrizione"
+  },
+  {
     id: "genova-via-orefici",
     comune: "Genova — Via degli Orefici (centro storico)",
     data: "22 agosto 2026, ore 19:20",
@@ -918,16 +935,19 @@ window.INCIDENTS_DATA = [
   },
   {
     id: "andora-aggressione",
-    comune: "Andora (via non specificata dalla fonte)",
+    comune: "Andora — via Aurelia, davanti a un chiosco",
     data: "23 agosto 2026",
     dataISO: "2026-08-23",
     categoria: "violenze",
-    titolo: "Aggressione ad Andora, il sindaco: “atto feroce e ingiustificato”",
-    descrizione: "Il sindaco di Andora ha condannato pubblicamente una violenta aggressione avvenuta in paese. La pagina originale non è stata raggiungibile in automatico per estrarre i dettagli completi della dinamica.",
-    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/08/23/aggressione-ad-andora-parole-di-condanna-del-sindaco-un-atto-feroce-e-ingiusticato/867743/" } ],
+    titolo: "Difende una ragazza molestata, 19enne colpito alla testa con un cartello stradale",
+    descrizione: "Un diciannovenne in vacanza è intervenuto per difendere una ragazza molestata da due coetanei davanti a un chiosco sulla via Aurelia; la richiesta di allontanarsi ha scatenato una reazione violenta, con il giovane colpito alla testa a pugni e con un cartello stradale divelto usato come arma, fino a perdere conoscenza. Ha riportato una frattura infossata della teca cranica e un'emorragia cerebrale, ricoverato in prognosi riservata a Pietra Ligure in attesa di intervento chirurgico. Le telecamere di videosorveglianza hanno permesso di identificare i responsabili; uno è stato formalmente denunciato, mentre gli investigatori non escludono il coinvolgimento di altri giovani già noti alle forze dell'ordine per precedenti episodi violenti.",
+    fonti: [
+      { nome: "Liguria24", url: "https://www.liguria24.it/2026/08/23/aggressione-ad-andora-parole-di-condanna-del-sindaco-un-atto-feroce-e-ingiusticato/867743/" },
+      { nome: "Sky TG24", url: "https://tg24.sky.it/cronaca/2026/08/23/andora-aggressione" }
+    ],
     lat: 43.951929, lon: 8.145649,
     approssimato: true,
-    precisione: "centro comune — nessuna via nota (fonte non raggiungibile per il testo completo) — posizione corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 480 m rispetto alla stima manuale precedente)"
+    precisione: "via Aurelia, davanti a un chiosco (dettaglio disponibile grazie a Sky TG24, dopo che la fonte Liguria24 non era raggiungibile in automatico per il testo completo) — coordinate lasciate sul centro del comune di Andora, non affinate al chiosco specifico: geocoder reale non raggiungibile in questa sessione (nessun dispositivo/browser connesso) — posizione originale corretta il 25/08 con geocoding reale (OpenStreetMap Nominatim, spostamento di circa 480 m rispetto alla stima manuale precedente)"
   },
   {
     id: "genova-levante",
@@ -975,23 +995,6 @@ window.INCIDENTS_DATA = [
     precisione: "frazione Bevera indicata dalla fonte, via della Stazione non trovata come via distinta su OpenStreetMap (probabile piccola via locale non mappata) — coordinate sul centro della frazione Bevera via geocoding reale (OpenStreetMap Nominatim, 25/08)"
   },
   {
-    id: "genova-vicoli-de-ferrari-accoltellato",
-    comune: "Genova, centro storico — vicoli, tra via XX Settembre e piazza De Ferrari",
-    data: "22 agosto 2026, poco dopo l'una di notte",
-    dataISO: "2026-08-22",
-    categoria: "violenze",
-    titolo: "Accoltellato nei vicoli, chiede aiuto ai passanti a De Ferrari",
-    descrizione: "Un giovane è stato colpito con un'arma da taglio in più parti del corpo nei vicoli del centro storico; ferito, è riuscito a raggiungere via XX Settembre/piazza De Ferrari chiedendo aiuto ai passanti, ed è stato trasportato in codice giallo all'ospedale Galliera. Le fonti riportano dettagli discordanti sulla vittima (un giovane di origini romene senza fissa dimora secondo Primocanale e LiguriaOggi; un 22enne marocchino secondo Telenord): non è chiaro se si tratti dello stesso episodio raccontato in modo diverso da fonti diverse o di due fatti distinti avvenuti la stessa notte nella stessa zona. Aggressore non identificato, indagini dei carabinieri in corso.",
-    fonti: [
-      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/22/genova-ragazzo-accoltellato-nel-centro-storico-721789/" },
-      { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/70721-ragazzo-accoltellato-in-strada-piazza-de-ferrari.html" },
-      { nome: "Telenord", url: "https://telenord.it/genova-violenza-nei-vicoli-22enne-accoltellato-schiena-107652" }
-    ],
-    lat: 44.406996, lon: 8.935102,
-    approssimato: true,
-    precisione: "zona indicata dalle fonti (vicoli del centro storico / via XX Settembre-piazza De Ferrari), punto esatto non specificato — coordinate stimate manualmente riusando il punto già geocodato di via XX Settembre (vedi genova-xx-settembre-gioielli): il geocoder reale (Claude in Chrome + Nominatim) non era raggiungibile in questa sessione notturna, poiché il dispositivo dell'utente non risultava connesso all'orario dello scheduled task — fonti con dettagli discordanti su età/nazionalità della vittima, vedi descrizione"
-  },
-  {
     id: "pieve-di-teco-torrente-arroscia",
     comune: "Pieve di Teco — torrente Arroscia (via Sottotenente Luigi Eula)",
     data: "24 agosto 2026 (scomparso la sera, corpo ritrovato nelle ore successive)",
@@ -1006,6 +1009,200 @@ window.INCIDENTS_DATA = [
     lat: 44.0554, lon: 7.9073,
     approssimato: true,
     precisione: "comune indicato dalla fonte (via Sottotenente Luigi Eula/torrente Arroscia, Pieve di Teco) — coordinate stimate manualmente sul centro del comune: il geocoder reale non era raggiungibile in questa sessione (nessun dispositivo/browser connesso, scheduled task notturno) — causa della morte non ancora determinata dalle fonti al momento della pubblicazione"
-  }
+  },
+  {
+    id: "savona-spiaggia-prolungamento-rapina-21ago",
+    comune: "Savona — spiaggia libera del Prolungamento",
+    data: "21 agosto 2026, mattina",
+    dataISO: "2026-08-21",
+    categoria: "rapine",
+    titolo: "Ruba lo zaino a una coppia in spiaggia, minaccia gli inseguitori con una bottiglia rotta",
+    descrizione: "Una coppia in acqua è stata derubata dello zaino lasciato sul telo da mare; i due, aiutati da alcuni bagnanti, hanno inseguito il responsabile, che per sfuggire ha afferrato e spaccato una bottiglia di vetro minacciando di morte gli inseguitori. Un complice si è unito a lui per ostacolare il blocco. Due uomini sono stati fermati dalla polizia e trasferiti al carcere di Marassi.",
+    fonti: [ { nome: "Savonanews.it", url: "https://www.savonanews.it/2026/08/21/leggi-notizia/argomenti/cronaca-2/articolo/derubati-mentre-fanno-il-bagno-inseguono-il-rapinatore-che-minaccia-gli-inseguitori-con-una-bottigl.html" } ],
+    lat: 44.283209, lon: 8.445371,
+    approssimato: true,
+    precisione: "spiaggia indicata dalla fonte, punto esatto non specificato — punto riutilizzato da un fatto già geocodato in precedenza sulla stessa spiaggia (vedi savona-spiaggia-accoltellamento): geocoder reale non raggiungibile in questa sessione (nessun dispositivo/browser connesso)"
+  },
+  {
+    id: "albenga-drogata-violentata",
+    comune: "Albenga — zona spiaggia (tenda dell'aggressore)",
+    data: "22 agosto 2026",
+    dataISO: "2026-08-22",
+    categoria: "violenze",
+    titolo: "Attira una giovane con droga e alcol e la violenta, arrestato",
+    descrizione: "Un uomo di 31 anni ha attirato una giovane donna presso la propria dimora — una tenda allestita su una spiaggia nei pressi di Albenga — le ha fatto assumere cocaina e alcol fino a ridurla in stato di incapacità, quindi l'ha violentata. Nei giorni successivi l'ha perseguitata con molestie e minacce, appostandosi sotto casa sua. La vittima ha sporto denuncia; l'uomo, con precedenti penali, è stato arrestato dai Carabinieri di Albenga e trasferito nel carcere di Imperia con le accuse di violenza sessuale, atti persecutori e spaccio di stupefacenti.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/08/22/giovane-drogata-e-violentata-a-savona-arrestato-31enne_28a2fa84-d6b3-464f-81dc-7b8c3b25c295.html" },
+      { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/70731-albenga-giovane-drogata-violentata-arrestato.html" }
+    ],
+    lat: 44.04297, lon: 8.224502,
+    approssimato: true,
+    precisione: "fatto avvenuto in una tenda su una spiaggia nei pressi di Albenga, punto esatto non specificato dalla fonte — punto riutilizzato dal lungomare di Albenga già geocodato in precedenza: geocoder reale non raggiungibile in questa sessione (nessun dispositivo/browser connesso) — una fonte (non citata qui) ha dato copertura dell'episodio con toni politicamente connotati, qui riportato in forma strettamente fattuale come da convenzione"
+  },
+  {
+    id: "imperia-tentata-violenza-minorenne",
+    comune: "Imperia (via non specificata dalla fonte)",
+    data: "notte tra il 22 e il 23 agosto 2026",
+    dataISO: "2026-08-23",
+    categoria: "violenze",
+    titolo: "Segue una minorenne dopo la Notte Bianca e tenta di violentarla",
+    descrizione: "Un diciannovenne ha seguito una ragazza minorenne che rientrava a casa dopo la Notte Bianca; quando si è separata dall'amica che l'accompagnava, l'ha strattonata e spinta a terra tentando di violentarla. Un passante, allertato dalle urla, è intervenuto allontanando l'aggressore. Le indagini, basate anche sulle telecamere di videosorveglianza della zona, hanno portato all'arresto del 19enne.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/27/imperia-tentata-violenza-sessuale-un-19enne-arrestato-722541/" } ],
+    lat: 43.8858, lon: 8.0297,
+    approssimato: true,
+    precisione: "comune indicato dalla fonte, via non specificata — coordinate stimate manualmente sul centro del comune: il geocoder reale non era raggiungibile in questa sessione (nessun dispositivo/browser connesso) — data incerta tra il 22 e il 23 agosto secondo la fonte"
+  },
+  {
+    id: "masone-rapina-collana-67enne",
+    comune: "Masone (entroterra genovese, Valle Stura)",
+    data: "25 agosto 2026, pomeriggio",
+    dataISO: "2026-08-25",
+    categoria: "rapine",
+    titolo: "Rapinano un 67enne della collana appena sceso dal bus, minacciano i soccorritori con coltello e pietre",
+    descrizione: "Un uomo di 67 anni è stato avvicinato da tre giovani subito dopo essere sceso da un autobus e derubato con violenza della collana d'oro. Alcuni passanti sono intervenuti in sua difesa, ma i tre li hanno minacciati con un coltello e con delle pietre per garantirsi la fuga. Un 18enne è stato fermato per rapina impropria in concorso e trasferito al carcere di Marassi, un coetaneo è stato denunciato a piede libero; ricerche in corso per il terzo giovane.",
+    fonti: [ { nome: "Lavocedigenova.it", url: "https://www.lavocedigenova.it/2026/08/26/leggi-notizia/argomenti/centro/articolo/masone-aggredito-e-rapinato-appena-sceso-dal-bus-un-18enne-fermato-e-un-coetaneo-denunciato.html" } ],
+    lat: 44.5325, lon: 8.7739,
+    approssimato: true,
+    precisione: "comune indicato dalla fonte, via/piazza non specificata — coordinate stimate manualmente sul centro del comune: il geocoder reale non era raggiungibile in questa sessione (nessun dispositivo/browser connesso)"
+  },
+  {
+    id: "genova-sampierdarena-via-cantore-bus",
+    comune: "Genova, Sampierdarena — via Cantore (bus linea 1)",
+    data: "26 agosto 2026, sera",
+    dataISO: "2026-08-26",
+    categoria: "rapine",
+    titolo: "Tenta una rapina sul bus in via Cantore, i passeggeri lo affrontano",
+    descrizione: "Su un autobus della linea 1 diretto a Caricamento, sovraffollato, un uomo ha tentato di rapinare alcuni passeggeri di un portafoglio e di una collana. Diversi passeggeri sono intervenuti per bloccarlo, scatenando una violenta colluttazione che ha costretto l'autista a fermare il mezzo; il bus ha riportato danni ingenti. Non è chiaro dalle fonti se l'uomo sia stato poi fermato dalla polizia o sia riuscito a fuggire.",
+    fonti: [
+      { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/70866-rissa-bus-via-cantore-genova.html" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/rissa-sul-bus-a-sampierdarena-passeggeri-contro-presunto-rapinatore/2026/08/27/671089/" }
+    ],
+    lat: 44.412874, lon: 8.888162,
+    approssimato: true,
+    precisione: "via indicata dalla fonte (via Cantore, bus linea 1) — punto riutilizzato da un altro fatto già geocodato in precedenza sulla stessa via (vedi genova-sampierdarena-maxirissa): geocoder reale non raggiungibile in questa sessione (nessun dispositivo/browser connesso) — esito della vicenda (fermo o fuga dell'aggressore) non chiarito dalle fonti"
+  },
+  {
+    id: "genova-sampierdarena-aumai-spray",
+    comune: "Genova, Sampierdarena — via Dino Col (megastore)",
+    data: "26 agosto 2026, pomeriggio",
+    dataISO: "2026-08-26",
+    categoria: "violenze",
+    titolo: "Spray al peperoncino contro una dipendente in un megastore, non esclusa una rapina",
+    descrizione: "Una dipendente di un megastore è stata colpita al volto con spray al peperoncino da un gruppo di tre giovani, poi bloccati e portati in questura per accertamenti; le fonti non escludono un tentativo di rapina, ma il movente resta incerto. La donna è stata soccorsa e trasportata in ospedale.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/sampierdarena-spray-al-peperoncino-contro-una-dipendente-aumai-fermati-tre-nordafricani/2026/08/26/671068/" } ],
+    lat: 44.412874, lon: 8.888162,
+    approssimato: true,
+    precisione: "via indicata dalla fonte (via Dino Col) — punto riutilizzato da un altro fatto già geocodato nella stessa zona di Sampierdarena (via Cantore): geocoder reale non raggiungibile in questa sessione (nessun dispositivo/browser connesso) — movente non chiarito dalle fonti (non escluso un tentativo di rapina)"
+  },
+  {
+    id: "busalla-minaccia-esplosione",
+    comune: "Busalla (entroterra genovese)",
+    data: "26 agosto 2026, notte",
+    dataISO: "2026-08-26",
+    categoria: "altro",
+    titolo: "Si barrica in casa, apre il gas e minaccia di far esplodere il palazzo",
+    descrizione: "Al culmine di una lite, un uomo di 32 anni si è barricato nel proprio appartamento, ha aperto il gas e ha minacciato di far esplodere il palazzo. All'arrivo dei Carabinieri ha impugnato due coltelli minacciandoli; i militari lo hanno disarmato con spray al peperoncino. Nessun ferito segnalato; l'uomo è stato arrestato e trasferito al carcere di Marassi.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/26/busalla-si-barrica-in-casa-e-minaccia-di-far-esplodere-il-palazzo-arrestato/" } ],
+    lat: 44.5442, lon: 8.9349,
+    approssimato: true,
+    precisione: "comune indicato dalla fonte, indirizzo dell'appartamento non specificato — coordinate stimate manualmente sul centro del comune: il geocoder reale non era raggiungibile in questa sessione (nessun dispositivo/browser connesso)"
+  },
+  {
+    id: "chiavari-bottiglia-insegue-passanti",
+    comune: "Chiavari (via non specificata dalla fonte)",
+    data: "26 agosto 2026, notte",
+    dataISO: "2026-08-26",
+    categoria: "violenze",
+    titolo: "Insegue i passanti con una bottiglia, ferisce due agenti e danneggia la Volante",
+    descrizione: "Un uomo di 31 anni, in evidente stato di alterazione, ha inseguito diverse persone brandendo una bottiglia di vetro. Bloccato dalla polizia, durante il trasporto in questura ha danneggiato l'auto di servizio; al pronto soccorso ha continuato a comportarsi in modo violento, ferendo due agenti. È stato arrestato per violenza, minaccia, resistenza e oltraggio a pubblico ufficiale, lesioni personali e danneggiamento.",
+    fonti: [
+      { nome: "TeleRadioPace TV", url: "https://www.teleradiopace.tv/2026/08/26/brandisce-una-bottiglia-si-scaglia-contro-i-poliziotti-arrestato-a-chiavari/" },
+      { nome: "GenovaToday (ripubblicazione verificata su altre testate)", url: "https://www.genovatoday.it/cronaca/chiavari-danneggia-auto-polizia-aggredisce-agenti.html" }
+    ],
+    lat: 44.316065, lon: 9.322763,
+    approssimato: true,
+    precisione: "via non specificata dalla fonte — punto riutilizzato da un altro fatto già geocodato nel centro di Chiavari (piazza dell'Orto): geocoder reale non raggiungibile in questa sessione (nessun dispositivo/browser connesso)"
+  },
+  {
+    id: "genova-castelletto-cocaina-aggressione",
+    comune: "Genova — quartiere Castelletto",
+    data: "27 agosto 2026, pomeriggio",
+    dataISO: "2026-08-27",
+    categoria: "violenze",
+    titolo: "Fermato con oltre un chilo di cocaina, aggredisce un agente durante l'arresto",
+    descrizione: "Un uomo di 23 anni, alla vista della polizia, ha tentato la fuga con uno zaino contenente 1,2 kg di cocaina; raggiunto e fermato, ha aggredito un agente causandogli lesioni con una prognosi di circa 25 giorni. Nello zaino e nella successiva perquisizione dell'abitazione sono stati trovati anche 600 euro in contanti e altri 11.000 euro. È stato arrestato per detenzione di stupefacenti a fini di spaccio e resistenza/lesioni aggravate a pubblico ufficiale.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/28/genova-giovane-arrestato-un-chilo-di-cocaina-castelletto-722793/" } ],
+    lat: 44.4103, lon: 8.931,
+    approssimato: true,
+    precisione: "quartiere indicato dalla fonte, via non specificata — coordinate stimate manualmente sul quartiere di Castelletto: il geocoder reale non era raggiungibile in questa sessione (nessun dispositivo/browser connesso)"
+  },
+  {
+    id: "varazze-a10-auto-rubata",
+    comune: "Varazze — autostrada A10 (Savona)",
+    data: "27 agosto 2026",
+    dataISO: "2026-08-27",
+    categoria: "altro",
+    titolo: "Sfreccia sull'A10 con un'auto rubata e documenti contraffatti, fermato",
+    descrizione: "Un uomo è stato fermato dalla polizia stradale mentre percorreva a forte velocità l'autostrada A10 in direzione del confine di Stato, all'altezza di Varazze. La targa e la carta di circolazione del veicolo, una Toyota RAV4, sono risultate contraffatte e il numero di telaio alterato; l'auto era stata rubata pochi giorni prima in provincia di Reggio Emilia. È stato fermato come indiziato di delitto e trasferito al carcere di Marassi.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/27/varazze-sfrecciava-sullautostrada-a10-con-auto-rubata-arrestato/" } ],
+    lat: 44.3597, lon: 8.5758,
+    approssimato: true,
+    precisione: "tratto autostradale indicato dalla fonte, punto esatto non specificato — coordinate stimate manualmente sul centro di Varazze: il geocoder reale non era raggiungibile in questa sessione (nessun dispositivo/browser connesso)"
+  },
+  {
+    id: "cairo-montenotte-vigilesse-investite",
+    comune: "Cairo Montenotte (entroterra savonese)",
+    data: "28 agosto 2026, mattina",
+    dataISO: "2026-08-28",
+    categoria: "altro",
+    titolo: "Investe due vigilesse durante un controllo e fugge",
+    descrizione: "Durante un controllo stradale, una donna alla guida di un'auto inizialmente ferma a lato strada è ripartita travolgendo due agenti della polizia locale, che hanno riportato ferite agli arti inferiori. La donna si è data alla fuga; non è chiaro dalle fonti se l'investimento sia stato intenzionale. Le vigilesse avevano registrato la targa del veicolo; ricerche in corso al momento della pubblicazione.",
+    fonti: [
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/08/28/cairo-montenotte-vigilesse-investite-ricerche-in-corso-722729/" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/cairo-montenotte-lascia-lauto-in-sosta-vietata-e-urta-due-vigilesse/2026/08/28/671160/" }
+    ],
+    lat: 44.3997, lon: 8.2779,
+    approssimato: true,
+    precisione: "comune indicato dalla fonte, via non specificata — coordinate stimate manualmente sul centro del comune: il geocoder reale non era raggiungibile in questa sessione (nessun dispositivo/browser connesso) — non è chiaro se l'investimento sia stato intenzionale, nessun fermo al momento della pubblicazione delle fonti"
+  },
+  {
+    id: "genova-tribunale-resistenza-lesioni",
+    comune: "Genova — Tribunale (zona Foce/San Fruttuoso)",
+    data: "23 agosto 2026",
+    dataISO: "2026-08-23",
+    categoria: "violenze",
+    titolo: "Aggredisce gli agenti al Tribunale, ferisce un poliziotto: 22enne deferito",
+    descrizione: "Un giovane di 22 anni di nazionalità tunisina, presente al Tribunale di Genova per un procedimento a suo carico, ha aggredito gli agenti ferendone uno e danneggiando delle strutture. È stato deferito per resistenza e lesioni a pubblico ufficiale e danneggiamento.",
+    fonti: [ { nome: "lamilano.it", url: "https://liguria.lamilano.it/genova-tre-interventi-della-polizia-agente-ferito-rapina-in-centro-e-tentato-scippo-a-sottoripa/" } ],
+    lat: 44.399433, lon: 8.94898,
+    approssimato: true,
+    precisione: "Tribunale di Genova (zona Foce/San Fruttuoso) indicato genericamente dalla fonte, indirizzo esatto non specificato nell'articolo — coordinate stimate manualmente riusando un punto già geocodato nella stessa zona (vedi genova-foce-supermercato): geocoder reale non raggiungibile in questa sessione (nessun dispositivo/browser connesso) — fonte unica, articolo in forma di rassegna con tre episodi distinti dello stesso giorno: qui riportato solo quello con dettagli sufficienti (età, dinamica, esito); gli altri due (rapina impropria in centro storico, tentato scippo a Sottoripa) restano esclusi per assenza di dettagli sufficienti a una scheda autonoma"
+  },
+  {
+    id: "genova-sampierdarena-via-rota-supermercato",
+    comune: "Genova, Sampierdarena — via Rota (supermercato)",
+    data: "28 agosto 2026",
+    dataISO: "2026-08-28",
+    categoria: "violenze",
+    titolo: "Molesta i clienti di un supermercato e aggredisce la Polizia, due agenti feriti",
+    descrizione: "Un uomo di 31 anni ha infastidito i clienti di un supermercato in via Rota, a Sampierdarena; intervenuta la Polizia, l'ha aggredita ferendo due agenti. È stato arrestato.",
+    fonti: [ { nome: "GenovaToday", url: "https://www.genovatoday.it/cronaca/supermercato-sampierdarena-violento.html" } ],
+    lat: 44.412874, lon: 8.888162,
+    approssimato: true,
+    precisione: "via indicata dal titolo GenovaToday (accesso diretto bloccato, errore 403, dettagli oltre il titolo non verificabili) — corroborato solo parzialmente da un articolo di lamilano.it dello stesso giorno che riporta l'arresto di un 31enne per aggressione agli agenti durante un diverso intervento di polizia: non è certo al 100% si tratti dello stesso identico episodio, ma la coincidenza tematica (aggressione ad agenti, stesso giorno) è forte — coordinate riutilizzate da un altro fatto già geocodato nella stessa zona di Sampierdarena (via Cantore): geocoder reale non raggiungibile in questa sessione (nessun dispositivo/browser connesso)"
+  },
+  {
+    id: "albenga-viale-liguria-ristorante-tetto",
+    comune: "Albenga — viale Liguria",
+    data: "28 agosto 2026",
+    dataISO: "2026-08-28",
+    categoria: "altro",
+    titolo: "Tenta il furto in un ristorante, bloccato dai Carabinieri sul tetto di un condominio",
+    descrizione: "Un uomo di 22 anni è stato notato dal titolare di un ristorante di viale Liguria, tramite le telecamere di videosorveglianza, mentre sottraeva il fondo cassa e un salvadanaio con circa 80 euro in monete. Alla vista del proprietario è fuggito rifugiandosi sul tetto di un condominio adiacente, dove è stato rintracciato e bloccato dai Carabinieri; addosso gli sono stati trovati un taglierino di 24 cm e un computer portatile, quest'ultimo riconducibile a un furto avvenuto poco prima ai danni di un avventore di una discoteca di Alassio. Elementi indiziari raccolti sul posto lo collegano anche a un furto con effrazione compiuto la notte del 26 agosto in un locale sul lungomare Colombo di Albenga (circa 500 euro, una collanina d'oro, una bottiglia di liquore e uno smartphone, refurtiva poi restituita). È stato arrestato per tentato furto aggravato, ricettazione e porto abusivo di oggetti atti a offendere.",
+    fonti: [ { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/70928-tenta-il-furto-in-un-ristorante-ma-viene-visto-dalle-telecamere-arrestato-sul-tetto-un-22enne.html" } ],
+    lat: 44.0509412, lon: 8.2158986,
+    approssimato: false,
+    precisione: "via indicata dalla fonte — posizione verificata con geocoding reale (OpenStreetMap Nominatim). Fatto composito: l'arresto e il furto principale sono datati nella notte tra il 27 e il 28 agosto; i due furti collegati allo stesso responsabile (Alassio discoteca, non datato con precisione, e Albenga lungomare Colombo nella notte del 26 agosto) sono riassunti in descrizione ma non schedati separatamente per mancanza di dettagli autonomi sufficienti"
+  },
 
 ];
