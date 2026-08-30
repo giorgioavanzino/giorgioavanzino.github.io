@@ -1204,5 +1204,18 @@ window.INCIDENTS_DATA = [
     approssimato: false,
     precisione: "via indicata dalla fonte — posizione verificata con geocoding reale (OpenStreetMap Nominatim). Fatto composito: l'arresto e il furto principale sono datati nella notte tra il 27 e il 28 agosto; i due furti collegati allo stesso responsabile (Alassio discoteca, non datato con precisione, e Albenga lungomare Colombo nella notte del 26 agosto) sono riassunti in descrizione ma non schedati separatamente per mancanza di dettagli autonomi sufficienti"
   },
+  {
+    id: "genova-principe-fanti-italia-autista-amt",
+    comune: "Genova, Principe — via Fanti d'Italia (capolinea bus)",
+    data: "29 agosto 2026",
+    dataISO: "2026-08-29",
+    categoria: "violenze",
+    titolo: "Minaccia l'autista di un bus al capolinea: \"Scendi che ti picchio\"",
+    descrizione: "Un uomo di 47 anni, di nazionalità ecuadoriana e in evidente stato di ebbrezza, è salito su un bus Amt al capolinea di via Fanti d'Italia e ha minacciato l'autista sbattendo i pugni sul vetro di protezione del posto di guida, lamentando il mancato passaggio di un bus di linea. L'autista ha allertato il 112; la polizia ha identificato l'uomo, denunciandolo per minacce e interruzione di pubblico servizio e sanzionandolo per ubriachezza molesta.",
+    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/08/30/scendi-che-ti-picchio-autista-amt-minacciato-a-principe-perche-non-passava-il-bus/868730/" } ],
+    lat: 44.416356, lon: 8.918661,
+    approssimato: false,
+    precisione: "via e capolinea (zona Principe) indicati dalla fonte — posizione verificata con geocoding reale (OpenStreetMap Nominatim). La fonte è internamente imprecisa sul numero di linea (cita sia il 7 sia il 36 come linea coinvolta) — non arrestato, solo denunciato e sanzionato"
+  },
 
 ];
