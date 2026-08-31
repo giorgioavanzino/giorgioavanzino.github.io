@@ -1217,5 +1217,18 @@ window.INCIDENTS_DATA = [
     approssimato: false,
     precisione: "via e capolinea (zona Principe) indicati dalla fonte — posizione verificata con geocoding reale (OpenStreetMap Nominatim). La fonte è internamente imprecisa sul numero di linea (cita sia il 7 sia il 36 come linea coinvolta) — non arrestato, solo denunciato e sanzionato"
   },
+  {
+    id: "ceriale-via-mimose-precipita",
+    comune: "Ceriale — via Mimose",
+    data: "30 agosto 2026",
+    dataISO: "2026-08-30",
+    categoria: "altro",
+    titolo: "Sedicenne precipita dal terzo piano e muore",
+    descrizione: "Un ragazzo di 16 anni, che si trovava in un appartamento insieme ad altri giovani probabilmente in vacanza nella zona, è precipitato poco dopo la mezzanotte dal balcone al terzo piano di un edificio di via Mimose, finendo nel cortile sottostante. Soccorso in gravi condizioni e trasportato in codice rosso all'ospedale Santa Corona di Pietra Ligure, è morto poco dopo l'arrivo nonostante i tentativi di rianimazione. Gli investigatori dovranno chiarire se si sia trattato di un incidente, di un gesto volontario o se emergano altri fattori: incluso come fatto sotto indagine, non come reato accertato.",
+    fonti: [ { nome: "Savonanews.it", url: "https://www.savonanews.it/2026/08/30/leggi-notizia/argomenti/cronaca-2/articolo/16enne-precipita-da-un-balcone-e-muore-tragedia-a-ceriale.html" } ],
+    lat: 44.0912527, lon: 8.2279465,
+    approssimato: true,
+    precisione: "via indicata dalla fonte, numero civico non specificato — posizione verificata con geocoding reale (OpenStreetMap Nominatim, centro di via delle Mimose). Dinamica dell'accaduto non ancora chiarita dalle autorità al momento della pubblicazione della fonte"
+  },
 
 ];
