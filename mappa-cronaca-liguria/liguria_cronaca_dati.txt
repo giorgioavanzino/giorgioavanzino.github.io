@@ -1230,5 +1230,44 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "via indicata dalla fonte, numero civico non specificato — posizione verificata con geocoding reale (OpenStreetMap Nominatim, centro di via delle Mimose). Dinamica dell'accaduto non ancora chiarita dalle autorità al momento della pubblicazione della fonte"
   },
+  {
+    id: "sarzana-anziano-bastonate",
+    comune: "Sarzana — centro (via non specificata dalla fonte)",
+    data: "30 agosto 2026",
+    dataISO: "2026-08-30",
+    categoria: "violenze",
+    titolo: "Anziano aggredito a bastonate in strada, gravi ferite al capo",
+    descrizione: "Un uomo di circa 80 anni, residente a Sarzana, è stato aggredito a bastonate nei pressi di un bar del centro da un giovane non identificato, colpito al corpo e più volte alla testa. Alcuni avventori del bar sono intervenuti, hanno bloccato l'aggressore sottraendogli il bastone e lo hanno costretto alla fuga a piedi; il titolare del locale ha prestato un primo soccorso in attesa dei sanitari. L'anziano è stato trasportato in condizioni serie, con traumi cranici, all'ospedale San Bartolomeo di Sarzana. Al momento della pubblicazione della fonte l'aggressore non risultava identificato né fermato; non si esclude l'ipotesi di tentato omicidio.",
+    fonti: [ { nome: "Gazzetta della Spezia", url: "https://gazzettadellaspezia.com/cronaca/item/179471-sarzana-anziano-aggredito-a-bastonate-e-grave" } ],
+    lat: 44.1131762, lon: 9.9599823,
+    approssimato: true,
+    precisione: "la fonte non specifica via o piazza esatta ('nei pressi di un bar del centro') — usata come approssimazione la posizione del centro del comune di Sarzana (geocoding reale via OpenStreetMap Nominatim). Nessun arresto o identificazione dell'aggressore risulta al momento della pubblicazione della fonte"
+  },
+  {
+    id: "genova-sampierdarena-piazza-montano-autista-sputi",
+    comune: "Genova, Sampierdarena — Piazza Nicolò Montano",
+    data: "31 agosto 2026",
+    dataISO: "2026-08-31",
+    categoria: "violenze",
+    titolo: "Sputi e porta danneggiata: aggredita l'autista di un bus Amt in piazza Montano",
+    descrizione: "Intorno alle 11:30 del 31 agosto un uomo ha aggredito la conducente di un bus Amt della linea 18 fermo in piazza Nicolò Montano, a Sampierdarena, sputandole contro e danneggiando una porta del mezzo. La donna è stata portata in ospedale per accertamenti. Secondo un rappresentante sindacale un uomo sarebbe stato individuato e fermato sul posto, ma la dinamica completa e l'eventuale coinvolgimento di altre persone non risultavano ancora chiariti al momento della pubblicazione delle fonti, e non vi è conferma ufficiale di un arresto o di una denuncia.",
+    fonti: [ { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/08/31/leggi-notizia/argomenti/cronaca-5/articolo/aggressione-a-unautista-del-bus-in-piazza-montano-rotta-una-porta-e-sputi-contro-la-conducente.html" }, { nome: "Liguria Oggi", url: "https://liguriaoggi.it/2026/08/31/genova-autista-bus-aggredita-sputi-porta-danneggiata-sampierdarena-723101/" } ],
+    lat: 44.4128744, lon: 8.8881624,
+    approssimato: false,
+    precisione: "piazza indicata dalla fonte — posizione verificata con geocoding reale (OpenStreetMap Nominatim). Notizia in aggiornamento al momento della raccolta: non confermato se il presunto responsabile sia stato effettivamente identificato o denunciato"
+  },
+  {
+    id: "recco-bar-sport-lite-anziani",
+    comune: "Recco — centro (zona Bar Sport)",
+    data: "31 agosto 2026",
+    dataISO: "2026-08-31",
+    categoria: "violenze",
+    titolo: "Lite tra due uomini in centro, uno finisce al pronto soccorso con una sospetta frattura",
+    descrizione: "Una lite tra due uomini, uno sulla sessantina e l'altro sulla settantina, è degenerata nel centro di Recco, in prossimità del Bar Sport, poco prima delle 13. Uno dei due ha colpito l'altro, che ha riportato una sospetta frattura ed è stato trasportato in codice verde al pronto soccorso dell'ospedale San Martino di Genova. Sul posto sono intervenuti i Carabinieri della Compagnia di Santa Margherita Ligure; al momento della pubblicazione della fonte non risultavano arresti o denunce.",
+    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/08/31/recco-lite-in-centro-tra-due-uomini-uno-al-san-martino-con-una-frattura/868930/" } ],
+    lat: 44.3615321, lon: 9.1436606,
+    approssimato: false,
+    precisione: "il 'Bar Sport' citato dalla fonte come riferimento è stato geocodificato realmente (OpenStreetMap Nominatim) su un locale con questo nome nel centro di Recco, in prossimità del centroide del comune; possibile presenza di altri locali omonimi in zona non verificabile dalla sola fonte. Nessun arresto o denuncia risulta al momento della pubblicazione della fonte"
+  },
 
 ];
