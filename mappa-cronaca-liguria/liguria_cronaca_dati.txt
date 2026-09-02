@@ -1269,5 +1269,57 @@ window.INCIDENTS_DATA = [
     approssimato: false,
     precisione: "il 'Bar Sport' citato dalla fonte come riferimento è stato geocodificato realmente (OpenStreetMap Nominatim) su un locale con questo nome nel centro di Recco, in prossimità del centroide del comune; possibile presenza di altri locali omonimi in zona non verificabile dalla sola fonte. Nessun arresto o denuncia risulta al momento della pubblicazione della fonte"
   },
+  {
+    id: "genova-fiumara-etichetta-pantaloni",
+    comune: "Genova, Sampierdarena — centro commerciale La Fiumara",
+    data: "31 agosto 2026",
+    dataISO: "2026-08-31",
+    categoria: "altro",
+    titolo: "Rimuove l'etichetta da un paio di pantaloni al centro commerciale, denunciato",
+    descrizione: "Nel pomeriggio del 31 agosto due agenti del Commissariato Centro liberi dal servizio hanno notato un uomo di 44 anni aggirarsi con fare sospetto, in evidente stato di alterazione, all'interno del centro commerciale La Fiumara, a Sampierdarena. Lo hanno seguito e lo hanno visto entrare in un negozio e rimuovere l'etichetta da un paio di pantaloni. Fermato dagli agenti, è emerso che l'uomo aveva in precedenza visitato altri due esercizi commerciali della struttura; è stato denunciato e la sua posizione sul territorio nazionale è stata sottoposta a verifica dell'Ufficio Immigrazione.",
+    fonti: [ { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/09/01/leggi-notizia/argomenti/cronaca-5/articolo/fiumara-rimuove-letichetta-da-un-paio-di-pantaloni-denunciato-44enne.html" } ],
+    lat: 44.4148993, lon: 8.8816924,
+    approssimato: true,
+    precisione: "la fonte indica il centro commerciale La Fiumara senza ulteriori dettagli sul punto vendita esatto — geocoding reale (OpenStreetMap Nominatim) non ha restituito un punto affidabile per 'La Fiumara' come toponimo, usata come approssimazione la posizione di via Pieragostini a Sampierdarena, dove sorge il centro commerciale"
+  },
+  {
+    id: "genova-waterfront-tronchese-30enne",
+    comune: "Genova — Waterfront Mall, piazzale Kennedy",
+    data: "31 agosto - 1 settembre 2026",
+    dataISO: "2026-08-31",
+    categoria: "altro",
+    titolo: "Tenta di rubare vestiti al Waterfront e fugge con una tronchese, denunciato",
+    descrizione: "Un uomo di 30 anni ha tentato di rubare alcuni capi d'abbigliamento da un esercizio commerciale del centro Waterfront, nel piazzale Kennedy, cercando poi di fuggire una volta scoperto. Raggiunto e bloccato dalla Polizia di Stato, è stato trovato in possesso della merce appena sottratta e di una tronchese, verosimilmente utilizzata per danneggiare o rimuovere i dispositivi antitaccheggio. Dagli accertamenti è emerso che l'uomo era già sottoposto alla misura di sicurezza della libertà vigilata; è stato denunciato.",
+    fonti: [ { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/09/01/leggi-notizia/argomenti/cronaca-5/articolo/waterfront-tenta-di-rubare-vestiti-e-fugge-con-una-tronchese-denunciato-30enne.html" }, { nome: "Liguria Oggi", url: "https://liguriaoggi.it/2026/09/01/genova-negozio-waterfront-furto-un-uomo-denunciato-723269/" } ],
+    lat: 44.3954784, lon: 8.9411245,
+    approssimato: false,
+    precisione: "centro commerciale indicato dalla fonte — posizione verificata con geocoding reale (OpenStreetMap Nominatim, Waterfront Mall). Le fonti non specificano la data esatta dell'episodio, riportato in un articolo pubblicato il 1 settembre: si stima sia avvenuto nelle 24-48 ore precedenti la pubblicazione"
+  },
+  {
+    id: "genova-via-xx-settembre-minorenni-shop",
+    comune: "Genova, centro — Via XX Settembre",
+    data: "fine settimana del 29-30 agosto 2026",
+    dataISO: "2026-08-30",
+    categoria: "altro",
+    titolo: "Due minorenni rubano vestiti e make-up in un negozio, denunciate",
+    descrizione: "Due ragazze italiane di 14 e 15 anni sono state fermate dalla Polizia di Stato all'interno di un esercizio commerciale di via XX Settembre dopo aver oltrepassato le casse con capi d'abbigliamento non pagati, facendo scattare il sistema antitaccheggio. Nel controllo sono stati trovati anche capi con etichette e placche danneggiate risultati sottratti ad altri negozi della zona, prodotti di make-up nascosti nella carta stagnola e due paia di forbici usate per rimuovere i dispositivi antitaccheggio. Le due minorenni sono state denunciate e riaffidate ai genitori; nello stesso weekend la Polizia di Stato è intervenuta per altri quattro episodi analoghi di furto in esercizi commerciali della zona.",
+    fonti: [ { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/09/01/leggi-notizia/argomenti/cronaca-5/articolo/via-xx-settembre-sorprese-a-rubare-vestiti-e-make-up-denunciate-due-minorenni.html" }, { nome: "Liguria Oggi", url: "https://liguriaoggi.it/2026/09/01/genova-rubano-dentro-un-negozio-in-via-xx-settembre-fermate-due-minorenni/" } ],
+    lat: 44.4069962, lon: 8.9351020,
+    approssimato: true,
+    precisione: "via indicata dalla fonte, numero civico non specificato — posizione approssimata con geocoding reale (OpenStreetMap Nominatim) sul tratto centrale di via XX Settembre. La fonte non precisa il giorno esatto entro il weekend ('è accaduto nel weekend' / 'nel corso dell'intero weekend'): dataISO impostata al 30 agosto come stima intermedia"
+  },
+  {
+    id: "genova-corso-italia-spaccata-tombino",
+    comune: "Genova, Medio Levante — Corso Italia",
+    data: "notte tra il 31 agosto e il 1 settembre 2026",
+    dataISO: "2026-09-01",
+    categoria: "altro",
+    titolo: "Spaccata notturna in corso Italia, tombino divelto per sfondare le vetrine",
+    descrizione: "Nella notte ignoti hanno divelto un tombino da corso Italia e lo hanno usato per mandare in frantumi le vetrate di alcune attività commerciali del lungomare genovese, tra cui un bar (il Baretto) e una gelateria, per poi colpire anche altri esercizi della zona. I danni provocati sono ingenti a fronte di un bottino, secondo quanto riferito, di pochi spiccioli. La presidente del Municipio VIII Medio Levante ha denunciato pubblicamente l'episodio parlando di una situazione di sicurezza sempre più preoccupante in una zona storicamente estranea a fatti di questo tipo; da un'altra forza politica locale è arrivata una lettura più cauta, che invita a non generalizzare un singolo episodio grave come sintomo di degrado diffuso.",
+    fonti: [ { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/09/01/leggi-notizia/argomenti/cronaca-5/articolo/spaccata-nella-notte-in-corso-italia-tombino-usato-per-sfondare-le-vetrate-palmieri-situazione.html" } ],
+    lat: 44.391434, lon: 8.965829,
+    approssimato: true,
+    precisione: "la fonte non indica i numeri civici degli esercizi colpiti, solo 'corso Italia' — riutilizzate le coordinate già geocodificate in precedenza (OpenStreetMap Nominatim) per un punto medio di corso Italia. Nessun fermo o identificazione dei responsabili risulta al momento della pubblicazione della fonte"
+  },
 
 ];
