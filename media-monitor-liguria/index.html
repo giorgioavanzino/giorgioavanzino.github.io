@@ -165,7 +165,7 @@
     </div>
     <p class="subtitle">Sedute del <strong>Consiglio Regionale della Liguria</strong> e del <strong>Consiglio Comunale di Genova</strong> con i temi commentabili per ORA!, piu' la rassegna stampa filtrata sulle quattro province liguri. Seleziona una data dal menu per rivedere una seduta passata; di default e' mostrata la piu' recente.</p>
     <div class="head-meta">
-      <span class="chip-updated">Aggiornato: 3 settembre 2026, 09:09</span>
+      <span class="chip-updated">Aggiornato: 3 settembre 2026, 20:07</span>
     </div>
   </header>
 
@@ -191,7 +191,7 @@
   <section class="panel">
     <div class="panel-head">
       <h2>Ultime notizie dai media</h2>
-      <span class="n spacer">aggiornato al 03/09/2026, 09:09</span>
+      <span class="n spacer">aggiornato al 03/09/2026, 20:07</span>
     </div>
     <p class="note">Testate monitorate: Il Secolo XIX, GenovaToday, Primocanale, ANSA Liguria (tutte le province), Liguria24, Genova24, Riviera24 (Imperia), Citta' della Spezia (La Spezia). Le notizie con tema evidenziato sono collegabili a una posizione ORA! esistente; quelle etichettate &ldquo;Di tendenza&rdquo; sono le piu' seguite anche senza un aggancio diretto al programma.</p>
 
@@ -340,6 +340,13 @@ const COMUNE_DATA = {
 };
 
 const NEWS_DATA = [
+  { data: "03/09/2026", fonte: "Riviera24", titolo: "Aurelia bis, via libera della Regione al completamento dello svincolo di San Martino", url: "https://www.riviera24.it/2026/09/aurelia-bis-via-libera-della-regione-al-completamento-dello-svincolo-di-san-martino-975534/",
+    badges: ["Infrastrutture"],
+    provincia: "Imperia",
+    angolo: "La tesi ORA! Infrastrutture, Trasporti e Mobilità chiede investimenti valutati su basi tecniche ed economiche solide, coerentemente con il metodo \"sulla strada dei fatti\" già rivendicato dal comunicato ORA! sul Ponte sullo Stretto (dati di traffico, impatti, profili tecnici prima del giudizio). Il parere della Regione sulla nuova rampa di uscita su via della Repubblica allo svincolo di San Martino — conforme al Puc di Sanremo, senza necessità di espropri e fuori da vincoli paesaggistici, secondo il parere trasmesso al Ministero delle Infrastrutture — è esattamente il tipo di dato tecnico verificabile su cui, per ORA!, si dovrebbe valutare ogni tratta dell'Aurelia bis, incluso il ben più conteso prolungamento verso Cava Cangiotti dove il 1° settembre il comitato Bonmoschetto aveva contestato la scelta della \"soluzione E\" del 2023. Per ORA! il completamento di San Martino, un avanzamento concreto e tecnicamente lineare, dovrebbe fare da modello di metodo per sbloccare anche il tratto a ponente, oggi fermo su scelte progettuali difese più per inerzia politica che per dati di traffico aggiornati." },
+  { data: "03/09/2026", fonte: "Primocanale", titolo: "Il Veneto approva il fine vita, il centrosinistra: \"Adesso tocca alla Liguria\"", url: "https://www.primocanale.it/politica/71083-fine-vita-veneto-approva-suicidio-assistito-richiesta-centrosinistra-liguria.html",
+    badges: ["Diritti civili"],
+    angolo: "La tesi ORA! Diritti Civili (proposta 3) chiede da tempo una legge organica sul fine vita che integri le leggi 38/2010 e 219/2017 e recepisca pienamente la sentenza 242/2019 della Corte Costituzionale, con registrazione delle volontà presso gli uffici comunali; il documento richiama inoltre il principio di Stato laico, per cui le scelte legislative su fine vita, aborto e famiglia non devono essere condizionate da posizioni confessionali. Il Consiglio regionale del Veneto ha approvato la propria legge con 32 voti favorevoli, 4 astenuti e 14 contrari, quinta Regione dopo Toscana, Sardegna ed Emilia-Romagna; in Liguria l'iter, avviato in commissione Sanità nella scorsa legislatura, si è arenato dopo l'inchiesta che ha coinvolto l'ex presidente Toti. Per ORA! la richiesta di PD, M5S e Linea Condivisa di riprendere subito il lavoro in commissione è pienamente coerente con la propria tesi: si tratta di applicare una sentenza costituzionale già vigente, con libertà di coscienza per i consiglieri come richiamato anche dal presidente del consiglio veneto Zaia, non di condurre una battaglia ideologica di campo." },
   { data: "03/09/2026", fonte: "Il Secolo XIX", titolo: "Amt, autisti in fuga verso un lavoro in porto. \"Sui moli prendono il doppio di stipendio\"", url: "https://www.ilsecoloxix.it/genova/news/crisi-amt-autisti-fuga-kbzvxkmv/",
     badges: ["Infrastrutture","Lavoro"],
     provincia: "Genova",
@@ -568,14 +575,6 @@ const NEWS_DATA = [
     badges: ["Infrastrutture","Ambiente"],
     provincia: "La Spezia",
     angolo: "A Castelnuovo Magra due cantieri su via Caprignano restano bloccati da anni: un semaforo mobile riduce la carreggiata senza interventi di messa in sicurezza, mentre i lavori di consolidamento idrogeologico finanziati con fondi PNRR, pur formalmente conclusi, mostrano attrezzature abbandonate, guardrail mai ripristinati e canalizzazione delle acque piovane assente, con rischio di frane e discariche abusive nei canaloni. La tesi ORA! Spesa Pubblica denuncia che l'Italia destina solo il 6,8% della spesa pubblica a investimenti fissi lordi e che la qualità della spesa, non solo la quantità, è il vero nodo: un'opera PNRR \"conclusa sulla carta\" ma pericolosa nei fatti è l'esempio concreto di questo problema. Per ORA! serve una verifica pubblica indipendente sullo stato reale dei lavori finanziati con fondi europei, con responsabilità chiare per chi ha certificato una conclusione che il territorio smentisce quotidianamente." },
-  { data: "27/08/2026", fonte: "Liguria24", titolo: "Savona, nuovo bando per la valorizzazione commerciale e rendere la città più attrattiva", url: "https://www.liguria24.it/2026/08/27/savona-nuovo-bando-per-la-valorizzazione-commerciale-e-rendere-la-citta-piu-attrattiva/868345/",
-    badges: ["Sviluppo economico"],
-    provincia: "Savona",
-    angolo: "Il Comune di Savona stanzia 55mila euro per un bando rivolto a Civ, associazioni di categoria e commercianti, destinato soprattutto all'illuminazione natalizia e alla valorizzazione del tessuto commerciale cittadino. La tesi ORA! Sviluppo Economico ricorda che il 96% delle imprese italiane ha meno di 10 addetti e che il commercio al dettaglio sconta tra i più alti oneri regolatori OCSE: il tessuto commerciale soffre di problemi strutturali (dimensione, accesso al credito, burocrazia), non di scarsa illuminazione nel periodo natalizio. Per ORA! un contributo a fondo perduto di questa scala, per quanto utile nell'immediato ai Civ coinvolti, è il tipico intervento simbolico che rischia di sostituire le riforme di sistema (riduzione degli oneri amministrativi, sostegno vero all'aggregazione tra micro-imprese) di cui il commercio locale avrebbe davvero bisogno per essere competitivo tutto l'anno, non solo a dicembre." },
-  { data: "27/08/2026", fonte: "Primocanale", titolo: "Mascia (Fi): «A Genova Amt fa la festa all'unità del Pd»", url: "https://www.primocanale.it/politica/70880-mascia-fi-a-genova-amt-fa-la-festa-all-unit%C3%A0-del-pd.html",
-    badges: ["Di tendenza"],
-    provincia: "Genova",
-    angolo: "Il capogruppo di Forza Italia Mario Mascia usa la crisi Amt e le dimissioni di Giancarlo Campora dalle deleghe in Città Metropolitana per attaccare la tenuta del Pd genovese, in un clima di scontro interno alla maggioranza che si somma alle tensioni già emerse tra sindaci dell'entroterra, segreterie cittadine e Comune sul piano tagli. La notizia non aggiunge elementi di merito rispetto alla vicenda Amt, già ampiamente commentata da ORA! nei giorni scorsi (necessità di audit indipendente e piano pluriennale prima di nuovi tagli): qui prevale lo scontro politico interno al centrosinistra, seguito dalle testate liguri più per il suo valore di cronaca politica che per contenuti amministrativi inediti." },
 ];
 
 // Palette fissa: un colore per ciascun tema (le 22 tesi ORA! + Trasparenza + Di tendenza),
