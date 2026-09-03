@@ -1321,5 +1321,18 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "la fonte non indica i numeri civici degli esercizi colpiti, solo 'corso Italia' — riutilizzate le coordinate già geocodificate in precedenza (OpenStreetMap Nominatim) per un punto medio di corso Italia. Nessun fermo o identificazione dei responsabili risulta al momento della pubblicazione della fonte"
   },
+  {
+    id: "genova-fontane-marose-zaino-notturno",
+    comune: "Genova, centro storico — Piazza Fontane Marose",
+    data: "2 settembre 2026",
+    dataISO: "2026-09-02",
+    categoria: "altro",
+    titolo: "Distrae una donna con la scusa di una bici elettrica e le ruba lo zaino, arrestato",
+    descrizione: "Un uomo di 35 anni, di origine peruviana, ha distratto una donna in piazza Fontane Marose chiedendole informazioni su come noleggiare una bicicletta elettrica, per poi sottrarle lo zaino riposto nel cestino del mezzo e darsi alla fuga. La vittima ha subito segnalato l'accaduto a una volante di passaggio, fornendo una descrizione che ha permesso alla Sala Operativa della Questura di seguirne i movimenti tramite le telecamere di videosorveglianza fino a Salita di San Gerolamo, dove è stato bloccato dagli agenti mentre frugava ancora nella refurtiva. È stato arrestato per furto aggravato.",
+    fonti: [ { nome: "GenovaToday (accesso diretto non riuscito, errore 403; dettagli verificati tramite ripubblicazioni su altre testate)", url: "https://www.genovatoday.it/cronaca/furto-bici-trucco-arresto.html" }, { nome: "Telenord", url: "https://telenord.it/genova-arrestato-furto-35enne-peruviano-reato-furto-108035" }, { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/09/02/leggi-notizia/argomenti/cronaca-5/articolo/centro-storico-distrae-una-passante-chiedendo-informazioni-e-le-ruba-lo-zaino-35enne-incastrato-d.html" } ],
+    lat: 44.4104234, lon: 8.9349421,
+    approssimato: false,
+    precisione: "piazza indicata con precisione dalla fonte — posizione verificata con geocoding reale (OpenStreetMap Nominatim, Piazza Fontane Marose)"
+  },
 
 ];
