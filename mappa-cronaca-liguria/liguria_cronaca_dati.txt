@@ -1334,5 +1334,35 @@ window.INCIDENTS_DATA = [
     approssimato: false,
     precisione: "piazza indicata con precisione dalla fonte — posizione verificata con geocoding reale (OpenStreetMap Nominatim, Piazza Fontane Marose)"
   },
+  {
+    id: "finale-ligure-forti-legnino-omicidio-suicidio",
+    comune: "Finale Ligure (Savona) — via dei Forti di Legnino",
+    data: "3 settembre 2026",
+    dataISO: "2026-09-03",
+    categoria: "omicidi",
+    titolo: "Tre corpi trovati in casa sulle alture di Finale Ligure, ipotesi omicidio-suicidio",
+    descrizione: "Un uomo, la moglie e il figlio minorenne di 15 anni sono stati trovati senza vita nella loro abitazione di via dei Forti di Legnino, sulle alture di Finale Ligure, nel primo pomeriggio del 3 settembre. L'allarme è scattato dopo che alcuni vicini avevano sentito dei colpi d'arma da fuoco; carabinieri e sanitari del 118, intervenuti sul posto, hanno potuto solo constatare il decesso di tutti e tre. L'ipotesi al vaglio degli inquirenti, non ancora confermata, è quella dell'omicidio-suicidio in ambito familiare.",
+    fonti: [
+      { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/09/03/tre-cadaveri-trovati-in-casa-nel-savonese-non-escluso-omicidio-suicidio_8a6fa0db-6a44-4cee-994e-1a690ad63a66.html" },
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/09/03/finale-ligure-tragedia-familiare-tre-morti-padre-madre-figlio-723593/" },
+      { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/71082-tragedia-finale-ligure-famiglia-omicidio-suicidio.html" }
+    ],
+    lat: 44.1725811, lon: 8.3456204,
+    approssimato: true,
+    precisione: "via indicata dalla fonte, numero civico non specificato — posizione sulla via ottenuta con geocoding reale (OpenStreetMap Nominatim). Ipotesi investigativa non ancora confermata al momento della pubblicazione delle fonti; nomi delle vittime omessi per convenzione editoriale"
+  },
+  {
+    id: "genova-vesima-furto-zaini",
+    comune: "Genova, Vesima — spiaggia libera",
+    data: "4 settembre 2026",
+    dataISO: "2026-09-04",
+    categoria: "altro",
+    titolo: "Rubano due zaini in spiaggia a Vesima, due uomini denunciati",
+    descrizione: "Due uomini di 38 e 30 anni sono stati denunciati dopo che un bagnante ha notato uno dei due sottrarre due zaini in spiaggia a Vesima, dandosi alla fuga con il complice. Polizia di Stato e Carabinieri, guidati sul posto dalla stessa persona che aveva dato l'allarme, hanno rintracciato i due poco dopo e recuperato gli zaini con gli effetti personali, riconsegnati ai proprietari.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/09/04/genova-furto-spiaggia-vesima-due-uomini-denunciati-723801/" } ],
+    lat: 44.4134181, lon: 8.7056696,
+    approssimato: true,
+    precisione: "spiaggia indicata dalla fonte, punto esatto non specificato — posizione sulla spiaggia libera di Vesima ottenuta con geocoding reale (OpenStreetMap Nominatim)"
+  },
 
 ];
