@@ -42,6 +42,230 @@
 
 window.INCIDENTS_DATA = [
   {
+    id: "genova-corso-italia-19enne-giu",
+    comune: "Genova — Corso Italia (zona lungomare)",
+    data: "2 giugno 2026",
+    dataISO: "2026-06-02",
+    categoria: "violenze",
+    titolo: "Tentata rapina notturna a un 19enne in corso Italia",
+    descrizione: "Nella notte un 19enne è stato affrontato da quattro coetanei che hanno tentato di rapinargli portafoglio e cellulare minacciandolo con un coltellino. Spinto a terra, è stato colpito con calci e pugni al volto; gli aggressori sono fuggiti senza portare via nulla. La vittima, con ferite lacero-contuse a sopracciglio e labbro, è stata trasportata in codice verde al San Martino.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/genova-19enne-aggredito-nella-notte-in-corso-italia-caccia-ai-responsabili/2026/06/02/640826/" } ],
+    lat: 44.391434, lon: 8.965829,
+    approssimato: true,
+    precisione: "corso indicato dalla fonte, punto esatto non specificato — coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-via-del-campo-rapina-operaio",
+    comune: "Genova, centro storico — Via del Campo",
+    data: "2 giugno 2026",
+    dataISO: "2026-06-02",
+    categoria: "rapine",
+    titolo: "Rapina ai danni di un operaio in un appartamento",
+    descrizione: "Un operaio impegnato in lavori edili in un appartamento di via del Campo è stato minacciato e derubato da due persone, che si sono poi allontanate rapidamente. Sul posto sono intervenuti i Carabinieri per raccogliere la testimonianza della vittima; indagini in corso, nessun arresto al momento della pubblicazione.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/06/03/genova-aggressione-rapina-centro-storico-indagini-in-corso-706225/" } ],
+    lat: 44.4124188, lon: 8.9282299,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, numero civico non specificato — coordinate ottenute con geocoding reale (OpenStreetMap Nominatim). Fatto avvenuto all'interno di un appartamento in ristrutturazione, non in strada"
+  },
+  {
+    id: "ventimiglia-coppia-senzatetto-rapina",
+    comune: "Ventimiglia (via non specificata)",
+    data: "inizio giugno 2026 (data esatta incerta)",
+    dataISO: "2026-06-02",
+    categoria: "rapine",
+    titolo: "Tentata rapina a una coppia di persone senza fissa dimora, due arresti",
+    descrizione: "Due giovani hanno aggredito e minacciato una coppia di persone senza fissa dimora nel centro di Ventimiglia, nel tentativo di rapinarli. Le volanti della Polizia di Stato, dopo aver trovato l'uomo ferito su una panchina, hanno rintracciato e arrestato in flagranza i due responsabili per tentata rapina aggravata e lesioni personali.",
+    fonti: [
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/06/03/aggressione-ventimiglia-senza-tetto-picchiati-rapina-due-arresti-706213/" },
+      { nome: "Sanremonews", url: "https://www.sanremonews.it/2026/06/03/leggi-notizia/argomenti/cronaca/articolo/ventimiglia-tentano-di-rapinare-una-coppia-sfd-due-extracomunitari-arrestati-dalla-polizia-di-stat.html" }
+    ],
+    lat: 43.7917623, lon: 7.6033131,
+    approssimato: true,
+    precisione: "data esatta non specificata dalle fonti (pubblicato il 3 giugno con formula generica \"negli scorsi giorni\") — stimata al 2 giugno; comune indicato dalla fonte, via non specificata — coordinate sul centro di Ventimiglia (OpenStreetMap Nominatim). Le due fonti citate potrebbero riferirsi allo stesso episodio"
+  },
+  {
+    id: "savona-corso-vittorio-veneto-furto-spiaggia",
+    comune: "Savona — Corso Vittorio Veneto / zona ex Cantieri Solimano",
+    data: "6 giugno 2026",
+    dataISO: "2026-06-06",
+    categoria: "rapine",
+    titolo: "Furto in un negozio e fuga in spiaggia con resistenza agli agenti",
+    descrizione: "Due uomini stranieri hanno sottratto prodotti per la cura della persona da un negozio di corso Vittorio Veneto, tentando la fuga a piedi sull'arenile. Uno è stato fermato in spiaggia; l'altro ha proseguito la fuga fino alla zona degli ex Cantieri Solimano, dove ha opposto resistenza ferendo due agenti della Polizia Locale. Entrambi arrestati per furto aggravato, resistenza a pubblico ufficiale e lesioni; refurtiva recuperata.",
+    fonti: [
+      { nome: "Savonanews", url: "https://www.savonanews.it/2026/06/09/leggi-notizia/argomenti/cronaca-2/articolo/savona-furto-in-un-negozio-e-fuga-sulla-spiaggia-con-resistenza-agli-agenti-arrestati-due-uomini.html" },
+      { nome: "IVG.it", url: "https://www.ivg.it/2026/06/savona-furto-in-corso-vittorio-veneto-e-fuga-in-spiaggia-arrestati-due-uomini-dopo-un-inseguimento/" }
+    ],
+    lat: 44.2989574, lon: 8.4708117,
+    approssimato: true,
+    precisione: "corso indicato dalla fonte come luogo del negozio, fuga fino agli ex Cantieri Solimano — coordinate sul corso ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-sampierdarena-via-anzani-danneggiamenti",
+    comune: "Genova, Sampierdarena — Via Anzani",
+    data: "7 giugno 2026 (data stimata)",
+    dataISO: "2026-06-07",
+    categoria: "violenze",
+    titolo: "Danneggia auto in sosta e aggredisce gli agenti a Sampierdarena",
+    descrizione: "Un uomo di 34 anni, in stato di ebbrezza e già noto alle forze dell'ordine, ha danneggiato a pugni diverse auto in sosta in via Anzani. Alla richiesta di identificazione ha minacciato gli agenti con una bottiglia di superalcolici e ha opposto resistenza al fermo; secondo testimonianze, poco prima si sarebbe reso responsabile anche di due tentate rapine improprie in due supermercati della zona.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/06/pugni-auto-arrestato-465254/" } ],
+    lat: 44.4141580, lon: 8.8892443,
+    approssimato: true,
+    precisione: "data esatta non indicata numericamente dalla fonte (solo \"domenica mattina\"), stimata dalla pubblicazione — via indicata dalla fonte — coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "la-spezia-umbertino-minimarket-rissa",
+    comune: "La Spezia — quartiere Umbertino",
+    data: "7 giugno 2026",
+    dataISO: "2026-06-07",
+    categoria: "violenze",
+    titolo: "Lite in un minimarket degenera in rissa",
+    descrizione: "Un diverbio per futili motivi tra il gestore di un minimarket e un cliente è degenerato in una rissa, con l'intervento di altre persone tra cui alcuni minorenni. La Polizia di Stato è intervenuta su chiamata al 112; alcune persone coinvolte hanno riportato escoriazioni lievi, curate al pronto soccorso. Nessun arresto riportato, indagini in corso tramite le telecamere della zona.",
+    fonti: [ { nome: "Gazzetta della Spezia", url: "https://gazzettadellaspezia.com/cronaca/item/176491-la-spezia-la-lite-tra-il-gestore-di-un-minimarket-e-un-avventore-degenera-in-rissa" } ],
+    lat: 44.1077, lon: 9.8157,
+    approssimato: true,
+    precisione: "quartiere indicato dalla fonte, via non specificata — coordinate sul quartiere Umbertino ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-piazza-vittoria-furto-abbigliamento",
+    comune: "Genova — Piazza della Vittoria",
+    data: "9 giugno 2026",
+    dataISO: "2026-06-09",
+    categoria: "rapine",
+    titolo: "Furto in un negozio di abbigliamento con minacce alla vigilanza",
+    descrizione: "Un uomo di 28 anni ha superato le casse di un negozio con merce non pagata; scoperto, ha minacciato l'addetto alla vigilanza con una bottiglia di vetro e ha tentato la fuga, opponendo poi resistenza agli agenti con calci e morsi. È stato arrestato per rapina impropria e denunciato per resistenza a pubblico ufficiale e ricettazione, essendo stato trovato in possesso di psicofarmaci senza ricetta; trattenuto per il rito direttissimo.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/furto-in-un-negozio-di-abbigliamento-e-minacce-alla-vigilanza-arrestato-algerino/2026/06/10/641260/" } ],
+    lat: 44.4030740, lon: 8.9449881,
+    approssimato: false,
+    precisione: "piazza indicata dalla fonte — coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "savona-prolungamento-furto-fuga-mare",
+    comune: "Savona — spiaggia libera del Prolungamento / centro",
+    data: "12 giugno 2026",
+    dataISO: "2026-06-12",
+    categoria: "rapine",
+    titolo: "Furto in un negozio e fuga in mare, arrestato per rapina impropria",
+    descrizione: "Un uomo di 42 anni, con precedenti, ha rubato articoli in un negozio del centro, spintonando e minacciando la titolare che lo aveva sorpreso. Per sfuggire alla Polizia si è gettato in mare presso la spiaggia del Prolungamento, mescolandosi ai bagnanti, prima di essere bloccato; nella fuga aveva abbandonato parte della refurtiva, incluso uno zaino rubato altrove. Arrestato per rapina impropria e denunciato per ricettazione; disposta la custodia cautelare.",
+    fonti: [ { nome: "104 News", url: "https://www.104news.it/2026/06/12/savona-ruba-in-un-negozio-e-per-sfuggire-alla-polizia-di-butta-in-mare-arrestato/" } ],
+    lat: 44.283209, lon: 8.445371,
+    approssimato: true,
+    precisione: "spiaggia indicata dalla fonte come luogo della fuga — riutilizzate le coordinate già geocodate per la spiaggia del Prolungamento (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-piazza-dante-taglierino",
+    comune: "Genova — Piazza Dante",
+    data: "15 giugno 2026",
+    dataISO: "2026-06-15",
+    categoria: "violenze",
+    titolo: "Uomo ferito con un taglierino durante un tentativo di rapina in piazza Dante",
+    descrizione: "Un uomo di circa 31 anni è stato accerchiato da un gruppo di persone in piazza Dante e colpito due volte con un taglierino durante un tentativo di rapina, prima di riuscire a fotografare i propri aggressori. È stato soccorso e trasportato in ospedale; era in corso la caccia agli aggressori.",
+    fonti: [ { nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/06/15/uomo-ferito-con-un-taglierino-in-pieno-centro-a-genova-caccia-agli-aggressori_3230369e-9b0f-4267-a8a5-e769162185f3.html" } ],
+    lat: 44.4051279, lon: 8.9360445,
+    approssimato: false,
+    precisione: "piazza indicata dalla fonte — coordinate ottenute con geocoding reale (OpenStreetMap Nominatim). Dettagli ricavati dalla sintesi del motore di ricerca, non da lettura diretta dell'articolo integrale (fonte non rileggibile in questa sessione per deduplica del fetch): si raccomanda una verifica manuale della fonte"
+  },
+  {
+    id: "savona-prolungamento-tentata-violenza-sessuale",
+    comune: "Savona — spiaggia libera del Prolungamento",
+    data: "20 giugno 2026",
+    dataISO: "2026-06-20",
+    categoria: "violenze",
+    titolo: "Rapina, aggressione e tentata violenza sessuale in spiaggia, tre arresti",
+    descrizione: "Tre uomini sono stati arrestati per una serie di episodi avvenuti nella zona del Prolungamento: prima una rapina di un cellulare ai danni di un connazionale, poi un'aggressione a un secondo uomo che li aveva accusati del furto, infine un tentativo di molestare una ragazza in spiaggia, con il fidanzato che, intervenuto in sua difesa, è stato colpito con un paletto e ferito.",
+    fonti: [
+      { nome: "Liguria Notizie (arresto, 1 luglio 2026)", url: "https://www.ligurianotizie.it/savona-fermati-tre-giovani-dopo-rapina-aggressione-e-tentata-violenza-sessuale-in-spiaggia/2026/07/01/643177/" },
+      { nome: "Liguria Notizie (riferimento alla data dell'evento, 5 luglio 2026)", url: "https://www.ligurianotizie.it/savona-rissa-tra-giovani-nordafricano-accoltellato-nella-spiaggia-libera-del-prolungamento/2026/07/05/643508/" }
+    ],
+    lat: 44.283209, lon: 8.445371,
+    approssimato: true,
+    precisione: "data dell'evento (20 giugno) dedotta da un riferimento in un articolo successivo del 5 luglio, non da una cronaca diretta datata 20 giugno — coordinate riutilizzate dalla spiaggia del Prolungamento già geocodata"
+  },
+  {
+    id: "genova-quinto-giardini-gianelli-spedizione",
+    comune: "Genova, Quinto — giardini di via Gianelli",
+    data: "21 giugno 2026 (notte tra sabato e domenica)",
+    dataISO: "2026-06-21",
+    categoria: "violenze",
+    titolo: "Scontro tra gruppi ai giardini di Quinto, un minore ferito",
+    descrizione: "Un gruppo di circa 20 giovani a volto coperto e armati di spranghe si è scontrato con un altro gruppo di circa 30 adolescenti ospiti di un vicino centro di accoglienza per minori. Uno dei minori è stato colpito alla testa, ha perso molto sangue ed è stato portato in ospedale in codice giallo. Quattro ragazzi del gruppo aggredito sono stati fermati e denunciati; gli aggressori a volto coperto si sono dati alla fuga. Gli inquirenti valutano l'ipotesi di una spedizione punitiva.",
+    fonti: [
+      { nome: "Genova24", url: "https://www.genova24.it/2026/06/quinto-aggressione-minori-ronda-467281/" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/quinto-aggressione-ai-giardini-ferito-un-giovane-indagano-i-carabinieri/2026/06/21/642351/" }
+    ],
+    lat: 44.3843657, lon: 9.0192707,
+    approssimato: false,
+    precisione: "giardini indicati dalla fonte (via Gianelli) — coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "diano-marina-lungomare-babygang",
+    comune: "Diano Marina — lungomare",
+    data: "21 giugno 2026 (notte tra sabato e domenica)",
+    dataISO: "2026-06-21",
+    categoria: "violenze",
+    titolo: "Tre minorenni circondati e picchiati da una baby gang sul lungomare",
+    descrizione: "Tre ragazzi minorenni sono stati accerchiati, picchiati e derubati di alcuni effetti personali sul lungomare da un gruppo di oltre dieci giovani, alcuni maggiorenni, dopo una serie di provocazioni. Uno dei tre ha riportato naso fratturato, contusioni diffuse e tumefazioni, con prognosi di 30 giorni; è stato portato al pronto soccorso e poi trasferito per accertamenti nella regione di residenza. Indagini in corso dei Carabinieri.",
+    fonti: [ { nome: "Riviera24", url: "https://www.riviera24.it/2026/06/diano-marina-tre-minorenni-pestati-dalla-baby-gang-967526/" } ],
+    lat: 43.9099088, lon: 8.0820798,
+    approssimato: true,
+    precisione: "lungomare indicato dalla fonte, punto esatto non specificato — coordinate sul centro di Diano Marina ottenute con geocoding reale (OpenStreetMap Nominatim); notte dell'evento dedotta dal giorno di pubblicazione (lunedì 22 giugno)"
+  },
+  {
+    id: "la-spezia-viale-garibaldi-scippi",
+    comune: "La Spezia — Viale Garibaldi",
+    data: "22 giugno 2026",
+    dataISO: "2026-06-22",
+    categoria: "rapine",
+    titolo: "Scippi in pieno centro, due denunce",
+    descrizione: "Due persone sono state denunciate dalla Squadra Mobile per una serie di furti con strappo ai danni di passanti. In un episodio, in viale Garibaldi, un giovane si è avvicinato a una vittima con la scusa di chiedere indicazioni e le ha strappato una collana d'oro da dietro, dandosi alla fuga; la vittima è caduta a terra riportando escoriazioni e danni al motorino. La refurtiva è stata recuperata.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/06/22/strappano-collane-a-due-passanti-in-pieno-centro-citta-denunciati-dalla-mobile-e-refurtiva-recuperata-659735" } ],
+    lat: 44.1065257, lon: 9.8145732,
+    approssimato: false,
+    precisione: "viale indicato dalla fonte — coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "sestri-levante-via-nazionale-scippo",
+    comune: "Sestri Levante — Via Nazionale",
+    data: "24 giugno 2026",
+    dataISO: "2026-06-24",
+    categoria: "rapine",
+    titolo: "Scippo a un'anziana e furto di un furgone risolti con la videosorveglianza",
+    descrizione: "Una donna anziana è stata scippata in via Nazionale a Sestri Levante; il caso è stato risolto in circa un'ora grazie al sistema di videosorveglianza comunale, con l'individuazione del sospettato e il recupero della refurtiva. Nello stesso contesto è stato segnalato anche il furto di un furgone, risolto con lo stesso metodo.",
+    fonti: [ { nome: "GenovaToday (verifica indiretta tramite risultati di ricerca)", url: "https://www.genovatoday.it/cronaca/sestri-levante-scippo-via-nazionale.html" } ],
+    lat: 44.271197, lon: 9.413774,
+    approssimato: true,
+    precisione: "via indicata dalla fonte, punto esatto dello scippo non specificato — fonte primaria GenovaToday non raggiungibile in automatico (pagina bloccata): dettagli e data confermati tramite risultati di ricerca — coordinate sul tratto di via Nazionale più prossimo (Riva Trigoso) ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "savona-finalmarina-rissa-lungomare",
+    comune: "Savona — Finale Ligure, lungomare di Finalmarina",
+    data: "25 giugno 2026",
+    dataISO: "2026-06-25",
+    categoria: "violenze",
+    titolo: "Rissa sul lungomare di Finalmarina, due minorenni denunciati",
+    descrizione: "Intervento della Polizia Locale nella notte per una rissa sul lungomare di Finalmarina, con un ragazzo ferito e soccorso. I presunti responsabili, due minorenni residenti nella cittadina, sono stati identificati e denunciati in meno di un'ora grazie alle telecamere di sorveglianza.",
+    fonti: [ { nome: "Savonanews", url: "https://www.savonanews.it/2026/06/25/leggi-notizia/argomenti/cronaca-2/articolo/rissa-sul-lungomare-di-finalmarina-due-minorenni-denunciati-dalla-polizia-locale.html" } ],
+    lat: 44.1694562, lon: 8.3450155,
+    approssimato: true,
+    precisione: "lungomare indicato dalla fonte, punto esatto non specificato — coordinate sul centro di Finalmarina ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-cep-rapina-scarpe",
+    comune: "Genova, Prà — quartiere CEP",
+    data: "26 giugno 2026 (sera di San Giovanni)",
+    dataISO: "2026-06-26",
+    categoria: "rapine",
+    titolo: "Rapinato e derubato anche delle scarpe al CEP",
+    descrizione: "Un uomo di 40 anni è stato aggredito da tre connazionali al CEP, che lo hanno percosso e derubato di denaro, chiavi di casa e delle scarpe che indossava, fuggendo poi in autobus. Un complice è stato riconosciuto dalla vittima e arrestato per rapina aggravata in concorso; proseguivano le ricerche degli altri due.",
+    fonti: [
+      { nome: "104 News", url: "https://www.104news.it/2026/06/26/genova-aggrediscono-marocchino-e-gli-portano-via-persino-le-scarpe-un-arresto/" },
+      { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/68673-rapina-in-strada-cep-rubano-le-scarpe.html" },
+      { nome: "GenovaToday (verifica indiretta tramite ripubblicazioni)", url: "https://www.genovatoday.it/cronaca/cep-rapina-arresto.html" }
+    ],
+    lat: 44.4304504, lon: 8.7655354,
+    approssimato: true,
+    precisione: "quartiere indicato dalla fonte, via non specificata — coordinate sul quartiere CEP ottenute con geocoding reale (OpenStreetMap Nominatim). Fonte primaria GenovaToday non raggiungibile in automatico: dettagli verificati tramite più ripubblicazioni concordanti (104 News, Primocanale, LiguriaDay, Imola Oggi)"
+  },
+  {
     id: "albenga-lungomare-1lug",
     comune: "Albenga — lungomare",
     data: "1 luglio 2026",
