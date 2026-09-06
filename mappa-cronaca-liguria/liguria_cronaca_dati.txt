@@ -2908,4 +2908,97 @@ window.INCIDENTS_DATA = [
     precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
   },
 
+  /* --- Ricerca integrativa Giugno 2026 con elenco fonti ampliato (aggiunti il 06/09/2026) --- */
+  {
+    id: "genova-piazza-sarzano-rissa-giovani",
+    comune: "Genova, centro storico — Piazza Sarzano",
+    data: "notte tra il 5 e il 6 giugno 2026",
+    dataISO: "2026-06-06",
+    categoria: "violenze",
+    titolo: "Maxi rissa tra gruppi di giovani in piazza Sarzano",
+    descrizione: "Intorno all'una di notte diversi gruppi di giovani si sono affrontati nella piazzetta vicino all'ingresso della metropolitana di Sarzano, nel centro storico, usando anche bastoni e spranghe. I residenti, svegliati dalle urla, hanno allertato le forze dell'ordine con numerose chiamate; i partecipanti si sono dileguati prima dell'arrivo delle volanti. Il Municipio Centro Est ha convocato un'assemblea pubblica sulle criticità di sicurezza segnalate dai residenti.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/piazza-sarzano-rissa-nella-notte-tra-gruppi-di-giovani-residenti-svegliati-dalle-urla/2026/06/07/641079/" }, { nome: "Liguria Oggi", url: "https://liguriaoggi.it/2026/06/07/genova-maxi-rissa-centro-storico-vicoli-indagini-in-corso-707077/" } ],
+    lat: 44.4043519, lon: 8.9320246,
+    approssimato: false,
+    precisione: "piazza indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); data dedotta dal contesto dell'articolo (pubblicato domenica 7/6, riferisce fatti di 'venerdì e sabato notte')"
+  },
+  {
+    id: "genova-san-fruttuoso-rapina-collana-giornalista",
+    comune: "Genova, San Fruttuoso (via non specificata dalla fonte)",
+    data: "8 giugno 2026",
+    dataISO: "2026-06-08",
+    categoria: "rapine",
+    titolo: "Rapina con scippo di collana ai danni di un giornalista",
+    descrizione: "Un uomo che rientrava a casa a San Fruttuoso, dopo essere stato avvicinato già sull'autobus, è stato affrontato alle spalle da un giovane che lo ha spintonato e ha tentato di strappargli la collana; allontanatosi fingendo di andarsene, lo ha aggredito una seconda volta gettandolo a terra, riuscendo a strappargli la collana e a fuggire. La vittima è stata portata al San Martino con 15 giorni di prognosi. Il responsabile è stato arrestato solo il mese successivo, già detenuto per un'altra causa, grazie alle immagini di videosorveglianza.",
+    fonti: [ { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/69222-rapinato-dalla-collana-a-san-fruttuoso,-arrestato-un-21enne.html" } ],
+    lat: 44.4079697, lon: 8.9611438,
+    approssimato: true,
+    precisione: "quartiere indicato dalla fonte (via esatta non specificata), coordinate approssimate su San Fruttuoso/Genova (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-sestri-ponente-rapina-poste-taxi",
+    comune: "Genova, Sestri Ponente — Vico Schiaffino (ufficio postale)",
+    data: "25 giugno 2026",
+    dataISO: "2026-06-25",
+    categoria: "rapine",
+    titolo: "Rapina a mano armata alle Poste di Sestri Ponente, fuga con un taxi rubato",
+    descrizione: "Un uomo con il volto coperto da un casco ha fatto irruzione nell'ufficio postale di vico Schiaffino minacciando gli impiegati con un coltello e una pistola, risultata poi giocattolo, per farsi consegnare il denaro. Il personale si è chiuso in una stanza dando l'allarme; il rapinatore è fuggito in via Ciro Menotti, ha minacciato un tassista con il coltello e gli ha rubato l'auto, ritrovata poi a Prà. Un uomo è stato successivamente arrestato per il fatto.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/06/rapina-poste-sestri-ponente-ladro-taxi-467738/" }, { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/06/25/leggi-notizia/argomenti/cronaca-5/articolo/sestri-ponente-rapina-lufficio-postale-e-fugge-rubando-un-taxi.html" } ],
+    lat: 44.4242664, lon: 8.8518686,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "santo-stefano-magra-conad-antitaccheggio",
+    comune: "Santo Stefano di Magra (La Spezia) — Conad Superstore",
+    data: "26 giugno 2026",
+    dataISO: "2026-06-26",
+    categoria: "rapine",
+    titolo: "Furto al supermercato: manomette l'antitaccheggio, arrestato",
+    descrizione: "Un uomo ha manomesso i dispositivi antitaccheggio al Conad superstore di Santo Stefano Magra, rubando generi alimentari e articoli vari per circa 100 euro nascosti nello zaino. Notato dal personale di vigilanza, è stato bloccato dai Carabinieri intervenuti su segnalazione al 112. Processato per direttissima, gli è stato imposto il divieto di dimora in provincia della Spezia.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/06/27/furto-al-supermercato-rimuove-lantitaccheggio-ma-viene-fermato-arrestato-660607" } ],
+    lat: 44.1650993, lon: 9.9173304,
+    approssimato: true,
+    precisione: "supermercato non georeferenziato singolarmente, coordinate approssimate sul centro di Santo Stefano di Magra (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "pietra-ligure-sala-giochi-rapina",
+    comune: "Pietra Ligure — sala giochi (via non specificata dalla fonte)",
+    data: "29 giugno 2026 (sera)",
+    dataISO: "2026-06-29",
+    categoria: "rapine",
+    titolo: "Rapina a mano armata in una sala giochi",
+    descrizione: "Un uomo ha minacciato con un coltello la titolare di una sala giochi, costringendola a consegnare circa 1.500 euro di incasso giornaliero, per poi fuggire a piedi. Il presunto responsabile è stato identificato tramite le telecamere di sorveglianza e arrestato dai Carabinieri il giorno successivo nel centro storico di Pietra Ligure.",
+    fonti: [ { nome: "IVG.it", url: "https://www.ivg.it/2026/07/minaccia-con-un-coltello-la-titolare-di-una-sala-giochi-e-scappa-con-1500-euro-40enne-individuato-dai-carabinieri/" }, { nome: "Savonanews", url: "https://www.savonanews.it/2026/07/23/leggi-notizia/argomenti/cronaca-2/articolo/rapina-alla-sala-giochi-il-presunto-autore-identificato-dai-carabinieri-tramite-le-telecamere.html" } ],
+    lat: 44.1489534, lon: 8.2825857,
+    approssimato: true,
+    precisione: "sala giochi non georeferenziata singolarmente, coordinate approssimate sul centro di Pietra Ligure (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "ventimiglia-via-cavour-spaccata-bar",
+    comune: "Ventimiglia — Via Cavour",
+    data: "notte tra il 16 e il 17 giugno 2026",
+    dataISO: "2026-06-17",
+    categoria: "altro",
+    titolo: "Furto con spaccata in un bar",
+    descrizione: "Un uomo, ripreso dalle telecamere di videosorveglianza, ha usato la griglia di un tombino per sfondare la porta a vetri di un bar in via Cavour, sottraendo il fondo cassa di circa 350 euro; si è poi fermato a consumare cibo e bevande sul posto prima di allontanarsi. Sono in corso le indagini delle forze dell'ordine.",
+    fonti: [ { nome: "Riviera24", url: "https://www.riviera24.it/2026/06/furto-con-spaccata-a-ventimiglia-rubato-il-fondo-cassa-di-un-bar-967029" } ],
+    lat: 43.7926387, lon: 7.6069300,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "bordighera-tentato-furto-spaccata-negozio",
+    comune: "Bordighera — Via Vittorio Emanuele",
+    data: "notte tra il 27 e il 28 giugno 2026",
+    dataISO: "2026-06-27",
+    categoria: "altro",
+    titolo: "Tentato furto con spaccata in un negozio, danni oltre 10mila euro",
+    descrizione: "Ignoti hanno tentato di sfondare a colpi di mazza le vetrine antisfondamento di un negozio di abbigliamento e attrezzatura sportiva in via Vittorio Emanuele, senza riuscire a entrare; i danni alle vetrine hanno superato i 10.000 euro. Il negozio era già stato colpito da un furto pochi mesi prima. Le indagini dei Carabinieri tramite videosorveglianza hanno portato all'individuazione e alla denuncia del responsabile.",
+    fonti: [ { nome: "Riviera24", url: "https://www.riviera24.it/2026/06/bordighera-tentato-furto-da-randone-sporting-vip-negozio-colpito-due-volte-in-pochi-mesi-968467/" } ],
+    lat: 43.7813958, lon: 7.6542399,
+    approssimato: true,
+    precisione: "via indicata dalla fonte, coordinate approssimate su via Vittorio Emanuele/Bordighera (numero civico non georeferenziato singolarmente)"
+  },
+
 ];
