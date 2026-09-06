@@ -2789,4 +2789,123 @@ window.INCIDENTS_DATA = [
     precisione: "quartiere/parco indicato dalla fonte, coordinate approssimate su Migliarina/La Spezia (OpenStreetMap Nominatim)"
   },
 
+  /* --- Ricerca integrativa Luglio 2026 con elenco fonti ampliato (aggiunti il 06/09/2026) --- */
+  {
+    id: "porto-venere-furto-ristorante",
+    comune: "Porto Venere — ristorante (via non specificata dalla fonte)",
+    data: "inizio luglio 2026 (data esatta incerta)",
+    dataISO: "2026-07-05",
+    categoria: "rapine",
+    titolo: "Furto in un ristorante, bottino da 500 euro tra vino e fondo cassa",
+    descrizione: "Un uomo, ripreso dalle telecamere di videosorveglianza, si è introdotto in un ristorante di Porto Venere sottraendo una decina di bottiglie di vino, per un valore di circa 400 euro, e il fondo cassa da circa 100 euro. I Carabinieri hanno rapidamente identificato il responsabile e recuperato parte della refurtiva.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/07/07/furto-in-un-ristorante-a-porto-venere-prese-bottiglie-di-vino-e-il-fondo-cassa-ladro-immortalato-dalle-telecamere-662061" } ],
+    lat: 44.05066, lon: 9.834459,
+    approssimato: true,
+    precisione: "ristorante non georeferenziato singolarmente, coordinate approssimate su Porto Venere; data del furto non precisata dalla fonte ('nei giorni scorsi' rispetto all'articolo del 7/7), potrebbe risalire a fine giugno"
+  },
+  {
+    id: "genova-via-luccoli-furto-negozio",
+    comune: "Genova, centro storico — Via Luccoli",
+    data: "6 luglio 2026 (data dedotta dalla fonte)",
+    dataISO: "2026-07-06",
+    categoria: "rapine",
+    titolo: "Furto in un negozio di abbigliamento di via Luccoli, tre denunciati",
+    descrizione: "Due persone hanno forzato l'ingresso di un negozio di abbigliamento di via Luccoli, portando via capi e calzature di marca in due sacchi. Le indagini sulle immagini di videosorveglianza hanno portato la Polizia a denunciare l'autore materiale del furto e due complici per ricettazione; parte della refurtiva è stata recuperata.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/furto-in-un-negozio-di-via-luccoli-tre-denunciati-dalla-polizia-recuperato-parte-del-bottino/2026/07/09/643885/" } ],
+    lat: 44.4096357, lon: 8.9335353,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); data dell'evento dedotta indirettamente dal testo dell'articolo pubblicato il 9/7"
+  },
+  {
+    id: "la-spezia-anziano-borseggiato-supermercato",
+    comune: "La Spezia — centro (supermercato, via non specificata dalla fonte)",
+    data: "6 luglio 2026 (mattina)",
+    dataISO: "2026-07-06",
+    categoria: "rapine",
+    titolo: "Anziano borseggiato all'uscita del supermercato, arresto in flagranza",
+    descrizione: "Nell'ambito di un servizio mirato contro i reati predatori, la Squadra Mobile ha notato due uomini già noti alle forze dell'ordine seguire un anziano appena uscito da un supermercato del centro con la spesa. Uno dei due si è avvicinato alle spalle della vittima sfilandogli il portafoglio dalla tasca, per poi tentare la fuga; è stato bloccato e arrestato in flagranza, il complice è stato denunciato a piede libero.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/07/07/anziano-borseggiato-alluscita-del-supermercato-ma-la-squadra-mobile-vede-tutto-e-lo-arresta-in-flagranza-661946" } ],
+    lat: 44.1043145, lon: 9.8213302,
+    approssimato: true,
+    precisione: "via del supermercato non specificata dalla fonte, coordinate approssimate sul centro di La Spezia (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "santo-stefano-magra-furto-auto-sosta",
+    comune: "Santo Stefano di Magra (La Spezia) — Via Cisa Vecchia",
+    data: "11 luglio 2026 (sabato mattina)",
+    dataISO: "2026-07-11",
+    categoria: "rapine",
+    titolo: "Ruba un'auto in sosta, inseguito a piedi dal proprietario e arrestato",
+    descrizione: "Un'auto lasciata in sosta con le chiavi inserite è stata portata via da un uomo in via Cisa Vecchia; il proprietario lo ha inseguito a piedi chiamando il 112. I Carabinieri lo hanno arrestato per furto aggravato e resistenza a pubblico ufficiale; l'arresto è stato convalidato con divieto di dimora.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/07/13/ruba-unauto-in-sosta-il-proprietario-lo-insegue-a-piedi-arrestato-dai-carabinieri-662913/" } ],
+    lat: 44.1319984, lon: 9.9404070,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "sarzana-piazza-garibaldi-rissa-vetro",
+    comune: "Sarzana — Piazza Garibaldi",
+    data: "notte tra il 10 e l'11 luglio 2026",
+    dataISO: "2026-07-11",
+    categoria: "violenze",
+    titolo: "Rissa in piazza, sedicenne estraneo ferito da una scheggia di vetro",
+    descrizione: "Una rissa scoppiata in piazza Garibaldi nella notte, con uso di bottiglie, ha coinvolto un gruppo di persone; una bottiglia rotta ha colpito accidentalmente alla testa un sedicenne estraneo alla lite, medicato al pronto soccorso e poi dimesso. I responsabili si sono dileguati all'arrivo dei Carabinieri; la madre del ragazzo ha denunciato un'escalation di episodi violenti in piazza, segnalando che la stessa sera un altro giovane era stato colpito da un pugno al volto.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/07/11/rissa-in-piazza-garibaldi-a-sarzana-sedicenne-estraneo-ferito-alla-testa-da-una-scheggia-di-vetro-e-medicato-al-pronto-soccorso-662720" } ],
+    lat: 44.1113137, lon: 9.9625329,
+    approssimato: false,
+    precisione: "piazza indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "ventimiglia-via-aprosio-rissa-vetro",
+    comune: "Ventimiglia — Via Aprosio",
+    data: "4 luglio 2026 (sera)",
+    dataISO: "2026-07-04",
+    categoria: "violenze",
+    titolo: "Rissa sfocia in ferimento con una scheggia di vetro in via Aprosio",
+    descrizione: "Una lite tra due persone è degenerata in aggressione in via Aprosio: uno dei due ha colpito l'altro al petto con una scheggia di una bottiglia rotta. Sono intervenuti il 118 e la Polizia; il ferito è stato trasportato al pronto soccorso di Sanremo. Entrambi risultavano in stato di ebbrezza.",
+    fonti: [ { nome: "Riviera24", url: "https://www.riviera24.it/2026/07/ventimiglia-lite-tra-stranieri-in-via-aprosio-un-ferito-969206" } ],
+    lat: 43.7917790, lon: 7.6076110,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); alcune fonti titolano erroneamente 'accoltellamento' ma la ferita è causata da una scheggia di vetro, non da una lama"
+  },
+  {
+    id: "la-spezia-umbertino-minimarket-rapina",
+    comune: "La Spezia — zona Stazione/Umbertino (minimarket, via non specificata)",
+    data: "22/23 luglio 2026 (notte)",
+    dataISO: "2026-07-23",
+    categoria: "rapine",
+    titolo: "Tenta una rapina armato di bottiglia in un minimarket, scoppia una rissa",
+    descrizione: "Un uomo è entrato in un minimarket della zona Stazione-Umbertino e ha rotto una bottiglia usandola come arma impropria per minacciare un dipendente e tentare di impossessarsi dell'incasso. Il tentativo di rapina è degenerato in una colluttazione tra l'aggressore, il dipendente e l'esercente, con tre persone rimaste lievemente ferite e trasportate in ospedale. Allertati da alcuni residenti, i Carabinieri hanno arrestato l'uomo per tentata rapina.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/07/23/tenta-una-rapina-armato-di-bottiglia-in-un-minimarket-scoppia-una-rissa-furibonda-arrestato-trentaquattrenne-664410" } ],
+    lat: 44.108416, lon: 9.813228,
+    approssimato: true,
+    precisione: "quartiere indicato dalla fonte, coordinate approssimate su Umbertino/La Spezia (via del minimarket non specificata)"
+  },
+  {
+    id: "sarzana-centro-luna-scippo-anziana",
+    comune: "Sarzana — Centro Luna (parcheggio)",
+    data: "24 luglio 2026",
+    dataISO: "2026-07-24",
+    categoria: "rapine",
+    titolo: "Scippano la borsa a un'anziana di 80 anni al Centro Luna",
+    descrizione: "Tre persone hanno sottratto la borsa di una pensionata di 80 anni nei pressi del parcheggio del centro commerciale Centro Luna, con dentro circa 500 euro in contanti e documenti. Poco dopo la Polizia Stradale ha fermato il veicolo dei tre durante un controllo oltre il confine regionale; la refurtiva è stata recuperata e restituita alla vittima.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/07/25/sarzana-rubano-la-borsa-ad-una-ottantenne-al-centro-luna-fermati/" } ],
+    lat: 44.1181347, lon: 9.9468266,
+    approssimato: false,
+    precisione: "centro commerciale indicato dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); il fermo dei responsabili è avvenuto oltre confine, a Pontremoli (Toscana), ma il fatto-reato si è consumato a Sarzana"
+  },
+  {
+    id: "sarzana-variante-aurelia-deodoranti",
+    comune: "Sarzana — Via Variante Aurelia",
+    data: "28 luglio 2026",
+    dataISO: "2026-07-28",
+    categoria: "rapine",
+    titolo: "Ruba trenta flaconi di deodorante e aggredisce l'addetto alla vigilanza",
+    descrizione: "Un uomo senza fissa dimora ha sottratto circa trenta flaconi di deodorante, per un valore di circa 130 euro, da un negozio di Sarzana. Sorpreso dall'addetto alla vigilanza, lo ha spintonato con violenza per fuggire. I Carabinieri lo hanno rintracciato e arrestato per rapina impropria.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/07/28/fugge-da-un-negozio-di-sarzana-con-trenta-flaconi-di-deodorante-non-pagati-arrestato-dai-carabinieri-665168" }, { nome: "La Nazione", url: "https://www.lanazione.it/sarzana/cronaca/furto-deodoranti-420941d7" } ],
+    lat: 44.1049842, lon: 9.9623165,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+
 ];
