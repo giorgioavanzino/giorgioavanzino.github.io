@@ -3011,9 +3011,9 @@ window.INCIDENTS_DATA = [
     titolo: "Scaraventato a terra e derubato del portafoglio in piazza Banchi",
     descrizione: "Un uomo che attraversava piazza Banchi è stato avvicinato da uno sconosciuto che, dopo avergli chiesto insistentemente denaro, lo ha spinto a terra sottraendogli il portafoglio con tutti i documenti. Grazie alle telecamere e alla descrizione fornita alla Sala Operativa, gli agenti del Commissariato Centro hanno rintracciato l'autore poco dopo in piazza delle Scuole Pie, ancora in possesso della refurtiva e di tre carte bancarie provento di furti precedenti. È stato denunciato per rapina e ricettazione.",
     fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/05/rapina-centro-storico-polizia-462860/" }, { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/66808-polizia-vicoli-denunce-rapina-spaccio.html" } ],
-    lat: 44.4082, lon: 8.9294,
-    approssimato: true,
-    precisione: "coordinate stimate su base di conoscenza geografica generale (piazza Banchi, centro storico di Genova); il geocoding live con OpenStreetMap Nominatim non è stato possibile per un'interruzione temporanea dei tool di rete — da verificare in un secondo momento"
+    lat: 44.4092608, lon: 8.9298769,
+    approssimato: false,
+    precisione: "piazza indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
   },
   {
     id: "genova-san-fruttuoso-finto-carabiniere-rapina-gioielli",
@@ -3037,9 +3037,9 @@ window.INCIDENTS_DATA = [
     titolo: "Alpino aggredito e rapinato durante l'Adunata Nazionale",
     descrizione: "Durante la 97ª Adunata Nazionale degli Alpini a Genova, un alpino è stato circondato in vico Vegetti da un gruppo di giovani, poi identificati come minorenni, e colpito con un pugno che gli ha causato la frattura scomposta della mandibola (40 giorni di prognosi), venendo derubato di portafoglio e coltellino multiuso. Le indagini, concluse a distanza di settimane, hanno portato all'arresto di quattro minorenni.",
     fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/06/rapina-alpino-centro-storico-arresti-466896/" }, { nome: "Today.it", url: "https://www.today.it/cronaca/ragazzi-aggrediscono-alpino-arrestati-genova.html" } ],
-    lat: 44.4083, lon: 8.9300,
-    approssimato: true,
-    precisione: "coordinate stimate su base di conoscenza geografica generale (vicoli del centro storico di Genova, zona piazza Banchi/via San Luca); il geocoding live con OpenStreetMap Nominatim non è stato possibile per un'interruzione temporanea dei tool di rete — da verificare in un secondo momento"
+    lat: 44.4049149, lon: 8.9311831,
+    approssimato: false,
+    precisione: "vico indicato dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
   },
   {
     id: "genova-bolzaneto-romairone-furto-cesoie",
@@ -3050,9 +3050,9 @@ window.INCIDENTS_DATA = [
     titolo: "Furto in centro commerciale sfocia in tentata rapina con cesoie",
     descrizione: "Un uomo ha sottratto da un supermercato di via Romairone alimenti e vestiti per un valore di circa 1.888 euro, nascondendoli in due carrelli; scoperto poco dopo mentre tentava di rubare anche dispositivi elettronici per 1.300 euro, ha minacciato il vice responsabile del negozio con delle cesoie usate per manomettere le placche antitaccheggio. È stato bloccato e arrestato dagli agenti del Commissariato di Cornigliano per tentata rapina aggravata e furto aggravato.",
     fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/05/furto-centro-commerciale-bolzaneto-463322/" }, { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/genova-tenta-la-rapina-con-cesoie-dopo-il-furto-arrestato-54enne/2026/05/13/639599/" } ],
-    lat: 44.4570, lon: 8.8935,
-    approssimato: true,
-    precisione: "coordinate stimate su base di conoscenza geografica generale (quartiere di Bolzaneto, Genova); il geocoding live con OpenStreetMap Nominatim non è stato possibile per un'interruzione temporanea dei tool di rete — da verificare in un secondo momento"
+    lat: 44.4649191, lon: 8.8979631,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
   },
   {
     id: "savona-via-nizza-rissa",
@@ -3063,9 +3063,9 @@ window.INCIDENTS_DATA = [
     titolo: "Rissa in via Nizza, un ferito lieve",
     descrizione: "Una rissa è scoppiata in mattinata in via Nizza a Savona, con il coinvolgimento di quattro o cinque persone. Sono intervenuti il personale sanitario e le forze dell'ordine; una persona ha riportato ferite lievi.",
     fonti: [ { nome: "Savonanews", url: "https://www.savonanews.it/2026/05/14/leggi-notizia/argomenti/cronaca-2/articolo/savona-scoppia-una-rissa-in-via-nizza-un-ferito-lieve.html" } ],
-    lat: 44.2950, lon: 8.4600,
-    approssimato: true,
-    precisione: "articolo parzialmente riservato agli abbonati, dettagli su dinamica non disponibili; coordinate stimate su base di conoscenza geografica generale (via Nizza, Savona), non verificate da geocoding live per un'interruzione temporanea dei tool di rete — da verificare in un secondo momento"
+    lat: 44.2887404, lon: 8.4508916,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); articolo parzialmente riservato agli abbonati, dettagli sulla dinamica non disponibili"
   },
   {
     id: "ventimiglia-carrefour-cavatappi-rapina",
@@ -3089,9 +3089,9 @@ window.INCIDENTS_DATA = [
     titolo: "Doppia rapina notturna nel centro storico: turista aggredita, studente accerchiato",
     descrizione: "Poco dopo mezzanotte una turista è stata seguita e colpita con pugni allo stomaco in vico Casana per sottrarle lo smartphone, rifugiandosi in un locale di via Roma. Verso le 2:30 uno studente fuorisede è stato accerchiato da un gruppo di persone in Stradone Sant'Agostino e rapinato con l'uso di spray al peperoncino. Entrambe le vittime sono state ricoverate in codice giallo al Galliera.",
     fonti: [ { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/67071-genova-rapina-via-roma-ladri.html" } ],
-    lat: 44.4106, lon: 8.9345,
-    approssimato: true,
-    precisione: "coordinate stimate su base di conoscenza geografica generale (vico Casana, centro storico di Genova); il geocoding live con OpenStreetMap Nominatim non è stato possibile per un'interruzione temporanea dei tool di rete — da verificare in un secondo momento"
+    lat: 44.4087848, lon: 8.9333757,
+    approssimato: false,
+    precisione: "vico indicato dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
   },
   {
     id: "sarzana-centroluna-raid-gioielleria",
@@ -3115,9 +3115,9 @@ window.INCIDENTS_DATA = [
     titolo: "Furto in appartamento e tentativo sventato in via Fornaci",
     descrizione: "In un appartamento di via Fornaci a Loano i ladri si sono introdotti portando via diversi oggetti, tra cui gioielli e preziosi. Poco dopo, nella stessa zona, un secondo tentativo di furto è stato sventato dal rientro improvviso del proprietario, che ha visto gli autori allontanarsi rapidamente. Indagano i Carabinieri della Compagnia di Albenga.",
     fonti: [ { nome: "IVG.it", url: "https://www.ivg.it/2026/05/un-colpo-riuscito-e-uno-tentato-ladri-in-azione-in-via-fornaci-a-loano-indagano-i-carabinieri/" } ],
-    lat: 44.1290, lon: 8.2730,
-    approssimato: true,
-    precisione: "data del furto non precisata dalla fonte ('negli ultimi giorni' rispetto all'articolo del 20/5); coordinate stimate su base di conoscenza geografica generale (via Fornaci, Loano), non verificate da geocoding live per un'interruzione temporanea dei tool di rete — da verificare in un secondo momento"
+    lat: 44.1296514, lon: 8.2417771,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); data del furto non precisata dalla fonte ('negli ultimi giorni' rispetto all'articolo del 20/5)"
   },
   {
     id: "imperia-lungomare-vespucci-spaccata-eni",
@@ -3128,9 +3128,9 @@ window.INCIDENTS_DATA = [
     titolo: "Furto con spaccata al distributore Eni del lungomare",
     descrizione: "Ignoti hanno sfondato con un mattone una vetrata del distributore Eni sul lungomare Vespucci a Imperia, introducendosi nei locali. L'allarme è stato dato da un passante; la Questura indaga tramite rilievi scientifici e telecamere di zona.",
     fonti: [ { nome: "Imperiapost", url: "https://imperiapost.it/811840/imperia-colpo-nella-notte-al-distributore-eni-del-lungomare-indaga-la-questura-e-caccia-agli-autori-della-spaccata" } ],
-    lat: 43.8865, lon: 8.0335,
-    approssimato: true,
-    precisione: "coordinate stimate su base di conoscenza geografica generale (lungomare Vespucci, Imperia); il geocoding live con OpenStreetMap Nominatim non è stato possibile per un'interruzione temporanea dei tool di rete — da verificare in un secondo momento"
+    lat: 43.8867281, lon: 8.0320022,
+    approssimato: false,
+    precisione: "lungomare indicato dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
   },
   {
     id: "genova-cornigliano-mercato-reta-rapina-forbici",
@@ -3141,9 +3141,9 @@ window.INCIDENTS_DATA = [
     titolo: "Rapinato e minacciato con le forbici al mercato di via Reta",
     descrizione: "Un uomo è stato avvicinato con una scusa al mercato di via Reta, derubato dello smartphone e colpito a testa e costato. L'aggressore è tornato poco dopo minacciandolo con un paio di forbici, prima di essere disarmato da alcuni passanti. È stato arrestato in giornata dalla polizia del Commissariato Cornigliano.",
     fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/05/rapina-mercato-via-reta-arresto-464686/" }, { nome: "Virgilio Notizie", url: "https://www.virgilio.it/notizie/genova-rapina-un-passante-al-mercato-di-via-reta-lo-picchia-e-lo-minaccia-con-le-forbici-1758160" } ],
-    lat: 44.4225, lon: 8.8635,
+    lat: 44.4161302, lon: 8.8717990,
     approssimato: true,
-    precisione: "coordinate stimate su base di conoscenza geografica generale (via Reta, Cornigliano, Genova); il geocoding live con OpenStreetMap Nominatim non è stato possibile per un'interruzione temporanea dei tool di rete — da verificare in un secondo momento"
+    precisione: "via Reta indicata dalla fonte non trovata su OpenStreetMap Nominatim in zona Cornigliano (l'unica corrispondenza, 'via Costantino Reta', risulta invece a Teglia/Bolzaneto); coordinate approssimate sul centro di Cornigliano"
   },
   {
     id: "san-lorenzo-mare-farmacia-rapina-ostaggio",
@@ -3154,9 +3154,9 @@ window.INCIDENTS_DATA = [
     titolo: "Rapina a mano armata in farmacia con cliente presa in ostaggio",
     descrizione: "Un uomo a volto coperto da passamontagna è entrato in una farmacia di San Lorenzo al Mare e ha preso in ostaggio una cliente, puntandole un coltello alla gola. È fuggito gettando coltello e vestiti, fermandosi in un bar nelle vicinanze prima di allontanarsi in taxi. È stato arrestato mesi dopo, già noto alle forze dell'ordine.",
     fonti: [ { nome: "La Voce di Imperia", url: "https://www.lavocediimperia.it/2026/07/16/leggi-notizia/argomenti/cronaca-6/articolo/il-colpo-in-farmacia-la-fuga-e-quella-birra-con-troppa-mancia-arrestato-il-rapinatore-di-san-loren.html" } ],
-    lat: 43.8495, lon: 7.9645,
+    lat: 43.8547109, lon: 7.9637075,
     approssimato: true,
-    precisione: "data esatta dell'evento non determinabile con precisione entro maggio 2026 (l'arresto, riportato dalla fonte, è avvenuto solo a luglio); assegnata una data indicativa a metà mese. Coordinate stimate su base di conoscenza geografica generale (San Lorenzo al Mare, centro paese), non verificate da geocoding live per un'interruzione temporanea dei tool di rete — da verificare in un secondo momento"
+    precisione: "via della farmacia non specificata dalla fonte, coordinate approssimate sul centro di San Lorenzo al Mare (OpenStreetMap Nominatim); data esatta dell'evento non determinabile con precisione entro maggio 2026 (l'arresto, riportato dalla fonte, è avvenuto solo a luglio) — assegnata una data indicativa a metà mese"
   },
 
 ];
