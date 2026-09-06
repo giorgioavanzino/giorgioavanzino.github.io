@@ -2591,5 +2591,18 @@ window.INCIDENTS_DATA = [
     approssimato: false,
     precisione: "passeggiata indicata con precisione dalle fonti — posizione verificata con geocoding reale (OpenStreetMap Nominatim). Le fonti sono discordanti sulla natura dell'episodio: 104 News e Savonanews.it parlano di rapina/derubato, Liguria24 di 'lite'; la dinamica esatta (rapina o rissa) non è del tutto chiarita al momento della pubblicazione"
   },
+  {
+    id: "savona-via-delle-trincee-lite-aggressione",
+    comune: "Savona — Via delle Trincee",
+    data: "5 settembre 2026 (pomeriggio)",
+    dataISO: "2026-09-05",
+    categoria: "violenze",
+    titolo: "Lite sfocia in aggressione, un ferito in codice giallo",
+    descrizione: "Una lite tra due persone è sfociata in un'aggressione nel pomeriggio in via delle Trincee. Le conseguenze sono state lievi; uno dei coinvolti è stato soccorso dalla Croce Bianca di Savona e trasportato in codice giallo all'ospedale San Paolo. Gli agenti della Polizia di Stato hanno identificato entrambe le persone coinvolte e stanno effettuando accertamenti per ricostruire la dinamica; al momento non sono note le cause della lite.",
+    fonti: [ { nome: "IVG.it", url: "https://www.ivg.it/2026/09/savona-lite-sfocia-in-aggressione-un-ferito-in-codice-giallo-al-san-paolo/" } ],
+    lat: 44.3105574, lon: 8.4750184,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
 
 ];
