@@ -42,6 +42,159 @@
 
 window.INCIDENTS_DATA = [
   {
+    id: "genova-pra-via-murtola-doppia-rapina",
+    comune: "Genova, Prà — Via Murtola",
+    data: "3 marzo 2026 (sera)",
+    dataISO: "2026-03-03",
+    categoria: "rapine",
+    titolo: "Doppia rapina a mano armata in due negozi",
+    descrizione: "Due uomini a volto coperto e armati di cutter, arrivati a bordo di uno scooter rubato, hanno rapinato in rapida successione due attività commerciali di via Murtola, a Prà, minacciando i titolari per farsi consegnare l'incasso. Dal primo esercizio sono stati sottratti circa 700 euro in contanti. Nel secondo negozio il tentativo è fallito perché il titolare ha reagito rifiutandosi di consegnare il denaro, costringendo i rapinatori alla fuga. Indagini in corso tramite testimonianze e videosorveglianza della zona.",
+    fonti: [
+      { nome: "GenovaQuotidiana", url: "https://genovaquotidiana.com/2026/03/04/pra-doppio-assalto-ai-negozi-in-via-murtola-minacce-con-un-cutter-e-fuga-in-scooter/" },
+      { nome: "Liguria24", url: "https://www.liguria24.it/2026/03/04/doppia-rapina-a-pra-armati-di-cutter-e-caccia-a-due-banditi/839837" },
+      { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/64178-rapina-a-mano-armata-pra-via-murtola.html" }
+    ],
+    lat: 44.4290595, lon: 8.7741918,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "sanremo-furto-raggiro-anziana",
+    comune: "Sanremo (IM), abitazione privata (via non specificata)",
+    data: "5-6 marzo 2026 (data esatta incerta)",
+    dataISO: "2026-03-06",
+    categoria: "altro",
+    titolo: "Furto con raggiro in casa di un'anziana, coppia arrestata",
+    descrizione: "Una coppia di \"trasferisti\" è stata arrestata dalla polizia per un furto con raggiro ai danni di una donna di 90 anni a Sanremo. I due sono riusciti con l'inganno a entrare in casa dell'anziana; mentre uno tratteneva la donna con una scusa, l'altro ha rovistato nell'appartamento portando via denaro contante e preziosi. Seguiti fino in autostrada, sono stati fermati e perquisiti: nel veicolo sono stati trovati sia la refurtiva sia altri oggetti in oro riconducibili a colpi analoghi. Imposto anche il divieto di ritorno per tre anni nei comuni di Sanremo, Bordighera e Imperia.",
+    fonti: [ { nome: "ANSA", url: "https://www.ansa.it/liguria/notizie/2026/03/06/coppia-di-cuneo-arrestata-per-furto-con-raggiro-ad-anziana-di-sanremo_f650227c-d8ab-48bf-990b-2dfaf6c89076.html" } ],
+    lat: 43.8170397, lon: 7.7750646,
+    approssimato: true,
+    precisione: "fonte non specifica il giorno esatto del furto, solo la data dell'arresto (6 marzo) — via non indicata, coordinate sul centro di Sanremo (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-molassana-omicidio-madre",
+    comune: "Genova, Molassana — Via San Felice",
+    data: "7-8 marzo 2026 (notte)",
+    dataISO: "2026-03-08",
+    categoria: "omicidi",
+    titolo: "Donna uccisa a coltellate in casa, arrestato il figlio",
+    descrizione: "Una donna anziana è stata trovata morta nella sua abitazione a Molassana, uccisa con numerose coltellate. Il corpo è stato scoperto nel primo pomeriggio di domenica da parenti allarmati, che hanno trovato in casa il figlio, un uomo di 52 anni, con i vestiti sporchi di sangue. L'uomo, seguito da tempo dai servizi di salute mentale, è stato arrestato per omicidio aggravato dal legame di parentela; interrogato, ha dichiarato di non ricordare nulla. Alcuni vicini avevano riferito di aver sentito urla provenire dall'appartamento nella notte.",
+    fonti: [
+      { nome: "ANSA (arresto)", url: "https://www.ansa.it/sito/notizie/cronaca/2026/03/09/anziana-uccisa-a-coltellate-a-genova-arrestato-il-figlio-per-omicidio-aggravato_41da289a-ae44-41ac-b4d9-ada352dc8359.html" },
+      { nome: "ANSA (primo articolo)", url: "https://www.ansa.it/sito/notizie/cronaca/2026/03/08/una-donna-trovata-morta-a-genova-non-escluso-lomicidio_31768f2d-473e-4fe3-892c-eb2fa9b03c87.html" }
+    ],
+    lat: 44.4651544, lon: 8.9925444,
+    approssimato: true,
+    precisione: "fatto avvenuto in ambito domestico, incluso per precedente editoriale data la gravità e l'intervento delle forze dell'ordine con arresto — via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim). Le fonti riportano l'età della vittima in modo lievemente discordante (86-87 anni)"
+  },
+  {
+    id: "genova-piazza-renato-negri-accoltellamento-minorenne",
+    comune: "Genova, centro storico — Piazza Renato Negri",
+    data: "7-8 marzo 2026 (notte)",
+    dataISO: "2026-03-08",
+    categoria: "violenze",
+    titolo: "Sedicenne accoltellato alla schiena nella zona della movida",
+    descrizione: "Un ragazzo di 16 anni è stato colpito alla schiena con una coltellata in piazza Renato Negri, davanti al Teatro della Tosse, zona molto frequentata nelle ore serali. L'aggressione è stata rapida; alcuni passanti hanno allertato i soccorsi dopo aver sentito le richieste di aiuto del giovane, trasportato in codice rosso al San Martino con condizioni gravi ma non in pericolo di vita. Polizia e carabinieri hanno acquisito le immagini delle videocamere di zona per identificare l'aggressore, non ancora rintracciato al momento della pubblicazione della fonte.",
+    fonti: [ { nome: "ANSA", url: "https://www.ansa.it/sito/notizie/cronaca/2026/03/08/sedicenne-accoltellato-alla-schiena-durante-la-movida-genovese_cca5d7f0-3d33-44c3-b240-03465c9af6f9.html" } ],
+    lat: 44.4048730, lon: 8.9315596,
+    approssimato: false,
+    precisione: "piazza indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "savona-darsena-accoltellamento-tentato-omicidio",
+    comune: "Savona — zona Darsena / Via del Molo",
+    data: "13-14 marzo 2026 (notte)",
+    dataISO: "2026-03-14",
+    categoria: "violenze",
+    titolo: "Accoltellamento in Darsena, arrestato un ventenne per tentato omicidio",
+    descrizione: "Nella notte, in zona Darsena a Savona, un uomo di 26 anni è stato colpito con un coltello nel corso di una lite, riportando ferite che hanno richiesto un delicato intervento chirurgico (prognosi riservata). La polizia ha rintracciato e arrestato, il giorno successivo, un uomo di 20 anni con l'accusa di tentato omicidio; il presunto responsabile si era dato alla fuga all'arrivo delle volanti. Restano da chiarire il movente e il numero esatto delle persone coinvolte nella colluttazione.",
+    fonti: [
+      { nome: "IVG.it (segnalazione)", url: "https://www.ivg.it/2026/03/savona-rissa-nella-notte-in-via-del-molo-un-ferito-indagini-della-polizia/" },
+      { nome: "IVG.it (arresto)", url: "https://www.ivg.it/2026/03/savona-rissa-in-via-del-molo-arrestato-un-20enne/" }
+    ],
+    lat: 44.3088053, lon: 8.4873079,
+    approssimato: true,
+    precisione: "zona indicata dalla fonte come Darsena/via del Molo — coordinate approssimate sulla zona portuale di Savona (OpenStreetMap Nominatim, via del Molo non trovata come via specifica)"
+  },
+  {
+    id: "genova-quarto-rapina-tabaccheria",
+    comune: "Genova, Quarto — Via Quarto / Viale Des Geneys",
+    data: "15 marzo 2026 (pomeriggio)",
+    dataISO: "2026-03-15",
+    categoria: "rapine",
+    titolo: "Rapina impropria in tabaccheria, inseguito e bloccato dalla polizia",
+    descrizione: "Una pattuglia della polizia in servizio nella zona di Quarto ha notato un uomo che correva lungo via Quarto inseguito da un altro, il quale ha riferito agli agenti di essere stato appena derubato all'interno della propria tabaccheria. Gli agenti hanno raggiunto e bloccato il fuggitivo, un uomo di 32 anni, in viale Des Geneys dopo che questi si era scagliato contro di loro. Addosso all'uomo sono stati trovati un grosso coltello, una lametta e il tabacco appena sottratto dal bancone del negozio.",
+    fonti: [ { nome: "GenovaToday", url: "https://www.genovatoday.it/cronaca/rapina-tabaccheria-principe-arresto.html" } ],
+    lat: 44.3865693, lon: 9.0024337,
+    approssimato: true,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim). Titolo della pagina fonte non del tutto coerente con la località (Principe vs. Quarto) — si raccomanda verifica diretta della fonte"
+  },
+  {
+    id: "savona-centro-rapina-impropria-negozio-abbigliamento",
+    comune: "Savona — negozio di abbigliamento in centro città",
+    data: "14-16 marzo 2026 (data esatta incerta)",
+    dataISO: "2026-03-16",
+    categoria: "rapine",
+    titolo: "Ruba in un negozio e aggredisce commesse, cliente e agenti",
+    descrizione: "Una donna di 47 anni, già nota alle forze dell'ordine, è stata sorpresa in un negozio di abbigliamento del centro di Savona mentre tentava di allontanarsi con un capo non pagato. Invitata a restituire la merce, ha reagito colpendo con calci e schiaffi due commesse e un cliente presente, per poi tentare la fuga. Le Volanti della Questura l'hanno bloccata e hanno recuperato il capo. È stata arrestata per rapina impropria, violenza, minacce, resistenza a pubblico ufficiale e lesioni personali.",
+    fonti: [
+      { nome: "Savonanews", url: "https://www.savonanews.it/2026/03/16/leggi-notizia/argomenti/cronaca-2/articolo/furto-in-un-negozio-del-centro-degenera-in-aggressione-a-commesse-clienti-e-agenti-una-47enne-arre.html" },
+      { nome: "104 News", url: "https://www.104news.it/2026/03/16/savona-tenta-furto-in-negozio-di-abbigliamento-e-aggredisce-le-commesse-arrestata-47enne/" }
+    ],
+    lat: 44.2334238, lon: 8.2525727,
+    approssimato: true,
+    precisione: "data esatta non specificata dalle fonti (pubblicato il 16 marzo, possibile evento 1-2 giorni prima) — negozio non identificato con via esatta, coordinate sul centro città (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "ventimiglia-stazione-rapina-notturna",
+    comune: "Ventimiglia (IM) — Stazione ferroviaria, Piazza Cesare Battisti",
+    data: "22 marzo 2026 (notte)",
+    dataISO: "2026-03-22",
+    categoria: "rapine",
+    titolo: "Rapina violenta in stazione, aggressore bloccato in fuga verso la Francia",
+    descrizione: "Un uomo di 23 anni, senza fissa dimora, ha aggredito alle spalle un altro uomo colpendolo con un calcio alle gambe e facendolo cadere, per poi rapinarlo. La Polizia Ferroviaria, grazie alle immagini di videosorveglianza, ha rintracciato e fermato il sospettato circa un'ora dopo, mentre si dirigeva verso i binari con i treni in partenza per la Francia. La vittima lo ha riconosciuto come autore dell'aggressione.",
+    fonti: [
+      { nome: "Riviera24", url: "https://www.riviera24.it/2026/03/ventimiglia-rapina-violenta-in-stazione-giovane-arrestato-dalla-polizia-ferroviaria-957229/" },
+      { nome: "Sanremonews", url: "https://www.sanremonews.it/2026/03/27/leggi-notizia/argomenti/cronaca/articolo/ventimiglia-rapina-in-stazione-la-polizia-ferroviaria-ferma-un-sospetto-in-fuga-verso-la-francia.html" }
+    ],
+    lat: 43.7921107, lon: 7.6099022,
+    approssimato: false,
+    precisione: "stazione indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "ventimiglia-furto-abitazione-ex-compagna",
+    comune: "Ventimiglia (IM), abitazione privata (via non specificata)",
+    data: "22 marzo 2026 (sera)",
+    dataISO: "2026-03-22",
+    categoria: "altro",
+    titolo: "Si introduce in casa della ex compagna per rubarle i documenti, arrestato",
+    descrizione: "Dopo una lite per gelosia in un bar con la compagna, che stava per intraprendere un viaggio all'estero, un uomo si è introdotto di notte nell'abitazione della donna passando dalla finestra del bagno, con l'intento di sottrarle i documenti e impedirle di partire. La donna è fuggita dalla finestra della camera da letto nascondendosi dietro un'auto e ha chiamato il 112. Rintracciato poco dopo, l'uomo è stato trovato in possesso di un cacciavite di 25 cm, gioielli, una carta prepagata, un cellulare e le chiavi di casa della vittima. È stato arrestato per furto aggravato in abitazione.",
+    fonti: [
+      { nome: "Riviera24", url: "https://www.riviera24.it/2026/03/ventimiglia-uomo-geloso-ruba-in-casa-della-compagna-956849" },
+      { nome: "Sanremonews", url: "https://www.sanremonews.it/2026/03/23/leggi-notizia/argomenti/cronaca/articolo/ventimiglia-irrompe-in-casa-della-compagna-per-impedirle-un-viaggio-allestero-arrestato-dopo-il.html" }
+    ],
+    lat: 43.7917623, lon: 7.6033131,
+    approssimato: true,
+    precisione: "fatto avvenuto in ambito domestico, incluso per precedente editoriale data la componente di reato e l'intervento delle forze dell'ordine con arresto — via non specificata, coordinate sul centro di Ventimiglia (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-piazza-erbe-aggressione-marittimi",
+    comune: "Genova, centro storico — Piazza delle Erbe / Molo Giano",
+    data: "27-28 marzo 2026 (notte)",
+    dataISO: "2026-03-28",
+    categoria: "violenze",
+    titolo: "Marittimi aggrediti con spray urticante e spranga in piazza delle Erbe",
+    descrizione: "Due marittimi stranieri, mentre trascorrevano la serata in piazza delle Erbe nel cuore della movida genovese, sono stati avvicinati da un gruppo di persone che li ha colpiti con spray urticante al volto e poi con un oggetto contundente alla testa. Uno dei due, dopo un tentativo di fuga, è stato ritrovato ferito e sanguinante a Molo Giano; è stato intubato e trasportato in codice rosso al San Martino per un trauma cranico, dove è stato operato d'urgenza. Le indagini dei Carabinieri ipotizzano un tentato furto/rapina come innesco dell'aggressione.",
+    fonti: [
+      { nome: "ANSA", url: "https://www.ansa.it/liguria/notizie/2026/03/28/giovane-stordito-con-spray-urticante-e-preso-a-sprangate-e-grave_9ae0b9d5-480f-4222-b8c3-9440cd0660d7.html" },
+      { nome: "GenovaToday", url: "https://www.genovatoday.it/cronaca/aggressione-spranga-vicoli.html" },
+      { nome: "Genova24 (follow-up arresto)", url: "https://www.genova24.it/2026/04/marittimo-aggredito-piazza-delle-erbe-arresto-tentato-omicidio-459145/" }
+    ],
+    lat: 44.4062537, lon: 8.9324582,
+    approssimato: false,
+    precisione: "piazza indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
     id: "genova-via-vernazza-accoltellamento-collanina",
     comune: "Genova, centro storico — Via Vernazza",
     data: "1-2 aprile 2026 (notte)",
