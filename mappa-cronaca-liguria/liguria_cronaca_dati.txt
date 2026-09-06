@@ -42,6 +42,292 @@
 
 window.INCIDENTS_DATA = [
   {
+    id: "genova-via-vernazza-accoltellamento-collanina",
+    comune: "Genova, centro storico — Via Vernazza",
+    data: "1-2 aprile 2026 (notte)",
+    dataISO: "2026-04-01",
+    categoria: "violenze",
+    titolo: "Accoltellamento dopo lite in discoteca per una collanina d'oro",
+    descrizione: "Un ragazzo di 20 anni è stato accoltellato al torace, riportando una grave lesione polmonare, al termine di una lite nata in una discoteca del centro per il furto con strappo di una collanina d'oro. Due giovani stranieri sono stati fermati dalla Squadra Mobile con l'accusa di tentato omicidio dopo aver reperito un coltello da un complice non identificato.",
+    fonti: [
+      { nome: "LaPresse", url: "https://www.lapresse.it/cronaca/2026/04/03/genova-20enne-accoltellato-dopo-lite-per-il-furto-di-una-collanina-doro/" },
+      { nome: "ANSA", url: "https://www.ansa.it/sito/notizie/cronaca/2026/04/07/ragazzo-accoltellato-a-genova-il-gip-logica-profondamente-criminale_1393baec-707e-452a-9bde-f75ccc53bf1f.html" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/accoltellamento-a-genova-fermati-due-minorenni-dopo-la-rissa/2026/04/03/635855/" }
+    ],
+    lat: 44.4045521, lon: 8.9796908,
+    approssimato: true,
+    precisione: "fonte pubblicata il 3/4 riferisce l'evento a \"due notti fa\" (1-2 aprile) — le fonti discordano se i fermati siano minorenni o 19enni — via indicata dalla fonte come zona della discoteca, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "la-spezia-sarzana-banda-furti-abitazione",
+    comune: "Sarzana (SP) — base logistica in un campo, furti in tutta la regione",
+    data: "3 aprile 2026 (all'alba)",
+    dataISO: "2026-04-03",
+    categoria: "altro",
+    titolo: "Smantellata banda di furti in abitazione, 8 arresti",
+    descrizione: "I Carabinieri hanno eseguito un'operazione (\"Settimo Comandamento atto II\") contro un gruppo attivo tra Liguria, Toscana e Piemonte, ritenuto responsabile di oltre 80 furti in abitazione per centinaia di migliaia di euro di refurtiva. Sono state arrestate 8 persone, tra i 13 indagati complessivi; la base logistica del gruppo era individuata in un campo a Sarzana.",
+    fonti: [
+      { nome: "Il Metropolitano", url: "https://www.ilmetropolitano.it/2026/04/03/la-spezia-furti-in-abitazione-operazione-settimo-comandamento-ii-con-8-arresti/" },
+      { nome: "Sbircia la Notizia", url: "https://www.sbircialanotizia.it/articoli/2026/04/spezia-banda-furti-casa/" },
+      { nome: "NoiTV", url: "https://www.noitv.it/2026/04/sgominata-la-banda-dei-furti-in-casa-sequestrati-gioelli-e-armi-e-anche-un-suricato-744637/" },
+      { nome: "La Nazione", url: "https://www.lanazione.it/la-spezia/cronaca/banda-furti-abitazione-ath5hmcv" }
+    ],
+    lat: 44.1131762, lon: 9.9599823,
+    approssimato: true,
+    precisione: "operazione con base logistica indicata a Sarzana, punto esatto del campo non specificato — coordinate sul centro di Sarzana ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "imperia-olivetta-san-michele-aggressione-padre-coltello",
+    comune: "Olivetta San Michele (IM)",
+    data: "inizio aprile 2026 (data esatta incerta)",
+    dataISO: "2026-04-03",
+    categoria: "violenze",
+    titolo: "Aggredisce il padre e minaccia i Carabinieri con un coltello",
+    descrizione: "Un uomo di 39 anni, già noto alle forze dell'ordine, ha aggredito il padre convivente in un'abitazione; il padre è riuscito ad allontanarsi e a chiamare i soccorsi. All'arrivo dei Carabinieri l'uomo, armato di un coltello da tavola, ha minacciato gli operatori prima di essere convinto ad arrendersi. È stato trasportato in ospedale e denunciato per minaccia e resistenza a pubblico ufficiale.",
+    fonti: [ { nome: "Riviera24", url: "https://www.riviera24.it/2026/04/pasqua-sicura-nel-ponente-attivita-di-contrasto-dei-carabinieri-della-compagnia-di-ventimiglia-959268" } ],
+    lat: 43.8795375, lon: 7.5148239,
+    approssimato: true,
+    precisione: "data esatta non specificata dalla fonte, stimata nella prima decade di aprile 2026 — fatto originato in un contesto domestico ma con minaccia alle forze dell'ordine intervenute — coordinate sul centro del comune (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-piazza-san-bernardo-scippo-collana",
+    comune: "Genova, centro storico — Piazza/Via di San Bernardo",
+    data: "4-5 aprile 2026 (notte)",
+    dataISO: "2026-04-04",
+    categoria: "rapine",
+    titolo: "Scippo di una collana d'oro nel centro storico, arrestato 18enne",
+    descrizione: "Un giovane è stato avvicinato con una scusa da uno sconosciuto mentre un secondo soggetto gli strappava la collana d'oro dal collo. Nella breve colluttazione successiva è intervenuta la polizia, che ha arrestato un 18enne per tentata rapina in concorso; il complice è fuggito. La collana è stata recuperata e restituita.",
+    fonti: [
+      { nome: "ANSA", url: "https://www.ansa.it/liguria/notizie/2026/04/08/furti-e-rapine-nel-week-end-di-pasqua-a-genova-arresti-e-denunce_b396758b-97f5-4439-8996-b6770529adc0.html" },
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/04/08/693997-genova-rapina-centro-storico-indagini-arrestato-18enne/" }
+    ],
+    lat: 44.4062700, lon: 8.9305010,
+    approssimato: true,
+    precisione: "piazza indicata dalla fonte come San Bernardo, coordinate ottenute geocodando via di San Bernardo nel centro storico (Nominatim non ha trovato una piazza con questo nome esatto)"
+  },
+  {
+    id: "genova-via-xx-settembre-rapina-fratelli-minorenni",
+    comune: "Genova — Via XX Settembre (centro)",
+    data: "4-5 aprile 2026 (notte)",
+    dataISO: "2026-04-04",
+    categoria: "rapine",
+    titolo: "Due fratelli accerchiati e rapinati da un gruppo di minorenni",
+    descrizione: "Due fratelli sono stati accerchiati da quattro ragazzi tra i 14 e i 16 anni che li hanno aggrediti e derubati del denaro, fuggendo poi a piedi. I responsabili sono stati individuati poco distante dalla polizia e denunciati per rapina in concorso.",
+    fonti: [ { nome: "ANSA", url: "https://www.ansa.it/liguria/notizie/2026/04/08/furti-e-rapine-nel-week-end-di-pasqua-a-genova-arresti-e-denunce_b396758b-97f5-4439-8996-b6770529adc0.html" } ],
+    lat: 44.4069962, lon: 8.9351020,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-vico-caprettari-scippo-turisti",
+    comune: "Genova, centro storico — Vico dei Caprettari",
+    data: "5 aprile 2026 (pomeriggio)",
+    dataISO: "2026-04-05",
+    categoria: "rapine",
+    titolo: "Scippo di una collanina ai danni di una coppia di turisti",
+    descrizione: "Un giovane, con la scusa di chiedere un'informazione, ha strappato la collanina dal collo di una turista per poi fuggire. Grazie alle telecamere della polizia municipale un minorenne è stato rintracciato e denunciato per furto con strappo.",
+    fonti: [ { nome: "ANSA", url: "https://www.ansa.it/liguria/notizie/2026/04/08/furti-e-rapine-nel-week-end-di-pasqua-a-genova-arresti-e-denunce_b396758b-97f5-4439-8996-b6770529adc0.html" } ],
+    lat: 44.4080935, lon: 8.9289079,
+    approssimato: false,
+    precisione: "vico indicato dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-sestri-ponente-furti-auto",
+    comune: "Genova — Sestri Ponente (via non specificata)",
+    data: "5 aprile 2026 (sera)",
+    dataISO: "2026-04-05",
+    categoria: "altro",
+    titolo: "Furti seriali su auto in sosta, fermato un 20enne",
+    descrizione: "La polizia è intervenuta per un furto all'interno di un'auto a Sestri Ponente. Con l'aiuto della vittima è stato fermato l'autore, un 20enne trovato in possesso anche della refurtiva relativa ad altri furti su auto commessi in zona.",
+    fonti: [ { nome: "ANSA", url: "https://www.ansa.it/liguria/notizie/2026/04/08/furti-e-rapine-nel-week-end-di-pasqua-a-genova-arresti-e-denunce_b396758b-97f5-4439-8996-b6770529adc0.html" } ],
+    lat: 44.4249254, lon: 8.8499031,
+    approssimato: true,
+    precisione: "quartiere indicato dalla fonte, via non specificata — coordinate sul centro di Sestri Ponente (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "ventimiglia-oberdan-aggressione-afghano",
+    comune: "Ventimiglia (IM) — Passeggiata Oberdan",
+    data: "prima decade di aprile 2026 (data esatta incerta)",
+    dataISO: "2026-04-06",
+    categoria: "violenze",
+    titolo: "Aggredisce un connazionale intervenuto per sedare una lite, un ferito",
+    descrizione: "Un uomo di 23 anni ha aggredito un cittadino straniero di 28 anni intervenuto per sedare una lite precedente, procurandogli lesioni con prognosi di 10 giorni. All'arrivo dei Carabinieri l'aggressore ha opposto resistenza fisica, ferendo lievemente due militari, ed è stato arrestato con successiva convalida e custodia in carcere.",
+    fonti: [ { nome: "Riviera24", url: "https://www.riviera24.it/2026/04/pasqua-sicura-nel-ponente-attivita-di-contrasto-dei-carabinieri-della-compagnia-di-ventimiglia-959268" } ],
+    lat: 43.7879363, lon: 7.6094628,
+    approssimato: true,
+    precisione: "data esatta non specificata dalla fonte, stimata nella prima decade di aprile 2026 — passeggiata indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "ventimiglia-scippo-donna-60enne",
+    comune: "Ventimiglia (IM), via non specificata",
+    data: "prima metà di aprile 2026 (data esatta incerta)",
+    dataISO: "2026-04-12",
+    categoria: "rapine",
+    titolo: "Scippo violento con trauma alla spalla ai danni di una donna di 60 anni",
+    descrizione: "Una donna è stata aggredita per strada mentre rientrava a casa e derubata della borsa, riportando un trauma alla spalla. I Carabinieri hanno rintracciato poche ore dopo un ventenne, arrestato e condotto al carcere di Sanremo; la refurtiva è stata recuperata.",
+    fonti: [ { nome: "Riviera24", url: "https://www.riviera24.it/2026/04/pasqua-sicura-nel-ponente-attivita-di-contrasto-dei-carabinieri-della-compagnia-di-ventimiglia-959268" } ],
+    lat: 43.7917623, lon: 7.6033131,
+    approssimato: true,
+    precisione: "data esatta non specificata dalla fonte (\"nei giorni scorsi\" rispetto alla pubblicazione del 14/4), stimata a metà aprile — via non specificata, coordinate sul centro di Ventimiglia (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "dolceacqua-furto-abitazione-moto-rubata",
+    comune: "Dolceacqua (IM)",
+    data: "prima metà di aprile 2026 (data esatta incerta)",
+    dataISO: "2026-04-12",
+    categoria: "altro",
+    titolo: "Furto in abitazione con fuga su moto rubata",
+    descrizione: "Due giovani si sono introdotti in un'abitazione approfittando dell'assenza dei proprietari, sottraendo preziosi, e sono fuggiti a bordo di un motociclo risultato anch'esso oggetto di furto. Sono stati identificati e denunciati dai Carabinieri.",
+    fonti: [ { nome: "Riviera24", url: "https://www.riviera24.it/2026/04/pasqua-sicura-nel-ponente-attivita-di-contrasto-dei-carabinieri-della-compagnia-di-ventimiglia-959268" } ],
+    lat: 43.8509263, lon: 7.6236357,
+    approssimato: true,
+    precisione: "data esatta non specificata dalla fonte (\"nei giorni scorsi\" rispetto alla pubblicazione del 14/4), stimata a metà aprile — coordinate sul centro del comune (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "sanremo-via-roma-rapina-vigilante",
+    comune: "Sanremo (IM) — Via Roma",
+    data: "13 aprile 2026 (data stimata)",
+    dataISO: "2026-04-13",
+    categoria: "rapine",
+    titolo: "Sorpreso durante un furto, aggredisce un addetto alla sicurezza",
+    descrizione: "Un uomo di 38 anni, già noto alle forze dell'ordine, è stato sorpreso durante un furto e, alla fuga, ha reagito con violenza colpendo un addetto alla sicurezza intervenuto. Segnalato da alcuni passanti, è stato bloccato dalla Polizia Locale e arrestato per rapina e lesioni; la misura è stata convalidata con detenzione in carcere.",
+    fonti: [ { nome: "Sanremonews", url: "https://www.sanremonews.it/2026/04/14/leggi-notizia/argomenti/cronaca/articolo/sanremo-violenta-colluttazione-in-via-roma-arrestato-38enne-per-rapina-e-per-aver-picchiato-un-add.html" } ],
+    lat: 43.8150436, lon: 7.7742764,
+    approssimato: true,
+    precisione: "articolo pubblicato il 14 aprile mattina, data esatta dell'evento dedotta e non confermata direttamente (fonte parzialmente riservata agli abbonati) — via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-sampierdarena-tentata-rapina-supermercato",
+    comune: "Genova, Sampierdarena — Via Cantore",
+    data: "15 aprile 2026",
+    dataISO: "2026-04-15",
+    categoria: "rapine",
+    titolo: "Tentata rapina impropria in un supermercato",
+    descrizione: "Un uomo di 46 anni, senza fissa dimora e con precedenti, è stato notato mentre occultava merce sotto i vestiti in un supermercato. Scoperto, ha minacciato di morte il commesso prima di darsi alla fuga. Identificato poco dopo grazie a una foto diffusa alle pattuglie, è stato arrestato e portato in carcere a Marassi.",
+    fonti: [
+      { nome: "Genova24", url: "https://www.genova24.it/2026/04/tentata-rapina-supermercato-arrestato-460389/" },
+      { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/69554-sampierdarena-tentata-rapina-negoziante-coltello-arresto.html" }
+    ],
+    lat: 44.4121078, lon: 8.8920999,
+    approssimato: true,
+    precisione: "supermercato in zona Sampierdarena, via esatta non confermata — coordinate su via Cantore ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-piccapietra-tentata-rapina-coop",
+    comune: "Genova — Piccapietra (centro)",
+    data: "19 aprile 2026",
+    dataISO: "2026-04-19",
+    categoria: "rapine",
+    titolo: "Sorpreso a rubare al supermercato, aggredisce il vigilante",
+    descrizione: "Un uomo di 29 anni è stato notato da un addetto alla sicurezza di un supermercato di Piccapietra mentre nascondeva alimenti nello zaino. Alla richiesta di mostrare il contenuto, ha reagito colpendo il vigilante con un pugno e poi con spray urticante. Le forze dell'ordine intervenute lo hanno arrestato per tentata rapina impropria.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/04/20/genova-tentativo-di-furto-supermercato-coop-piaccapietra-696673/" } ],
+    lat: 44.4082074, lon: 8.9363211,
+    approssimato: false,
+    precisione: "quartiere indicato dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-porta-degli-archi-rissa-soccorritori",
+    comune: "Genova — Via Porta degli Archi (centro)",
+    data: "20 aprile 2026",
+    dataISO: "2026-04-20",
+    categoria: "violenze",
+    titolo: "Rissa in centro, aggrediti anche i soccorritori",
+    descrizione: "Una violenta rissa tra due uomini è scoppiata in via Porta degli Archi, nel centro di Genova; è stato richiesto l'intervento dei soccorsi in serata. Durante l'intervento anche il personale intervenuto è stato aggredito. L'episodio si inserisce in una serie di risse e aggressioni notturne segnalate nel centro cittadino nello stesso periodo.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/04/20/genova-rissa-in-centro-aggrediti-anche-i-soccorritori/" } ],
+    lat: 44.4059827, lon: 8.9379168,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim). Dettagli su età dei coinvolti ed esito giudiziario limitati nelle fonti disponibili"
+  },
+  {
+    id: "genova-via-bernardini-furto-auto-ristorante",
+    comune: "Genova — Via Bernardini (centro)",
+    data: "21 aprile 2026 (sera)",
+    dataISO: "2026-04-21",
+    categoria: "altro",
+    titolo: "Ruba l'auto a una donna a cena al ristorante, arrestato dopo inseguimento",
+    descrizione: "Una donna ha lasciato le chiavi di casa e dell'auto sul tavolo di un ristorante in via Bernardini; un complice le ha sottratte e l'auto è stata rubata dal parcheggio. Un conoscente della vittima ha notato il veicolo danneggiato in via Geirato e ha guidato la polizia fino al fermo. Un 18enne è stato arrestato dopo un inseguimento a piedi; nel suo zaino sono state trovate le chiavi di casa della vittima. Giudicato per direttissima, gli è stato imposto l'obbligo di dimora; ricercato il complice.",
+    fonti: [
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/furto-dauto-mentre-e-al-ristorante-fermato-un-18enne-a-genova/2026/04/23/637741/" },
+      { nome: "LaMilano — Liguria", url: "https://liguria.lamilano.it/genova-rubata-unauto-durante-una-cena-arrestato-18enne-dopo-un-inseguimento/" }
+    ],
+    lat: 44.4542995, lon: 8.9767448,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "ventimiglia-oberdan-rissa-tre-arresti",
+    comune: "Ventimiglia (IM) — Passeggiata Oberdan",
+    data: "24-25 aprile 2026 (notte)",
+    dataISO: "2026-04-25",
+    categoria: "violenze",
+    titolo: "Rissa in passeggiata Oberdan, tre arresti",
+    descrizione: "I Carabinieri sono intervenuti su segnalazione di una lite in corso sulla passeggiata Oberdan. Tre uomini in stato di ebbrezza si sono opposti all'identificazione, causando lievi lesioni a due carabinieri. Sono stati arrestati in flagranza per resistenza e lesioni a pubblico ufficiale e denunciati per il reato di rissa; uno di loro è stato segnalato anche per ingresso illegale nel territorio dello Stato.",
+    fonti: [
+      { nome: "Sanremonews", url: "https://www.sanremonews.it/2026/05/02/leggi-notizia/argomenti/cronaca/articolo/ventimiglia-rissa-nella-notte-del-25-aprile-tre-arresti-dopo-lintervento-dei-carabinieri.html" },
+      { nome: "LaMilano — Liguria", url: "https://lamilano.it/imperia/ventimiglia/ventimiglia-rissa-violenta-durante-la-notte-del-25-aprile-tre-arresti-per-resistenza-e-lesioni-a-pubblico-ufficiale/" }
+    ],
+    lat: 43.7879363, lon: 7.6094628,
+    approssimato: false,
+    precisione: "passeggiata indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-castelletto-corso-firenze-rapina-anziana",
+    comune: "Genova, Castelletto — Corso Firenze",
+    data: "26 aprile 2026",
+    dataISO: "2026-04-26",
+    categoria: "rapine",
+    titolo: "Segue un'anziana dal bus e la rapina sotto casa",
+    descrizione: "Un uomo ha individuato una donna di 86 anni su un autobus e l'ha seguita fino a casa, in corso Firenze. Giunto sul posto l'ha colpita alle spalle facendola cadere a terra e le ha sottratto la borsa, per poi fuggire. La vittima ha riportato un trauma cranico con prognosi di 15 giorni ed è stata trasportata in codice giallo al San Martino. Le indagini, basate sull'uso successivo del bancomat rubato, hanno portato all'arresto — il 20 maggio — di un uomo di 55 anni, rintracciato nel centro storico.",
+    fonti: [
+      { nome: "Telenord", url: "https://telenord.it/genova-rapino-anzian-arrestato-presunto-responsabile-104546" },
+      { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/05/20/leggi-notizia/argomenti/cronaca-5/articolo/rapina-a-castelletto-la-polizia-di-stato-ferma-il-presunto-autore.html" },
+      { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/67232-anziana-rapinata-portone-di-casa-castelletto-preso-aggressore.html" },
+      { nome: "Sbircia la Notizia", url: "https://www.sbircialanotizia.it/articoli/2026/05/20/genova-rapina-86enne-e4f9k/" }
+    ],
+    lat: 44.4186563, lon: 8.9278988,
+    approssimato: true,
+    precisione: "data dell'evento (26 aprile) nota dalle fonti sull'arresto, comunicato solo il 20 maggio — corso indicato dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "borghetto-santo-spirito-accoltellamento-minorenne-edicola",
+    comune: "Borghetto Santo Spirito (SV)",
+    data: "27 aprile 2026 (pomeriggio)",
+    dataISO: "2026-04-27",
+    categoria: "violenze",
+    titolo: "Minorenne accoltella un coetaneo e tenta una rapina in edicola",
+    descrizione: "Un ragazzo di 15 anni ha aggredito per strada un coetaneo colpendolo con un coltello al torace, apparentemente per motivi legati a una relazione sentimentale. Poco prima lo stesso minorenne aveva tentato una rapina ai danni di un'edicola della zona, aggredendo con il coltello il titolare e ferendolo alla testa, a una spalla e allo stomaco. Rintracciato il 21 maggio a casa dei genitori, in provincia di Alessandria, è stato trasferito nel carcere minorile di Torino in base a un'ordinanza di custodia cautelare del Tribunale per i Minorenni di Genova.",
+    fonti: [ { nome: "ANSA", url: "https://www.ansa.it/sito/notizie/cronaca/2026/05/21/accoltella-un-coetaneo-e-un-edicolante-nel-savonese-arrestato-quindicenne_9f9a39bb-dba6-4f26-b7ad-c844ba1574ce.html" } ],
+    lat: 44.1092512, lon: 8.2413691,
+    approssimato: true,
+    precisione: "data dell'evento (27 aprile) nota dalla fonte sulla custodia cautelare, eseguita solo il 21 maggio — via non specificata, coordinate riutilizzate dal centro di Borghetto Santo Spirito già geocodato (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-san-teodoro-via-bologna-accoltellamento",
+    comune: "Genova, San Teodoro — Via Bologna",
+    data: "29 aprile 2026",
+    dataISO: "2026-04-29",
+    categoria: "violenze",
+    titolo: "Accoltellato in via Bologna vicino a una panetteria",
+    descrizione: "Un uomo di 32 anni è stato accoltellato poco prima delle 13:00 in via Bologna, nel quartiere di San Teodoro, in prossimità di una panetteria. Secondo le prime informazioni raccolte, l'aggressione sarebbe scaturita da un regolamento di conti personale tra due uomini. La vittima è stata trasportata in ospedale.",
+    fonti: [ { nome: "GenovaToday", url: "https://www.genovatoday.it/cronaca/accoltellamento-via-bologna.html" } ],
+    lat: 44.4192022, lon: 8.9117309,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim). Fonte primaria verificata solo indirettamente (fetch diretto bloccato); esito giudiziario non reperito"
+  },
+  {
+    id: "spezia-sarzana-lerici-cavallo-di-ritorno",
+    comune: "Lerici (SP) — luogo dell'incontro per il riscatto; furto avvenuto a Sarzana",
+    data: "30 aprile 2026",
+    dataISO: "2026-04-30",
+    categoria: "altro",
+    titolo: "Rubano il furgone di un artigiano e chiedono un riscatto per gli attrezzi",
+    descrizione: "Un artigiano ha scoperto il furto del proprio furgone, parcheggiato la sera precedente a Sarzana. Ritrovato il mezzo privo dell'attrezzatura da lavoro, è stato contattato nel pomeriggio da un uomo che gli chiedeva una somma di denaro in cambio della restituzione degli attrezzi (il cosiddetto \"cavallo di ritorno\"). Ha organizzato un incontro a Lerici avvisando i Carabinieri di Sarzana, che hanno arrestato in flagranza un quarantenne del luogo con le banconote ancora in mano; posto ai domiciliari.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/05/02/cavallo-di-ritorno-a-sarzana-estorsore-arrestato-mentre-incassa-per-restituire-gli-attrezzi-rubati-652170/" } ],
+    lat: 44.0736073, lon: 9.9099135,
+    approssimato: true,
+    precisione: "furto del furgone avvenuto a Sarzana, ma l'arresto per l'estorsione (\"cavallo di ritorno\") è avvenuto durante l'incontro concordato a Lerici — coordinate su Lerici ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
     id: "genova-piazza-stampa-scippo-arresto",
     comune: "Genova, centro storico — Piazza della Stampa",
     data: "2 maggio 2026",
