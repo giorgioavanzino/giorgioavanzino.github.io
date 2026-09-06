@@ -1847,5 +1847,54 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "spiaggia indicata dalla fonte, punto esatto non specificato — posizione sulla spiaggia libera di Vesima ottenuta con geocoding reale (OpenStreetMap Nominatim)"
   },
+  {
+    id: "genova-castelletto-via-bertani-tentato-furto",
+    comune: "Genova, Castelletto — via Agostino Bertani",
+    data: "4 settembre 2026",
+    dataISO: "2026-09-04",
+    categoria: "altro",
+    titolo: "Tentano un furto in abitazione a Castelletto, due arrestati",
+    descrizione: "Due uomini di 26 e 35 anni sono stati notati armeggiare intorno al portone di uno stabile di via Bertani, a Castelletto; accortisi di essere osservati si sono allontanati, ma sono stati intercettati poco dopo dalle volanti della Polizia di Stato mentre cercavano di nascondersi, uno dietro un'auto parcheggiata e l'altro tra le sterpaglie di un giardino. Il primo aveva addosso un paio di guanti in lattice; il secondo anche uno spray urticante non conforme alla normativa. Entrambi sono stati arrestati per tentato furto in abitazione, il più giovane anche per possesso ingiustificato di armi od oggetti atti a offendere. La proprietaria dell'appartamento non si era accorta del tentativo di accesso.",
+    fonti: [
+      { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/09/05/leggi-notizia/argomenti/cronaca-5/articolo/castelletto-tentano-di-entrare-in-un-appartamento-due-denunciati.html" },
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/09/05/genova-tentano-furto-in-casa-in-via-bertani-arrestati/" }
+    ],
+    lat: 44.4126262, lon: 8.9369737,
+    approssimato: true,
+    precisione: "via indicata con precisione da entrambe le fonti (una riporta anche piazza dei Cappuccini/via Bottaro come area dell'intervento delle volanti) — posizione sulla via ottenuta con geocoding reale (OpenStreetMap Nominatim). Le fonti riportano l'esito come denuncia (La Voce di Genova) o arresto (LiguriaOggi): usata la dicitura più cautelativa nel testo, segnalata la discrepanza"
+  },
+  {
+    id: "genova-marassi-scontri-ultras-genoa-como",
+    comune: "Genova, Marassi — esterno dello stadio Luigi Ferraris",
+    data: "4 settembre 2026",
+    dataISO: "2026-09-04",
+    categoria: "altro",
+    titolo: "Scontri con la polizia dopo Genoa-Como, due ultras denunciati e colpiti da Daspo",
+    descrizione: "Al termine della partita Genoa-Como, un gruppo di circa quindici ultras rossoblù travisati in volto si è allontanato dallo stadio Luigi Ferraris armato di bastoni e altri oggetti contundenti, lanciandoli contro le forze dell'ordine schierate a protezione dell'area; il pronto intervento della Polizia ha respinto l'attacco e disperso il gruppo, con il sequestro di quattro bastoni e un tubo idraulico. Le indagini della Digos hanno portato all'identificazione di due ultras di 54 e 53 anni, già noti per precedenti analoghi, denunciati per violenza aggravata a pubblico ufficiale, lancio di oggetti atti a offendere, travisamento e porto abusivo di oggetti atti a offendere; per entrambi il Questore ha disposto il Daspo, di 7 e 3 anni.",
+    fonti: [
+      { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/09/05/leggi-notizia/argomenti/cronaca-5/articolo/assalgono-la-polizia-con-bastoni-e-tubi-in-ferro-dopo-genoa-como-denunciati-e-colpiti-da-daspo-due.html" },
+      { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/71149-aggressione-polizia-genoa-como-tifosi-genoani-daspo.html" }
+    ],
+    lat: 44.4164753, lon: 8.9525341,
+    approssimato: true,
+    precisione: "punto esatto degli scontri non specificato dalle fonti (avvenuti 'al termine della partita' fuori dall'impianto) — usata la posizione dello stadio Luigi Ferraris ottenuta con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "albisola-superiore-passeggiata-montale-rapina",
+    comune: "Albisola Superiore (Savona) — Passeggiata Eugenio Montale",
+    data: "5 settembre 2026",
+    dataISO: "2026-09-05",
+    categoria: "rapine",
+    titolo: "Circondato e colpito da un gruppo sulla passeggiata, 35enne ferito alla testa",
+    descrizione: "Un uomo di 35 anni è stato circondato da un gruppo di persone e colpito alla testa nella notte lungo la Passeggiata Eugenio Montale ad Albisola Superiore, attorno alle 5 del mattino. Soccorso da un'ambulanza della Croce d'Oro di Albissola Marina, è stato trasportato in codice giallo all'ospedale San Paolo di Savona. Sono in corso le indagini dei Carabinieri.",
+    fonti: [
+      { nome: "104 News", url: "https://www.104news.it/2026/09/05/albisola-35enne-rapinato-sul-lungomare-e-ferito-trasportato-in-codice-giallo-in-ospedale/" },
+      { nome: "Savonanews.it", url: "https://www.savonanews.it/2026/09/05/leggi-notizia/argomenti/cronaca-2/articolo/lite-sulla-passeggiata-ad-albisola-35enne-trasportato-in-codice-giallo.html" },
+      { nome: "Liguria24", url: "https://www.liguria24.it/2026/09/05/lite-nella-notte-ad-albisola-ferito-un-35enne-trasportato-in-ospedale/869568" }
+    ],
+    lat: 44.3298763, lon: 8.5165546,
+    approssimato: false,
+    precisione: "passeggiata indicata con precisione dalle fonti — posizione verificata con geocoding reale (OpenStreetMap Nominatim). Le fonti sono discordanti sulla natura dell'episodio: 104 News e Savonanews.it parlano di rapina/derubato, Liguria24 di 'lite'; la dinamica esatta (rapina o rissa) non è del tutto chiarita al momento della pubblicazione"
+  },
 
 ];
