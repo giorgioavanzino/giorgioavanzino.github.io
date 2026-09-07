@@ -3449,4 +3449,138 @@ window.INCIDENTS_DATA = [
     precisione: "punto esatto lungo il tragitto del bus non specificato dalla fonte, coordinate approssimate su Taggia; articolo parzialmente riservato agli abbonati"
   },
 
+  /* --- Ricerca integrativa Gennaio 2026 con elenco fonti ampliato (aggiunti il 07/09/2026) --- */
+  {
+    id: "imperia-stazione-capotreno-aggredito",
+    comune: "Imperia, Oneglia — stazione ferroviaria",
+    data: "7 gennaio 2026 (sera)",
+    dataISO: "2026-01-07",
+    categoria: "violenze",
+    titolo: "Rapina un passante e poco dopo aggredisce il capotreno che lo blocca",
+    descrizione: "Due persone hanno rapinato un passante di 50 euro colpendolo ripetutamente e gettandolo a terra in città. Riconosciute poco dopo dalla vittima alla stazione ferroviaria di Imperia, hanno tentato di salire su un intercity in transito; il capotreno ha impedito loro l'accesso ed è stato aggredito e ferito con un coccio di bottiglia da uno dei due. Entrambi sono stati fermati dalla Polizia grazie a testimonianze e videosorveglianza; l'episodio ha causato uno sciopero di 8 ore del personale ferroviario il giorno successivo.",
+    fonti: [ { nome: "Riviera24", url: "https://www.riviera24.it/2026/01/capotreno-aggredito-e-ferito-alla-stazione-di-imperia-due-persone-fermate-dalla-polizia-947977/" }, { nome: "Genova24", url: "https://www.genova24.it/2026/01/capotreno-aggredito-in-liguria-giovedi-8-gennaio-sciopero-del-personale-ferroviario-450187/" } ],
+    lat: 43.8919990, lon: 8.0399737,
+    approssimato: true,
+    precisione: "stazione indicata dalla fonte, coordinate approssimate sulla stazione ferroviaria di Imperia Oneglia (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "ventimiglia-corso-genova-aggressione-forbici-domestica",
+    comune: "Ventimiglia — Corso Genova",
+    data: "8 gennaio 2026",
+    dataISO: "2026-01-08",
+    categoria: "violenze",
+    titolo: "Aggredisce la moglie con le forbici, lei si getta dal balcone per sfuggirgli",
+    descrizione: "Un uomo ha aggredito e ferito con delle forbici la moglie nella loro abitazione di corso Genova. La donna si è gettata dal balcone del primo piano per sfuggirgli, riportando un trauma alla colonna e ferite al volto e alle mani; è stata trasportata in elisoccorso in condizioni critiche a Pietra Ligure. L'uomo è stato arrestato per tentato omicidio.",
+    fonti: [ { nome: "Sky TG24", url: "https://tg24.sky.it/cronaca/2026/01/08/tentato-omicidio-ventimiglia-oggi" }, { nome: "Sanremonews", url: "https://www.sanremonews.it/2026/03/02/leggi-notizia/argomenti/cronaca/articolo/ventimiglia-tentato-omicidio-di-corso-genova-la-difesa-chiede-una-perizia-psichiatrica.html" } ],
+    lat: 43.7892188, lon: 7.6262845,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "savona-stazione-tablet-scippo-passeggera",
+    comune: "Savona — stazione ferroviaria",
+    data: "13 gennaio 2026",
+    dataISO: "2026-01-13",
+    categoria: "rapine",
+    titolo: "Scippa il tablet a una passeggera su un treno e la spintona, arrestato",
+    descrizione: "Su un intercity in arrivo da Genova, un uomo ha sottratto con destrezza il tablet a una passeggera; quando lei ha cercato di riprenderlo è stata spintonata. L'uomo è fuggito lungo le carrozze inseguito dal personale di sicurezza ferroviaria e si è nascosto in una toilette, dove è stato bloccato dalla Polizia Ferroviaria all'arrivo a Savona. Al momento del fermo indossava anche un cappotto rubato a un altro passeggero, con i documenti della vittima ancora nelle tasche.",
+    fonti: [ { nome: "IVG.it", url: "https://www.ivg.it/2026/01/con-un-cappotto-rubato-addosso-sottrae-il-tablet-ad-una-passeggera-su-un-treno-arrestato-dalla-polizia-a-savona/" } ],
+    lat: 44.308805, lon: 8.487308,
+    approssimato: true,
+    precisione: "stazione indicata dalla fonte, coordinate approssimate sul centro di Savona (riuso di un punto già geocodificato in zona)"
+  },
+  {
+    id: "genova-san-vincenzo-rapina-distributore",
+    comune: "Genova, centro storico — Via San Vincenzo",
+    data: "24 gennaio 2026 (sabato)",
+    dataISO: "2026-01-24",
+    categoria: "rapine",
+    titolo: "Rapina a un distributore h24, vittima aggredita a pugni",
+    descrizione: "Due minori con il volto travisato da passamontagna hanno avvicinato un uomo presso un distributore di carburante h24, aggredendolo a pugni e strattonandolo nel tentativo di derubarlo, prima di fuggire. La vittima si è accorta di aver perso lo smartphone e ha chiamato il 112; uno dei due giovani è stato fermato poco dopo, l'altro ritrovato nascosto in un cassonetto grazie alle telecamere di zona. Entrambi sono stati denunciati e affidati alle rispettive comunità.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/01/rapine-baby-gang-arresti-denunce-452268/" } ],
+    lat: 44.4070713, lon: 8.9427744,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); data dedotta da 'sabato scorso' in un articolo pubblicato martedì 27/1"
+  },
+  {
+    id: "genova-calata-marinetta-rapina-babygang",
+    comune: "Genova, Porto Antico — Calata Marinetta",
+    data: "notte tra il 26 e il 27 gennaio 2026",
+    dataISO: "2026-01-27",
+    categoria: "rapine",
+    titolo: "Rapina con coltello a Calata Marinetta, tre giovani fermati",
+    descrizione: "Un uomo è stato avvicinato da tre giovani che, puntandogli contro un coltellino multiuso, gli hanno sottratto una sigaretta elettronica dalla tasca. Le Volanti, allertate dalla vittima, hanno rintracciato poco dopo il gruppo in piazza Cavour; due dei tre indossavano ancora il passamontagna. I minori sono stati portati in Questura e trasferiti in un centro di accoglienza.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/01/rapine-baby-gang-arresti-denunce-452268/" } ],
+    lat: 44.4085352, lon: 8.9244316,
+    approssimato: true,
+    precisione: "zona indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); data dedotta da 'la scorsa notte' in un articolo pubblicato il 27/1, incertezza di ±1 giorno"
+  },
+
+  /* --- Ricerca integrativa Febbraio 2026 con elenco fonti ampliato (aggiunti il 07/09/2026) --- */
+  {
+    id: "imperia-porto-maurizio-furto-notturno-salumeria",
+    comune: "Imperia, Porto Maurizio — Via Oreggia",
+    data: "6 febbraio 2026 (notte)",
+    dataISO: "2026-02-06",
+    categoria: "altro",
+    titolo: "Furto notturno di frutta e verdura da una salumeria",
+    descrizione: "Un uomo ha sottratto di notte frutta e verdura esposte davanti a una salumeria di via Oreggia, trasportandola con più viaggi di carrello fino all'auto parcheggiata. Il titolare ha escluso si trattasse di un furto di necessità, viste la quantità di merce e le modalità organizzate.",
+    fonti: [ { nome: "La Voce di Imperia", url: "https://www.lavocediimperia.it/2026/02/06/leggi-notizia/argomenti/cronaca-6/articolo/furto-notturno-di-frutta-e-verdura-davanti-a-una-salumeria-di-porto-maurizio.html" } ],
+    lat: 43.8776398, lon: 8.0143420,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-san-donato-rapina-gruppo-cellulare",
+    comune: "Genova, centro storico — Chiesa di San Donato / Salita Pollaiuoli",
+    data: "9 febbraio 2026 (sera)",
+    dataISO: "2026-02-09",
+    categoria: "rapine",
+    titolo: "Rapina di gruppo nel centro storico, aggredito un uomo per il cellulare",
+    descrizione: "Un uomo seduto sui gradini della chiesa di San Donato è stato avvicinato da quattro giovani, uno dei quali con il volto coperto da passamontagna; uno gli ha strappato il cellulare fuggendo verso Salita Pollaiuoli. Nel tentativo di inseguirlo, la vittima è stata bloccata e aggredita dagli altri per consentire la fuga del complice. Un 17enne è stato fermato dalla polizia.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/02/09/genova-uomo-derubato-e-picchiato-nel-centro-storico-fermato-un-17enne/" }, { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/63294-genova-derubato-cellulare-rincorre-ladro-viene-picchiato-dagli-amici.html" } ],
+    lat: 44.4067629, lon: 8.9322559,
+    approssimato: true,
+    precisione: "zona indicata dalla fonte, coordinate riusate da un fatto già geocodificato in Salita Pollaiuoli/Genova (OpenStreetMap Nominatim, geocoding di sessione precedente)"
+  },
+  {
+    id: "genova-priaruggia-tentato-omicidio-rapina",
+    comune: "Genova, Quarto — Priaruggia",
+    data: "15 febbraio 2026",
+    dataISO: "2026-02-15",
+    categoria: "violenze",
+    titolo: "Tentato omicidio e rapina a Priaruggia, uomo accoltellato più volte",
+    descrizione: "Un uomo è stato aggredito a pugni e poi accoltellato ripetutamente al collo, al torace e a un polso in un appartamento di Priaruggia, riportando ferite gravi e venendo sottoposto a un delicato intervento chirurgico. Una persona è stata fermata con le accuse di tentato omicidio e rapina, poiché aveva ancora addosso abiti sporchi di sangue e il cellulare della vittima; un'altra persona minorenne è stata denunciata a piede libero. Le indagini indicano un diverbio tra persone che si conoscevano.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/02/tentato-omicidio-priaruggia-convalida-arresto-elton-vogli-messaggi-454561/" }, { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/tentato-omicidio-e-rapina-a-priaruggia-40enne-ferito-due-arresti/2026/02/16/631729/" } ],
+    lat: 44.3895369, lon: 8.9991138,
+    approssimato: false,
+    precisione: "località indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); fatto distinto dall'accoltellamento di Savona già presente nel dataset per la stessa data (luoghi e vittime diverse)"
+  },
+  {
+    id: "sanremo-via-galilei-rissa-bar",
+    comune: "Sanremo — Via Galileo Galilei (bar)",
+    data: "10 febbraio 2026",
+    dataISO: "2026-02-10",
+    categoria: "violenze",
+    titolo: "Rissa e violenze in un bar, due denunciati",
+    descrizione: "In un bar di via Galileo Galilei è scoppiata una rissa con violenze tra alcune persone; due uomini sono stati denunciati per aggressione. Il Questore ha disposto nei loro confronti i divieti di accesso ai locali pubblici (Daspo Willy/Dacur).",
+    fonti: [ { nome: "Sanremonews", url: "https://www.sanremonews.it/2026/02/10/leggi-notizia/argomenti/cronaca/articolo/sanremo-due-uomini-denunciati-per-aggressione-il-questore-dispone-i-divieti-di-accesso-ai-locali.html" } ],
+    lat: 43.8228321, lon: 7.7692480,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); articolo parzialmente riservato agli abbonati, dettagli sulla dinamica non tutti disponibili"
+  },
+  {
+    id: "bonassola-minorenne-furto-aggravato",
+    comune: "Bonassola (La Spezia) — centro cittadino",
+    data: "notte tra il 19 e il 20 febbraio 2026",
+    dataISO: "2026-02-19",
+    categoria: "rapine",
+    titolo: "Minorenne arrestato per furto aggravato in più esercizi commerciali",
+    descrizione: "Un minorenne ospitato in una comunità genovese è stato sorpreso dai Carabinieri mentre si allontanava dal centro di Bonassola dopo aver danneggiato la vetrina di un ristorante e commesso furti in una gelateria, un bar e una tabaccheria. La refurtiva — un monopattino, 600 euro in contanti e due telefonini — è stata recuperata e restituita. Il minore è stato messo a disposizione della Procura minorile di Genova.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/02/20/bonassola-minore-arrestato-dai-carabinieri-per-furto-aggravato-641449" } ],
+    lat: 44.1835463, lon: 9.5825259,
+    approssimato: true,
+    precisione: "centro cittadino indicato dalla fonte, coordinate approssimate su Bonassola (OpenStreetMap Nominatim)"
+  },
+
 ];
