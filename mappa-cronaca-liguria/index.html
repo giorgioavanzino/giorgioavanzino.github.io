@@ -144,6 +144,20 @@
   footer.notes .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px 24px; }
   footer.notes ul { margin: 4px 0 0; padding-left: 18px; }
   footer.notes li { margin-bottom: 3px; }
+
+  .stats-panel { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 14px; }
+  .stats-head { display: flex; flex-direction: column; gap: 2px; }
+  .stats-head h2 { font-family: "Poppins", sans-serif; font-size: 18px; margin: 0; font-weight: 700; color: var(--ink); }
+  .stats-sub { font-size: 12px; color: var(--ink-faint); }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; align-items: start; }
+  .stats-card { background: var(--surface-solid); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px 12px; }
+  .stats-card h3 { margin: 0 0 10px; font-family: "Poppins", sans-serif; font-size: 13.5px; font-weight: 700; color: var(--ink); }
+  .stats-card-wide { grid-column: 1 / -1; }
+  .stats-caveat { margin: 10px 0 0; font-size: 11.5px; color: var(--ink-faint); font-style: italic; }
+  .chart-canvas-wrap { position: relative; height: 220px; }
+  .treemap-wrap { width: 100%; }
+  .treemap-wrap svg { width: 100%; height: auto; display: block; }
+  .treemap-wrap .fallback-note { font-size: 12.5px; color: var(--ink-soft); }
   .updated { font-family: "Poppins", sans-serif; font-size: 11.5px; color: var(--ink-faint); }
 </style>
 </head>
@@ -185,6 +199,28 @@
     </aside>
   </div>
 
+  <section class="panel stats-panel">
+    <div class="stats-head">
+      <h2>Statistiche</h2>
+      <span class="stats-sub" id="statsSub">Si aggiornano in base ai filtri di categoria e data selezionati sopra</span>
+    </div>
+    <div class="stats-grid">
+      <div class="stats-card">
+        <h3>Andamento mensile per categoria</h3>
+        <div class="chart-canvas-wrap"><canvas id="chartTrend" role="img" aria-label="Andamento mensile dei fatti per categoria"></canvas></div>
+      </div>
+      <div class="stats-card">
+        <h3>Distribuzione per categoria</h3>
+        <div class="chart-canvas-wrap"><canvas id="chartCategoria" role="img" aria-label="Distribuzione dei fatti per categoria"></canvas></div>
+      </div>
+      <div class="stats-card stats-card-wide">
+        <h3>Per provincia e comune</h3>
+        <div id="chartTreemap" class="treemap-wrap"></div>
+        <p class="stats-caveat">Le dimensioni riflettono il numero di fatti pubblicati dalle testate monitorate, non l'incidenza reale dei reati: alcune province (in particolare Genova) hanno più testate locali monitorate di altre, quindi il confronto assoluto tra province va letto con questa cautela.</p>
+      </div>
+    </div>
+  </section>
+
   <footer class="panel notes">
     <h4>Nota metodologica</h4>
     <div class="grid">
@@ -212,6 +248,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.1/chart.umd.min.js"></script>
 <script src="liguria_cronaca_dati.txt" onerror="window.__datiMancanti = true;"></script>
 <script>
   const CATS = {
@@ -1380,10 +1417,270 @@
     return inc.dataISO >= dateFromEl.value && inc.dataISO <= dateToEl.value;
   }
 
+  // ================= Statistiche (trend, categoria, treemap provincia/comune) =================
+
+  // Comuni liguri "minori" noti nel dataset, associati alla provincia. Vanno
+  // controllati PRIMA dei quattro capoluoghi, perché un capoluogo può comparire
+  // come riferimento di provincia tra parentesi accanto a un altro comune
+  // (es. "Finale Ligure (Savona)": deve risultare comune "Finale Ligure", non "Savona").
+  const PROVINCIA_COMUNI = [
+    ["Ventimiglia", "Imperia"], ["Sanremo", "Imperia"], ["Bordighera", "Imperia"],
+    ["Olivetta San Michele", "Imperia"], ["Dolceacqua", "Imperia"], ["Diano Marina", "Imperia"],
+    ["Pieve di Teco", "Imperia"], ["San Lorenzo al Mare", "Imperia"], ["Taggia", "Imperia"],
+    ["Albenga", "Savona"], ["Loano", "Savona"], ["Alassio", "Savona"], ["Borghetto Santo Spirito", "Savona"],
+    ["Pietra Ligure", "Savona"], ["Laigueglia", "Savona"], ["Andora", "Savona"], ["Varazze", "Savona"],
+    ["Cairo Montenotte", "Savona"], ["Ceriale", "Savona"], ["Finale Ligure", "Savona"], ["Albisola Superiore", "Savona"],
+    ["Sestri Levante", "Genova"], ["Chiavari", "Genova"], ["Rapallo", "Genova"], ["Santa Margherita Ligure", "Genova"],
+    ["Masone", "Genova"], ["Busalla", "Genova"], ["Recco", "Genova"], ["Lavagna", "Genova"],
+    ["Sarzana", "La Spezia"], ["Porto Venere", "La Spezia"], ["Santo Stefano di Magra", "La Spezia"],
+    ["Lerici", "La Spezia"], ["Bonassola", "La Spezia"]
+  ].sort((a, b) => b[0].length - a[0].length);
+  const CAPOLUOGHI = [["Genova", "Genova"], ["Savona", "Savona"], ["Imperia", "Imperia"], ["La Spezia", "La Spezia"]];
+
+  function localizzaFatto(comuneStr) {
+    const s = comuneStr || "";
+    for (const [nome, prov] of PROVINCIA_COMUNI) { if (s.includes(nome)) return { comune: nome, provincia: prov }; }
+    for (const [nome, prov] of CAPOLUOGHI) { if (s.includes(nome)) return { comune: nome, provincia: prov }; }
+    return { comune: "Altro/non determinato", provincia: "Altro/non determinato" };
+  }
+
+  const PROV_COLORS = { "Genova": "#2b6cb0", "Savona": "#b7791f", "Imperia": "#38a169", "La Spezia": "#805ad5", "Altro/non determinato": "#8a8f98" };
+  const MESI_BREVI = ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"];
+
+  function monthsBetween(isoMin, isoMax) {
+    const [y0, m0] = isoMin.split("-").map(Number);
+    const [y1, m1] = isoMax.split("-").map(Number);
+    const out = [];
+    let y = y0, m = m0;
+    while (y < y1 || (y === y1 && m <= m1)) {
+      out.push(`${y}-${String(m).padStart(2, "0")}`);
+      m++; if (m > 12) { m = 1; y++; }
+    }
+    return out;
+  }
+  const monthLabelsAll = (minDate && maxDate) ? monthsBetween(minDate, maxDate) : [];
+
+  // Algoritmo "squarified treemap" (Bruls, Huizing, van Wijk): dispone un
+  // insieme di {name, value, ...} dentro un rettangolo x,y,w,h restituendo
+  // per ciascuno un sotto-rettangolo con area proporzionale al valore.
+  function squarify(items, x, y, w, h) {
+    const total = items.reduce((s, it) => s + it.value, 0);
+    if (total <= 0 || !items.length || w <= 0 || h <= 0) return [];
+    const scale = (w * h) / total;
+    let remaining = items.map(it => Object.assign({}, it, { area: it.value * scale }));
+    let cx = x, cy = y, cw = w, ch = h;
+    const results = [];
+    function worstRatio(row, length) {
+      const sum = row.reduce((s, r) => s + r.area, 0);
+      const maxA = Math.max.apply(null, row.map(r => r.area));
+      const minA = Math.min.apply(null, row.map(r => r.area));
+      const s2 = sum * sum, l2 = length * length;
+      return Math.max((l2 * maxA) / s2, s2 / (l2 * minA));
+    }
+    while (remaining.length) {
+      const length = Math.min(cw, ch);
+      let row = [remaining[0]], i = 1;
+      while (i < remaining.length) {
+        const testRow = row.concat(remaining[i]);
+        if (worstRatio(testRow, length) <= worstRatio(row, length)) { row = testRow; i++; } else break;
+      }
+      const rowArea = row.reduce((s, r) => s + r.area, 0);
+      if (cw >= ch) {
+        const rowW = rowArea / ch;
+        let ry = cy;
+        row.forEach(r => { const rh = r.area / rowW; results.push(Object.assign({}, r, { x: cx, y: ry, w: rowW, h: rh })); ry += rh; });
+        cx += rowW; cw -= rowW;
+      } else {
+        const rowH = rowArea / cw;
+        let rx = cx;
+        row.forEach(r => { const rw = r.area / rowH; results.push(Object.assign({}, r, { x: rx, y: cy, w: rw, h: rowH })); rx += rw; });
+        cy += rowH; ch -= rowH;
+      }
+      remaining = remaining.slice(row.length);
+    }
+    return results;
+  }
+
+  let trendChart = null, categoriaChart = null;
+  const chartsLibMissing = typeof Chart === "undefined";
+
+  function renderTrendChart(list) {
+    const canvas = document.getElementById("chartTrend");
+    if (!canvas) return;
+    if (chartsLibMissing) {
+      canvas.parentElement.innerHTML = '<p class="fallback-note">Grafico non disponibile: libreria di rendering non caricata (rete bloccata o offline).</p>';
+      return;
+    }
+    const byMonthCat = {};
+    monthLabelsAll.forEach(m => byMonthCat[m] = { rapine: 0, violenze: 0, omicidi: 0, altro: 0 });
+    list.forEach(inc => {
+      if (!inc.dataISO) return;
+      const mkey = inc.dataISO.slice(0, 7);
+      if (!byMonthCat[mkey]) byMonthCat[mkey] = { rapine: 0, violenze: 0, omicidi: 0, altro: 0 };
+      byMonthCat[mkey][inc.categoria]++;
+    });
+    const labels = monthLabelsAll.length ? monthLabelsAll : Object.keys(byMonthCat).sort();
+    const labelsShort = labels.map(l => { const [y, m] = l.split("-").map(Number); return `${MESI_BREVI[m - 1]} ${String(y).slice(2)}`; });
+    const datasets = Object.keys(CATS).map(key => ({
+      label: CATS[key].label,
+      data: labels.map(l => (byMonthCat[l] ? byMonthCat[l][key] : 0)),
+      backgroundColor: CATS[key].color,
+      borderRadius: 3,
+      maxBarThickness: 28
+    }));
+    if (trendChart) trendChart.destroy();
+    trendChart = new Chart(canvas, {
+      type: "bar",
+      data: { labels: labelsShort, datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        scales: {
+          x: { stacked: true, grid: { display: false }, ticks: { font: { family: "Poppins", size: 11 } } },
+          y: { stacked: true, beginAtZero: true, ticks: { precision: 0, font: { family: "Poppins", size: 11 } }, grid: { color: "#dfe3ea" } }
+        },
+        plugins: { legend: { display: false }, tooltip: { titleFont: { family: "Poppins" }, bodyFont: { family: "Poppins" } } }
+      }
+    });
+  }
+
+  function renderCategoriaChart(list) {
+    const canvas = document.getElementById("chartCategoria");
+    if (!canvas) return;
+    if (chartsLibMissing) return; // il messaggio di fallback è già mostrato dal grafico dell'andamento
+    const counts = { rapine: 0, violenze: 0, omicidi: 0, altro: 0 };
+    list.forEach(inc => counts[inc.categoria]++);
+    const keys = Object.keys(CATS).filter(k => counts[k] > 0);
+    if (categoriaChart) categoriaChart.destroy();
+    if (!keys.length) return;
+    categoriaChart = new Chart(canvas, {
+      type: "doughnut",
+      data: { labels: keys.map(k => CATS[k].label), datasets: [{ data: keys.map(k => counts[k]), backgroundColor: keys.map(k => CATS[k].color), borderColor: "#f2f4f8", borderWidth: 2 }] },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { position: "bottom", labels: { font: { family: "Poppins", size: 11 }, boxWidth: 10, padding: 10 } },
+          tooltip: { titleFont: { family: "Poppins" }, bodyFont: { family: "Poppins" } }
+        }
+      }
+    });
+  }
+
+  function renderTreemap(list) {
+    const wrap = document.getElementById("chartTreemap");
+    if (!wrap) return;
+    wrap.innerHTML = "";
+    if (!list.length) { wrap.innerHTML = '<p class="fallback-note">Nessun fatto nel periodo o nelle categorie selezionate.</p>'; return; }
+
+    const byProv = {};
+    list.forEach(inc => {
+      const { provincia, comune } = localizzaFatto(inc.comune);
+      if (!byProv[provincia]) byProv[provincia] = {};
+      byProv[provincia][comune] = (byProv[provincia][comune] || 0) + 1;
+    });
+    const provItems = Object.entries(byProv).map(([nome, comuni]) => ({
+      name: nome, value: Object.values(comuni).reduce((s, n) => s + n, 0), comuni
+    })).sort((a, b) => b.value - a.value);
+
+    const W = Math.max(wrap.clientWidth || 640, 280), H = 340;
+    const provRects = squarify(provItems, 0, 0, W, H);
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("height", H);
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", "Treemap dei fatti per provincia e comune");
+
+    provRects.forEach(pr => {
+      const g = document.createElementNS(svgNS, "g");
+      const provColor = PROV_COLORS[pr.name] || "#8a8f98";
+      const pad = 3;
+      const headerH = (pr.h > 40 && pr.w > 60) ? 16 : 0;
+
+      const outline = document.createElementNS(svgNS, "rect");
+      outline.setAttribute("x", pr.x); outline.setAttribute("y", pr.y);
+      outline.setAttribute("width", pr.w); outline.setAttribute("height", pr.h);
+      outline.setAttribute("fill", "none"); outline.setAttribute("stroke", provColor); outline.setAttribute("stroke-width", "3");
+      g.appendChild(outline);
+
+      const comuniEntries = Object.entries(pr.comuni).sort((a, b) => b[1] - a[1]);
+      const TOP_N = 6;
+      const comuniItems = comuniEntries.slice(0, TOP_N).map(([nome, val]) => ({ name: nome, value: val }));
+      const rest = comuniEntries.slice(TOP_N).reduce((s, [, v]) => s + v, 0);
+      if (rest > 0) comuniItems.push({ name: "Altri comuni", value: rest });
+
+      const innerRects = squarify(comuniItems, pr.x + pad, pr.y + pad + headerH, Math.max(pr.w - 2 * pad, 1), Math.max(pr.h - 2 * pad - headerH, 1));
+      innerRects.forEach(cr => {
+        const cRect = document.createElementNS(svgNS, "rect");
+        cRect.setAttribute("x", cr.x); cRect.setAttribute("y", cr.y);
+        cRect.setAttribute("width", cr.w); cRect.setAttribute("height", cr.h);
+        cRect.setAttribute("fill", provColor + "33"); cRect.setAttribute("stroke", "#ffffff"); cRect.setAttribute("stroke-width", "1.5");
+        const title = document.createElementNS(svgNS, "title");
+        title.textContent = `${cr.name} (${pr.name}): ${cr.value} fatt${cr.value === 1 ? "o" : "i"}`;
+        cRect.appendChild(title);
+        g.appendChild(cRect);
+
+        if (cr.w > 46 && cr.h > 22) {
+          const text = document.createElementNS(svgNS, "text");
+          text.setAttribute("x", cr.x + 5); text.setAttribute("y", cr.y + 15);
+          text.setAttribute("font-family", "Poppins, sans-serif"); text.setAttribute("font-weight", "700"); text.setAttribute("font-size", "10.5"); text.setAttribute("fill", "#000000");
+          text.textContent = cr.name.length > 18 ? cr.name.slice(0, 17) + "…" : cr.name;
+          g.appendChild(text);
+          const countText = document.createElementNS(svgNS, "text");
+          countText.setAttribute("x", cr.x + 5); countText.setAttribute("y", cr.y + 28);
+          countText.setAttribute("font-family", "Poppins, sans-serif"); countText.setAttribute("font-size", "10"); countText.setAttribute("fill", "#4c4f55");
+          countText.textContent = `${cr.value} fatt${cr.value === 1 ? "o" : "i"}`;
+          g.appendChild(countText);
+        }
+      });
+
+      if (headerH > 0) {
+        const provLabel = document.createElementNS(svgNS, "text");
+        provLabel.setAttribute("x", pr.x + 6); provLabel.setAttribute("y", pr.y + 12);
+        provLabel.setAttribute("font-family", "Poppins, sans-serif"); provLabel.setAttribute("font-weight", "900");
+        provLabel.setAttribute("font-size", "10"); provLabel.setAttribute("letter-spacing", "0.4");
+        provLabel.setAttribute("fill", provColor);
+        provLabel.textContent = `${pr.name.toUpperCase()} (${pr.value})`;
+        g.appendChild(provLabel);
+      } else {
+        const title = document.createElementNS(svgNS, "title");
+        title.textContent = `${pr.name}: ${pr.value} fatti`;
+        g.insertBefore(title, g.firstChild);
+      }
+
+      svg.appendChild(g);
+    });
+
+    wrap.appendChild(svg);
+  }
+
+  let lastVisibleIncidents = [];
+  function renderStats(list) {
+    lastVisibleIncidents = list;
+    renderTrendChart(list);
+    renderCategoriaChart(list);
+    renderTreemap(list);
+    const statsSub = document.getElementById("statsSub");
+    if (statsSub) {
+      statsSub.textContent = (list.length === INCIDENTS.length)
+        ? "Statistiche su tutti i fatti registrati. Si aggiornano in base ai filtri di categoria e data selezionati sopra."
+        : `Statistiche su ${list.length} di ${INCIDENTS.length} fatti, in base ai filtri di categoria e data selezionati sopra.`;
+    }
+  }
+  let statsResizeTimer = null;
+  window.addEventListener("resize", () => {
+    clearTimeout(statsResizeTimer);
+    statsResizeTimer = setTimeout(() => renderTreemap(lastVisibleIncidents), 200);
+  });
+
+  // ================= /Statistiche =================
+
   function applyFilter() {
     let visible = 0;
+    const visibleIncidents = [];
     INCIDENTS.forEach(inc => {
       const show = activeCats.has(inc.categoria) && passesDateFilter(inc);
+      if (show) visibleIncidents.push(inc);
       if (mapReady) {
         const m = markers[inc.id];
         if (show) { if (!map.hasLayer(m)) m.addTo(map); } else { if (map.hasLayer(m)) map.removeLayer(m); }
@@ -1400,6 +1697,7 @@
     if (meta) meta.textContent = `${visible} fatti geolocalizzati`;
     const emptyState = document.getElementById("emptyState");
     if (emptyState) emptyState.classList.toggle("show", visible === 0);
+    renderStats(visibleIncidents);
   }
 
   applyFilter();
