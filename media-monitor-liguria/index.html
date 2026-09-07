@@ -165,7 +165,7 @@
     </div>
     <p class="subtitle">Sedute del <strong>Consiglio Regionale della Liguria</strong> e del <strong>Consiglio Comunale di Genova</strong> con i temi commentabili per ORA!, piu' la rassegna stampa filtrata sulle quattro province liguri. Seleziona una data dal menu per rivedere una seduta passata; di default e' mostrata la piu' recente.</p>
     <div class="head-meta">
-      <span class="chip-updated">Aggiornato: 6 settembre 2026, 20:15</span>
+      <span class="chip-updated">Aggiornato: 7 settembre 2026, 09:10</span>
     </div>
   </header>
 
@@ -191,7 +191,7 @@
   <section class="panel">
     <div class="panel-head">
       <h2>Ultime notizie dai media</h2>
-      <span class="n spacer">aggiornato al 06/09/2026, 20:15</span>
+      <span class="n spacer">aggiornato al 07/09/2026, 09:10</span>
     </div>
     <p class="note">Testate monitorate: Il Secolo XIX, GenovaToday, Primocanale, ANSA Liguria (tutte le province), Liguria24, Genova24, Riviera24 (Imperia), Citta' della Spezia (La Spezia). Le notizie con tema evidenziato sono collegabili a una posizione ORA! esistente; quelle etichettate &ldquo;Di tendenza&rdquo; sono le piu' seguite anche senza un aggancio diretto al programma.</p>
 
@@ -340,6 +340,10 @@ const COMUNE_DATA = {
 };
 
 const NEWS_DATA = [
+  { data: "06/09/2026", fonte: "Riviera24", titolo: "Gioventù nazionale Imperia: «La sicurezza dei nostri quartieri non può essere oggetto di sconti»", url: "https://www.riviera24.it/2026/09/gioventu-nazionale-imperia-la-sicurezza-dei-nostri-quartieri-non-puo-essere-oggetto-di-sconti-975820/",
+    badges: ["Giustizia"],
+    provincia: "Imperia",
+    angolo: "Gioventù Nazionale Imperia denuncia la scarcerazione anticipata dell'aggressore di una giovane donna della zona, accostando il caso a recenti scarcerazioni di cittadini stranieri a Torino, e ne trae un giudizio di sistema giudiziario troppo permissivo verso chi delinque. La tesi ORA! Giustizia (sezione \"Sicurezza nelle città\") individua però un problema diverso da quello denunciato: non la severità delle pene ma l'organizzazione del sistema — dal 2008 le forze dell'ordine hanno perso 15mila unità e l'età media è salita da 33 a 46 anni, mentre l'Italia resta comunque tra i paesi UE con più agenti per abitante, segno che serve investire meglio, non solo di più. La stessa tesi (sezione \"Tempi della giustizia\") chiede un processo penale meno intasato da reati simbolici e più concentrato sui reati che minacciano davvero sicurezza e convivenza, oltre a un piano di rigenerazione delle periferie dove degrado e criminalità si alimentano a vicenda. Per ORA! la priorità non è invocare pene più dure caso per caso sull'onda dell'indignazione, ma rendere il sistema giudiziario più rapido ed efficiente e riorganizzare la presenza sul territorio: la certezza di una risposta tempestiva conta più dell'allarme mediatico sul singolo episodio." },
   { data: "06/09/2026", fonte: "Città della Spezia", titolo: "Tpl, Raffaelli: \"Dall'inizio dell'anno 500 corse saltate\". Peserico e Teja: \"Fatti investimenti per 50 milioni\"", url: "https://www.cittadellaspezia.com/2026/09/06/tpl-raffaelli-dallinizio-dellanno-500-corse-saltate-peserico-e-teja-fatti-investimenti-per-50-milioni-670783/",
     badges: ["Infrastrutture"],
     provincia: "La Spezia",
@@ -571,9 +575,6 @@ const NEWS_DATA = [
     badges: ["Infrastrutture","Spesa pubblica"],
     provincia: "Genova",
     angolo: "Alla tradizionale Festa della Madonna della Guardia, la sindaca Salis ha incontrato un'accoglienza fredda da parte dei sindaci dell'Alta Val Polcevera, in aperta protesta contro il piano di tagli AMT e l'aumento della compartecipazione richiesta ai Comuni; il clima segue le dimissioni di Giancarlo Campora dalle deleghe in Città Metropolitana. La tesi ORA! Infrastrutture (proposta 1, Efficientamento del TPL) chiede rinnovo del parco mezzi e aumento reale dell'offerta, non una contrazione del servizio scaricata sui territori con meno voce in capitolo; la tesi Spesa Pubblica (proposta 3, Razionalizzazione delle partecipate) chiede controlli indipendenti su AMT prima di ogni nuovo impegno finanziario. Per ORA! la freddezza istituzionale mostrata in processione è solo la fotografia di un problema che resta irrisolto nel merito: senza un audit pubblico dei conti AMT e un piano pluriennale condiviso tra Regione, Comune e Città Metropolitana, ogni gesto simbolico non sposta di un centimetro la sostanza della crisi." },
-  { data: "29/08/2026", fonte: "Città della Spezia", titolo: "Natale: «Bucci aumenta di 5 milioni la spesa per le segreterie: si potevano assumere 70 medici»", url: "https://www.cittadellaspezia.com/2026/08/29/natale-bucci-aumenta-di-5-milioni-la-spesa-per-le-segreterie-si-potevano-assumere-70-medici-669722/",
-    badges: ["Spesa pubblica"],
-    angolo: "Il segretario regionale del Pd Davide Natale accusa la Giunta Bucci di aver stanziato oltre 5 milioni di euro aggiuntivi per il personale delle segreterie politiche, i collaboratori e le assunzioni interinali, calcolando che con quella cifra si sarebbero potuti assumere circa 70 medici o 150 infermieri, oppure ristrutturare 170 alloggi ERP oggi sfitti. La tesi ORA! Spesa Pubblica distingue nettamente la spesa improduttiva (moltiplicazione di strutture politiche, incarichi, poltrone) dagli investimenti che aggrediscono davvero i nodi del Paese, a partire dalla sanità, dove l'Italia spende meno della media UE. La Regione replica che si tratta di arretrati contrattuali dovuti per legge: per ORA!, coerentemente con il proprio metodo di giudicare la spesa \"sulla strada dei fatti\", la Regione deve pubblicare la scomposizione integrale del decreto — quanto è dovuto per contratto e quanto è ampliamento discrezionale della struttura politica, unico punto su cui si misurerebbe la fondatezza dell'accusa." },
 ];
 
 // Palette fissa: un colore per ciascun tema (le 22 tesi ORA! + Trasparenza + Di tendenza),
