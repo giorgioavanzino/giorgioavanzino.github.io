@@ -3369,4 +3369,84 @@ window.INCIDENTS_DATA = [
     precisione: "via dell'abitazione non specificata dalla fonte, coordinate approssimate sul centro di Sanremo (OpenStreetMap Nominatim); orario dell'episodio nella notte tra venerdì 4 e sabato 5 settembre, data del fatto attribuita al 5 settembre"
   },
 
+  /* --- Ricerca integrativa Marzo 2026 con elenco fonti ampliato (aggiunti il 06/09/2026) --- */
+  {
+    id: "genova-brignole-tentata-rapina-cellulare",
+    comune: "Genova, Brignole (zona stazione)",
+    data: "11 marzo 2026 (sera)",
+    dataISO: "2026-03-11",
+    categoria: "rapine",
+    titolo: "Tentata rapina con calci e pugni a Brignole",
+    descrizione: "Nei pressi della stazione di Brignole, due giovani hanno aggredito un uomo colpendolo ripetutamente con calci e pugni, anche al volto e alla testa, nel tentativo di rubargli il cellulare. La vittima, con ferite guaribili in una settimana, è riuscita a reagire e a fuggire, chiedendo poi l'intervento delle forze dell'ordine. Grazie al confronto tra testimonianze e immagini di videosorveglianza, la Squadra Mobile ha successivamente identificato e arrestato i due responsabili, già noti alle forze dell'ordine.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/04/tentata-rapina-brignole-arresti-459913/" }, { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/04/11/leggi-notizia/argomenti/cronaca-5/articolo/brignole-pestano-un-24enne-per-rubargli-il-telefono-arrestati-due-giovani.html" } ],
+    lat: 44.4073346, lon: 8.9457543,
+    approssimato: true,
+    precisione: "zona indicata dalla fonte (via/piazza esatta non specificata), coordinate approssimate sulla stazione di Brignole (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "la-spezia-fiera-san-giuseppe-furti-portafogli",
+    comune: "La Spezia — centro città (Fiera di San Giuseppe)",
+    data: "18-20 marzo 2026",
+    dataISO: "2026-03-20",
+    categoria: "rapine",
+    titolo: "Cinque furti di portafogli alla Fiera di San Giuseppe",
+    descrizione: "Durante i tre giorni della tradizionale Fiera di San Giuseppe a La Spezia sono state sporte cinque denunce per furto di portafogli avvenuti dentro o nei pressi dell'area della fiera. Nonostante il grande afflusso di visitatori, le forze dell'ordine non hanno registrato episodi gravi.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/03/20/fiera-di-san-giuseppe-cinque-furti-ma-nessun-episodio-grave-645778" }, { nome: "Gazzetta della Spezia", url: "https://gazzettadellaspezia.com/cronaca/item/173780-cinque-denunce-per-furto-alla-fiera-di-san-giuseppe" } ],
+    lat: 44.1062240, lon: 9.8258476,
+    approssimato: true,
+    precisione: "area della fiera non georeferenziata singolarmente, coordinate approssimate sul centro di La Spezia (OpenStreetMap Nominatim); riepilogo di più episodi minori senza dettaglio individuale per vittima"
+  },
+  {
+    id: "porto-venere-fezzano-furti-abitazione",
+    comune: "Porto Venere, frazione Fezzano (La Spezia)",
+    data: "26 marzo 2026",
+    dataISO: "2026-03-26",
+    categoria: "altro",
+    titolo: "Tre furti in abitazione a Fezzano, cinque persone denunciate",
+    descrizione: "Ignoti hanno forzato porte e finestre di tre abitazioni nella frazione di Fezzano, portando via gioielli, un orologio di pregio e contanti per un bottino stimato oltre 30.000 euro. I Carabinieri, con il supporto della Squadra Mobile della Spezia, hanno identificato tramite telecamere e il riconoscimento di un veicolo sospetto quattro uomini e una donna, tutti denunciati; sono stati recuperati numerosi monili di cui si cercano ancora i legittimi proprietari.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/03/28/topi-dappartamento-in-azione-a-fezzano-presi-monili-e-un-orologio-di-pregio-indagano-i-carabinieri-647005" }, { nome: "Liguria24", url: "https://www.liguria24.it/2026/03/30/furti-in-abitazione-a-fezzano-denunciate-cinque-persone-recuperati-denaro-e-giolielli-i-carabinieri-cercano-i-proprietari/844257" } ],
+    lat: 44.0800228, lon: 9.8265139,
+    approssimato: false,
+    precisione: "frazione indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-cornigliano-rapina-supermercato-alcolici",
+    comune: "Genova, Cornigliano — Via Cornigliano",
+    data: "26 marzo 2026 (sera)",
+    dataISO: "2026-03-26",
+    categoria: "rapine",
+    titolo: "Tenta il furto di alcolici al supermercato e aggredisce l'addetto alla sicurezza",
+    descrizione: "Un uomo ha tentato di allontanarsi da un supermercato di via Cornigliano senza pagare una bottiglia di superalcolico; fermato da un addetto alla sicurezza, ha reagito colpendolo con un pugno in volto e minacciandolo con un coccio di bottiglia rotta prima di essere bloccato. È stato arrestato per rapina.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/aggressione-e-furto-al-supermercato-arrestato-a-genova-dopo-la-rapina/2026/03/26/635190/" }, { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/03/26/leggi-notizia/argomenti/cronaca-5/articolo/rapina-al-supermercato-in-via-cornigliano-arrestato-35enne.html" } ],
+    lat: 44.4161878, lon: 8.8750369,
+    approssimato: false,
+    precisione: "via indicata dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-fanti-italia-tentata-rapina-smartphone",
+    comune: "Genova, Principe — Via Fanti d'Italia",
+    data: "26 marzo 2026",
+    dataISO: "2026-03-26",
+    categoria: "rapine",
+    titolo: "Pestaggio per rubare uno smartphone, due arresti",
+    descrizione: "In via Fanti d'Italia due persone sono state arrestate per tentata rapina dopo aver aggredito un passante nel tentativo di sottrargli lo smartphone.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/violenza-in-strada-a-genova-pestaggio-per-uno-smartphone-due-arresti/2026/03/26/635193/" } ],
+    lat: 44.416356, lon: 8.918661,
+    approssimato: true,
+    precisione: "via indicata dalla fonte, coordinate riusate da un fatto già geocodificato in via Fanti d'Italia/Genova (OpenStreetMap Nominatim, geocoding di sessione precedente); dettagli sulla dinamica limitati nella fonte disponibile"
+  },
+  {
+    id: "taggia-sanremo-bus-aggressione-17enne",
+    comune: "Tra Taggia e Sanremo (IM) — autobus di linea",
+    data: "25 marzo 2026 (pomeriggio)",
+    dataISO: "2026-03-25",
+    categoria: "violenze",
+    titolo: "17enne aggredita da una donna su un bus di linea",
+    descrizione: "Nel pomeriggio, su un autobus di linea tra Taggia e Sanremo, una ragazza di 17 anni è stata insultata, sputata e picchiata da una donna, scatenando caos e panico tra i passeggeri. Sono intervenuti i Carabinieri e il personale sanitario; la famiglia della vittima ha annunciato una denuncia.",
+    fonti: [ { nome: "Sanremonews", url: "https://www.sanremonews.it/2026/03/30/leggi-notizia/argomenti/cronaca/articolo/aggressione-sul-bus-tra-taggia-e-sanremo-17enne-picchiata-da-una-donna-caos-e-panico-tra-i-passegg.html" } ],
+    lat: 43.8696068, lon: 7.8364582,
+    approssimato: true,
+    precisione: "punto esatto lungo il tragitto del bus non specificato dalla fonte, coordinate approssimate su Taggia; articolo parzialmente riservato agli abbonati"
+  },
+
 ];
