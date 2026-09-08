@@ -3582,5 +3582,44 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "centro cittadino indicato dalla fonte, coordinate approssimate su Bonassola (OpenStreetMap Nominatim)"
   },
+  {
+    id: "genova-corso-sardegna-branco-11-rapina",
+    comune: "Genova, San Fruttuoso — Corso Sardegna",
+    data: "5 settembre 2026 (notte)",
+    dataISO: "2026-09-05",
+    categoria: "rapine",
+    titolo: "Aggredito da un branco di 11 ragazzi per uno smartphone, quattro minorenni arrestati",
+    descrizione: "Un diciottenne è stato aggredito in strada sabato notte da un gruppo di 11 ragazzi: uno di 16 anni lo ha affrontato brandendo un bastone, un altro di 15 anni lo ha colpito al viso, poi gli altri lo hanno bloccato contro il muro chiedendogli soldi e sottraendogli il cellulare, prima di fuggire verso il mare. Un passante ha soccorso il giovane e allertato il 112; grazie alla geolocalizzazione del telefono rubato la polizia ha rintracciato il gruppo al piazzale della stazione di Brignole. Sono stati arrestati quattro minorenni (15, 16 e due 17enni) e denunciati altri sette ragazzi poco più che maggiorenni; uno dei fermati aveva con sé un coltello da cucina, una forbice e uno spray urticante.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/09/rapina-branco-11-ragazzi-minorenni-arrestati-473960/" } ],
+    lat: 44.4091334, lon: 8.9538851,
+    approssimato: false,
+    precisione: "corso indicato dalla fonte (fatto avvenuto 'in strada' lungo corso Sardegna), coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); data dedotta dal contesto dell'articolo (pubblicato lunedì 7/9, riferisce fatti di 'sabato notte')"
+  },
+  {
+    id: "genova-certosa-via-jori-rapina-catenina",
+    comune: "Genova, Certosa — Via Germano Jori",
+    data: "5 settembre 2026 (sera)",
+    dataISO: "2026-09-05",
+    categoria: "rapine",
+    titolo: "Seguono un uomo sceso dal bus e lo rapinano di catenina e smartphone",
+    descrizione: "Due giovani di 20 e 25 anni hanno seguito un uomo appena sceso da un autobus, lo hanno raggiunto e colpito con un pugno al volto, per poi rapinarlo della catenina d'oro e dello smartphone che aveva con sé. La vittima ha riconosciuto per strada i due responsabili il pomeriggio successivo, permettendo alla Polizia di rintracciarli in via Jori, nel quartiere di Certosa, e di denunciarli per rapina in concorso.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/09/07/genova-rapina-aggressione-certosa-due-giovani-denunciati-724129/" } ],
+    lat: 44.4311368, lon: 8.8922174,
+    approssimato: true,
+    precisione: "via indicata dalla fonte come luogo del fermo dei responsabili (via Jori, Certosa); il punto esatto dell'aggressione dopo la discesa dal bus non è specificato dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); data dedotta dal contesto dell'articolo (pubblicato lunedì 7/9, riferisce fatti della 'sera di sabato')"
+  },
+  {
+    id: "genova-piazza-principe-furto-treno-resistenza",
+    comune: "Genova, Principe — stazione ferroviaria, via Andrea Doria",
+    data: "6 settembre 2026 (sera)",
+    dataISO: "2026-09-06",
+    categoria: "violenze",
+    titolo: "Ruba uno zaino su un treno e aggredisce gli agenti che lo fermano",
+    descrizione: "Un uomo ha sottratto uno zaino a un passeggero a bordo di un treno diretto verso il ponente ligure. Individuato dagli agenti mentre usciva dal piazzale della stazione di Genova Piazza Principe sul lato di via Andrea Doria con la refurtiva, ha reagito colpendo ripetutamente i poliziotti e minacciandoli di morte, causando loro ferite guaribili in sette giorni. È stato infine bloccato e arrestato con le accuse di furto aggravato, resistenza e lesioni a pubblico ufficiale.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/09/07/genova-ruba-su-un-treno-e-aggredisce-gli-agenti-arrestato-un-uomo/" } ],
+    lat: 44.4165578, lon: 8.9188284,
+    approssimato: true,
+    precisione: "lato via Andrea Doria della stazione di Piazza Principe indicato dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); età e nazionalità dell'uomo non specificate dalla fonte; data dedotta dal contesto dell'articolo (pubblicato lunedì 7/9, riferisce un fatto di 'ieri sera')"
+  },
 
 ];
