@@ -3622,4 +3622,90 @@ window.INCIDENTS_DATA = [
     precisione: "lato via Andrea Doria della stazione di Piazza Principe indicato dalla fonte, coordinate ottenute con geocoding reale (OpenStreetMap Nominatim); età e nazionalità dell'uomo non specificate dalla fonte; data dedotta dal contesto dell'articolo (pubblicato lunedì 7/9, riferisce un fatto di 'ieri sera')"
   },
 
+  /* --- Aggiornamento 09/09/2026 --- */
+  {
+    id: "albenga-auto-rubata-minaccia-investimento-carabinieri",
+    comune: "Albenga (Savona) — parcheggio (via non specificata dalla fonte)",
+    data: "5-6 settembre 2026 (stimata; arresto convalidato dal GIP lunedì mattina 7/9)",
+    dataISO: "2026-09-06",
+    categoria: "violenze",
+    titolo: "Minaccia di investire un conoscente con un'auto rubata e aggredisce i Carabinieri, arrestato",
+    descrizione: "Un uomo di 34 anni, pregiudicato e residente nell'Imperiese, è stato trovato dai Carabinieri della Sezione Radiomobile di Albenga alla guida di un'auto rubata il giorno prima a Imperia, durante un intervento per placare una lite in un parcheggio. Secondo la ricostruzione, avrebbe prima tentato di investire un conoscente accelerando verso di lui e minacciandolo di morte non riuscendoci; alla vista della pattuglia ha opposto una violenta resistenza, colpendo i militari e prendendo a calci l'auto di servizio anche dopo essere stato bloccato, proseguendo con la stessa condotta aggressiva anche in caserma durante la perquisizione, dove è stata trovata anche una modica quantità di stupefacente. L'uomo, già noto per una serie di reati contro il patrimonio, è stato arrestato per resistenza a pubblico ufficiale, ricettazione e minacce aggravate; il GIP del Tribunale di Imperia ha convalidato l'arresto lunedì mattina disponendo la custodia cautelare in carcere.",
+    fonti: [
+      { nome: "Liguria24 / IVG", url: "https://www.liguria24.it/2026/09/09/minaccia-e-cerca-di-investire-un-conoscente-con-unauto-rubata-poi-aggredisce-i-carabinieri-arrestato-ad-albenga/870145/" },
+      { nome: "Sanremonews", url: "https://www.sanremonews.it/2026/09/09/leggi-notizia/argomenti/cronaca/articolo/albenga-tenta-di-investire-un-conoscente-con-unauto-rubata-in-provincia-di-imperia-e-aggredisce-i.html" },
+      { nome: "Savonanews (primo resoconto, 8/9)", url: "https://www.savonanews.it/2026/09/08/leggi-notizia/argomenti/cronaca-2/articolo/alla-guida-di-unauto-rubata-oppone-resistenza-ai-carabinieri-arrestato-ad-albenga.html" }
+    ],
+    lat: 44.0492503, lon: 8.2131239,
+    approssimato: true,
+    precisione: "parcheggio indicato genericamente dalla fonte, via non specificata — coordinate sul centro di Albenga ottenute con geocoding reale (OpenStreetMap Nominatim). Data esatta dell'episodio incerta: le fonti concordano solo sulla convalida GIP di lunedì mattina 7/9, l'arresto è stimato nel fine settimana precedente; due articoli di fonti diverse (Savonanews 8/9 e Liguria24/Sanremonews 9/9) descrivono con dettagli in parte differenti quello che appare essere lo stesso episodio (34enne pregiudicato residente nell'Imperiese, auto rubata a Imperia il giorno prima, ricettazione e resistenza, cocaina trovata in perquisizione): trattato come un unico fatto"
+  },
+  {
+    id: "la-spezia-calata-paita-rapina-operaio-chiave-cricchetto",
+    comune: "La Spezia — Porto, Calata Paita",
+    data: "7 settembre 2026 (pomeriggio)",
+    dataISO: "2026-09-07",
+    categoria: "rapine",
+    titolo: "Entra in porto e minaccia un operaio con una chiave a cricchetto, lo ferisce e lo rapina",
+    descrizione: "Un uomo di 33 anni, di nazionalità marocchina, è entrato nell'area portuale da Calata Paita e ha minacciato con una chiave a cricchetto un operaio in servizio, ferendolo a un braccio, per poi sottrargli un borsello e una fede d'argento. Ha anche tentato di allontanarsi a bordo dell'auto della vittima, ma nel frattempo era stata avvisata la Polizia: una volante lo ha bloccato poco dopo. L'uomo, già noto alle forze dell'ordine con precedenti per danneggiamenti, maltrattamenti in famiglia e resistenza a pubblico ufficiale, è stato arrestato per rapina e lesioni e portato in carcere a Villa Andreino in attesa dell'udienza di convalida.",
+    fonti: [
+      { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/09/08/rapina-un-operaio-in-porto-lo-ferisce-con-una-chiave-a-cricchetto-e-cerca-di-rubargli-lauto-arrestato-671050" },
+      { nome: "La Nazione", url: "https://www.lanazione.it/la-spezia/cronaca/ferisce-e-deruba-operaio-del-portafoglio-e-dellauto-arrestato-d6vurl8z" },
+      { nome: "104 News", url: "https://www.104news.it/2026/09/08/la-spezia-ferisce-una-persona-per-rubargli-il-portafoglio-arrestato/" }
+    ],
+    lat: 44.1067203, lon: 9.8320442,
+    approssimato: false,
+    precisione: "Calata Paita indicata con precisione dalla fonte come punto di accesso al porto — posizione verificata con geocoding reale (OpenStreetMap Nominatim); punto esatto dell'aggressione all'interno dell'area portuale non specificato. Data dedotta dall'articolo di Città della Spezia (pubblicato l'8/9, riferisce un fatto di 'ieri pomeriggio')"
+  },
+  {
+    id: "savona-aggredisce-compagna-cutter-denunciato",
+    comune: "Savona (via/zona non specificata dalla fonte)",
+    data: "inizio settembre 2026 (notte, data esatta incerta)",
+    dataISO: "2026-09-02",
+    categoria: "violenze",
+    titolo: "Aggredisce la compagna e si allontana armato di un cutter, denunciato",
+    descrizione: "Un uomo di origine albanese ha aggredito la propria compagna all'interno dell'abitazione comune, per poi allontanarsi armato di un cutter. Rintracciato in strada dai Carabinieri della Sezione Radiomobile di Savona, è stato denunciato per lesioni personali e porto abusivo di armi od oggetti atti a offendere.",
+    fonti: [
+      { nome: "104 News", url: "https://www.104news.it/2026/09/08/savona-aggredisce-la-compagna-e-lascia-labitazione-armato-di-un-cutter-denunciato/" },
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/09/08/uomo-denunciato-savona-aggressione-compagna-724277/" }
+    ],
+    lat: 44.3105574, lon: 8.4750184,
+    approssimato: true,
+    precisione: "fonti generiche sulla localizzazione (solo 'Savona') e sulla data ('una notte della scorsa settimana' secondo LiguriaOggi, pubblicato l'8/9): dataISO stimata a inizio settembre come valore intermedio — coordinate riutilizzate da un altro fatto già geocodato nel centro di Savona (via delle Trincee, OpenStreetMap Nominatim)"
+  },
+
+  /* --- Aggiornamento 10/09/2026 --- */
+  {
+    id: "genova-sampierdarena-supermercato-alcolici-rapina-vigilante",
+    comune: "Genova, Sampierdarena — supermercato (via non specificata dalla fonte)",
+    data: "8 settembre 2026",
+    dataISO: "2026-09-08",
+    categoria: "rapine",
+    titolo: "Ruba alcolici in un supermercato e colpisce il vigilante con una bottiglia per fuggire, arrestato",
+    descrizione: "Un uomo di 42 anni, di origine marocchina, ha prelevato alcune bottiglie di alcolici dagli scaffali di un supermercato di Sampierdarena senza pagarle; fermato dall'addetto alla sicurezza, lo ha colpito alla testa con una delle bottiglie per guadagnarsi la fuga, ferendolo. Allertati dai titolari dell'esercizio, i Carabinieri del Nucleo Operativo di Genova Sampierdarena sono intervenuti rapidamente bloccando l'uomo poco distante. È stato arrestato per rapina impropria e trasferito nel carcere di Marassi.",
+    fonti: [
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/rapina-a-sampierdarena-42enne-marocchino-arrestato-dai-carabinieri/2026/09/09/671535/" },
+      { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/09/09/genova-rapina-supermercato-sampierdarena-aggressione-vigilante-724417/" },
+      { nome: "GenovaQuotidiana", url: "https://genovaquotidiana.com/2026/09/09/ruba-bottiglie-di-alcolici-e-colpisce-il-vigilante-per-fuggire-arrestato-un-uomo/" }
+    ],
+    lat: 44.4121078, lon: 8.8920999,
+    approssimato: true,
+    precisione: "via del supermercato non specificata dalle fonti, riusate le coordinate di un altro fatto già geocodato in zona Sampierdarena/via Cantore (OpenStreetMap Nominatim, geocoding di sessione precedente) — geocoder non raggiungibile in questa sessione (Claude in Chrome non disponibile); data dedotta dalle fonti (pubblicate il 9/9 con riferimento a 'ieri'/'nei giorni scorsi')"
+  },
+  {
+    id: "sanremo-corso-mombello-furto-appartamento-turistico",
+    comune: "Sanremo — Corso Mombello",
+    data: "5 settembre 2026 (sabato)",
+    dataISO: "2026-09-05",
+    categoria: "altro",
+    titolo: "Furto in un appartamento turistico del centro, rubati orologio e contanti per circa 9mila euro",
+    descrizione: "In una struttura ricettiva di corso Mombello, una coppia di turisti residente in Germania ha subito il furto di un orologio da donna e di circa 2.300 euro in contanti, oltre ad altri beni personali, per un danno complessivo denunciato di circa 9mila euro. Il furto sarebbe avvenuto mentre gli ospiti erano usciti dall'appartamento, tra le 10.30 del mattino e le 19 di sera; la denuncia-querela è stata formalizzata il giorno successivo presso i Carabinieri della stazione di Sanremo, senza segni evidenti di effrazione riscontrati sulla porta d'ingresso né sull'accesso condominiale. Indagini in corso per l'ipotesi di furto aggravato, nessun fermo al momento della pubblicazione della fonte.",
+    fonti: [
+      { nome: "Riviera24", url: "https://www.riviera24.it/2026/09/sanremo-furto-in-un-appartamento-turistico-del-centro-spariscono-orologio-e-contanti-976182/" }
+    ],
+    lat: 43.8157369, lon: 7.7846014,
+    approssimato: true,
+    precisione: "corso indicato dalla fonte ma numero civico non specificato — coordinate riusate da un altro fatto già geocodato nella zona limitrofa di Porto Vecchio/Pian di Nave, area in cui si trova anche corso Mombello (OpenStreetMap Nominatim, geocoding di sessione precedente); geocoder non raggiungibile in questa sessione (Claude in Chrome non disponibile); nessun arresto al momento della pubblicazione della fonte, fatto incluso per l'apertura di un procedimento con denuncia-querela"
+  },
+
 ];
