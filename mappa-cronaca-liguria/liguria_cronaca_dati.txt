@@ -3708,4 +3708,37 @@ window.INCIDENTS_DATA = [
     precisione: "corso indicato dalla fonte ma numero civico non specificato — coordinate riusate da un altro fatto già geocodato nella zona limitrofa di Porto Vecchio/Pian di Nave, area in cui si trova anche corso Mombello (OpenStreetMap Nominatim, geocoding di sessione precedente); geocoder non raggiungibile in questa sessione (Claude in Chrome non disponibile); nessun arresto al momento della pubblicazione della fonte, fatto incluso per l'apertura di un procedimento con denuncia-querela"
   },
 
+  /* --- Aggiornamento 11/09/2026 --- */
+  {
+    id: "genova-truffa-finto-carabiniere-oro-100mila-euro-a12",
+    comune: "Genova (via/zona non specificata dalla fonte)",
+    data: "9 settembre 2026 (pomeriggio)",
+    dataISO: "2026-09-09",
+    categoria: "altro",
+    titolo: "Truffa del finto carabiniere a un'anziana, recuperati oltre 100mila euro in oro e gioielli",
+    descrizione: "Un uomo, contattando telefonicamente un'anziana e spacciandosi per un carabiniere, le ha raccontato di un presunto incidente stradale che avrebbe coinvolto un familiare, convincendola a consegnargli con urgenza gioielli, monete preziose e un orologio per un valore complessivo stimato in circa 100mila euro. Dopo la truffa l'uomo aveva preso un autobus per lasciare la Liguria e fare rientro in Campania, ma è stato intercettato e fermato dalla Polizia Stradale lungo l'autostrada A12 con addosso oltre due chili tra oro e preziosi; un uomo di 39 anni è stato denunciato per ricettazione, avendo ammesso di esserne stato l'esecutore materiale.",
+    fonti: [
+      { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/09/10/truffa-del-finto-carabiniere-a-genova-intercettato-sulla12-con-oro-e-gioielli-per-100mila-euro-671390" },
+      { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/truffa-del-finto-carabiniere-recuperati-due-chili-di-gioielli-denunciato-un-39enne/2026/09/11/1278771/" }
+    ],
+    lat: 44.4073688, lon: 8.9339354,
+    approssimato: true,
+    precisione: "quartiere/via della truffa a Genova non specificati dalle fonti — punto collocato sul centro città (piazza De Ferrari), coordinate riutilizzate da un altro fatto già geocodato in zona (OpenStreetMap Nominatim, geocoding di sessione precedente); il fermo con la refurtiva è avvenuto sull'autostrada A12, fuori Genova, qui non geolocalizzato poiché il fatto rilevante ai fini della mappa è la truffa avvenuta in città"
+  },
+  {
+    id: "genova-brignole-furto-treno-rolex-louis-vuitton",
+    comune: "Genova, Stazione Brignole (furto avvenuto a bordo del treno Santa Margherita Ligure–Genova)",
+    data: "10 settembre 2026 (pomeriggio)",
+    dataISO: "2026-09-10",
+    categoria: "altro",
+    titolo: "Ruba una borsa con un Rolex a una coppia di turisti su un treno, arrestato 27enne",
+    descrizione: "Un uomo di 27 anni di origine spagnola è stato arrestato in flagranza dalla Polizia Ferroviaria per aver rubato una borsa da viaggio Louis Vuitton, contenente tra l'altro un orologio Rolex di valore stimato in svariate migliaia di euro, a una coppia di turisti tedeschi saliti a bordo di un treno alla stazione di Santa Margherita Ligure e diretti a Genova. Insieme a un complice, il 27enne ha afferrato il bagaglio dalla cappelliera e si è dato alla fuga non appena il treno è giunto alla stazione di Genova Brignole; gli agenti della Polfer in servizio sui binari lo hanno bloccato subito dopo, mentre il complice è riuscito a dileguarsi tra i passeggeri dello scalo.",
+    fonti: [
+      { nome: "Genova24", url: "https://www.genova24.it/2026/09/ruba-su-un-treno-una-borsa-louis-vuitton-con-dentro-un-rolex-a-una-coppia-di-turisti-arrestato-27enne-474440/" }
+    ],
+    lat: 44.4073346, lon: 8.9457543,
+    approssimato: true,
+    precisione: "furto avvenuto a bordo di un treno in movimento tra Santa Margherita Ligure e Genova, non localizzabile con un punto preciso — collocato sulla stazione di Genova Brignole, dove è avvenuto l'arresto in flagranza; coordinate riutilizzate da un altro fatto già geocodato nella stessa zona (OpenStreetMap Nominatim, geocoding di sessione precedente); data dedotta dalla fonte (pubblicata l'11/9, riferisce un fatto di 'ieri pomeriggio')"
+  },
+
 ];
