@@ -3741,4 +3741,32 @@ window.INCIDENTS_DATA = [
     precisione: "furto avvenuto a bordo di un treno in movimento tra Santa Margherita Ligure e Genova, non localizzabile con un punto preciso — collocato sulla stazione di Genova Brignole, dove è avvenuto l'arresto in flagranza; coordinate riutilizzate da un altro fatto già geocodato nella stessa zona (OpenStreetMap Nominatim, geocoding di sessione precedente); data dedotta dalla fonte (pubblicata l'11/9, riferisce un fatto di 'ieri pomeriggio')"
   },
 
+  /* --- Aggiornamento 13/09/2026 --- */
+  {
+    id: "savona-bar-prolungamento-rapina-impropria",
+    comune: "Savona — zona Prolungamento",
+    data: "notte tra l'11 e il 12 settembre 2026",
+    dataISO: "2026-09-12",
+    categoria: "rapine",
+    titolo: "Ruba nel fondo cassa di un bar, lancia una bottiglia e spintona chi lo insegue: arrestato",
+    descrizione: "Due uomini si sono introdotti in un bar della zona del Prolungamento, individuati dal titolare grazie all'impianto di videosorveglianza collegato all'allarme. Il titolare e un suo parente, intervenuti sul posto, sono riusciti a intercettarli: uno è fuggito subito, mentre l'altro, nel tentativo di scappare, ha lanciato contro di loro una bottiglia di vetro e ha spintonato uno dei due. Raggiunto poco dopo dalle Volanti della Polizia di Stato, è stato trovato in possesso del fondo cassa del locale e di alcune bottiglie di alcolici, abbandonati poco distante. Un ventenne di origine tunisina, richiedente asilo, è stato arrestato per rapina impropria e condotto nel carcere di Genova-Marassi; proseguono le ricerche del complice.",
+    fonti: [ { nome: "Savonanews.it", url: "https://www.savonanews.it/2026/09/12/leggi-notizia/argomenti/cronaca-2/articolo/savona-ruba-in-un-bar-e-aggredisce-i-titolari-che-tentano-di-fermarlo-arrestato-un-ventenne.html" }, { nome: "104 News", url: "https://www.104news.it/2026/09/12/savona-ruba-in-un-bar-e-aggredisce-i-titolari-arrestato-tunisino/" } ],
+    lat: 44.3028003, lon: 8.4820951,
+    approssimato: true,
+    precisione: "zona indicata dalla fonte ('zona del Prolungamento'), via e numero civico del bar non specificati — coordinate approssimate su un punto di riferimento della zona (Giardini Principessa Mafalda di Savoia, geocoding reale OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-piazza-de-marini-camioncino-amiu-rubato",
+    comune: "Genova, centro storico — Piazza De Marini / Via Petrarca (portici di Palazzo Ducale)",
+    data: "12 settembre 2026 (mattina, ore 7:30)",
+    dataISO: "2026-09-12",
+    categoria: "altro",
+    titolo: "Ruba un mezzo della raccolta rifiuti e si schianta contro i portici di Palazzo Ducale",
+    descrizione: "Un uomo di 37 anni ha rubato un mezzo Amiu per la raccolta dei rifiuti fermo in piazza De Marini, nel cuore del centro storico di Genova, dandosi poi a una rocambolesca fuga tra i vicoli. Due dipendenti Amiu che hanno cercato di fermarlo sono rimasti lievemente feriti. Il mezzo si è schiantato prima contro un new jersey davanti a Palazzo Ducale e poi contro un pilastro dei portici di via Petrarca. L'uomo è stato soccorso e portato in ospedale, dove è stato piantonato dai Carabinieri del Nucleo Radiomobile; secondo l'ANSA, al momento della pubblicazione l'autorità giudiziaria stava ancora valutando se denunciarlo o arrestarlo.",
+    fonti: [ { nome: "ANSA", url: "https://www.ansa.it/liguria/notizie/2026/09/12/ruba-mezzo-della-raccolta-rifiuti-e-si-schianta-contro-un-jersey_b1d81d12-121b-4d90-986d-c1bdd044f43c.html" }, { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/09/12/genova-ruba-camioncino-dei-rifiuti-e-si-schianta-paura-in-centro/" } ],
+    lat: 44.4075011, lon: 8.9332840,
+    approssimato: true,
+    precisione: "il punto di partenza del furto (piazza De Marini) non è geocodificato singolarmente — usata la posizione di Palazzo Ducale, contro cui il mezzo si è schiantato (geocoding reale OpenStreetMap Nominatim). Esito giudiziario (denuncia o arresto) non ancora definito al momento della pubblicazione della fonte ANSA (12/9, ore 10:55)"
+  },
+
 ];
