@@ -3769,4 +3769,45 @@ window.INCIDENTS_DATA = [
     precisione: "il punto di partenza del furto (piazza De Marini) non è geocodificato singolarmente — usata la posizione di Palazzo Ducale, contro cui il mezzo si è schiantato (geocoding reale OpenStreetMap Nominatim). Esito giudiziario (denuncia o arresto) non ancora definito al momento della pubblicazione della fonte ANSA (12/9, ore 10:55)"
   },
 
+  /* --- Aggiornamento 14/09/2026 --- */
+  {
+    id: "genova-corso-sardegna-16enne-maranza-coltelli",
+    comune: "Genova, San Fruttuoso — Corso Sardegna",
+    data: "notte tra il 6 e il 7 settembre 2026 (stimata)",
+    dataISO: "2026-09-07",
+    categoria: "rapine",
+    titolo: "Accerchiano e rapinano un 16enne con bastone e coltelli, sette denunce e quattro arresti tra i minorenni",
+    descrizione: "Un gruppo di ragazzi, descritto dalle fonti come una banda di 'maranza', ha accerchiato un sedicenne genovese che camminava da solo lungo corso Sardegna: uno dei giovani lo ha minacciato con un bastone, un altro lo ha colpito al volto, poi il gruppo lo ha bloccato contro il muro chiedendogli soldi e sottraendogli il telefono cellulare, prima di fuggire verso il mare. La Polizia di Stato ha arrestato un quindicenne e un sedicenne italiani e due diciassettenni, uno colombiano e uno ecuadoriano, per rapina in concorso; altri sette giovani poco più che maggiorenni (due 18enni e una 19enne italiani, un 19enne colombiano, due 18enni e un 22enne dominicano) sono stati denunciati per lo stesso reato. Nella perquisizione sono stati trovati un coltello da cucina nelle tasche di ciascuno dei due diciassettenni, oltre a una dose di cannabis, una forbice e uno spray urticante; da accertamenti successivi è emerso che alcuni del gruppo erano già responsabili di precedenti tentativi di rapina non andati a segno.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/corso-sardegna-maranza-rapinano-16enne-arrestati-due-sudamericani-presi-con-le-lame/2026/09/08/671474/" } ],
+    lat: 44.4091334, lon: 8.9538851,
+    approssimato: true,
+    precisione: "coordinate riutilizzate da un fatto già geocodato nella stessa zona di corso Sardegna/San Fruttuoso (rapina dell'11 contro 1 del 5 settembre, OpenStreetMap Nominatim, geocoding di sessione precedente); via esatta dell'aggressione non specificata dalla fonte. Data incerta: la fonte (pubblicata l'8/9) parla genericamente de 'l'altra notte', qui stimata tra il 6 e il 7 settembre; fatto distinto dalla rapina di gruppo verificatasi nella stessa via nella notte tra il 5 e il 6 settembre (vittima diciottenne, undici aggressori), con vittima e responsabili diversi"
+  },
+  {
+    id: "rapallo-stazione-zaino-65enne-treno",
+    comune: "Rapallo — stazione ferroviaria",
+    data: "11 settembre 2026 (tarda serata)",
+    dataISO: "2026-09-11",
+    categoria: "rapine",
+    titolo: "Ruba lo zaino a una 65enne su un treno fermo in stazione, bloccato dai passanti dopo l'inseguimento",
+    descrizione: "Un uomo ha approfittato di un momento di distrazione di una passeggera di 65 anni a bordo di un treno regionale fermo alla stazione di Rapallo per impossessarsi del suo zaino, scendendo poi dal convoglio e dandosi alla fuga nelle vie limitrofe. La donna lo ha inseguito chiedendo aiuto, attirando l'attenzione di alcuni passanti che sono riusciti a intercettarlo e bloccarlo fino all'arrivo dei Carabinieri della Compagnia di Santa Margherita Ligure, che hanno recuperato l'intera refurtiva e arrestato un diciottenne tunisino per rapina impropria.",
+    fonti: [ { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/09/13/leggi-notizia/argomenti/cronaca-5/articolo/rapallo-ruba-lo-zaino-a-una-65enne-sul-treno-e-tenta-la-fuga-bloccato-dai-passanti-e-arrestato.html" } ],
+    lat: 44.3511705, lon: 9.2313155,
+    approssimato: false,
+    precisione: "stazione indicata con precisione dalla fonte — posizione verificata con geocoding reale (OpenStreetMap Nominatim, Stazione di Rapallo)"
+  },
+  {
+    id: "genova-pontedecimo-via-isocorte-furto-tentato-furto",
+    comune: "Genova, Pontedecimo — Via Isocorte",
+    data: "11 settembre 2026",
+    dataISO: "2026-09-11",
+    categoria: "altro",
+    titolo: "Furto di una tessera carburante e tentato furto di mezzi da lavoro nella stessa mattina, arrestato 22enne",
+    descrizione: "Un uomo di 22 anni, cittadino tunisino, si è introdotto in una ditta di via Isocorte, a Pontedecimo, tentando di impossessarsi di alcuni mezzi da lavoro e urtandoli tra loro nel tentativo, per poi allontanarsi portando con sé una tessera carburante intestata alla ditta del valore di circa 2mila euro. Poco dopo lo stesso uomo è stato notato da un residente della zona mentre rovistava tra alcuni attrezzi nel giardino della sua abitazione, sempre in via Isocorte; alla vista del proprietario si è dato alla fuga, ma gli agenti del Commissariato di Cornigliano, intervenuti dopo la segnalazione, lo hanno rintracciato e fermato poco dopo, trovandolo in possesso della tessera carburante sottratta poco prima. Le immagini di videosorveglianza hanno permesso di ricollegarlo al primo episodio. È stato arrestato; aveva già diversi precedenti per reati contro il patrimonio.",
+    fonti: [ { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/09/12/leggi-notizia/argomenti/cronaca-5/articolo/pontedecimo-furto-e-tentato-furto-nella-stessa-mattina-arrestato-22enne.html" } ],
+    lat: 44.4941500, lon: 8.9015648,
+    approssimato: false,
+    precisione: "via indicata con precisione dalla fonte — posizione verificata con geocoding reale (OpenStreetMap Nominatim, Via Isocorte, Pontedecimo)"
+  },
+
 ];
