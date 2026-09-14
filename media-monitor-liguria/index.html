@@ -165,7 +165,7 @@
     </div>
     <p class="subtitle">Sedute del <strong>Consiglio Regionale della Liguria</strong> e del <strong>Consiglio Comunale di Genova</strong> con i temi commentabili per ORA!, piu' la rassegna stampa filtrata sulle quattro province liguri. Seleziona una data dal menu per rivedere una seduta passata; di default e' mostrata la piu' recente.</p>
     <div class="head-meta">
-      <span class="chip-updated">Aggiornato: 14 settembre 2026, 09:15</span>
+      <span class="chip-updated">Aggiornato: 14 settembre 2026, 20:10</span>
     </div>
   </header>
 
@@ -191,7 +191,7 @@
   <section class="panel">
     <div class="panel-head">
       <h2>Ultime notizie dai media</h2>
-      <span class="n spacer">aggiornato al 14/09/2026, 09:15</span>
+      <span class="n spacer">aggiornato al 14/09/2026, 20:10</span>
     </div>
     <p class="note">Testate monitorate: Il Secolo XIX, GenovaToday, Primocanale, ANSA Liguria (tutte le province), Liguria24, Genova24, Riviera24 (Imperia), Citta' della Spezia (La Spezia). Le notizie con tema evidenziato sono collegabili a una posizione ORA! esistente; quelle etichettate &ldquo;Di tendenza&rdquo; sono le piu' seguite anche senza un aggancio diretto al programma.</p>
 
@@ -379,6 +379,14 @@ const COMUNE_DATA = {
 };
 
 const NEWS_DATA = [
+  { data: "14/09/2026", fonte: "Genova24", titolo: "Amt, orario invernale al via con bus pieni e carenza di vetture. Salis e Terrile: \"Il servizio ha retto\"", url: "https://www.genova24.it/2026/09/amt-orario-invernale-terrile-salis-servizio-474625/",
+    badges: ["Infrastrutture"],
+    provincia: "Genova",
+    angolo: "Il bilancio ufficiale del primo giorno di orario invernale (Comune e Amt: \"il servizio ha retto\") convive con i dati diffusi lo stesso giorno da Assoutenti, che smentiscono la narrazione del \"-10%\" ripetuta nei giorni scorsi: la contrazione reale nei giorni feriali è del 18% (da 13.471 a 11.103 corse, -2.368 corse/giorno), con punte del -47% sulla linea 43, -45% sulla 16, -41% sulla 3, -39% sulla 38 e -38% sulla 88, oltre venti linee azzerate (tra cui la 6, il Navebus e il Taxibus) e la linea 8 che perde il 91% delle corse. Coerente con la posizione ORA! già espressa sullo stesso dossier (tesi Infrastrutture, Trasporti e Mobilità, proposta 1), il nodo resta la carenza di mezzi di scorta — un solo guasto manda in sofferenza intere linee collinari ed extraurbane (disagi a Rossiglione, Torriglia, San Cipriano) — più che la tenuta dei turni di guida (855/giorno, comunque -190 sull'anno scorso). Angolo: Assoutenti solleva un punto che ORA! dovrebbe fare proprio — le tariffe restano quelle dell'anno scorso a fronte di un servizio ridotto del 18%, pratica commerciale che l'associazione preannuncia di segnalare all'Antitrust; ORA! chiede che il Comune pubblichi da subito, linea per linea, i dati reali di puntualità e affollamento (non solo le corse programmate sulla carta) e valuti un adeguamento tariffario proporzionale finché il piano di potenziamento 2027 non sarà operativo." },
+  { data: "14/09/2026", fonte: "Genova24", titolo: "Ericsson, lavoratori in corteo contro i licenziamenti: \"Rabbia, malessere e grande preoccupazione\"", url: "https://www.genova24.it/2026/09/ericsson-corteo-licenziamenti-lavoratori-474609/",
+    badges: ["Lavoro","Sviluppo economico"],
+    provincia: "Genova",
+    angolo: "Primo corteo dei lavoratori Ericsson dopo l'annuncio dei 131 esuberi (56 impiegati, 64 quadri, 11 dirigenti, tutti nei reparti R&D), pari al 40% della forza lavoro sul sito di Genova (circa 310 addetti): la Slc Cgil (segretaria Sonia Montaldo) annuncia un'agenda istituzionale fitta — martedì in consiglio regionale, mercoledì incontro con la sindaca a Palazzo Tursi — e sollecita anche il Governo, ricordando che \"l'azienda ha ricevuto contributi pubblici nel corso degli anni e nonostante questo continua a licenziare\". È esattamente il nodo già individuato da ORA! sullo stesso dossier (tesi Sviluppo Economico e Politica Industriale, proposta 1, \"eliminare i sussidi e razionalizzare gli incentivi\": ogni euro pubblico alle imprese va condizionato a risultati occupazionali misurabili, non erogato a fondo perduto). Il Consiglio comunale discuterà martedì due distinti ordini del giorno (Mascia/Forza Italia e la maggioranza a firma Mesmaker/M5S) per un tavolo con Ericsson e il Ministero competente. Angolo: prima di appelli generici a \"salvare i posti\", ORA! chiede che l'incontro di mercoledì a Tursi serva innanzitutto a rendere pubblici quali contributi pubblici Ericsson ha ricevuto sugli Erzelli e con quali clausole di risultato — senza quella trasparenza qualunque tavolo negoziale parte da una posizione di debolezza." },
   { data: "14/09/2026", fonte: "Primocanale", titolo: "Amt, da oggi scattano i tagli: il primo test con l'inizio della scuola", url: "https://www.primocanale.it/attualit%C3%A0/71415-amt-oggi-tagli-sabato-corse-dimezzate-genova-nuovo-orari.html",
     badges: ["Infrastrutture"],
     provincia: "Genova",
@@ -605,13 +613,6 @@ const NEWS_DATA = [
     badges: ["Di tendenza"],
     provincia: "La Spezia",
     angolo: "Botta e risposta tra il Pd spezzino e l'assessora al Demanio Gagliardi sul recupero del Filtro di Pegazzano, impianto di potabilizzazione abbandonato ma di proprietà della Marina Militare: per la Giunta non si possono impegnare fondi comunali su un bene di un altro ente proprietario, per l'opposizione il Comune dovrebbe comunque attivarsi. Non esiste in archivio una posizione ORA! dedicata al caso specifico; la notizia è inclusa per la sua rilevanza nel dibattito politico locale spezzino su recupero urbano e uso delle risorse comunali, un tema di rendicontazione della spesa pubblica su cui vale il principio generale ORA! di valutare ogni euro investito in base a fattibilità ed efficacia, non solo all'intenzione dichiarata." },
-  { data: "06/09/2026", fonte: "Primocanale", titolo: "Salis alla Festa dell'Unità di Modena, quella foto che divide e infiamma il Pd ligure", url: "https://www.primocanale.it/politica/71172-salis-alla-festa-dell-unit%C3%A0-di-modena-quelle-foto-che-infiammano-il-pd-ligure.html",
-    badges: ["Di tendenza"],
-    provincia: "Genova",
-    angolo: "Le foto pubblicate da Silvia Salis alla Festa dell'Unità di Modena, che la ritraggono con Alessandro Terrile e Simone D'Angelo ma non con i segretari provinciale e regionale del Pd Tognoni e Natale, alimentano le manovre in vista del congresso regionale dem e il dibattito su un possibile ruolo nazionale della sindaca di Genova come federatrice di un'area moderata del centrosinistra. Non esiste una posizione ORA! sugli equilibri interni del Pd; la notizia è inclusa per la sua rilevanza politica in Liguria, dato il peso di Salis come sindaca del capoluogo e figura centrale del campo largo, con possibili ricadute sugli assetti politici regionali nei prossimi mesi." },
-  { data: "05/09/2026", fonte: "Primocanale", titolo: "Fine vita, la Pdl arriva in consiglio regionale: discussione prevista a fine settembre", url: "https://www.primocanale.it/politica/71141-suicidio-medicalmente-assistito-consiglio-regionale-liguria-discussione-fine-settembre-pastorino.html",
-    badges: ["Diritti civili","Salute"],
-    angolo: "Il consigliere Gianni Pastorino (Lista Orlando Presidente/Linea Condivisa) rilancia la sua proposta di legge regionale sul fine vita, ferma dal 2024 dopo la caduta della giunta Toti: chiede che l'aula la discuta entro fine settembre, mentre il presidente Bucci ribadisce che la materia sarebbe di competenza esclusiva dello Stato. La tesi ORA! Diritti Civili (proposta 3) chiede una legge organica che integri le leggi 38/2010 e 219/2017 e recepisca la sentenza 242/2019 della Consulta, con registrazione delle volontà presso i Comuni — e la Consulta ha già chiarito che, in assenza di legge nazionale, le Regioni possono legiferare, come rivendica Pastorino contro l'obiezione di Bucci. Il comunicato nazionale ORA! del segretario Boldrin sul Veneto (5/9/2026, archiviato in questa sessione) chiede proprio che il Parlamento legiferi affinché l'accesso non dipenda dalla Regione di residenza: fino a quel momento, per coerenza con la propria tesi, ORA! dovrebbe sostenere la ripresa dell'iter Pastorino in Consiglio regionale, non l'attendismo invocato da Bucci." },
 ];
 
 // Palette fissa: un colore per ciascun tema (le 22 tesi ORA! + Trasparenza + Di tendenza),
