@@ -3810,4 +3810,32 @@ window.INCIDENTS_DATA = [
     precisione: "via indicata con precisione dalla fonte — posizione verificata con geocoding reale (OpenStreetMap Nominatim, Via Isocorte, Pontedecimo)"
   },
 
+  /* --- Aggiornamento 15/09/2026 --- */
+  {
+    id: "genova-via-rimassa-furto-negozio-elettronica",
+    comune: "Genova, Foce — Via Alessandro Rimassa",
+    data: "notte tra il 13 e il 14 settembre 2026",
+    dataISO: "2026-09-14",
+    categoria: "altro",
+    titolo: "Fora la vetrina di un negozio di elettronica per rubare, arrestato in fuga",
+    descrizione: "Un uomo di 27 anni, di origine marocchina, già noto alle forze dell'ordine e mai rimpatriato, ha forato le vetrine esterna e interna di un negozio di elettronica in via Rimassa e ha introdotto un braccio per impossessarsi della merce esposta, facendo scattare l'allarme collegato a un istituto di vigilanza. Gli agenti del Commissariato San Fruttuoso e dell'UPGSP, intervenuti sul posto, lo hanno visto tentare la fuga a piedi e lo hanno bloccato dopo pochi minuti mentre si nascondeva dietro alcune auto parcheggiate in piazza Rossetti. È stato arrestato in flagranza per tentato furto aggravato; la refurtiva è stata restituita al titolare del negozio.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/via-rimassa-27enne-marocchino-ruba-in-un-negozio-arrestato/2026/09/14/1279348/" } ],
+    lat: 44.3960672, lon: 8.9477514,
+    approssimato: false,
+    precisione: "via e zona (Foce) indicate dalla fonte, numero civico del negozio non specificato — coordinate reali sulla via (OpenStreetMap Nominatim)"
+  },
+  {
+    id: "savona-darsena-rissa-pizzeria-cinque-denunce",
+    comune: "Savona, Darsena — nei pressi di Calata Sbarbaro",
+    data: "notte tra il 12 e il 13 settembre 2026",
+    dataISO: "2026-09-13",
+    categoria: "violenze",
+    titolo: "Rissa davanti a una pizzeria per un ordine in ritardo, due feriti e cinque denunce",
+    descrizione: "Una lite scoppiata davanti a una pizzeria della zona Darsena, nata secondo la ricostruzione degli investigatori dalla protesta di un cliente per un ordine in ritardo, è degenerata in rissa dopo che alla discussione con il ristoratore si sono uniti familiari della titolare e amici dell'avventore. Le Volanti della Polizia di Stato, intervenute su segnalazione, hanno rintracciato alcuni dei protagonisti allontanatisi poco prima nella vicina Calata Sbarbaro. Due dei coinvolti sono stati medicati al pronto soccorso del San Paolo, un terzo ha rifiutato le cure. Cinque persone, di età tra i 20 e i 63 anni, sono state denunciate per rissa; una di loro è stata inoltre segnalata per manifesta ubriachezza.",
+    fonti: [ { nome: "Ilnazionale.it", url: "https://www.ilnazionale.it/2026/09/13/leggi-notizia/argomenti/cronaca-6/articolo/savona-rissa-davanti-a-una-pizzeria-in-darsena-botte-per-un-ordine-in-ritardo-5-denunciati.html" } ],
+    lat: 44.3075582, lon: 8.4867256,
+    approssimato: true,
+    precisione: "pizzeria non identificata con indirizzo esatto dalla fonte, zona indicata come 'Darsena' — coordinate approssimate su Calata Sbarbaro, punto di riferimento vicino indicato dalla fonte (dove sono stati rintracciati alcuni dei coinvolti), geocoding reale OpenStreetMap Nominatim"
+  },
+
 ];
