@@ -3837,5 +3837,18 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "pizzeria non identificata con indirizzo esatto dalla fonte, zona indicata come 'Darsena' — coordinate approssimate su Calata Sbarbaro, punto di riferimento vicino indicato dalla fonte (dove sono stati rintracciati alcuni dei coinvolti), geocoding reale OpenStreetMap Nominatim"
   },
+  {
+    id: "borghetto-santo-spirito-tentata-rapina-furto-abitazione",
+    comune: "Borghetto Santo Spirito (SV) — abitazione (via non specificata dalla fonte)",
+    data: "fine settimana del 12-13 settembre 2026",
+    dataISO: "2026-09-13",
+    categoria: "rapine",
+    titolo: "Sorpreso a rubare in un'abitazione, spintona i proprietari e tenta la fuga: arrestato",
+    descrizione: "Un uomo di 33 anni, di origine marocchina, irregolare sul territorio nazionale e già noto alle forze dell'ordine, si è introdotto in un'abitazione privata alla ricerca di denaro e oggetti di valore. È stato sorpreso dai due proprietari di casa, anch'essi di origine nordafricana, rientrati nel frattempo: nella colluttazione che ne è seguita li ha spintonati per poi darsi alla fuga. La coppia ha allertato i Carabinieri della Stazione di Albenga, che lo hanno rintracciato e arrestato in flagranza poco dopo con l'accusa di tentata rapina aggravata; è stato quindi condotto nel carcere di Imperia a disposizione dell'autorità giudiziaria.",
+    fonti: [ { nome: "Savonanews", url: "https://www.savonanews.it/2026/09/15/leggi-notizia/argomenti/cronaca-2/articolo/borghetto-entra-in-casa-per-rubare-ma-viene-sorpreso-dai-proprietari-arrestato.html" }, { nome: "Imperiapost", url: "https://imperiapost.it/827157/tenta-il-furto-in-una-abitazione-ad-albenga-33enne-arrestato-dai-carabinieri-e-tradotto-in-carcere-a-imperia" } ],
+    lat: 44.1092512, lon: 8.2413691,
+    approssimato: true,
+    precisione: "fatto avvenuto 'lo scorso fine settimana' secondo la fonte pubblicata lunedì 15 settembre — giorno esatto non specificato, stimato tra sabato 12 e domenica 13 settembre; via dell'abitazione non indicata, coordinate riutilizzate dal centro di Borghetto Santo Spirito già geocodato in precedenza (OpenStreetMap Nominatim)"
+  },
 
 ];
