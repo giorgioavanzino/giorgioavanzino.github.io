@@ -3850,5 +3850,31 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "fatto avvenuto 'lo scorso fine settimana' secondo la fonte pubblicata lunedì 15 settembre — giorno esatto non specificato, stimato tra sabato 12 e domenica 13 settembre; via dell'abitazione non indicata, coordinate riutilizzate dal centro di Borghetto Santo Spirito già geocodato in precedenza (OpenStreetMap Nominatim)"
   },
+  {
+    id: "genova-marassi-viale-centurione-bracelli-finto-carabiniere-20enne",
+    comune: "Genova, Marassi — Viale Virginia Centurione Bracelli",
+    data: "15 settembre 2026",
+    dataISO: "2026-09-15",
+    categoria: "rapine",
+    titolo: "Finto carabiniere deruba una 20enne di oggetti d'oro e aggredisce un fattorino: arrestato",
+    descrizione: "Un ragazzo di circa 20 anni, originario della provincia di Napoli, ha contattato telefonicamente una giovane di Genova spacciandosi per un carabiniere e raccontandole che l'auto della madre sarebbe stata coinvolta in una rapina; con la scusa di alcuni controlli le ha chiesto di consegnare i gioielli di casa a un presunto maresciallo. La ragazza ha affidato i preziosi al giovane presentatosi alla porta in viale Centurione Bracelli, ma insospettitasi subito dopo lo ha inseguito con l'aiuto di un corriere che si trovava nel palazzo; durante la fuga il giovane ha colpito il corriere. Sul posto sono intervenute le Volanti della Polizia e la Squadra Mobile, che hanno bloccato e arrestato il ragazzo con l'accusa di rapina impropria; il pubblico ministero ha disposto il giudizio direttissimo per il 16 settembre.",
+    fonti: [ { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/71470-finto-carabiniere-arresto-polizia-truffata-ragazza.html" }, { nome: "Teleclubitalia", url: "https://www.teleclubitalia.it/dalla-provincia-di-napoli-a-genova-per-truffa-del-finto-maresciallo-arrestato-20enne/" } ],
+    lat: 44.4192520, lon: 8.9637893,
+    approssimato: true,
+    precisione: "numero civico non specificato dalle fonti — coordinate collocate su viale Virginia Centurione Bracelli, quartiere Marassi (geocoding reale OpenStreetMap Nominatim); episodio distinto da un'altra truffa del finto carabiniere del 9 settembre già presente nel dataset (vittima anziana, intercettato sull'A12): qui la vittima è una ventenne e l'autore è stato arrestato sul posto"
+  },
+  {
+    id: "savona-santa-rita-furto-bar-borsello",
+    comune: "Savona — zona Santa Rita",
+    data: "16 settembre 2026",
+    dataISO: "2026-09-16",
+    categoria: "altro",
+    titolo: "Rubano il borsello a un cliente in un bar, arrestati due uomini",
+    descrizione: "Due uomini di 31 e 26 anni sono stati arrestati dai Carabinieri per un furto avvenuto all'interno di un bar in zona Santa Rita, a Savona. I due avrebbero rubato il borsello di un cliente di 73 anni, tentando subito la fuga: uno è stato bloccato dal titolare del locale, che ha allertato i militari, mentre l'altro è stato rintracciato poco dopo a pochi metri di distanza. La refurtiva è stata recuperata e restituita al proprietario; per entrambi è scattato l'arresto, convalidato dal Tribunale di Savona con contestuale divieto di dimora nella provincia.",
+    fonti: [ { nome: "Liguria Oggi", url: "https://liguriaoggi.it/2026/09/16/savona-derubano-un-cliente-di-un-bar-arrestati-due-uomini/" } ],
+    lat: 44.3045080, lon: 8.4751282,
+    approssimato: true,
+    precisione: "via e numero civico del bar non specificati dalla fonte, indicata solo la zona 'Santa Rita' — coordinate collocate sul relativo punto di riferimento (Chiesa di Santa Rita, Oltreletimbro), geocoding reale OpenStreetMap Nominatim; giorno esatto del furto non specificato, dedotto dalla data di pubblicazione (16 settembre)"
+  },
 
 ];
