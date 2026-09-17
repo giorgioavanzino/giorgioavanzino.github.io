@@ -165,7 +165,7 @@
     </div>
     <p class="subtitle">Sedute del <strong>Consiglio Regionale della Liguria</strong> e del <strong>Consiglio Comunale di Genova</strong> con i temi commentabili per ORA!, piu' la rassegna stampa filtrata sulle quattro province liguri. Seleziona una data dal menu per rivedere una seduta passata; di default e' mostrata la piu' recente.</p>
     <div class="head-meta">
-      <span class="chip-updated">Aggiornato: 16 settembre 2026, 20:17</span>
+      <span class="chip-updated">Aggiornato: 17 settembre 2026, 09:05</span>
     </div>
   </header>
 
@@ -191,7 +191,7 @@
   <section class="panel">
     <div class="panel-head">
       <h2>Ultime notizie dai media</h2>
-      <span class="n spacer">aggiornato al 16/09/2026, 20:17</span>
+      <span class="n spacer">aggiornato al 17/09/2026, 09:05</span>
     </div>
     <p class="note">Testate monitorate: Il Secolo XIX, GenovaToday, Primocanale, ANSA Liguria (tutte le province), Liguria24, Genova24, Riviera24 (Imperia), Citta' della Spezia (La Spezia). Le notizie con tema evidenziato sono collegabili a una posizione ORA! esistente; quelle etichettate &ldquo;Di tendenza&rdquo; sono le piu' seguite anche senza un aggancio diretto al programma.</p>
 
@@ -435,6 +435,22 @@ const COMUNE_DATA = {
 };
 
 const NEWS_DATA = [
+  { data: "17/09/2026", fonte: "Città della Spezia", titolo: "Natale: \"Vergogna lasciare a piedi gli studenti abbonati\". Il Pd in consiglio: \"Le scuse doveva farle Peracchini\"", url: "https://www.cittadellaspezia.com/2026/09/17/natale-vergogna-lasciare-a-piedi-gli-studenti-abbonati-il-pd-in-consiglio-le-scuse-doveva-farle-peracchini-672230/",
+    badges: ["Infrastrutture"],
+    provincia: "La Spezia",
+    angolo: "Nella prima settimana di scuola le segnalazioni di disservizi Atc raggiungono, secondo il consigliere regionale Pd Davide Natale, livelli mai visti: corse saltate su tutte le linee dei poli scolastici, frequenze domenicali fino a 80 minuti, mezzi con pianale marcio. Le opposizioni in consiglio comunale rilanciano dati precisi: 300mila euro tagliati da Peracchini a inizio mandato e mai ripristinati, e 1,5 milioni di euro sottratti nel 2025 alla Spezia dai criteri di riparto regionali a vantaggio di Imperia. Coerente con la tesi ORA! Infrastrutture, Trasporti e Mobilità (proposta 1: efficientamento del TPL tramite rinnovo del parco mezzi e aumento dell'offerta, non la sua riduzione — il TPL italiano offre già metà del servizio della media europea) e con quanto già segnalato da questo monitor sui tagli Amt e sul subappalto al 30%. Angolo: ORA! chiede che la Regione pubblichi i criteri esatti di riparto 2025 tra le province, per verificare se la sottrazione di risorse alla Spezia sia stata una scelta tecnica o politica, e che il Comune, socio al 79% di Atc, renda conto pubblicamente degli esiti dei controlli sui subappaltatori." },
+  { data: "17/09/2026", fonte: "Genova24", titolo: "Allerta arancione su Genova e Tigullio: possibili temporali anche nel pomeriggio. Le disposizioni di sicurezza", url: "https://www.genova24.it/2026/09/allerta-arancione-maltempo-genova-tigullio-aggiornamenti-474916/",
+    badges: ["Di tendenza"],
+    provincia: "Genova",
+    angolo: "Scattata alle 6 di oggi la nuova allerta meteo arancione per temporali su Genova, Tigullio e Spezzino, valida fino alle 13.59 con possibile replica nel primo pomeriggio: scuole chiuse in molti Comuni del Tigullio (aperte a Genova), mercati sospesi, accessi limitati alla metro di Brignole. Notizia di cronaca/servizio che domina la giornata su tutte le testate liguri, ma è una gestione amministrativa ordinaria dell'allerta meteo su cui l'archivio ORA! non ha una posizione dedicata; si applica solo il principio generale, già richiamato da questo monitor, della tesi Comuni sulla necessità di una pianificazione idrogeologica aggiornata." },
+  { data: "17/09/2026", fonte: "Riviera24", titolo: "Confesercenti al Comune: «Servono fondi specifici per arredo urbano, marciapiedi e illuminazione»", url: "https://www.riviera24.it/2026/09/confesercenti-al-comune-servono-fondi-specifici-per-arredo-urbano-marciapiedi-e-illuminazione-976899/",
+    badges: ["Di tendenza"],
+    provincia: "Imperia",
+    angolo: "Confesercenti Sanremo chiede al Comune, in vista del nuovo Bilancio di Previsione, capitoli di spesa dedicati e vincolati per arredo urbano, marciapiedi e illuminazione pubblica, richiamando l'avanzo di amministrazione disponibile. Notizia di rilievo locale sulla programmazione di bilancio comunale, ma su una richiesta di categoria di questo tipo l'archivio ORA! non ha una posizione dedicata; si applica solo il principio generale della tesi Spesa Pubblica sulla necessità di orientare la spesa pubblica verso investimenti di qualità e verificabili piuttosto che spesa corrente generica." },
+  { data: "16/09/2026", fonte: "Genova24", titolo: "Ericsson, l'azienda conferma tutti i licenziamenti. Salis: \"Il Governo convochi subito un tavolo\"", url: "https://www.genova24.it/2026/09/ericsson-licenziamenti-salis-governo-tavolo-474910/",
+    badges: ["Lavoro","Sviluppo economico"],
+    provincia: "Genova",
+    angolo: "Dopo l'ordine del giorno unanime di Regione e Comune, l'incontro tra Ericsson e sindacati si chiude con una fumata nera: l'azienda conferma tutti i 131 licenziamenti, esclude ipotesi alternative salvo incentivi all'esodo e trasferimenti non dettagliati, e dichiara di escludere il ricorso agli ammortizzatori sociali per \"tempi ristretti\". La sindaca Salis annuncia una lettera ai ministri Urso, Calderone e Giorgetti per chiedere un tavolo nazionale; il presidente Bucci minimizza (\"non vedo un dramma occupazionale ligure\"). Coerente con la tesi ORA! Sviluppo Economico (proposta 1: incentivi pubblici condizionati a risultati occupazionali, non a fondo perduto) e con la tesi Lavoro (flexsecurity, politiche attive invece di ammortizzatori passivi). Angolo: proprio perché l'azienda esclude gli ammortizzatori sociali, il tavolo nazionale richiesto da Salis è l'occasione per pretendere la pubblicazione dei contributi pubblici già ricevuti da Ericsson sugli Erzelli e delle clausole di risultato collegate, prima di discutere qualunque nuova misura di sostegno." },
   { data: "16/09/2026", fonte: "Genova24", titolo: "Cantieri nautici, Autorità portuale pensa al raddoppio. Paroli: \"Espansione a mare, nuove darsene e più spazi a terra\"", url: "https://www.genova24.it/2026/09/cantieri-navalti-raddoppio-porto-piano-regolatore-474882/",
     badges: ["Sviluppo economico","Infrastrutture"],
     provincia: "Genova",
