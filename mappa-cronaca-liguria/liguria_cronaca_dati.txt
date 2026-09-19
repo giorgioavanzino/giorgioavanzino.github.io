@@ -3877,4 +3877,44 @@ window.INCIDENTS_DATA = [
     precisione: "via e numero civico del bar non specificati dalla fonte, indicata solo la zona 'Santa Rita' — coordinate collocate sul relativo punto di riferimento (Chiesa di Santa Rita, Oltreletimbro), geocoding reale OpenStreetMap Nominatim; giorno esatto del furto non specificato, dedotto dalla data di pubblicazione (16 settembre)"
   },
 
+  {
+    id: "la-spezia-san-bartolomeo-tentata-rapina-maltrattamenti",
+    comune: "La Spezia — Viale San Bartolomeo",
+    data: "18 settembre 2026",
+    dataISO: "2026-09-18",
+    categoria: "violenze",
+    titolo: "Tenta di forzare la porta di casa della compagna che lo accusa di una rapina, arrestato",
+    descrizione: "Una donna ha contattato la Polizia di Stato per denunciare un tentativo di rapina da parte del compagno, poco prima avvenuto in viale San Bartolomeo. Mentre gli agenti si trovavano nella sua abitazione per raccogliere la denuncia, l'uomo, in evidente stato di alterazione, è tornato e ha tentato di forzare la porta per entrare; è stato bloccato dagli agenti. Risultava già gravato da precedenti per lesioni, maltrattamenti in famiglia, minacce, resistenza a pubblico ufficiale e spaccio di stupefacenti: è stato arrestato per maltrattamenti in famiglia, con udienza di convalida fissata per lunedì.",
+    fonti: [ { nome: "ANSA", url: "https://www.ansa.it/liguria/notizie/2026/09/18/prova-a-forzare-la-casa-della-compagna-mentre-ce-la-polizia-allinterno_c73a9e5e-9dab-4719-b13f-406802ab57e0.html" }, { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/09/18/tenta-di-forzare-la-porta-di-casa-della-compagna-arrestato-dalla-polizia-per-maltrattamenti-in-famiglia-672501/" } ],
+    lat: 44.1113509, lon: 9.8473622,
+    approssimato: true,
+    precisione: "via indicata dalla fonte, numero civico non specificato — posizione sul tratto stradale di Viale San Bartolomeo (geocoding reale OpenStreetMap Nominatim); nessuna età indicata dalle fonti per i due protagonisti"
+  },
+  {
+    id: "genova-corso-italia-xii-ottobre-furti-poliziotto-fuori-servizio",
+    comune: "Genova, centro — Corso Italia e Via XII Ottobre",
+    data: "16 settembre 2026",
+    dataISO: "2026-09-16",
+    categoria: "altro",
+    titolo: "Riconosciuto da un poliziotto fuori servizio per due furti in locali del centro, denunciato 23enne",
+    descrizione: "Un poliziotto libero dal servizio, passeggiando in corso Torino, ha notato un 23enne cittadino marocchino dall'abbigliamento identico a quello ripreso dalle telecamere di due furti avvenuti nei giorni precedenti: il 12 settembre in un ristorante di corso Italia, dove ignoti erano entrati forzando una porta finestra e portando via merce e alcuni tablet, e il 16 settembre in un esercizio commerciale di via XII Ottobre, la cui vetrina era stata infranta con un mattone. Segnalata la sala operativa, una volante ha raggiunto e bloccato il giovane, che è stato denunciato.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/09/poliziotto-fuori-servizio-riconosce-il-presunto-ladro-dalle-immagini-denunciato-23enne-475082/" }, { nome: "Telenord", url: "https://telenord.it/genova-poliziotto-fuori-servizio-riconosce-presunto-autore-108727" } ],
+    lat: 44.4089640, lon: 8.9384916,
+    approssimato: true,
+    precisione: "fatto composito: due furti in luoghi diversi (corso Italia il 12/9, via XII Ottobre il 16/9) attribuiti allo stesso responsabile e riconosciuti insieme dal poliziotto fuori servizio in corso Torino il 18/9 — coordinate collocate sul secondo indirizzo, via XII Ottobre (geocoding reale OpenStreetMap Nominatim); nessuna violenza riportata dalle fonti, classificato come 'altro'"
+  },
+  {
+    id: "albenga-via-piave-rapina-turista-coltello-complice",
+    comune: "Albenga — Via Piave (pizzeria kebab)",
+    data: "14 agosto 2026",
+    dataISO: "2026-08-14",
+    categoria: "rapine",
+    titolo: "Tentata rapina con coltello a un turista fuori da una pizzeria, denunciata la complice",
+    descrizione: "Nei pressi di una pizzeria kebab di via Piave, una donna si sarebbe avvicinata a un turista piemontese di circa trent'anni pretendendo denaro o il telefono per presunti pregressi dissidi. Al rifiuto, si sarebbe allontanata per poi tornare affiancata da due complici: uno rimasto all'esterno a fare da palo, l'altro entrato nel locale minacciando di morte la vittima con un coltello a serramanico. La reazione del turista e l'intervento dei titolari del locale hanno permesso ai Carabinieri, allertati al 112, di bloccare i due uomini poco distante mentre tentavano di disfarsi dell'arma; sono stati arrestati in flagranza per tentata rapina e lesioni la notte stessa. Al termine delle indagini è stata identificata e denunciata in stato di libertà anche la donna, una 49enne savonese, ritenuta la complice che avrebbe avviato l'aggressione.",
+    fonti: [ { nome: "Liguria Oggi", url: "https://liguriaoggi.it/2026/09/18/albenga-turista-minacciato-di-morte-e-rapinato-denunciata-una-donna/" }, { nome: "Lokkio", url: "https://lokkio.it/albenga-tentata-rapina-con-coltello-in-via-piave-denunciata-la-presunta-complice-dei-due-arrestati/" } ],
+    lat: 44.0409306, lon: 8.2112656,
+    approssimato: true,
+    precisione: "via indicata dalla fonte (via Piave), numero civico non specificato — posizione sul tratto stradale (geocoding reale OpenStreetMap Nominatim); fatto datato 14 agosto (arresto dei due uomini la notte stessa), denuncia della complice completata e resa nota il 18 settembre"
+  },
+
 ];
