@@ -3917,4 +3917,70 @@ window.INCIDENTS_DATA = [
     precisione: "via indicata dalla fonte (via Piave), numero civico non specificato — posizione sul tratto stradale (geocoding reale OpenStreetMap Nominatim); fatto datato 14 agosto (arresto dei due uomini la notte stessa), denuncia della complice completata e resa nota il 18 settembre"
   },
 
+  {
+    id: "genova-san-benigno-via-di-francia-rapina-impropria-supermercato",
+    comune: "Genova, San Benigno — Via di Francia (supermercato)",
+    data: "18 settembre 2026",
+    dataISO: "2026-09-18",
+    categoria: "rapine",
+    titolo: "Tentata rapina impropria in un supermercato, arrestato un 55enne",
+    descrizione: "In un supermercato di via di Francia, l'addetto alla sicurezza ha notato un uomo aggirarsi tra le corsie e riporre della merce in una busta per poi superare le casse automatiche senza pagare. Fermato dal personale, ha gettato a terra la merce (circa 350 euro di valore, poi recuperata integra) e ha tentato la fuga spintonando e colpendo gli addetti alla vigilanza. È stato bloccato fino all'arrivo di una volante della Polizia di Stato, che lo ha arrestato per tentata rapina impropria.",
+    fonti: [ { nome: "Telenord", url: "https://telenord.it/genova-rapina-impropria-supermercato-arrestato-polizia-108764" } ],
+    lat: 44.4093021, lon: 8.9020852,
+    approssimato: true,
+    precisione: "via indicata dalla fonte, supermercato non identificato con precisione — coordinate sul tratto di via di Francia (geocoding reale OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-lagaccio-supermercato-minacce-bastone",
+    comune: "Genova, Lagaccio — Via del Lagaccio (supermercato)",
+    data: "18 settembre 2026",
+    dataISO: "2026-09-18",
+    categoria: "rapine",
+    titolo: "Nasconde bottiglie nello zaino al supermercato, minaccia i presenti con un bastone",
+    descrizione: "Nello stesso pomeriggio di un analogo episodio a San Benigno, la Polizia di Stato è intervenuta in un supermercato di via del Lagaccio dopo la segnalazione di un uomo che aveva nascosto delle bottiglie nello zaino per non pagarle alla cassa. Scoperto, ha restituito la merce ma è andato in escandescenze, spintonando una commessa e minacciando i presenti con un bastone di legno, prima di essere rintracciato e fermato dagli agenti.",
+    fonti: [ { nome: "Telenord", url: "https://telenord.it/genova-rapina-impropria-supermercato-arrestato-polizia-108764" } ],
+    lat: 44.4180796, lon: 8.9186183,
+    approssimato: true,
+    precisione: "via indicata dalla fonte, supermercato non identificato con precisione — coordinate sul tratto di via del Lagaccio (geocoding reale OpenStreetMap Nominatim); esito giudiziario non specificato dalla fonte"
+  },
+  {
+    id: "genova-staglieno-truffa-finto-poliziotto-gioielli-50mila",
+    comune: "Genova, Staglieno (via/palazzo non specificati dalla fonte)",
+    data: "18 settembre 2026",
+    dataISO: "2026-09-18",
+    categoria: "altro",
+    titolo: "Truffa del finto poliziotto a un anziano, recuperati gioielli per 50mila euro",
+    descrizione: "Agenti della squadra mobile di Genova, che tenevano sotto controllo un'auto a noleggio sospetta, hanno arrestato un ventenne e un 19enne subito dopo che questi avevano messo a segno una truffa ai danni di un 78enne genovese nel quartiere di Staglieno, con il consueto stratagemma del finto poliziotto incaricato di 'verificare' la provenienza di alcuni gioielli. Nella scatola consegnata dalla vittima sono stati trovati 14 braccialetti, un orologio di valore e altri monili per un totale di circa 50mila euro, subito restituiti all'anziano. I due sono stati arrestati per truffa aggravata dal danno ingente.",
+    fonti: [ { nome: "ANSA", url: "https://www.ansa.it/liguria/notizie/2026/09/19/truffano-anziano-a-genova-sottraendogli-gioielli-per-50mila-euro-due-arresti_19072905-7ce6-44cd-9863-73868d5b95ee.html" } ],
+    lat: 44.4312976, lon: 8.9505860,
+    approssimato: true,
+    precisione: "quartiere indicato dalla fonte (Staglieno), via/palazzo esatto non specificato — coordinate sul centro del quartiere (geocoding reale OpenStreetMap Nominatim)"
+  },
+  {
+    id: "sanremo-rissa-centro-carabinieri-35enne",
+    comune: "Sanremo — incrocio tra via Feraldi, via Palazzo e piazza Eroi Sanremesi",
+    data: "7 settembre 2026",
+    dataISO: "2026-09-07",
+    categoria: "violenze",
+    titolo: "Rissa in centro tra alcuni stranieri, 35enne aggredisce due Carabinieri",
+    descrizione: "Nel pomeriggio è scoppiata una rissa tra alcune persone di origine straniera all'incrocio tra via Feraldi, via Palazzo e piazza Eroi Sanremesi, per motivi non ancora accertati. I protagonisti si erano già allontanati all'arrivo di una pattuglia dei Carabinieri, che ha comunque individuato e fermato uno dei presunti coinvolti, un 35enne. Anziché collaborare, l'uomo ha colpito i due militari intervenuti, procurando loro lievi ferite, prima di essere bloccato e accompagnato al pronto soccorso; dovrà rispondere di oltraggio, resistenza e violenza a pubblico ufficiale.",
+    fonti: [ { nome: "Sanremonews", url: "https://www.sanremonews.it/2026/09/07/leggi-notizia/argomenti/cronaca/articolo/rissa-in-centro-a-sanremo-tra-alcuni-stranieri-35enne-aggredisce-due-carabinieri-feriti-lievemente.html" } ],
+    lat: 43.8167541, lon: 7.7753045,
+    approssimato: true,
+    precisione: "incrocio indicato dalla fonte — coordinate su via Feraldi, una delle tre vie dell'incrocio (geocoding reale OpenStreetMap Nominatim); dinamica e causa della rissa iniziale non chiarite dalla fonte"
+  },
+  {
+    id: "luni-rapina-abitazione-anziana-92enne-bombola-gas",
+    comune: "Luni (La Spezia) — abitazione vicino al campo sportivo",
+    data: "17 settembre 2026",
+    dataISO: "2026-09-17",
+    categoria: "rapine",
+    titolo: "Con l'inganno della bombola di gas si introducono in casa e rapinano una 92enne",
+    descrizione: "Due persone con mascherina e guanti hanno suonato al campanello di un'abitazione vicino al campo sportivo di Luni, intimando alla donna di 92 anni che vi si trovava sola di uscire subito perché una bombola di gas rischiava di esplodere. Nonostante la donna avesse risposto di non possedere alcuna bombola, i due sono comunque riusciti a entrare, le hanno intimato di consegnare l'oro e, di fronte alla sua resistenza, l'hanno minacciata di percosse costringendola su una sedia. Hanno poi forzato la cassaforte con un flessibile portando via tutto ciò che hanno trovato, oltre al cellulare della vittima per impedirle di chiamare aiuto; l'anziana è comunque riuscita a uscire di casa e a fermare un automobilista per dare l'allarme. Sono intervenuti i Carabinieri di Luni e Sarzana e la Scientifica di La Spezia.",
+    fonti: [ { nome: "La Nazione", url: "https://www.lanazione.it/sarzana/cronaca/tenuta-in-ostaggio-e-minacciata-dai-banditi-novantenne-brutalmente-rapinata-in-casa-ahbr8405" } ],
+    lat: 44.0850143, lon: 10.0424603,
+    approssimato: true,
+    precisione: "posizione esatta (vicino al campo sportivo) non geocodificabile con precisione — coordinate sul centro amministrativo del comune di Luni (geocoding reale OpenStreetMap Nominatim); data dell'evento ricavata dall'articolo (\"due giorni fa\" rispetto alla pubblicazione del 18-19 settembre)"
+  },
+
 ];
