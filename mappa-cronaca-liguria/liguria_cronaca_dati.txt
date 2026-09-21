@@ -3983,4 +3983,18 @@ window.INCIDENTS_DATA = [
     precisione: "posizione esatta (vicino al campo sportivo) non geocodificabile con precisione — coordinate sul centro amministrativo del comune di Luni (geocoding reale OpenStreetMap Nominatim); data dell'evento ricavata dall'articolo (\"due giorni fa\" rispetto alla pubblicazione del 18-19 settembre)"
   },
 
+  {
+    id: "genova-sampierdarena-via-fillak-rissa-gruppi",
+    comune: "Genova, Sampierdarena — Via Walter Fillak",
+    data: "19 settembre 2026",
+    dataISO: "2026-09-19",
+    categoria: "violenze",
+    titolo: "Maxi rissa tra due gruppi di giovani in strada, nessun ferito grave",
+    descrizione: "In via Fillak, in direzione di piazza Masnata, due gruppi di giovani e giovanissimi si sono affrontati con spintoni, pugni, calci e lancio di bottiglie di vetro, dopo una serie di battibecchi e insulti reciproci. I residenti della zona hanno allertato le forze dell'ordine sentendo le urla dalle finestre; l'arrivo delle volanti ha fatto disperdere i partecipanti in tutte le direzioni. Non si registrano feriti gravi né è stato fatto uso di armi.",
+    fonti: [ { nome: "Liguria Oggi", url: "https://liguriaoggi.it/2026/09/19/genova-maxi-rissa-per-strada-a-sampierdarena-726289/" } ],
+    lat: 44.4250367, lon: 8.8908134,
+    approssimato: true,
+    precisione: "via indicata dalla fonte senza numero civico o incrocio esatto — coordinate sul tratto centrale di via Walter Fillak (geocoding reale OpenStreetMap Nominatim); nessun arresto né denuncia riportati dalla fonte, dinamica precisa dello scontro non chiarita dalla fonte"
+  },
+
 ];
