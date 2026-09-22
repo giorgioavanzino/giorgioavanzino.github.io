@@ -3997,4 +3997,46 @@ window.INCIDENTS_DATA = [
     precisione: "via indicata dalla fonte senza numero civico o incrocio esatto — coordinate sul tratto centrale di via Walter Fillak (geocoding reale OpenStreetMap Nominatim); nessun arresto né denuncia riportati dalla fonte, dinamica precisa dello scontro non chiarita dalla fonte"
   },
 
+  {
+    id: "genova-begato-bus-670-rissa-minacce-autista",
+    comune: "Genova, Begato — bus di linea 670",
+    data: "21 settembre 2026",
+    dataISO: "2026-09-21",
+    categoria: "violenze",
+    titolo: "Rissa a bordo di un bus in corsa, minacciato l'autista: due minorenni fermati",
+    descrizione: "Nella notte, a bordo di un autobus della linea 670 in transito nel quartiere di Begato, è scoppiata una rissa tra tre giovanissimi per motivi ancora da chiarire. Uno di loro ha minacciato l'autista brandendo una cintura, mentre gli altri due hanno danneggiato i vetri del mezzo. Sul posto sono intervenute le volanti della polizia, che hanno identificato e fermato due minorenni stranieri, accompagnati in questura insieme ai familiari; sono in corso accertamenti, anche tramite le telecamere di bordo, per individuare il terzo giovane coinvolto.",
+    fonti: [ { nome: "ANSA", url: "https://www.ansa.it/liguria/notizie/2026/09/21/rissa-tra-giovani-a-bordo-di-un-bus-a-genova-fermati-due-minori_60120600-5d47-4f36-ab83-98a542134cf0.html" } ],
+    lat: 44.4489828, lon: 8.9265575,
+    approssimato: true,
+    precisione: "quartiere indicato dalla fonte (Begato) e linea del bus (670), fermata/via esatta non specificata — coordinate sul centro del quartiere (geocoding reale OpenStreetMap Nominatim); nessun arresto in flagranza, solo fermo e identificazione di due minorenni, terzo giovane ancora ricercato secondo la fonte"
+  },
+
+  {
+    id: "savona-piazza-martiri-disordini-notturni-discoteca",
+    comune: "Savona, zona Oltreletimbro — Piazza Martiri / Via Libero Briganti",
+    data: "20 settembre 2026",
+    dataISO: "2026-09-20",
+    categoria: "violenze",
+    titolo: "Disordini nella notte davanti a una discoteca, danneggiate alcune auto",
+    descrizione: "Nella notte tra sabato e domenica, intorno alle 3.30, diversi giovani usciti da una discoteca della zona si sono resi protagonisti di disordini in Piazza Martiri, nel quartiere dell'Oltreletimbro: urla, schiamazzi e corse tra i presenti, con alcune persone che si sono colpite nell'area verde davanti al monumento alla Resistenza, e alcune auto parcheggiate sono state danneggiate. Secondo una prima ricostruzione, all'origine dei disordini ci sarebbe stato uno spray al peperoncino spruzzato all'interno del locale durante una festa riservata a studenti delle scuole superiori savonesi, che ha fatto riversare i giovani all'esterno dando origine a un parapiglia tra più persone. Sul posto sono intervenute pattuglie di carabinieri e polizia; una persona soccorsa da un'ambulanza ha rifiutato il trasporto in ospedale. Non risultano, al momento, arresti o denunce.",
+    fonti: [ { nome: "Savonanews", url: "https://www.savonanews.it/2026/09/21/leggi-notizia/argomenti/cronaca-2/articolo/savona-maxi-rissa-in-piazza-martiri-paura-e-disagi-per-i-residenti.html" } ],
+    lat: 44.3097378, lon: 8.4731096,
+    approssimato: true,
+    precisione: "la ricerca diretta di 'Piazza Martiri, Savona' su Nominatim restituisce erroneamente una piazza omonima nel comune di Cengio; si sono quindi usate le coordinate di via Libero Briganti, nella stessa zona dell'Oltreletimbro indicata dalla fonte come luogo dei fatti (geocoding reale OpenStreetMap Nominatim); dinamica esatta e responsabili non chiariti dalla fonte, nessun arresto riportato"
+  },
+
+  {
+    id: "la-spezia-truffa-anziani-oro-contanti-stazione",
+    comune: "La Spezia, zona stazione centrale / piazza Europa (abitazione non specificata dalla fonte)",
+    data: "20 settembre 2026 (circa)",
+    dataISO: "2026-09-20",
+    categoria: "altro",
+    titolo: "Truffa dell'oro a un'anziana coppia, recuperati gioielli e contanti vicino alla stazione",
+    descrizione: "Un anziano, incontrando per caso alcuni agenti in strada mentre cercava la caserma dei Carabinieri, ha raccontato che la moglie era appena stata vittima di una truffa nella loro abitazione: un uomo, con uno stratagemma, si era fatto consegnare dalla donna gioielli in oro — tra cui una collana che indossava — e denaro contante, dandosi poi alla fuga. Grazie alla descrizione fornita dalla coppia, gli agenti hanno rintracciato un uomo corrispondente nei pressi della stazione ferroviaria di La Spezia, trovandolo in possesso di oltre 100 grammi di monili in oro e circa 2.000 euro in contanti, riconosciuti come provento della truffa e restituiti alle vittime. L'uomo, già noto alle forze dell'ordine, è stato deferito all'autorità giudiziaria per truffa aggravata.",
+    fonti: [ { nome: "Liguria Oggi", url: "https://liguriaoggi.it/2026/09/21/la-spezia-ancora-truffe-agli-anziani-polizia-denuncia-un-malvivente/" }, { nome: "Liguria Oggi", url: "https://liguriaoggi.it/2026/09/21/la-spezia-altra-truffa-ai-danni-di-unanziana-denunciato-un-uomo/" } ],
+    lat: 44.1113559, lon: 9.8134258,
+    approssimato: true,
+    precisione: "data esatta del fatto non specificata dalla fonte ('nei giorni scorsi' / 'poco prima'), stimata al 20 settembre; le due fonti riportano dettagli in parte discordanti (una descrive una coppia di anziani truffata, l'altra un'anziana sola con il marito avvertito successivamente) ma con dinamica, bottino (100-127 grammi d'oro e circa 2.000 euro) e luogo del fermo (nei pressi della stazione) sostanzialmente coincidenti: trattate come lo stesso episodio riportato con lievi differenze redazionali dalla stessa testata; indirizzo esatto dell'abitazione non specificato, coordinate sulla stazione di La Spezia Centrale"
+  },
+
 ];
