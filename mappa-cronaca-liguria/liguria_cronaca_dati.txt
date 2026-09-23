@@ -4039,4 +4039,18 @@ window.INCIDENTS_DATA = [
     precisione: "data esatta del fatto non specificata dalla fonte ('nei giorni scorsi' / 'poco prima'), stimata al 20 settembre; le due fonti riportano dettagli in parte discordanti (una descrive una coppia di anziani truffata, l'altra un'anziana sola con il marito avvertito successivamente) ma con dinamica, bottino (100-127 grammi d'oro e circa 2.000 euro) e luogo del fermo (nei pressi della stazione) sostanzialmente coincidenti: trattate come lo stesso episodio riportato con lievi differenze redazionali dalla stessa testata; indirizzo esatto dell'abitazione non specificato, coordinate sulla stazione di La Spezia Centrale"
   },
 
+  {
+    id: "genova-sampierdarena-via-sasso-rapina-collanina-luglio",
+    comune: "Genova, Sampierdarena — Via G. B. Sasso",
+    data: "14 luglio 2026",
+    dataISO: "2026-07-14",
+    categoria: "rapine",
+    titolo: "Spintonano un passante e gli strappano la catenina d'oro: arrestati due giovani dopo le indagini",
+    descrizione: "Due uomini hanno avvicinato un passante in via G. B. Sasso, a Sampierdarena, e dopo averlo spintonato gli hanno strappato dal collo una catenina d'oro del valore di circa 2.300 euro, dandosi poi alla fuga. Le indagini della Squadra Mobile, basate sull'analisi delle immagini della videosorveglianza cittadina e sul riconoscimento fotografico da parte della vittima (anche grazie ad alcuni tatuaggi riconoscibili), hanno portato all'identificazione di due presunti responsabili, un 29enne e un 25enne, raggiunti a settembre da un provvedimento cautelare per rapina in concorso: il primo è stato rintracciato a casa della compagna e portato in carcere, al secondo il provvedimento è stato notificato in carcere, dove era già detenuto per altra causa.",
+    fonti: [ { nome: "Liguria Oggi", url: "https://liguriaoggi.it/2026/09/22/genova-rapina-per-strada-a-sampierdarena-fermate-due-persone/" }, { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/rapina-a-sampierdarena-arrestati-29enne-italiano-e-25enne-marocchino/2026/09/22/1280031/" } ],
+    lat: 44.4153375, lon: 8.8898553,
+    approssimato: true,
+    precisione: "data dell'episodio (14 luglio 2026) indicata dalla fonte; gli arresti sono stati eseguiti ed annunciati il 21-22 settembre 2026. Via indicata senza numero civico — coordinate sulla via G. B. Sasso (geocoding reale OpenStreetMap Nominatim)"
+  },
+
 ];
