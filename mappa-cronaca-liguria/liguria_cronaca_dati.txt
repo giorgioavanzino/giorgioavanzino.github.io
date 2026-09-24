@@ -4053,4 +4053,59 @@ window.INCIDENTS_DATA = [
     precisione: "data dell'episodio (14 luglio 2026) indicata dalla fonte; gli arresti sono stati eseguiti ed annunciati il 21-22 settembre 2026. Via indicata senza numero civico — coordinate sulla via G. B. Sasso (geocoding reale OpenStreetMap Nominatim)"
   },
 
+  {
+    id: "rapallo-corso-mameli-furto-supermercato-rapina-impropria",
+    comune: "Rapallo — Corso Mameli",
+    data: "22 settembre 2026",
+    dataISO: "2026-09-22",
+    categoria: "rapine",
+    titolo: "Ruba al supermercato e trascina la dipendente aggrappata all'auto durante la fuga, bloccato da un furgone",
+    descrizione: "Un 22enne romeno ha rubato generi alimentari da alcuni supermercati di corso Mameli, a Rapallo, nascondendoli in uno zaino. Sorpreso da una dipendente che ha tentato di fermarlo all'uscita, è salito in auto e si è dato alla fuga trascinandola per alcuni metri aggrappata alla portiera, colpendola più volte per liberarsi. Un automobilista di passaggio, testimone della scena, ha bloccato la strada con il proprio furgone impedendogli la fuga. La dipendente, soccorsa al pronto soccorso di Lavagna, è stata giudicata guaribile in 7 giorni. Nello zaino nascosto nell'auto sono stati recuperati alimenti rubati in più esercizi.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/rapina-a-rapallo-22enne-romeno-tenta-la-fuga-bloccato-da-un-furgone-e-arrestato/2026/09/23/1280116/" }, { nome: "Liguria24", url: "https://www.liguria24.it/2026/09/23/rapallo-bloccato-un-22enne-rumeno-indiziato-di-rapina-impropria/872558" } ],
+    lat: 44.3505234, lon: 9.2274142,
+    approssimato: true,
+    precisione: "corso indicato dalla fonte, supermercato e civico non specificati — coordinate su corso Mameli (geocoding reale OpenStreetMap Nominatim); data dell'episodio (22 settembre) dedotta dalla fonte, pubblicata il 23"
+  },
+
+  {
+    id: "genova-carignano-via-nino-bixio-rapina-impropria-supermercato-tre-marocchini",
+    comune: "Genova, Carignano — Via Nino Bixio",
+    data: "23 settembre 2026",
+    dataISO: "2026-09-23",
+    categoria: "rapine",
+    titolo: "Rapina impropria in supermercato, tre uomini arrestati dopo l'aggressione a un dipendente",
+    descrizione: "Tre uomini di nazionalità marocchina, già noti alle forze dell'ordine, sono entrati in un supermercato di via Nino Bixio, nel quartiere di Carignano a Genova, rubando alcuni prodotti nascosti in uno zaino. Inseguiti dal personale del negozio, durante la fuga uno di loro ha colpito più volte un dipendente ferendolo, mentre un altro abbandonava la refurtiva in strada. Le volanti della polizia, presenti nella zona, li hanno intercettati e arrestati a poca distanza dal supermercato; sono stati condotti in questura e trattenuti in attesa di giudizio.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/carignano-rapina-in-supermercato-di-via-nino-bixio-tre-marocchini-arrestati/2026/09/23/1280118/" } ],
+    lat: 44.4014494, lon: 8.9361851,
+    approssimato: false,
+    precisione: "via indicata con precisione dalla fonte, civico e nome del supermercato non specificati — coordinate su via Nino Bixio (geocoding reale OpenStreetMap Nominatim)"
+  },
+
+  {
+    id: "la-spezia-furto-rame-scuola-notturno",
+    comune: "La Spezia (istituto scolastico non specificato dalla fonte)",
+    data: "22 settembre 2026",
+    dataISO: "2026-09-22",
+    categoria: "altro",
+    titolo: "Sorpreso di notte a rubare rame in una scuola, arrestato",
+    descrizione: "Un residente ha allertato la polizia dopo essere stato svegliato da rumori sospetti provenienti da un istituto scolastico della Spezia. Gli agenti, intervenuti sul posto, hanno notato un uomo compiere più viaggi tra l'edificio e un'auto parcheggiata nelle vicinanze; nel veicolo sono state trovate matasse di rame e altro materiale sottratto all'istituto. L'uomo è stato arrestato dalla polizia. I furti di rame nella zona erano già stati oggetto, nei giorni precedenti, di un tavolo tecnico sulla sicurezza convocato in prefettura.",
+    fonti: [ { nome: "ANSA", url: "https://www.ansa.it/liguria/notizie/2026/09/22/ruba-rame-da-una-scuola-a-spezia-arrestato_8f1d0fb7-8f90-4904-bfaa-a921fd3f4853.html" }, { nome: "Gazzetta della Spezia", url: "https://gazzettadellaspezia.com/cronaca/180588-sorpreso-nella-notte-a-rubare-rame-in-una-scuola-della-spezia-arrestato-dalla-polizia" } ],
+    lat: 44.1065257, lon: 9.8145732,
+    approssimato: true,
+    precisione: "nome e indirizzo dell'istituto scolastico non specificati dalla fonte — coordinate riutilizzate dal centro della Spezia già geocodato in un altro fatto (OpenStreetMap Nominatim)"
+  },
+
+  {
+    id: "genova-brignole-principe-furto-turisti-algerino-settembre",
+    comune: "Genova, Stazione Brignole e Piazza Principe",
+    data: "22 settembre 2026",
+    dataISO: "2026-09-22",
+    categoria: "altro",
+    titolo: "Ruba una valigia a una coppia di turisti sul treno e uno zaino a un turista alla stazione Principe, arrestato",
+    descrizione: "Un uomo di nazionalità algerina, già noto alle forze dell'ordine e mai espulso, ha commesso due furti a distanza di poche ore ai danni di turisti nelle stazioni ferroviarie genovesi: prima una valigia, sottratta a una coppia di turisti australiani a bordo di un treno ad alta velocità, poi uno zaino contenente un computer portatile, rubato a un turista ucraino alla stazione di Piazza Principe. Il bottino, per un valore complessivo di circa 11mila euro, comprendeva anche un dispositivo di localizzazione GPS nella valigia, che ha permesso alla polizia di rintracciare l'uomo sui binari della stazione di Brignole, ancora in possesso della refurtiva. Processato per direttissima, è stato rimesso in libertà con il solo obbligo di firma.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/09/furto-stazione-turisti-treno-arresto-475548/" }, { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/insicurezza-furti-a-brignole-e-principe-algerino-arrestato-ma-il-giudice-lo-libera-subito/2026/09/23/1280148/" } ],
+    lat: 44.4073346, lon: 8.9457543,
+    approssimato: true,
+    precisione: "furto avvenuto in parte a bordo di un treno in corsa e in parte alla stazione di Piazza Principe, non localizzabili con un punto preciso — collocato sulla stazione di Genova Brignole, dove è avvenuto l'arresto in flagranza; coordinate riutilizzate da un altro fatto già geocodato nella stessa zona (OpenStreetMap Nominatim); data dell'episodio (22 settembre) dedotta dalla fonte, pubblicata il 23"
+  },
 ];
