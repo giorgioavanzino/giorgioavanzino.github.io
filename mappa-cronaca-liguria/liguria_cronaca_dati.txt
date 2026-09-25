@@ -4108,4 +4108,46 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "furto avvenuto in parte a bordo di un treno in corsa e in parte alla stazione di Piazza Principe, non localizzabili con un punto preciso — collocato sulla stazione di Genova Brignole, dove è avvenuto l'arresto in flagranza; coordinate riutilizzate da un altro fatto già geocodato nella stessa zona (OpenStreetMap Nominatim); data dell'episodio (22 settembre) dedotta dalla fonte, pubblicata il 23"
   },
+
+  {
+    id: "genova-sestri-ponente-stazione-furto-zaino-farmaci-due-arresti",
+    comune: "Genova, Sestri Ponente — Stazione ferroviaria",
+    data: "24 settembre 2026",
+    dataISO: "2026-09-24",
+    categoria: "altro",
+    titolo: "Rubano lo zaino con farmaci salvavita a un passeggero in stazione, due arresti",
+    descrizione: "Due uomini hanno sottratto lo zaino di un passeggero sceso da un treno alla stazione di Sestri Ponente; lo zaino conteneva costosi farmaci salvavita necessari alla vittima. L'uomo ha inseguito i responsabili e allertato una pattuglia della Polizia Locale in transito, che li ha rintracciati poco dopo ancora in possesso della refurtiva e li ha arrestati. Lo zaino è stato restituito al proprietario.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/09/24/genova-furto-zaino-stazione-sestri-ponente-due-arresti-727209/" } ],
+    lat: 44.4224904, lon: 8.8480250,
+    approssimato: false,
+    precisione: "geocodificata sulla stazione ferroviaria di Genova Sestri Ponente (OpenStreetMap Nominatim); età e descrizione dei due arrestati non specificate dalla fonte"
+  },
+
+  {
+    id: "genova-sampierdarena-via-avio-inseguimento-polstrada-feriti-arresto",
+    comune: "Genova, Sampierdarena — Via Federico Avio",
+    data: "24 settembre 2026",
+    dataISO: "2026-09-24",
+    categoria: "violenze",
+    titolo: "Inseguono uno scooterista in fuga, l'auto della Polizia stradale si schianta contro un muro: due agenti feriti, arrestato",
+    descrizione: "Nella notte, durante l'inseguimento di uno scooterista in fuga in via Federico Avio, l'auto della Polizia stradale è finita contro un muro: i due agenti a bordo sono rimasti feriti in codice giallo e sono stati trasportati agli ospedali Villa Scassi e San Martino. Il conducente dello scooter è stato bloccato dai Carabinieri intervenuti in supporto e arrestato per resistenza a pubblico ufficiale.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/genova-inseguimento-nella-notte-a-sampierdarena-auto-della-polstrada-contro-un-muro-feriti-due-agenti/2026/09/24/1280173/" } ],
+    lat: 44.4118313, lon: 8.8872109,
+    approssimato: false,
+    precisione: "geocodificata su via Federico Avio (OpenStreetMap Nominatim); età e descrizione del fermato non specificate dalla fonte; fatto avvenuto intorno all'1:10 della notte tra il 23 e il 24 settembre, attribuito al 24 come da fonte"
+  },
+
+  {
+    id: "genova-stazione-marittima-scontri-corteo-polizia",
+    comune: "Genova, San Teodoro — Stazione Marittima",
+    data: "24 settembre 2026",
+    dataISO: "2026-09-24",
+    categoria: "violenze",
+    titolo: "Scontri ai margini di un corteo alla Stazione Marittima, lanci di bottiglie contro la polizia",
+    descrizione: "Un gruppo di una quarantina di manifestanti, riunitosi per un corteo confluito presso la Stazione Marittima, ha lanciato bottiglie contro le forze dell'ordine, che hanno risposto con cariche di alleggerimento; un funzionario della Digos ha riportato una lieve contusione.",
+    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/09/24/scontri-tra-polizia-e-anarchici-ai-margini-del-corteo-del-comitato-del-centro-storico/872779/" } ],
+    lat: 44.4140119, lon: 8.9191566,
+    approssimato: false,
+    precisione: "geocodificata sulla Stazione Marittima (OpenStreetMap Nominatim); numero esatto di partecipanti e esito investigativo non specificati dalla fonte"
+  },
 ];
