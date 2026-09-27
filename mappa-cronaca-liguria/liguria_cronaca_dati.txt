@@ -4150,4 +4150,46 @@ window.INCIDENTS_DATA = [
     approssimato: false,
     precisione: "geocodificata sulla Stazione Marittima (OpenStreetMap Nominatim); numero esatto di partecipanti e esito investigativo non specificati dalla fonte"
   },
+  {
+    id: "genova-san-benigno-via-di-francia-furto-morso-vicedirettore-esselunga",
+    comune: "Genova, San Benigno — Via di Francia (supermercato Esselunga)",
+    data: "25 settembre 2026",
+    dataISO: "2026-09-25",
+    categoria: "rapine",
+    titolo: "Tenta un furto in un supermercato e morde il vicedirettore che lo blocca, arrestato",
+    descrizione: "Un uomo di origine tunisina, 29 anni, già noto al personale del negozio per precedenti tentativi di furto, ha cercato di rubare della merce in un supermercato Esselunga di via di Francia; fermato dal vicedirettore, lo ha morso a un braccio procurandogli una ferita che ha richiesto il trasporto all'ospedale Galliera. È stato arrestato dalla polizia per rapina, lesioni e resistenza a pubblico ufficiale.",
+    fonti: [ { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/71850-furto-esselunga-vicedirettore-morsicato.html" }, { nome: "104 News", url: "https://www.104news.it/2026/09/25/genova-tunisino-tenta-un-furto-e-aggredisce-il-vicedirettore-di-un-supermerctao-arrestato/" } ],
+    lat: 44.4108198, lon: 8.9070101,
+    approssimato: false,
+    precisione: "via indicata con precisione dalla fonte, civico esatto del supermercato non specificato — coordinate su via di Francia (geocoding reale OpenStreetMap Nominatim)"
+  },
+
+  {
+    id: "genova-foce-via-cecchi-furto-bancomat-tre-venezuelani",
+    comune: "Genova, Foce — Via Antonio Cecchi e Piazza Dante",
+    data: "25 settembre 2026",
+    dataISO: "2026-09-25",
+    categoria: "altro",
+    titolo: "Sostituiscono le carte alle vittime allo sportello bancomat con un raggiro, tre arrestati",
+    descrizione: "Tre uomini di nazionalità venezuelana, tutti sulla cinquantina, adottavano un sistema collaudato per sottrarre le carte di pagamento agli sportelli automatici: si affiancavano a chi stava usando il bancomat e, con una scusa, convincevano la vittima a reinserire la carta, per poi sostituirla con un'altra tessera già provento di furti precedenti. Individuati e fermati dalla polizia presso una filiale bancaria di via Antonio Cecchi, alla Foce, e successivamente in piazza Dante, sono stati trovati in possesso di diverse carte di pagamento e somme di denaro. Indagati dalla Procura di Firenze per furto, ricettazione e utilizzo indebito di carte di pagamento, sono stati condotti nel carcere di Marassi.",
+    fonti: [ { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/71846-rubavano-carte-soldi-trucco-bancomat-arresti-foce.html" } ],
+    lat: 44.3984197, lon: 8.9465888,
+    approssimato: false,
+    precisione: "geocodificato su via Antonio Cecchi, alla Foce (OpenStreetMap Nominatim); il fermo è avvenuto anche in un secondo luogo, piazza Dante, non riportato con coordinate separate; nome della filiale bancaria non specificato dalla fonte"
+  },
+
+  {
+    id: "savona-stazione-aggressione-agente-polfer-senza-biglietto",
+    comune: "Savona — Stazione ferroviaria",
+    data: "23 settembre 2026",
+    dataISO: "2026-09-23",
+    categoria: "violenze",
+    titolo: "Aggredisce un agente della Polfer che lo fa scendere dal treno senza biglietto, arrestato",
+    descrizione: "Un uomo straniero con precedenti penali, sorpreso senza biglietto su un treno regionale in partenza dalla stazione di Savona, ha reagito colpendo più volte al volto un agente della Polizia ferroviaria, libero dal servizio, intervenuto per aiutare il personale del treno a farlo scendere; l'agente ha subito un trauma cranico con una prognosi di 10 giorni. L'uomo è stato arrestato per resistenza e lesioni a pubblico ufficiale; il giudice ha convalidato l'arresto imponendo il divieto di soggiorno nella provincia di Savona.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/savona-senza-biglietto-sul-treno-aggredisce-un-agente-polfer-arrestato/2026/09/23/1280093/" } ],
+    lat: 44.3069809, lon: 8.4710865,
+    approssimato: false,
+    precisione: "evento avvenuto a bordo del treno in partenza dalla stazione di Savona; coordinate sulla stazione ferroviaria (OpenStreetMap Nominatim); nazionalità esatta non specificata dalla fonte"
+  },
+
 ];
