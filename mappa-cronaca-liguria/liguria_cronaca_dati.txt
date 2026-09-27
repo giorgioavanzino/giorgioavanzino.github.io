@@ -4192,4 +4192,18 @@ window.INCIDENTS_DATA = [
     precisione: "evento avvenuto a bordo del treno in partenza dalla stazione di Savona; coordinate sulla stazione ferroviaria (OpenStreetMap Nominatim); nazionalità esatta non specificata dalla fonte"
   },
 
+  {
+    id: "rapallo-stazione-aggressione-rapina-zaino-due-marocchini",
+    comune: "Rapallo — stazione ferroviaria",
+    data: "25 settembre 2026 (sera)",
+    dataISO: "2026-09-25",
+    categoria: "rapine",
+    titolo: "Aggredito e rapinato dello zaino alla stazione, arrestati due uomini",
+    descrizione: "Un uomo è stato avvicinato da due uomini all'interno della stazione ferroviaria di Rapallo: spintonato e colpito al volto, si è visto sottrarre lo zaino contenente portafoglio, smartphone, effetti personali e farmaci. Grazie alle immagini delle telecamere di sorveglianza e alla descrizione fornita da un esercente della zona, la Polizia ha rintracciato ed arrestato in flagranza i due responsabili, cittadini marocchini di 31 e 40 anni, trovati sul marciapiede della stazione in attesa di un treno e ancora in possesso della refurtiva; sono stati condotti nel carcere di Marassi in attesa di convalida. La vittima è stata trasportata al pronto soccorso dell'ospedale di Lavagna per le cure del caso.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/rapallo-uomo-aggredito-e-rapinato-alla-stazione-arrestati-due-marocchini/2026/09/26/1280295/" }, { nome: "Genova24", url: "https://www.genova24.it/2026/09/rapina-stazione-rapallo-polizia-arresti-475880/" } ],
+    lat: 44.3511705, lon: 9.2313155,
+    approssimato: false,
+    precisione: "coordinate riutilizzate dalla stazione ferroviaria di Rapallo, già geocodata con precisione (OpenStreetMap Nominatim) per un fatto precedente nello stesso luogo; età esatta della vittima non specificata dalle fonti"
+  },
+
 ];
