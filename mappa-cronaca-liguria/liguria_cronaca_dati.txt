@@ -4205,5 +4205,31 @@ window.INCIDENTS_DATA = [
     approssimato: false,
     precisione: "coordinate riutilizzate dalla stazione ferroviaria di Rapallo, già geocodata con precisione (OpenStreetMap Nominatim) per un fatto precedente nello stesso luogo; età esatta della vittima non specificata dalle fonti"
   },
+  {
+    id: "santa-margherita-ligure-stazione-furto-portafoglio-turista-polacca",
+    comune: "Santa Margherita Ligure — zona stazione ferroviaria",
+    data: "22 settembre 2026",
+    dataISO: "2026-09-22",
+    categoria: "altro",
+    titolo: "Rubano il portafoglio a una turista polacca su un bus vicino alla stazione, arrestate due donne",
+    descrizione: "Una donna italiana di 22 anni e una donna bosniaca di 27 anni hanno sottratto il portafoglio, con circa 500 euro in contanti, dalla borsa di una turista polacca di 50 anni a bordo di un autobus nei pressi della stazione ferroviaria di Santa Margherita Ligure. La vittima si è accorta del furto e ha affrontato le due donne, riuscendo a trattenerle fino all'arrivo dei Carabinieri; il portafoglio è stato recuperato e restituito. Le due sono state arrestate per furto aggravato e sono comparse a giudizio direttissimo.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/stazione-di-s-margherita-ligure-arrestate-due-ladre-nomadi-una-italiana-e-laltra-bosniaca/2026/09/22/1279972/" } ],
+    lat: 44.3360322, lon: 9.2156001,
+    approssimato: true,
+    precisione: "via/tratto esatto del bus non specificato dalla fonte — coordinate collocate su Via alla Stazione, Santa Margherita Ligure (geocoding reale OpenStreetMap Nominatim)"
+  },
+  {
+    id: "genova-val-bisagno-via-lodi-truffa-finto-carabiniere-50mila",
+    comune: "Genova, Val Bisagno — Via Lodi",
+    data: "22 settembre 2026",
+    dataISO: "2026-09-22",
+    categoria: "altro",
+    titolo: "Truffa del finto carabiniere a un'anziana in Val Bisagno, arrestati due giovani per un colpo da 50mila euro",
+    descrizione: "Un ragazzo di 19 anni originario di Salerno e un ragazzo di 20 anni romeno si sono spacciati al telefono per un carabiniere, raccontando a una pensionata genovese che l'auto di un familiare sarebbe stata coinvolta in una rapina in gioielleria; con questo pretesto uno dei due si è presentato a casa della donna in via Lodi, in Val Bisagno, e si è fatto consegnare gioielli d'oro e altri valori per circa 50mila euro. I due sono stati individuati e arrestati dalla polizia: il romeno è stato condotto in carcere a Marassi, mentre per l'italiano è stato disposto l'obbligo di firma nel comune di residenza.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/val-bisagno-truffa-finto-carabinieriere-colpo-da-50mila-euro-italiano-e-romeno-arrestati/2026/09/22/1279990/" }, { nome: "La Milano", url: "https://liguria.lamilano.it/genova-finta-telefonata-del-carabiniere-e-truffa-da-50mila-euro-arrestati-due-giovani/" } ],
+    lat: 44.4385054, lon: 8.9600578,
+    approssimato: true,
+    precisione: "numero civico non specificato dalla fonte — coordinate collocate su Via Lodi, quartiere Media Val Bisagno (geocoding reale OpenStreetMap Nominatim); episodio distinto da altre truffe del finto carabiniere/poliziotto già presenti nel dataset (9 e 15 settembre): qui la vittima e l'importo differiscono pur essendo simile la cifra approssimativa"
+  },
 
 ];
