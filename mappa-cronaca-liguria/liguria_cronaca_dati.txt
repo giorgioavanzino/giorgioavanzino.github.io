@@ -4257,5 +4257,44 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "numero civico non specificato dalla fonte; coordinate stimate manualmente su Via San Vincenzo (geocoder non disponibile in questa sessione); nazionalità degli arrestati non specificata"
   },
+  {
+    id: "alassio-auto-parcheggiate-furto-vetri-rotti-32enne",
+    comune: "Alassio (SV) — strade pubbliche (via non specificata dalla fonte)",
+    data: "28 settembre 2026",
+    dataISO: "2026-09-28",
+    categoria: "altro",
+    titolo: "Spacca i finestrini delle auto parcheggiate e ruba all'interno: arrestato 32enne senza fissa dimora",
+    descrizione: "Intorno alle 12.20 una segnalazione ha avvisato i Carabinieri di un uomo che danneggiava auto in sosta. I militari lo hanno sorpreso mentre rubava dall'interno di un veicolo di cui aveva appena rotto il finestrino: il 32enne, senza fissa dimora e con precedenti, è stato arrestato per furto aggravato e danneggiamento.",
+    fonti: [ { nome: "Savonanews", url: "https://www.savonanews.it/2026/09/28/leggi-notizia/argomenti/cronaca-2/articolo/danneggia-e-ruba-allinterno-delle-auto-ad-alassio-arrestato-32enne-senza-fissa-dimora.html" } ],
+    lat: 44.0027, lon: 8.1717,
+    approssimato: true,
+    precisione: "via non specificata dalla fonte; coordinate stimate sul centro di Alassio (geocoder non disponibile in questa sessione)"
+  },
+  {
+    id: "sant-olcese-truffa-finto-poliziotto-furto-bracciale-due-arresti",
+    comune: "Sant'Olcese (GE) — abitazione di un pensionato; fermo in Via Bobbio",
+    data: "30 settembre 2026",
+    dataISO: "2026-09-30",
+    categoria: "altro",
+    titolo: "Falso poliziotto si fa consegnare i gioielli da un pensionato e porta via un bracciale d'oro: arrestati due uomini",
+    descrizione: "Un uomo si è presentato a un pensionato come appartenente alle forze dell'ordine sostenendo che la sua auto fosse stata usata per una rapina in gioielleria, chiedendo di controllare i gioielli, mentre un complice lo teneva al telefono. L'anziano, insospettito, ha chiesto il tesserino e lo ha allontanato, accorgendosi solo dopo della sottrazione di un bracciale d'oro. I due uomini, di 27 e 28 anni e residenti fuori regione, sono stati fermati in via Bobbio con un'auto noleggiata a Napoli e con il bracciale a bordo; arrestati per furto in abitazione in concorso, sono stati sottoposti a giudizio direttissimo.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/09/truffa-gioielleria-auto-arresto-476386/" } ],
+    lat: 44.4980, lon: 8.9380,
+    approssimato: true,
+    precisione: "indirizzo dell'abitazione non specificato dalla fonte; coordinate stimate sul territorio di Sant'Olcese (geocoder non disponibile in questa sessione)"
+  },
+  {
+    id: "vernazza-furti-sette-esercizi-commerciali-notte",
+    comune: "Vernazza (SP) — bar e ristoranti del borgo",
+    data: "30 settembre 2026",
+    dataISO: "2026-09-30",
+    categoria: "altro",
+    titolo: "Sfondano porte e finestre di sette bar e ristoranti nella notte e svuotano le casse",
+    descrizione: "Intorno alle 3 di notte ignoti hanno forzato infissi e porte di sette esercizi commerciali tra bar e ristoranti, prelevando dalle casse circa 1.700 euro in contanti; i danni alle strutture potrebbero superare la cifra rubata. Indagano i Carabinieri di Monterosso, che stanno valutando le immagini delle telecamere presenti nella zona.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/09/30/ladri-in-azione-a-vernazza-prese-di-mira-sette-attivita-tra-bar-e-ristoranti-674154" } ],
+    lat: 44.1355, lon: 9.6843,
+    approssimato: true,
+    precisione: "esercizi non indicati singolarmente dalla fonte; coordinate stimate sul centro di Vernazza (geocoder non disponibile in questa sessione); autori ignoti"
+  },
 
 ];
