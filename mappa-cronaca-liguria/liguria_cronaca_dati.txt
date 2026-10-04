@@ -4324,5 +4324,57 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "data dell'aggressione (13 agosto) e arresti notificati il 1 ottobre; numero civico non indicato dalla fonte, coordinate stimate su Via del Lagaccio (geocoder non disponibile in questa sessione); movente e ricostruzione basati sulle dichiarazioni della vittima"
   },
+  {
+    id: "ventimiglia-eurodrink-furto-aggressione-personale",
+    comune: "Ventimiglia (IM) — negozio Eurodrink, centro",
+    data: "1 ottobre 2026",
+    dataISO: "2026-10-01",
+    categoria: "violenze",
+    titolo: "Tenta di rubare una bottiglia e aggredisce il personale del negozio, fermato dalla Polizia locale",
+    descrizione: "Un uomo straniero, di età non indicata, ha tentato di sottrarre una bottiglia da un negozio del centro di Ventimiglia aggredendo gli addetti per riuscire nell'intento. Sul posto sono intervenuti rapidamente più agenti della Polizia locale, che lo hanno bloccato e accompagnato in ufficio.",
+    fonti: [ { nome: "Sanremonews", url: "https://www.sanremonews.it/2026/10/01/leggi-notizia/argomenti/cronaca/articolo/ventimiglia-tenta-di-rubare-aggredendo-il-personale-di-un-negozio-fermato-dalla-polizia-locale-fo.html" } ],
+    lat: 43.7917623, lon: 7.6033131,
+    approssimato: true,
+    precisione: "via e numero civico non indicati dalla fonte; coordinate stimate riusando un punto già geocodato nel centro di Ventimiglia (geocoder non disponibile in questa sessione); età dell'uomo non riportata"
+  },
+  {
+    id: "genova-waterfront-mall-furti-27enne-carabinieri-fuori-servizio",
+    comune: "Genova, Foce — Waterfront Mall",
+    data: "2-3 ottobre 2026",
+    dataISO: "2026-10-02",
+    categoria: "altro",
+    titolo: "Furti in due negozi del Waterfront Mall, 27enne bloccato da carabinieri fuori servizio e arrestato",
+    descrizione: "Un uomo di 27 anni, dopo due furti in negozi del centro commerciale, è stato notato da tre militari liberi dal servizio mentre afferrava altri oggetti. Riuscito a uscire dal mall, è stato bloccato nel piazzale antistante; aveva con sé due giubbotti rubati. Portato in caserma, è stato arrestato e giudicato per direttissima.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/10/furti-waterfront-mall-27enne-arrestato-476657/" }, { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/10/03/leggi-notizia/argomenti/cronaca-5/articolo/beccato-a-rubare-al-waterfront-mall-27enne-arrestato-da-tre-carabinieri-fuori-servizio.html" } ],
+    lat: 44.3954784, lon: 8.9411245,
+    approssimato: false,
+    precisione: "centro commerciale indicato dalla fonte, coordinate già verificate in precedenza; la data esatta non è specificata dagli articoli, pubblicati il 3 ottobre mattina: si stima sia avvenuto tra il 2 e il 3 ottobre"
+  },
+  {
+    id: "genova-oregina-spedizione-punitiva-16enne-due-17enni",
+    comune: "Genova, Oregina",
+    data: "inizio settembre 2026 (arresti il 3 ottobre)",
+    dataISO: "2026-09-05",
+    categoria: "violenze",
+    titolo: "Spedizione punitiva contro un 16enne a Oregina: due 17enni in carcere minorile",
+    descrizione: "A inizio settembre due ragazzi di 17 anni avrebbero picchiato a calci e pugni un coetaneo di 16 anni, pretendendo mille euro come ritorsione per avere riferito ai carabinieri di aver ricevuto droga da loro; gli avrebbero poi sottratto portafoglio, catenina d'argento e cellulare. La vittima è stata medicata in ospedale con prognosi di 30 giorni. I due minorenni sono stati arrestati con accuse di rapina, tentata estorsione e lesioni e trasferiti all'istituto penale minorile di Torino.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/10/spedizione-punitiva-16enne-oregina-arresti-476660/" }, { nome: "La Voce di Genova", url: "https://www.lavocedigenova.it/2026/10/03/leggi-notizia/argomenti/cronaca-5/articolo/oregina-16enne-pestato-e-rapinato-da-due-coetanei-accusati-di-estorsione-due-arresti.html" } ],
+    lat: 44.4208, lon: 8.9315,
+    approssimato: true,
+    precisione: "le fonti indicano solo 'inizio settembre' per l'aggressione (data ISO stimata) e il 3 ottobre per gli arresti; strada non indicata, coordinate stimate sul quartiere di Oregina (geocoder non disponibile in questa sessione)"
+  },
+  {
+    id: "sestri-levante-via-aurelia-aggressione-quindicenne",
+    comune: "Sestri Levante (GE) — Via Aurelia",
+    data: "3 ottobre 2026",
+    dataISO: "2026-10-03",
+    categoria: "violenze",
+    titolo: "Quindicenne aggredito in Via Aurelia: due feriti, indagano i carabinieri",
+    descrizione: "Nella serata del 3 ottobre, intorno alle 21:56, un quindicenne è rimasto ferito in un'aggressione in Via Aurelia a Sestri Levante; una seconda persona è stata soccorsa. Entrambi sono stati portati al pronto soccorso di Lavagna (il ragazzo in codice giallo, l'altro in codice verde). Numero di persone coinvolte e circostanze non sono noti; i carabinieri hanno avviato le indagini.",
+    fonti: [ { nome: "Liguria24", url: "https://www.liguria24.it/2026/10/03/sestri-quindicenne-aggredito-due-i-feriti-intervenuti-i-carabinieri/874250/" } ],
+    lat: 44.2755, lon: 9.3935,
+    approssimato: true,
+    precisione: "numero civico non indicato dalla fonte; coordinate stimate sul centro di Sestri Levante lungo Via Aurelia (geocoder non disponibile in questa sessione); dinamica e responsabili non ancora noti"
+  },
 
 ];
