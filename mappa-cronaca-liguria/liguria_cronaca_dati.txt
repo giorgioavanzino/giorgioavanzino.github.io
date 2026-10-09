@@ -4390,4 +4390,18 @@ window.INCIDENTS_DATA = [
     precisione: "la fonte non indica la data esatta dei furti (articolo del 7 ottobre, data ISO stimata); coordinate stimate sull'area di Via Canneto il Curto/Darsena (geocoder non disponibile in questa sessione)"
   },
 
+  {
+    id: "pietra-ligure-lite-domestica-spinta-moglie-arrestato-50enne",
+    comune: "Pietra Ligure (SV) — abitazione di una coppia",
+    data: "2 ottobre 2026 (arresto reso noto l'8 ottobre 2026)",
+    dataISO: "2026-10-02",
+    categoria: "violenze",
+    titolo: "Spinge la moglie contro un mobile e la ferisce: arrestato 50enne",
+    descrizione: "Durante una lite domestica un uomo di 50 anni ha spinto con forza la moglie, anch'essa 50enne, contro un mobile facendola cadere. I vicini hanno chiamato i Carabinieri; la donna è stata ricoverata in ortopedia con lesioni giudicate guaribili in 30 giorni. L'uomo, già in affidamento in prova ai servizi sociali, è stato portato nel carcere di Imperia dopo la segnalazione all'Ufficio di Sorveglianza; le ipotesi di reato sono maltrattamenti in famiglia e lesioni personali.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/10/08/pietra-ligure-spintona-la-moglie-in-casa-e-la-ferisce-arrestato/" } ],
+    lat: 44.1456, lon: 8.2779,
+    approssimato: true,
+    precisione: "indirizzo non indicato dalla fonte; coordinate stimate sul centro di Pietra Ligure (geocoder non disponibile in questa sessione); la fonte descrive in modo non del tutto chiaro il provvedimento (fermo/ordine di carcerazione)"
+  },
+
 ];
