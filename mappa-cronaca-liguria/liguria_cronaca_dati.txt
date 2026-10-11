@@ -4403,5 +4403,18 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "indirizzo non indicato dalla fonte; coordinate stimate sul centro di Pietra Ligure (geocoder non disponibile in questa sessione); la fonte descrive in modo non del tutto chiaro il provvedimento (fermo/ordine di carcerazione)"
   },
+  {
+    id: "genova-sampierdarena-bus-amt-linea-1-aggressione-autista-vetro",
+    comune: "Genova, Sampierdarena — fermata tra Fiumara e Via Pacinotti (bus AMT linea 1)",
+    data: "9 ottobre 2026",
+    dataISO: "2026-10-09",
+    categoria: "violenze",
+    titolo: "Litiga con l'autista del bus AMT linea 1 e sfonda con un pugno il vetro della cabina: fermato dalla polizia",
+    descrizione: "Poco dopo le 20 un passeggero ha preteso di scendere dalla porta anteriore anziché da quella centrale; dal diverbio con l'autista è passato alle vie di fatto, sfondando con un pugno il vetro della cabina di guida. La corsa è stata interrotta e la polizia ha fermato l'uomo subito; secondo i sindacati è stato arrestato. L'autista, visibilmente scosso, è stato accompagnato al pronto soccorso per accertamenti senza lesioni gravi.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/10/aggressione-bus-amt-fiumara-477359/" }, { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/10/10/genova-tenta-di-aggredire-autista-amt-distrugge-vetrata-bus-730153/" } ],
+    lat: 44.4135, lon: 8.8885,
+    approssimato: true,
+    precisione: "fermata indicata in modo generico (tra Fiumara e Via Pacinotti); coordinate stimate sull'area Fiumara/Sampierdarena riusando punti già geocodati nella zona (geocoder non disponibile in questa sessione); età del passeggero non indicata; l'arresto è riferito dai sindacati, la fonte non parla di denuncia; data dell'episodio ricavata dall'articolo del 10 ottobre (venerdì sera)"
+  },
 
 ];
