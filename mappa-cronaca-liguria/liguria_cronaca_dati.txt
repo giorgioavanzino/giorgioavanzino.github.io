@@ -4417,4 +4417,18 @@ window.INCIDENTS_DATA = [
     precisione: "fermata indicata in modo generico (tra Fiumara e Via Pacinotti); coordinate stimate sull'area Fiumara/Sampierdarena riusando punti già geocodati nella zona (geocoder non disponibile in questa sessione); età del passeggero non indicata; l'arresto è riferito dai sindacati, la fonte non parla di denuncia; data dell'episodio ricavata dall'articolo del 10 ottobre (venerdì sera)"
   },
 
+  {
+    id: "manarola-furti-tabaccheria-supermercato-notte",
+    comune: "Manarola (Riomaggiore, SP) — tabaccheria e supermercato del borgo",
+    data: "11 ottobre 2026 (poco prima delle 5)",
+    dataISO: "2026-10-11",
+    categoria: "altro",
+    titolo: "Raid notturno a Manarola: svuotati i fondi cassa di una tabaccheria e di un supermercato",
+    descrizione: "Poco prima delle 5 del mattino ignoti hanno colpito una tabaccheria e un supermercato del paese portando via i fondi cassa; sono in corso verifiche su possibili furti anche in un bar e in alcuni ristoranti. I responsabili sarebbero fuggiti a piedi verso un parcheggio e non si esclude un mezzo ad attenderli. Una residente svegliata dai rumori ha chiamato il 112. Indagano i Carabinieri, che valutano un collegamento con i recenti furti a Vernazza.",
+    fonti: [ { nome: "Città della Spezia", url: "https://www.cittadellaspezia.com/2026/10/11/notte-di-furti-a-manarola-nel-mirino-finisco-diversi-esercizi-del-paese-675832/" } ],
+    lat: 44.1070, lon: 9.7280,
+    approssimato: true,
+    precisione: "via non indicata dalla fonte (solo 'vie principali del paese'); coordinate stimate sul centro di Manarola (geocoder non utilizzato); importo e metodo non noti; autori ignoti"
+  },
+
 ];
