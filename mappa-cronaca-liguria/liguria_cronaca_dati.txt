@@ -4431,4 +4431,32 @@ window.INCIDENTS_DATA = [
     precisione: "via non indicata dalla fonte (solo 'vie principali del paese'); coordinate stimate sul centro di Manarola (geocoder non utilizzato); importo e metodo non noti; autori ignoti"
   },
 
+  {
+    id: "genova-quezzi-maltrattamenti-compagna-balcone-katana-arresto-37enne",
+    comune: "Genova, Quezzi — abitazione di una coppia",
+    data: "10 ottobre 2026 (sabato sera; arresto in flagranza)",
+    dataISO: "2026-10-10",
+    categoria: "violenze",
+    titolo: "Maltrattamenti alla compagna per quasi tre anni, minacciata con una katana: arrestato 37enne",
+    descrizione: "Un uomo di 37 anni è stato arrestato in flagranza per maltrattamenti in famiglia aggravati dal fine di controllo e dominio sulla donna. Secondo il racconto della compagna 32enne, per quasi tre anni l'avrebbe controllata con telefonate continue e una telecamera in cucina e punita lasciandola di notte sul balcone al freddo, episodio che l'avrebbe portata al ricovero per polmonite. Sabato sera l'ha minacciata con una katana; la donna è fuggita in strada chiamando il 112 e, soccorsa in stato di shock, è stata dimessa dall'ospedale con 15 giorni di prognosi. L'udienza di convalida era attesa il 13 o 14 ottobre.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/10/maltrattamenti-verso-compagna-chiusa-sul-balcone-e-picchiata-arresto-477521/" }, { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/genova-la-costringeva-al-freddo-sul-balcone-fino-a-farla-ammalare-arrestato-il-compagno-le-minacce-con-una-katana/2026/10/12/1284317/" }, { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/10/12/genova-follia-a-quezzi-minaccia-la-compagna-e-la-fa-dormire-sul-terrazzo-arrestato/" } ],
+    lat: 44.4230, lon: 8.9600,
+    approssimato: true,
+    precisione: "via non indicata dalle fonti (solo quartiere Quezzi); coordinate stimate sul centro del quartiere (geocoder non utilizzato); data dell'ultimo episodio ricavata come 'sabato sera' dagli articoli del 12 ottobre; fatto in ambito domestico con intervento delle forze dell'ordine e arresto"
+  },
+
+  {
+    id: "genova-nervi-via-del-commercio-scippo-collanina-donna",
+    comune: "Genova, Nervi — Via del Commercio",
+    data: "12 ottobre 2026 (mattina)",
+    dataISO: "2026-10-12",
+    categoria: "rapine",
+    titolo: "Scippo a Nervi: strappa la collanina a una donna in strada e fugge, spintonato chi tenta di fermarlo",
+    descrizione: "In mattinata, davanti a diversi passanti, un uomo ha strappato di dosso la collanina a una donna che camminava in Via del Commercio ed è fuggito; un uomo che ha provato a fermarlo è stato spintonato. Nessun ferito. È intervenuta la Polizia di Stato, che sta visionando le immagini delle telecamere di sorveglianza della zona per identificare il responsabile.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/10/12/genova-scippo-nervi-donna-un-malvivente-scappato-indagini-730613/" } ],
+    lat: 44.3835, lon: 9.0360,
+    approssimato: true,
+    precisione: "coordinate stimate su Via del Commercio, Nervi (geocoder non utilizzato), numero civico non indicato; età della vittima e descrizione dell'autore non riportate; autore non identificato; fonte unica"
+  },
+
 ];
