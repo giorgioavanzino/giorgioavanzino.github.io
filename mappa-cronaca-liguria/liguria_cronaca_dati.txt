@@ -4501,4 +4501,32 @@ window.INCIDENTS_DATA = [
     precisione: "centro commerciale non nominato dalle fonti: coordinate stimate sul centro di Savona (geocoder non utilizzato); data 9/10 da Virgilio (articolo del 10/10)"
   },
 
+  {
+    id: "genova-via-ceccardi-rissa-bottiglie-tre-feriti",
+    comune: "Genova, centro — Via Ceccardi",
+    data: "17 ottobre 2026",
+    dataISO: "2026-10-17",
+    categoria: "violenze",
+    titolo: "Rissa a colpi di bottiglia in Via Ceccardi nella movida del sabato sera: tre feriti",
+    descrizione: "Intorno alle 23:30 il 112 ha ricevuto più segnalazioni di una rissa in Via Ceccardi, nel centro di Genova. Gli aggressori si sono colpiti con cocci di bottiglia: tre persone sono rimaste ferite e sono state medicate dal 118 e trasferite in tre diversi ospedali cittadini, dove alcune ferite profonde sono state suturate. Le forze dell'ordine indagano per ricostruire le cause della lite e individuare i responsabili; al momento non risultano arresti o denunce.",
+    fonti: [ { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/10/18/genova-rissa-con-feriti-in-via-ceccardi-731677/" } ],
+    lat: 44.4067, lon: 8.9345,
+    approssimato: true,
+    precisione: "via indicata, numero civico non noto: coordinate stimate su Via Ceccardi (geocoder non utilizzato); fonte unica"
+  },
+
+  {
+    id: "cavi-di-lavagna-bus-amt-704-ciclista-pugni-autista",
+    comune: "Lavagna (GE), Cavi Borgo — bus AMT linea 704",
+    data: "17 ottobre 2026",
+    dataISO: "2026-10-17",
+    categoria: "violenze",
+    titolo: "Cavi di Lavagna: ciclista insulta e tenta di colpire a pugni l'autista di un bus AMT, ferito alla mano",
+    descrizione: "Intorno alle 12:30 un ciclista ha approfittato del finestrino aperto di un autobus della linea 704 AMT, fermo a Cavi Borgo, per insultare il conducente e cercare di colpirlo al volto con più pugni. L'autista ha schivato i colpi ma si è procurato un trauma alla mano sinistra: medicato al Pronto Soccorso di Lavagna, distorsione con prognosi di 10 giorni. Le fonti non riportano denunce o arresti; i sindacati denunciano una situazione fuori controllo e sono in corso accertamenti.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/10/aggressione-autista-pugni-ciclista-lavagna-478113/" }, { nome: "LiguriaOggi", url: "https://liguriaoggi.it/2026/10/18/cavi-di-lavagna-autista-amt-aggredito-a-pugni-da-un-ciclista-indagini/" } ],
+    lat: 44.3150, lon: 9.3400,
+    approssimato: true,
+    precisione: "fermata di Cavi Borgo: coordinate stimate sulla frazione (geocoder non utilizzato); data 17/10 dedotta da 'ieri' nell'articolo del 18/10"
+  },
+
 ];
