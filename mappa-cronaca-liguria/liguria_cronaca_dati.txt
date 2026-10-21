@@ -4529,4 +4529,31 @@ window.INCIDENTS_DATA = [
     precisione: "fermata di Cavi Borgo: coordinate stimate sulla frazione (geocoder non utilizzato); data 17/10 dedotta da 'ieri' nell'articolo del 18/10"
   },
 
+  {
+    id: "genova-san-teodoro-maltrattamenti-madre-compagno-denaro-35enne",
+    comune: "Genova, San Teodoro — abitazione familiare",
+    data: "18-19 ottobre 2026 (reso noto il 20 ottobre 2026)",
+    dataISO: "2026-10-19",
+    categoria: "violenze",
+    titolo: "Minaccia e aggredisce la madre e il compagno di lei per ottenere denaro: denunciato 35enne",
+    descrizione: "Un uomo di 35 anni, convivente con la madre e il compagno di lei, li avrebbe minacciati e aggrediti per mesi per ottenere denaro. Tra il 18 e il 19 ottobre avrebbe sfasciato i mobili dell'appartamento, atteso la madre fuori casa per chiedere soldi e rientrato con una copia delle chiavi. Madre e compagno si sono trasferiti da parenti per paura. Dopo la denuncia i carabinieri lo hanno fermato in strada e accompagnato in ospedale per una valutazione psichiatrica; è stato denunciato a piede libero per maltrattamenti in famiglia e allontanato d'urgenza dall'abitazione su disposizione del PM.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/10/minaccia-e-aggredisce-ripetutamente-la-madre-e-il-compagno-per-avere-soldi-denunciato-35enne-478328/" } ],
+    lat: 44.4170, lon: 8.9170,
+    approssimato: true,
+    precisione: "via non indicata dalla fonte; coordinate stimate sul quartiere di San Teodoro (geocoder non utilizzato); episodi ripetuti per mesi, data indicata = ultimo episodio noto"
+  },
+  {
+    id: "genova-sestri-ponente-maltrattamenti-moglie-denuncia-figlia-44enne",
+    comune: "Genova, Sestri Ponente — abitazione familiare",
+    data: "sera del 19 ottobre 2026 (reso noto il 20 ottobre 2026)",
+    dataISO: "2026-10-19",
+    categoria: "violenze",
+    titolo: "Minaccia di colpire la moglie con una scopa: la figlia 17enne chiama il 112, denunciato 44enne",
+    descrizione: "La figlia 17enne si è chiusa in camera con la madre e ha chiamato il 112 perché il padre, 44 anni, minacciava di colpire la moglie con una scopa. La madre, con l'aiuto di un interprete, ha confermato anni di violenze e umiliazioni e di essere tenuta in casa; anche il figlio maggiore ha confermato. Intervenuti i carabinieri, l'uomo è stato denunciato a piede libero per maltrattamenti in famiglia e allontanato d'urgenza dalla casa su disposizione della procura.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/10/maltrattamenti-in-famiglia-operaio-denunciato-sestri-ponente-478312/" } ],
+    lat: 44.4260, lon: 8.8490,
+    approssimato: true,
+    precisione: "via non indicata dalla fonte; coordinate stimate sul centro di Sestri Ponente (geocoder non utilizzato); data dell'intervento dedotta dal provvedimento della 'sera precedente' la pubblicazione, maltrattamenti protratti negli anni"
+  },
+
 ];
