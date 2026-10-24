@@ -4555,5 +4555,18 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "via non indicata dalla fonte; coordinate stimate sul centro di Sestri Ponente (geocoder non utilizzato); data dell'intervento dedotta dal provvedimento della 'sera precedente' la pubblicazione, maltrattamenti protratti negli anni"
   },
+  {
+    id: "genova-sampierdarena-spaccata-sartoria-arresto-21enne",
+    comune: "Genova, Sampierdarena — sartoria",
+    data: "notte tra il 22 e il 23 ottobre 2026 (data dedotta dalla pubblicazione del 23 ottobre)",
+    dataISO: "2026-10-23",
+    categoria: "altro",
+    titolo: "Spaccata in una sartoria a Sampierdarena: fermato e arrestato un 21enne",
+    descrizione: "Un giovane di 21 anni è stato fermato nei pressi di una sartoria di Sampierdarena dove era stata effettuata una spaccata, mentre trasportava una macchina da cucire professionale e alcuni capi di abbigliamento. È stato arrestato.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/10/sampierdarena-spaccata-sartoria-arresto-478662/" } ],
+    lat: 44.4235, lon: 8.8935,
+    approssimato: true,
+    precisione: "via e orario non verificati (articolo non apribile, dettagli dal solo riassunto del feed); coordinate stimate sul centro di Sampierdarena (geocoder non utilizzato); data dedotta dalla pubblicazione"
+  },
 
 ];
