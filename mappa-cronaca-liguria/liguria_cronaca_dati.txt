@@ -4568,5 +4568,18 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "via e orario non verificati (articolo non apribile, dettagli dal solo riassunto del feed); coordinate stimate sul centro di Sampierdarena (geocoder non utilizzato); data dedotta dalla pubblicazione"
   },
+  {
+    id: "genova-cornigliano-pasticceria-rapina-impropria-arresto-33enne",
+    comune: "Genova, Cornigliano — pasticceria",
+    data: "24 ottobre 2026 (data dedotta dalla pubblicazione del 24 ottobre)",
+    dataISO: "2026-10-24",
+    categoria: "rapine",
+    titolo: "Cornigliano: ruba 120 euro dalla cassa di una pasticceria e strattona il personale, arrestato un 33enne",
+    descrizione: "Un uomo di 33 anni ha sottratto circa 120 euro dalla cassa di una pasticceria di Cornigliano strattonando il personale ed è stato arrestato per rapina impropria. Nella vicenda è stato arrestato per resistenza a pubblico ufficiale anche un 25enne.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/10/rapina-pasticceria-cornigliano-arresto-478792/" } ],
+    lat: 44.4150, lon: 8.8800,
+    approssimato: true,
+    precisione: "via e orario non verificati (articolo non apribile, dettagli dal solo riassunto del feed; ruolo del 25enne non chiarito); coordinate stimate sul centro di Cornigliano (geocoder non utilizzato); data dedotta dalla pubblicazione"
+  },
 
 ];
