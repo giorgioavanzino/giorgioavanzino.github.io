@@ -4581,5 +4581,18 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "via e orario non verificati (articolo non apribile, dettagli dal solo riassunto del feed; ruolo del 25enne non chiarito); coordinate stimate sul centro di Cornigliano (geocoder non utilizzato); data dedotta dalla pubblicazione"
   },
+  {
+    id: "genova-sampierdarena-villa-scassi-pronto-soccorso-guardia-giurata-pugno-44enne",
+    comune: "Genova, Sampierdarena — pronto soccorso Villa Scassi",
+    data: "24 ottobre 2026, sera (circa le 20:30)",
+    dataISO: "2026-10-24",
+    categoria: "violenze",
+    titolo: "Villa Scassi: pugno a una guardia giurata nella sala d'attesa del pronto soccorso, arrestato un 44enne",
+    descrizione: "Un uomo di 44 anni, apparentemente in stato di alterazione, si è presentato al pronto soccorso dicendo di essere stato aggredito in strada da uno sconosciuto e ha molestato altri pazienti. Invitato ad allontanarsi dalle due guardie giurate in servizio, ha colpito con un pugno al petto una di loro, che ha riportato sette giorni di prognosi. Intervenuta la Polizia di Stato, l'uomo è stato arrestato.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/villa-scassi-pugno-a-una-guardia-giurata-al-pronto-soccorso-arrestato/2026/10/25/1285368/" }, { nome: "Genova24", url: "https://www.genova24.it/2026/10/aggressione-guardia-giurata-villa-scassi-arresto-478840/" } ],
+    lat: 44.4188, lon: 8.8945,
+    approssimato: true,
+    precisione: "reato formale non specificato dalla fonte; articolo Genova24 non apribile (dettagli da Liguria Notizie); coordinate stimate sull'ospedale (geocoder non utilizzato)"
+  },
 
 ];
