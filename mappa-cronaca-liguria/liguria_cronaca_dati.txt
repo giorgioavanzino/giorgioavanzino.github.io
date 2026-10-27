@@ -4594,5 +4594,18 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "reato formale non specificato dalla fonte; articolo Genova24 non apribile (dettagli da Liguria Notizie); coordinate stimate sull'ospedale (geocoder non utilizzato)"
   },
+  {
+    id: "genova-molassana-via-merello-truffatori-tentano-investire-poliziotto-spari",
+    comune: "Genova, Molassana — Via Lungobisagno d'Istria / Via Merello",
+    data: "26 ottobre 2026, pomeriggio",
+    dataISO: "2026-10-26",
+    categoria: "altro",
+    titolo: "Molassana: due sospetti truffatori di anziani tentano di investire un poliziotto, che spara alle ruote dell'auto; fuga a piedi",
+    descrizione: "Al mattino due uomini avevano tentato tre truffe ad anziani nel quartiere di Castelletto con il metodo dei finti tecnici del gas, riuscendone una. La Squadra Mobile ha individuato la loro auto in Val Bisagno e l'ha bloccata; quando un agente è sceso, i due hanno cercato di investirlo ed è fuggito. L'agente, evitato l'impatto, ha sparato alcuni colpi alle ruote. L'auto è stata abbandonata in Via Merello dopo una corsa ad alta velocità anche contromano e i due si sono dati alla fuga a piedi; parte della refurtiva è stata recuperata. Al momento della pubblicazione non risultavano arresti.",
+    fonti: [ { nome: "Genova24", url: "https://www.genova24.it/2026/10/inseguimento-sparatoria-molassana-genova-polizia-478931/" } ],
+    lat: 44.4510, lon: 8.9600,
+    approssimato: true,
+    precisione: "fatto di strada più truffe in abitazione; coordinate stimate su Molassana (Via Merello) senza geocoder; nessun arresto al momento della fonte"
+  },
 
 ];
