@@ -4608,4 +4608,18 @@ window.INCIDENTS_DATA = [
     precisione: "fatto di strada più truffe in abitazione; coordinate stimate su Molassana (Via Merello) senza geocoder; nessun arresto al momento della fonte"
   },
 
+  {
+    id: "ventimiglia-greto-roja-via-tenda-migrante-ferito-bastoni",
+    comune: "Ventimiglia (IM) — greto del Roja, Via Tenda",
+    data: "28 ottobre 2026, sera",
+    dataISO: "2026-10-28",
+    categoria: "violenze",
+    titolo: "Ventimiglia: migrante ferito nel greto del Roja, aggressori armati di bastoni in fuga",
+    descrizione: "Alcuni residenti hanno segnalato alle forze dell'ordine la presenza di persone armate di bastoni in un'area di sosta vicino al greto del Roja e le grida di aiuto di un uomo. La vittima, un migrante di cui non è riportata l'età, è stata soccorsa e portata all'ospedale Borea di Sanremo in codice giallo con ferite di media gravità. Polizia locale e carabinieri hanno cercato gli aggressori; al momento della pubblicazione non risultavano arresti né identificazioni.",
+    fonti: [ { nome: "Riviera24", url: "https://www.riviera24.it/2026/10/ventimiglia-migrante-ferito-nel-greto-del-roja-e-caccia-agli-aggressori-981581/" } ],
+    lat: 43.7875, lon: 7.6080,
+    approssimato: true,
+    precisione: "coordinate stimate sul greto del Roja all'altezza di Via Tenda senza geocoder; numero e identità degli aggressori non noti; nessun arresto al momento della fonte"
+  },
+
 ];
