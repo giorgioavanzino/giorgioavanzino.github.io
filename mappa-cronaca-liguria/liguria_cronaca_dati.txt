@@ -4622,4 +4622,30 @@ window.INCIDENTS_DATA = [
     precisione: "coordinate stimate sul greto del Roja all'altezza di Via Tenda senza geocoder; numero e identità degli aggressori non noti; nessun arresto al momento della fonte"
   },
 
+  {
+    id: "genova-via-del-campo-rapina-portafoglio-luglio-arresto-due",
+    comune: "Genova, centro storico — Via del Campo",
+    data: "11 luglio 2026 (arresti resi noti il 31 ottobre)",
+    dataISO: "2026-07-11",
+    categoria: "rapine",
+    titolo: "Via del Campo: pugno al volto e rapina di collane e cellulare a un 36enne, arrestati due uomini di 47 e 35 anni",
+    descrizione: "Un uomo di 36 anni, dopo aver perso il portafoglio, è stato avvicinato da due uomini che lo hanno preso; uno dei due lo ha colpito al volto e gli ha sottratto due collane e il cellulare. Con la carta prepagata della vittima hanno poi effettuato pagamenti per circa 130 euro in una tabaccheria. Identificati tramite le telecamere cittadine e del negozio, i due (47 e 35 anni) sono stati arrestati dai Carabinieri di Genova Maddalena in esecuzione di un'ordinanza di custodia cautelare in carcere, con le accuse di rapina aggravata in concorso e indebito utilizzo di strumenti di pagamento. Gravi indizi di colpevolezza, non condanna.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/rapina-in-via-del-campo-senegalese-e-marocchino-arrestati-dai-carabinieri/2026/10/31/1285749/" }, { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/73089-furto-portafoglio-collane-arrestati-genova.html" } ],
+    lat: 44.4124188, lon: 8.9282299,
+    approssimato: false,
+    precisione: "data del fatto 11 luglio (anno dedotto dalla pubblicazione del 31 ottobre 2026); coordinate riutilizzate da fatti già geocodati in Via del Campo"
+  },
+  {
+    id: "genova-bolzaneto-autobus-tentata-rapina-collana-settembre-arresto-due",
+    comune: "Genova, Bolzaneto — salita su un autobus",
+    data: "14 settembre 2026 (arresti resi noti il 31 ottobre)",
+    dataISO: "2026-09-14",
+    categoria: "rapine",
+    titolo: "Bolzaneto: tentano di strappare una collana d'oro a un giovane sull'autobus, arrestati due ragazzi di 18 e 21 anni",
+    descrizione: "Mentre un giovane saliva su un autobus a Bolzaneto, due persone, aiutate da una terza non ancora rintracciata, hanno tentato di strappargli una collana d'oro, causandogli escoriazioni al collo. Identificati dalle riprese delle telecamere del mezzo, i due (18 e 21 anni) sono stati raggiunti da un'ordinanza di custodia cautelare in carcere eseguita dai Carabinieri della Compagnia di Sampierdarena, con le accuse di tentata rapina e lesioni aggravate in concorso.",
+    fonti: [ { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/73089-furto-portafoglio-collane-arrestati-genova.html" } ],
+    lat: 44.458679, lon: 8.901468,
+    approssimato: true,
+    precisione: "fermata/via esatta non indicata dalla fonte; coordinate riusate dal centro di Bolzaneto già geocodato; data del fatto 14 settembre (anno dedotto dalla pubblicazione)"
+  },
 ];
