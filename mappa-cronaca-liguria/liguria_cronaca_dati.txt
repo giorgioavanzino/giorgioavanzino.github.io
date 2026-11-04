@@ -4648,4 +4648,30 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "fermata/via esatta non indicata dalla fonte; coordinate riusate dal centro di Bolzaneto già geocodato; data del fatto 14 settembre (anno dedotto dalla pubblicazione)"
   },
+  {
+    id: "rapallo-treno-tentata-rapina-collana-studentessa-21enne-minore-arrestato",
+    comune: "Rapallo — treno verso il Levante, stazione di Rapallo",
+    data: "29 ottobre 2026",
+    dataISO: "2026-10-29",
+    categoria: "rapine",
+    titolo: "Rapallo: tenta di strappare la collana a una 21enne sul treno, arrestato un 17enne",
+    descrizione: "Su un treno diretto verso il Levante, un minorenne di 17 anni ha afferrato la collana d'oro di una studentessa di 21 anni, che si è divincolata chiamando aiuto riportando lesioni al collo; altri due giovani avrebbero fatto da \"palo\" impedendole di allontanarsi, fuggendo prima dell'arrivo della polizia. Alcuni passeggeri sono intervenuti bloccando il giovane, che ha restituito la collana. Gli agenti del commissariato di Rapallo lo hanno arrestato sul convoglio; per disposizione della procura per i minorenni è stato portato in un centro di prima accoglienza in attesa della convalida.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/insicurezza-rapina-una-21enne-genovese-sul-treno-minore-straniero-arrestato/2026/11/02/1285943/" } ],
+    lat: 44.3496, lon: 9.2339,
+    approssimato: true,
+    precisione: "data del fatto dedotta da 'giovedì scorso' nell'articolo del 2 novembre; punto stimato manualmente sulla stazione di Rapallo (geocoder non utilizzato)"
+  },
+  {
+    id: "genova-galleria-mameli-scooter-rubato-calci-37enne-arrestato",
+    comune: "Genova — Galleria Mameli",
+    data: "notte tra il 2 e il 3 novembre 2026",
+    dataISO: "2026-11-03",
+    categoria: "altro",
+    titolo: "Genova: prende a calci uno scooter appena rubato, 37enne arrestato per furto aggravato",
+    descrizione: "Un uomo di 37 anni, ubriaco e con addosso il casco, ha preso a calci uno scooter che è caduto contro un'auto in sosta in Galleria Mameli. Segnalato da un passante, è stato rintracciato dalla polizia: lo scooter era stato appena rubato e il casco indossato proviene dal mezzo stesso. Arrestato per furto aggravato e denunciato per danneggiamento, era già stato segnalato la stessa notte per essersi introdotto senza autorizzazione su un'imbarcazione ormeggiata al Porto Antico.",
+    fonti: [ { nome: "Liguria Notizie", url: "https://www.ligurianotizie.it/genova-prende-a-calci-uno-scooter-per-rabbia-37enne-arrestato/2026/11/03/1287420/" } ],
+    lat: 44.4072, lon: 8.9387,
+    approssimato: true,
+    precisione: "punto stimato manualmente su Galleria Mameli (geocoder non utilizzato); data indicata come notte precedente alla pubblicazione del 3 novembre"
+  },
 ];
