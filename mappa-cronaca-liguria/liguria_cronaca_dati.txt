@@ -4674,4 +4674,17 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "punto stimato manualmente su Galleria Mameli (geocoder non utilizzato); data indicata come notte precedente alla pubblicazione del 3 novembre"
   },
+  {
+    id: "genova-vico-santa-fede-rapina-aggressione-60-giorni-prognosi-fermato-37enne",
+    comune: "Genova — vico Santa Fede (centro storico)",
+    data: "notte tra il 2 e il 3 novembre 2026",
+    dataISO: "2026-11-03",
+    categoria: "rapine",
+    titolo: "Genova, centro storico: rapinato e picchiato in vico Santa Fede, 60 giorni di prognosi; fermato un 37enne e denunciato un 44enne",
+    descrizione: "Un uomo, mentre cammina nel vicolo, viene avvicinato da due persone che gli chiedono denaro; viene poi aggredito, fatto cadere a terra e derubato di orologio e portafoglio. Le lesioni sono giudicate guaribili in 60 giorni, salvo complicazioni. La Squadra Mobile, anche grazie alle telecamere di videosorveglianza, individua i presunti responsabili: un 37enne, con precedenti, è sottoposto a fermo di polizia giudiziaria per rapina e lesioni aggravate e portato in carcere; un 44enne è denunciato per gli stessi reati. Vale la presunzione di innocenza.",
+    fonti: [ { nome: "Lavocedigenova", url: "https://www.lavocedigenova.it/2026/11/07/leggi-notizia/argomenti/cronaca-5/articolo/centro-storico-rapina-con-aggressione-in-piazza-santa-fede-identificati-due-presunti-responsabili.html" }, { nome: "Genova Quotidiana", url: "https://genovaquotidiana.com/2026/11/07/picchiato-e-rapinato-in-vico-santa-fede-un-fermo-e-una-denuncia/" }, { nome: "Liguria24", url: "https://www.liguria24.it/2026/11/06/violenta-rapina-in-centro-storico-40enne-finisce-in-ospedale-con-60-giorni-di-prognosi/879891" } ],
+    lat: 44.4079, lon: 8.9297,
+    approssimato: true,
+    precisione: "punto stimato manualmente su vico Santa Fede (geocoder non utilizzato); l'evento risale alla notte 2-3 novembre, le fonti sono state pubblicate il 6-7 novembre; età della vittima riportata come 40 anni da una sola fonte (non verificata nelle altre)"
+  },
 ];
