@@ -4771,4 +4771,18 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "fonte di dettaglio limitato (rassegna settimanale dei Carabinieri del 2-8 novembre, senza data esatta): usato l'8 novembre come stima; articolo LiguriaOggi non leggibile in questa sessione — punto stimato manualmente sull'ospedale Santa Corona (geocoder non disponibile in questa sessione)",
   },
+  {
+    id: "genova-campi-certosa-rissa-giovanissimi-bastoni-coltelli-denunciati-14enne-15enne",
+    comune: "Genova — quartieri di Campi e Certosa (Valpolcevera)",
+    data: "10 novembre 2026, pomeriggio",
+    dataISO: "2026-11-10",
+    categoria: "violenze",
+    titolo: "Genova, Campi e Certosa: rissa tra una decina di giovanissimi armati di bastoni e coltelli, denunciati un 14enne e un 15enne",
+    descrizione: "Nel primo pomeriggio una decina di giovanissimi si è affrontata in strada tra i quartieri di Campi e Certosa a colpi di calci, pugni, bastoni e coltelli. Le volanti della Polizia, chiamate dai passanti, hanno trovato la maggior parte dei ragazzi già in fuga; due minorenni stranieri di 14 e 15 anni sono stati fermati, identificati e denunciati alla Procura per i minorenni, con sequestro dei coltelli che avevano con sé. La Squadra mobile sta analizzando le immagini delle telecamere per identificare gli altri partecipanti. Feriti non riferiti dalle fonti. Vale la presunzione di innocenza.",
+    fonti: [{ nome: "ANSA Liguria", url: "https://www.ansa.it/liguria/notizie/2026/11/11/rissa-tra-giovanissimi-a-genova-con-bastoni-e-coltelli-due-denunciati_71529374-781c-4f18-9885-f2a07eba1146.html" }, { nome: "Ilnazionale.it", url: "https://ilnazionale.it/2026/11/11/leggi-notizia/argomenti/cronaca-6/articolo/rissa-tra-giovanissimi-nei-quartieri-di-campi-e-certosa-erano-armati-con-bastoni-e-coltelli-due-de.html" }, { nome: "104 News", url: "https://www.104news.it/2026/11/11/genova-rissa-tra-giovanissimi-due-denunciati/" }],
+    lat: 44.428,
+    lon: 8.891,
+    approssimato: true,
+    precisione: "data dedotta (articoli dell'11 novembre riferiti al pomeriggio precedente); le fonti non indicano vie precise né se ci siano feriti — punto stimato manualmente tra i quartieri di Campi e Certosa (geocoder non usato in questa sessione)",
+  },
 ];
