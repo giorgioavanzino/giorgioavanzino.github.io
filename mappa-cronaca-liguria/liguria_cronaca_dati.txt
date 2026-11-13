@@ -4785,4 +4785,18 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "data dedotta (articoli dell'11 novembre riferiti al pomeriggio precedente); le fonti non indicano vie precise né se ci siano feriti — punto stimato manualmente tra i quartieri di Campi e Certosa (geocoder non usato in questa sessione)",
   },
+  {
+    id: "imperia-centro-supermercato-gin-felpa-spintona-direttore-rapina-impropria-arrestato-33enne",
+    comune: "Imperia — supermercato del centro (nome e via non indicati dalla fonte)",
+    data: "6 novembre 2026",
+    dataISO: "2026-11-06",
+    categoria: "rapine",
+    titolo: "Imperia: nasconde una bottiglia di gin sotto la felpa e spintona il direttore del supermercato, arrestato un 33enne per rapina impropria",
+    descrizione: "In serata, in un supermercato del centro di Imperia, un uomo di 33 anni senza fissa dimora ha pagato alle casse solo alcuni generi alimentari, tenendo nascosta sotto la felpa una bottiglia di gin. Scoperto dal personale, ha spintonato il direttore per tenersi la merce e fuggire. I Carabinieri della Sezione Radiomobile, chiamati dai dipendenti, lo hanno bloccato pochi minuti dopo e arrestato per rapina impropria; il giorno successivo il Tribunale di Imperia ha convalidato l'arresto disponendo la custodia cautelare in carcere. Vale la presunzione di innocenza.",
+    fonti: [{ nome: "Riviera24", url: "https://www.riviera24.it/2026/11/nasconde-il-gin-sotto-la-felpa-e-spintona-il-direttore-del-supermercato-arrestato-33enne-983281" }, { nome: "Riviera Time", url: "https://www.rivieratime.news/imperia-ruba-gin-al-supermercato-e-spintona-il-direttore-in-carcere-un-33enne/" }, { nome: "Prima la Riviera", url: "https://primalariviera.it/cronaca/tenta-di-rubare-una-bottiglia-di-gin-in-un-supermarket-arrestato-dai-carabinieri/" }],
+    lat: 43.8895559,
+    lon: 8.0393926,
+    approssimato: true,
+    precisione: "articolo pubblicato il 12 novembre ma riferito alla sera del 6 novembre; supermercato e via non indicati dalla fonte (solo 'centro di Imperia') — coordinate stimate riusando un punto già geocodato in piazza Dante, Oneglia (geocoder non usato in questa sessione)",
+  },
 ];
