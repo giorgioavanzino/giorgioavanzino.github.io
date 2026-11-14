@@ -4799,4 +4799,18 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "articolo pubblicato il 12 novembre ma riferito alla sera del 6 novembre; supermercato e via non indicati dalla fonte (solo 'centro di Imperia') — coordinate stimate riusando un punto già geocodato in piazza Dante, Oneglia (geocoder non usato in questa sessione)",
   },
+  {
+    id: "genova-levante-finto-carabiniere-impronte-coppia-anziani-20mila-euro-24enne-custodia-cautelare",
+    comune: "Genova — Levante genovese (abitazione, via non indicata dalla fonte)",
+    data: "agosto 2026 (giorno non indicato)",
+    dataISO: "2026-08-15",
+    categoria: "altro",
+    titolo: "Genova, Levante: finto carabiniere ruba 20mila euro di gioielli a una coppia di anziani con la scusa delle impronte digitali; misura cautelare per un 24enne",
+    descrizione: "Una coppia di coniugi di 89 e 88 anni è stata contattata al telefono da un uomo che si è finto carabiniere, sostenendo che un'auto intestata a loro fosse stata usata per una rapina e invitandoli a radunare denaro e gioielli in attesa di un perito. Poco dopo un giovane si è presentato alla porta con il pretesto di dover prendere le impronte digitali, ha convinto i due anziani ad allontanarsi per qualche minuto dall'appartamento e ne ha approfittato per portare via gioielli per circa 20mila euro e 320 euro in contanti. I Carabinieri del Nucleo Operativo della Compagnia di San Martino lo hanno identificato attraverso l'analisi dei tabulati telefonici e telematici e delle immagini di videosorveglianza: si tratta di un 24enne, al quale il gip di Genova ha applicato la custodia cautelare in carcere per furto in abitazione, notificata nel carcere di Santa Maria Capua Vetere dove era già detenuto per altra causa. Vale la presunzione di innocenza.",
+    fonti: [ { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/73588-genova-finto-carabiniere-furto-gioielli-anziani-24enne.html" }, { nome: "104 News", url: "https://www.104news.it/2026/11/13/genova-aveva-derubato-due-anziani-di-gioielli-e-contanti-con-la-truffa-del-finti-carabiniere-identificato-24-enne/" }, { nome: "GenovaToday", url: "https://www.genovatoday.it/cronaca/truffa-anziani-finto-carabiniere-furto-gioielli-arresto.html" } ],
+    lat: 44.4053,
+    lon: 8.9707,
+    approssimato: true,
+    precisione: "notizia pubblicata il 13 novembre 2026 ma riferita a un episodio dello scorso agosto, giorno non indicato dalla fonte — assegnata una data indicativa a metà mese; la fonte indica solo il 'levante genovese' senza via né quartiere — coordinate stimate manualmente sul quartiere di San Martino (sede della Compagnia Carabinieri che ha condotto le indagini), geocoder non usato in questa sessione; GenovaToday non accessibile direttamente, contenuto verificato tramite Primocanale e 104 News",
+  },
 ];
