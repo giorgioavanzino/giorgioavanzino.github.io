@@ -4813,4 +4813,18 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "notizia pubblicata il 13 novembre 2026 ma riferita a un episodio dello scorso agosto, giorno non indicato dalla fonte — assegnata una data indicativa a metà mese; la fonte indica solo il 'levante genovese' senza via né quartiere — coordinate stimate manualmente sul quartiere di San Martino (sede della Compagnia Carabinieri che ha condotto le indagini), geocoder non usato in questa sessione; GenovaToday non accessibile direttamente, contenuto verificato tramite Primocanale e 104 News",
   },
+  {
+    id: "genova-scalinata-borghese-albaro-ristorante-sushi-tentato-furto-dipendenti-aggrediti-arrestato-ricercato",
+    comune: "Genova — Scalinata Borghese (Albaro/Foce)",
+    data: "13 novembre 2026 (notte)",
+    dataISO: "2026-11-13",
+    categoria: "rapine",
+    titolo: "Genova, Albaro: tenta il furto in un ristorante di sushi alle 3 di notte e aggredisce i dipendenti che lo inseguono; arrestato, era ricercato con mandato europeo",
+    descrizione: "Intorno alle tre di notte un uomo è entrato in un ristorante di sushi in Scalinata Borghese, probabilmente convinto che il locale fosse ormai vuoto. Alcuni dipendenti erano però ancora al lavoro e hanno cercato di fermarlo: l'uomo è fuggito e, inseguito dal personale, ha reagito con violenza ferendo due dipendenti. Bloccato e identificato, è risultato destinatario di un mandato di arresto europeo emesso dalle autorità tedesche per reati contro il patrimonio: è stato arrestato e trasferito nel carcere di Marassi a disposizione dell'autorità giudiziaria. Vale la presunzione di innocenza.",
+    fonti: [ { nome: "Primocanale", url: "https://www.primocanale.it/cronaca/73589-genova-furto-ristorante-sushi-dipendenti-feriti-ricercato-europa.html" }, { nome: "GenovaToday", url: "https://www.genovatoday.it/cronaca/furto-ristorante-albaro-aggressione.html" } ],
+    lat: 44.4019,
+    lon: 8.9551,
+    approssimato: false,
+    precisione: "notizia pubblicata il 13 novembre 2026; la fonte indica solo 'alle tre di notte' senza specificare il giorno — assegnata la data di pubblicazione (probabile notte tra il 12 e il 13 novembre); età dell'arrestato ed entità delle lesioni dei due dipendenti non indicate dalla fonte; coordinate geocodificate con Nominatim su Scalinata Borghese (Foce/Albaro), civico del locale non indicato; GenovaToday non accessibile direttamente, contenuto verificato tramite Primocanale",
+  },
 ];
