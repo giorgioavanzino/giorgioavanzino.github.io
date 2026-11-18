@@ -4883,4 +4883,50 @@ window.INCIDENTS_DATA = [
     approssimato: true,
     precisione: "furto avvenuto a bordo di un treno in movimento sulla linea Genova–Sestri Levante, tratto non indicato; le fonti non nominano la località del rintraccio ('una cittadina rivierasca') — coordinate collocate in modo indicativo sulla stazione di Santa Margherita Ligure (punto già geocodificato con Nominatim in una scheda precedente), sede dei carabinieri che hanno condotto l'indagine; notizia pubblicata il 16 novembre 2026",
   },
+  {
+    "id": "genova-brignole-piazza-verdi-lavoratore-amt-accerchiato-picchiato-rapinato-gruppo-giovani",
+    "comune": "Genova — piazza Verdi, area della stazione di Brignole (postazioni dei lavoratori Amt)",
+    "data": "16 novembre 2026, sera",
+    "dataISO": "2026-11-16",
+    "categoria": "rapine",
+    "titolo": "Genova, Brignole: lavoratore Amt accerchiato da un gruppo di giovani, preso a calci e pugni e rapinato",
+    "descrizione": "La sera del 16 novembre, poco dopo la fine del turno, un lavoratore impiegato per Amt (secondo alcune fonti dipendente dell'azienda, secondo altre di una ditta esterna che opera per Amt) è stato accerchiato da un gruppo di giovani nella zona delle postazioni Amt in piazza Verdi, nei pressi della stazione di Brignole. Secondo la ricostruzione della vittima gli aggressori sarebbero stati almeno una decina: uno lo avrebbe colpito con un pugno mentre un altro gli strappava il borsello; altre fonti riferiscono di calci e pugni e del furto di portafoglio e telefono. L'uomo, caduto a terra, ha chiamato il 112: sono intervenuti i carabinieri del Radiomobile, ma il gruppo si era già allontanato. Soccorso e portato in ospedale, ha riportato una prognosi di 10 giorni. La vittima ha presentato denuncia; al momento non risultano persone identificate. Il sindacato Ugl Autoferrotranvieri ha denunciato la mancanza di sicurezza nell'area.",
+    "fonti": [
+      {
+        "nome": "Primocanale",
+        "url": "https://www.primocanale.it/cronaca/73720-operaio-amt-aggredito-rapinato-brignole-ugl-sciopero.html"
+      },
+      {
+        "nome": "GenovaQuotidiana",
+        "url": "https://genovaquotidiana.com/2026/11/17/aggredito-e-rapinato-alluscita-di-brignole-ugl-siamo-stanchi-delle-chiacchiere/"
+      },
+      {
+        "nome": "GenovaToday",
+        "url": "https://www.genovatoday.it/cronaca/aggressione-lavoratore-amt-brignole.html"
+      }
+    ],
+    "lat": 44.4060373,
+    "lon": 8.9469279,
+    "approssimato": true,
+    "precisione": "coordinate di piazza Giuseppe Verdi (Brignole) geocodificate con Nominatim; il punto esatto dell'aggressione nell'area non è indicato. Le fonti divergono su alcuni dettagli (dipendente Amt o di ditta esterna; bottino: borsello oppure portafoglio e telefono; numero degli aggressori indicato solo dalla vittima). Data dedotta dal 'ieri sera' degli articoli del 17 novembre 2026; GenovaToday citata senza verifica diretta del testo"
+  },
+  {
+    "id": "genova-sampierdarena-giardini-ansaldo-meccanico-rissa-giovani-spranghe-segnalata",
+    "comune": "Genova — giardini Ansaldo Meccanico, Sampierdarena (vicino alla stazione)",
+    "data": "16 novembre 2026, tardo pomeriggio",
+    "dataISO": "2026-11-16",
+    "categoria": "violenze",
+    "titolo": "Genova, Sampierdarena: segnalata una rissa tra una quindicina di giovani armati di spranghe ai giardini Ansaldo Meccanico",
+    "descrizione": "Nel tardo pomeriggio del 16 novembre diverse telefonate al 112 hanno segnalato una rissa tra circa 15 giovani tra i 16 e i 20 anni, armati di spranghe, ai giardini Ansaldo Meccanico di Sampierdarena, vicino alla stazione ferroviaria. All'arrivo dei carabinieri i partecipanti si erano già allontanati. Intorno alla mezzanotte altre chiamate hanno segnalato una seconda rissa in piazza Vittorio Veneto, anche in quel caso senza trovare nessuno sul posto; secondo la fonte in uno dei due episodi sarebbe comparso anche un machete. Non risultano feriti né persone identificate; sono in corso accertamenti per ricostruire i fatti.",
+    "fonti": [
+      {
+        "nome": "Primocanale",
+        "url": "https://www.primocanale.it/cronaca/73698-genova-sampierdarena-due-risse-giovani-spranghe-machete-carabinieri.html"
+      }
+    ],
+    "lat": 44.4140418,
+    "lon": 8.8824912,
+    "approssimato": false,
+    "precisione": "coordinate dei giardini Ansaldo Meccanico geocodificate con Nominatim. Fatti noti solo da segnalazioni al 112: i carabinieri non hanno trovato i partecipanti, quindi la dinamica non è verificata; il secondo episodio (piazza Vittorio Veneto, 44.41174, 8.88827, intorno a mezzanotte) è citato nella descrizione ma non ha scheda autonoma per scarsità di dettagli; fonte unica"
+  },
 ];
