@@ -4929,4 +4929,27 @@ window.INCIDENTS_DATA = [
     "approssimato": false,
     "precisione": "coordinate dei giardini Ansaldo Meccanico geocodificate con Nominatim. Fatti noti solo da segnalazioni al 112: i carabinieri non hanno trovato i partecipanti, quindi la dinamica non è verificata; il secondo episodio (piazza Vittorio Veneto, 44.41174, 8.88827, intorno a mezzanotte) è citato nella descrizione ma non ha scheda autonoma per scarsità di dettagli; fonte unica"
   },
+  {
+    "id": "sanremo-lungomare-calvino-tentato-furto-auto-in-sosta-punta-trapano-arrestato-51enne",
+    "comune": "Sanremo (IM) — Lungomare Italo Calvino, area di parcheggio",
+    "data": "14 novembre 2026, pomeriggio",
+    "dataISO": "2026-11-14",
+    "categoria": "altro",
+    "titolo": "Sanremo: forza il deflettore di un'auto in sosta sul lungomare Calvino con una punta da trapano, arrestato un 51enne",
+    "descrizione": "Nel pomeriggio di sabato 14 novembre gli agenti del commissariato di Sanremo, che stavano tenendo sotto osservazione l'area di parcheggio del lungomare Italo Calvino, hanno notato un uomo di 51 anni aggirarsi tra le auto in sosta. L'uomo ha rotto il deflettore di un finestrino con una punta da trapano, ha aperto la portiera e ha iniziato a rovistare nel cruscotto, venendo bloccato dagli agenti. Già noto per reati contro il patrimonio, è stato arrestato in flagranza per tentato furto aggravato su autovettura; il tribunale di Imperia ha convalidato l'arresto disponendo il divieto di dimora in provincia di Imperia. È stato inoltre denunciato per il possesso della punta da trapano e per violazioni della normativa sull'immigrazione.",
+    "fonti": [
+      {
+        "nome": "Riviera24",
+        "url": "https://www.riviera24.it/2026/11/sanremo-sorpreso-a-rubare-su-unauto-in-sosta-arrestato-51enne-983993"
+      },
+      {
+        "nome": "Riviera Time",
+        "url": "https://www.rivieratime.news/serie-di-furti-sulle-auto-in-sosta-a-sanremo-la-polizia-arresta-un-51enne/"
+      }
+    ],
+    "lat": 43.8137872,
+    "lon": 7.7725634,
+    "approssimato": true,
+    "precisione": "coordinate del Lungomare Italo Calvino geocodificate con Nominatim; la fonte non indica il punto esatto del parcheggio lungo la passeggiata, quindi la posizione è indicativa. Notizia pubblicata il 19 novembre, data dell'evento (14 novembre) dalla fonte"
+  },
 ];
