@@ -4952,4 +4952,42 @@ window.INCIDENTS_DATA = [
     "approssimato": true,
     "precisione": "coordinate del Lungomare Italo Calvino geocodificate con Nominatim; la fonte non indica il punto esatto del parcheggio lungo la passeggiata, quindi la posizione è indicativa. Notizia pubblicata il 19 novembre, data dell'evento (14 novembre) dalla fonte"
   },
+  {
+    "id": "genova-sampierdarena-palateknoship-concerto-spray-peperoncino-furti-collanine",
+    "comune": "Genova, Sampierdarena — PalaTeknoship (Lungomare Canepa, Fiumara)",
+    "data": "19 novembre 2026, sera (intorno alle 23)",
+    "dataISO": "2026-11-19",
+    "categoria": "rapine",
+    "titolo": "Genova, Sampierdarena: spray al peperoncino tra il pubblico di un concerto al PalaTeknoship, testimoni parlano di collanine strappate",
+    "descrizione": "Nella serata di giovedì 19 novembre, durante il concerto di un trapper al PalaTeknoship di Sampierdarena davanti a centinaia di ragazzi, anche giovanissimi, qualcuno tra il pubblico ha spruzzato dello spray al peperoncino, costringendo l'artista a interrompere lo spettacolo. Secondo diversi testimoni lo spray sarebbe stato usato per strappare collanine e gioielli ad alcuni presenti. Il concerto si è concluso intorno alle 23. Non risultano malori o problemi respiratori legati allo spray, né arresti o denunce al momento della pubblicazione.",
+    "fonti": [
+      {
+        "nome": "Primocanale",
+        "url": "https://www.primocanale.it/cronaca/73824-concerto-shiva-spray-peperoncino-palateknoship-furti-gioielli.html"
+      }
+    ],
+    "lat": 44.4124251,
+    "lon": 8.8799605,
+    "approssimato": false,
+    "precisione": "coordinate del PalaTeknoship geocodificate con Nominatim. Fonte unica: i furti di gioielli sono riferiti da testimoni e non risultano confermati dalle forze dell'ordine; nessun autore identificato e nessuna indicazione su età o numero dei responsabili"
+  },
+  {
+    "id": "savona-centro-tenta-furto-auto-spintona-proprietario-tentata-rapina-impropria-denunciato-26enne",
+    "comune": "Savona — centro cittadino (via non indicata dalla fonte)",
+    "data": "novembre 2026 (data esatta non indicata; notizia del 19 novembre)",
+    "dataISO": "2026-11-19",
+    "categoria": "rapine",
+    "titolo": "Savona: sorpreso dentro un'auto in sosta, spintona il proprietario per fuggire; denunciato un 26enne per tentata rapina impropria",
+    "descrizione": "Un uomo di 26 anni, residente nel Savonese, è salito a bordo di un'auto parcheggiata nel centro di Savona per rubare. Sorpreso dal proprietario, ha cercato di allontanarsi spintonandolo, senza riuscire a portare via nulla. I carabinieri del Nucleo operativo e radiomobile della Compagnia di Savona lo hanno identificato e denunciato per tentata rapina impropria. La fonte non riporta feriti.",
+    "fonti": [
+      {
+        "nome": "Savonanews",
+        "url": "https://www.savonanews.it/2026/11/19/leggi-notizia/argomenti/cronaca-2/articolo/savona-tenta-di-rubare-in-unauto-e-spintona-il-proprietario-denunciato.html"
+      }
+    ],
+    "lat": 44.3080251,
+    "lon": 8.4810315,
+    "approssimato": true,
+    "precisione": "la fonte indica solo il 'centro cittadino' senza via: coordinate del centro di Savona (Nominatim), posizione indicativa. La data dell'episodio non è indicata: usata la data di pubblicazione (19 novembre), il fatto potrebbe risalire ai giorni immediatamente precedenti. Fonte unica"
+  },
 ];
