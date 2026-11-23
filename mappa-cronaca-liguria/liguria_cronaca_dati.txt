@@ -4990,4 +4990,23 @@ window.INCIDENTS_DATA = [
     "approssimato": true,
     "precisione": "la fonte indica solo il 'centro cittadino' senza via: coordinate del centro di Savona (Nominatim), posizione indicativa. La data dell'episodio non è indicata: usata la data di pubblicazione (19 novembre), il fatto potrebbe risalire ai giorni immediatamente precedenti. Fonte unica"
   },
+  {
+    "id": "savona-stazione-supermercato-birra-spintona-guardia-giurata-rapina-impropria-arrestato-23enne",
+    "comune": "Savona — supermercato nei pressi della stazione ferroviaria (nome e via non indicati dalla fonte)",
+    "data": "15 novembre 2026 (sera)",
+    "dataISO": "2026-11-15",
+    "categoria": "rapine",
+    "titolo": "Savona: prende una birra e consuma prodotti senza pagare in un supermercato vicino alla stazione, poi spintona la guardia giurata; arrestato un 23enne per rapina impropria",
+    "descrizione": "La sera del 15 novembre, in un supermercato nei pressi della stazione ferroviaria di Savona, un uomo di 23 anni ha preso una bottiglia di birra e consumato altri prodotti senza pagarli. Quando la guardia giurata è intervenuta per fermarlo, l'ha spintonata con forza per guadagnare la fuga. Le Volanti della Polizia di Stato lo hanno arrestato per rapina impropria; è stato inoltre denunciato per l'inottemperanza a un ordine di allontanamento del Questore. La fonte non riporta feriti.",
+    "fonti": [
+      {
+        "nome": "Redazione News",
+        "url": "https://www.redazionenews.it/cronaca-savonese/2026/11/16/savona-rapina-in-un-supermercato-arrestato-dalle-volanti/"
+      }
+    ],
+    "lat": 44.3069809,
+    "lon": 8.4710865,
+    "approssimato": true,
+    "precisione": "la fonte indica solo un supermercato 'nei pressi della stazione' senza nome né via: coordinate della stazione ferroviaria di Savona (riuso di un punto già geocodificato con Nominatim), posizione indicativa. Data ricavata da 'ieri sera' nell'articolo del 16 novembre. Fonte unica, dettagli limitati"
+  },
 ];
