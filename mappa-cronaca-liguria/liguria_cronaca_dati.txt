@@ -5009,4 +5009,50 @@ window.INCIDENTS_DATA = [
     "approssimato": true,
     "precisione": "la fonte indica solo un supermercato 'nei pressi della stazione' senza nome né via: coordinate della stazione ferroviaria di Savona (riuso di un punto già geocodificato con Nominatim), posizione indicativa. Data ricavata da 'ieri sera' nell'articolo del 16 novembre. Fonte unica, dettagli limitati"
   },
+  {
+    "id": "albenga-stazione-piazza-matteotti-rapina-spray-urticante-turista-18enne-collanina-misure-cautelari",
+    "comune": "Albenga (SV) — stazione ferroviaria, piazza Matteotti",
+    "data": "21 giugno 2026 (prime ore del mattino)",
+    "dataISO": "2026-06-21",
+    "categoria": "rapine",
+    "titolo": "Albenga: turista 18enne accerchiato alla stazione, spray urticante e collanina d'oro strappata; misure cautelari per il gruppo dopo mesi di indagini",
+    "descrizione": "Nelle prime ore del 21 giugno, nei pressi della stazione ferroviaria di Albenga (piazza Matteotti), un turista di 18 anni arrivato da Torino era seduto su una panchina con un amico quando un gruppo di cinque giovani li ha avvicinati con un pretesto, ha spruzzato spray urticante negli occhi di entrambi, ha picchiato il 18enne e gli ha strappato una collanina d'oro, fuggendo poi in auto. Il ragazzo è stato medicato all'ospedale di Pietra Ligure. Al termine delle indagini dei Carabinieri di Albenga (con la Polizia Ferroviaria di Torino per uno dei fermi), il GIP del Tribunale di Savona ha disposto quattro misure cautelari: due in carcere, gli arresti domiciliari con divieto di avvicinamento per il proprietario dell'auto usata per la fuga e il divieto di dimora in provincia di Savona per chi faceva da 'palo'. Le misure sono state eseguite a novembre 2026.",
+    "fonti": [
+      {
+        "nome": "Primocanale",
+        "url": "https://www.primocanale.it/cronaca/73922-albenga-rapina-turista-stazione-spray-urticante-arresti-carabinieri.html"
+      },
+      {
+        "nome": "104 News",
+        "url": "https://www.104news.it/2026/11/23/albenga-rapina-aggravata-identificati-5-giovani/"
+      },
+      {
+        "nome": "Redazione News",
+        "url": "https://www.redazionenews.it/cronaca-savonese/2026/11/23/cinque-arresti-per-rapina-con-spray-urticante-alla-stazione-di-albenga/"
+      }
+    ],
+    "lat": 44.0472406,
+    "lon": 8.2208517,
+    "approssimato": false,
+    "precisione": "piazza Matteotti (area della stazione) geocodificata con Nominatim. Fatto di giugno reso noto il 23 novembre con l'esecuzione delle misure cautelari: usata la data dell'episodio. Le fonti sono discordanti sul numero dei destinatari (titolo 'cinque fermati', testo 'quattro misure'; il quinto risulterebbe ancora libero). Età degli aggressori non indicate"
+  },
+  {
+    "id": "bogliasco-centro-sportivo-mugnaini-colpi-arma-fuoco-segnalati-arrestato-45enne-armi-droga",
+    "comune": "Bogliasco (GE) — nei pressi del centro sportivo Mugnaini (via Marconi)",
+    "data": "20 novembre 2026 (venerdì sera)",
+    "dataISO": "2026-11-20",
+    "categoria": "altro",
+    "titolo": "Bogliasco: segnalati colpi d'arma da fuoco vicino al centro sportivo Mugnaini, fermato l'automobilista in fuga; in casa armi, munizioni e droga, arrestato un 45enne",
+    "descrizione": "Venerdì sera alcune chiamate al numero unico 112 hanno segnalato diversi colpi d'arma da fuoco nei pressi del centro sportivo Mugnaini di Bogliasco e un'auto che si allontanava velocemente. Le pattuglie dei Carabinieri della Compagnia di Santa Margherita Ligure hanno fermato il veicolo segnalato, guidato da un uomo di 45 anni. La perquisizione nella sua abitazione ha portato al sequestro di un fucile ad aria compressa, una pistola a salve, polvere da sparo, cartucce calibro .22, materiale per il ricaricamento e circa 300 grammi di hashish e 480 di marijuana. L'uomo è stato arrestato per detenzione ai fini di spaccio e detenzione illegale di armi e munizioni e portato nel carcere di Marassi. Non risultano feriti.",
+    "fonti": [
+      {
+        "nome": "Liguria Notizie",
+        "url": "https://www.ligurianotizie.it/bogliasco-colpi-di-pistola-al-mugnaini-45enne-piemontese-arrestato-dai-carabinieri/2026/11/23/1289339/"
+      }
+    ],
+    "lat": 44.3855472,
+    "lon": 9.0740472,
+    "approssimato": true,
+    "precisione": "coordinate del centro sportivo Mugnaini (Nominatim); la fonte non indica il punto esatto degli spari. Data ricavata da 'venerdì sera scorso' in un articolo del 23 novembre. La fonte non afferma che l'arrestato abbia esploso i colpi: l'arresto riguarda droga e armi trovate in casa. Fonte unica, dettagli parzialmente da sintesi"
+  },
 ];
