@@ -5055,4 +5055,115 @@ window.INCIDENTS_DATA = [
     "approssimato": true,
     "precisione": "coordinate del centro sportivo Mugnaini (Nominatim); la fonte non indica il punto esatto degli spari. Data ricavata da 'venerdì sera scorso' in un articolo del 23 novembre. La fonte non afferma che l'arrestato abbia esploso i colpi: l'arresto riguarda droga e armi trovate in casa. Fonte unica, dettagli parzialmente da sintesi"
   },
+  {
+    "id": "pietra-ligure-lite-futili-motivi-uomo-picchiato-minacciato-denunciati-24enne-25enne",
+    "comune": "Pietra Ligure (SV) — luogo non indicato dalla fonte",
+    "data": "tra il 16 e il 22 novembre 2026 (data esatta non indicata)",
+    "dataISO": "2026-11-19",
+    "categoria": "violenze",
+    "titolo": "Pietra Ligure: picchiano e minacciano un uomo dopo una lite per futili motivi, denunciati un 24enne e un 25enne",
+    "descrizione": "Al termine di una lite nata per futili motivi, due giovani di 24 e 25 anni residenti nella piana di Albenga avrebbero picchiato e minacciato un uomo a Pietra Ligure. I Carabinieri li hanno denunciati per minacce e percosse. Vale la presunzione di innocenza.",
+    "fonti": [
+      {
+        "nome": "RedazioneNews (riepilogo settimanale Carabinieri 16-22 novembre)",
+        "url": "https://www.redazionenews.it/cronaca-savonese/2026/11/24/stazioni-carabinieri-savonesi-attivita-settimanale/"
+      },
+      {
+        "nome": "Albenga Corsara",
+        "url": "https://www.albengacorsara.it/2026/11/24/carabinieri-savonese-controlli-16-22-novembre-2026"
+      },
+      {
+        "nome": "Savonanews.it",
+        "url": "https://www.savonanews.it/2026/11/24/leggi-notizia/argomenti/cronaca-2/articolo/pietra-ligure-lite-per-futili-motivi-denunciati-due-giovani-per-minacce-e-percosse.html"
+      }
+    ],
+    "lat": 44.1489097,
+    "lon": 8.2837044,
+    "approssimato": true,
+    "precisione": "fonte di dettaglio limitato (rassegna settimanale dei Carabinieri 16-22 novembre, senza data esatta né luogo): usato il 19 novembre come stima centrale; coordinate sul centro di Pietra Ligure (Nominatim). Articolo dedicato di Savonanews non leggibile in questa sessione"
+  },
+  {
+    "id": "varazze-supermercato-furto-bottiglie-olio-arrestati-38enne-40enne",
+    "comune": "Varazze (SV) — supermercato (nome non indicato), rintracciati nei pressi della stazione ferroviaria",
+    "data": "19 novembre 2026 (stimata)",
+    "dataISO": "2026-11-19",
+    "categoria": "altro",
+    "titolo": "Varazze: rubano bottiglie d'olio per oltre 100 euro al supermercato e fuggono, arrestati un 38enne e un 40enne",
+    "descrizione": "Due uomini di 38 e 40 anni, senza fissa dimora, avrebbero sottratto da un supermercato di Varazze alcune bottiglie d'olio per un valore di poco superiore ai 100 euro, allontanandosi a piedi. Sono stati rintracciati nei pressi della stazione ferroviaria e arrestati in flagranza per furto aggravato; dopo una notte in caserma gli arresti sono stati convalidati con rito direttissimo. La merce è stata restituita. Vale la presunzione di innocenza.",
+    "fonti": [
+      {
+        "nome": "Savonanews.it",
+        "url": "https://www.savonanews.it/2026/11/20/leggi-notizia/argomenti/cronaca-2/articolo/varazze-rubano-bottiglie-dolio-al-supermercato-arrestati-due-uomini.html"
+      }
+    ],
+    "lat": 44.356599,
+    "lon": 8.5666586,
+    "approssimato": true,
+    "precisione": "supermercato non indicato dalla fonte: coordinate sulla stazione di Varazze, luogo del rintraccio (Nominatim). Data stimata dall'articolo del 20 novembre mattina (notte in caserma prima della direttissima). Fonte unica"
+  },
+  {
+    "id": "genova-voltri-ospedale-evangelico-pronto-soccorso-pugno-infermiere-arrestato-44enne",
+    "comune": "Genova, Voltri — Pronto Soccorso dell'Ospedale Evangelico Internazionale",
+    "data": "23 novembre 2026, sera",
+    "dataISO": "2026-11-23",
+    "categoria": "violenze",
+    "titolo": "Genova, Voltri: pugno in faccia all'infermiere del Pronto Soccorso dell'Evangelico, arrestato un 44enne",
+    "descrizione": "Un uomo di 44 anni in stato di alterazione alcolica, portato in ambulanza al Pronto Soccorso dell'Ospedale Evangelico di Voltri, ha colpito con un pugno al volto un infermiere che lo stava soccorrendo e ha poi opposto resistenza agli agenti intervenuti. È stato arrestato per lesioni aggravate e resistenza a pubblico ufficiale; l'infermiere ha riportato una prognosi di 3 giorni. Vale la presunzione di innocenza.",
+    "fonti": [
+      {
+        "nome": "La Voce di Genova",
+        "url": "https://www.lavocedigenova.it/2026/11/24/leggi-notizia/argomenti/cronaca-5/articolo/voltri-un-uomo-aggredisce-personale-sanitario-e-poliziotti-al-pronto-soccorso-dellospedale-evangel.html"
+      },
+      {
+        "nome": "Genova24",
+        "url": "https://www.genova24.it/2026/11/evangelico-voltri-aggressione-infermiere-481842/"
+      },
+      {
+        "nome": "LiguriaOggi",
+        "url": "https://liguriaoggi.it/2026/11/24/genova-pugno-in-faccia-allinfermiere-che-lo-soccorre-44enne-arrestato/"
+      }
+    ],
+    "lat": 44.4301477,
+    "lon": 8.7458311,
+    "approssimato": false,
+    "precisione": "Ospedale Evangelico Internazionale (piazzale Gianasso, Voltri) geocodificato con Nominatim"
+  },
+  {
+    "id": "chiavari-corso-colombo-aggressione-notturna-due-feriti-codice-giallo",
+    "comune": "Chiavari (GE) — corso Colombo",
+    "data": "21 novembre 2026, intorno alle 3 di notte",
+    "dataISO": "2026-11-21",
+    "categoria": "violenze",
+    "titolo": "Chiavari: aggressione notturna in corso Colombo, due persone in codice giallo al Pronto Soccorso",
+    "descrizione": "Intorno alle 3 di notte, in corso Colombo a Chiavari, due persone sono rimaste coinvolte in un'aggressione riportando traumi; entrambe sono state trasportate in codice giallo al Pronto Soccorso di Lavagna. La fonte non chiarisce la dinamica né se si sia trattato di una lite tra le due persone; non risultano arresti.",
+    "fonti": [
+      {
+        "nome": "Levante News",
+        "url": "https://www.levantenews.it/2026/11/21/chiavari-aggressione-coinvolte-2-persone-ne-due-feriti-in-incidente/"
+      }
+    ],
+    "lat": 44.3119685,
+    "lon": 9.3280021,
+    "approssimato": true,
+    "precisione": "via indicata dalla fonte, numero civico no: coordinate di corso Colombo (Nominatim). Fonte unica con dettagli molto limitati (dinamica, età e motivo non indicati)"
+  },
+  {
+    "id": "savona-stazione-cane-antidroga-fuga-colluttazione-militare-fermato",
+    "comune": "Savona — stazione ferroviaria (piazza Aldo Moro)",
+    "data": "21 novembre 2026, mattina",
+    "dataISO": "2026-11-21",
+    "categoria": "violenze",
+    "titolo": "Savona: fiutato dal cane antidroga in stazione, tenta la fuga e ingaggia una colluttazione con il militare; fermato dalla Polizia",
+    "descrizione": "Durante un controllo alla stazione ferroviaria di Savona, il cane antidroga condotto da un militare in borghese ha segnalato un uomo, che ha tentato di fuggire. Raggiunto, ha reagito dando vita a una colluttazione con il conduttore, aiutato da un dipendente delle Ferrovie; l'uomo è stato poi fermato dagli agenti della Polizia di Stato presenti. La fonte non indica età, esito giudiziario né eventuali feriti o sostanze trovate.",
+    "fonti": [
+      {
+        "nome": "Savonanews.it",
+        "url": "https://www.savonanews.it/2026/11/21/leggi-notizia/argomenti/cronaca-2/articolo/stazione-di-savona-uomo-tenta-la-fuga-dopo-essere-stato-fiutato-dal-cane-antidroga.html"
+      }
+    ],
+    "lat": 44.3069809,
+    "lon": 8.4710865,
+    "approssimato": false,
+    "precisione": "stazione di Savona (piazza Aldo Moro) geocodificata con Nominatim. Fonte unica con dettagli limitati: esito (arresto/denuncia) non riportato"
+  },
 ];
