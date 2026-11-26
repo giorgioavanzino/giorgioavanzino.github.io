@@ -5166,4 +5166,42 @@ window.INCIDENTS_DATA = [
     "approssimato": false,
     "precisione": "stazione di Savona (piazza Aldo Moro) geocodificata con Nominatim. Fonte unica con dettagli limitati: esito (arresto/denuncia) non riportato"
   },
+  {
+    "id": "imperia-greto-torrente-impero-argine-destro-fermato-taser-sospetto-furto-supermercato",
+    "comune": "Imperia — greto del torrente Impero, nei pressi dell'Argine Destro",
+    "data": "24 novembre 2026, pomeriggio (poco dopo le 17)",
+    "dataISO": "2026-11-24",
+    "categoria": "altro",
+    "titolo": "Imperia: uomo in evidente stato di alterazione bloccato dai Carabinieri nel greto del torrente Impero, sospettato di un furto in un supermercato",
+    "descrizione": "Nel tardo pomeriggio un uomo in evidente stato di alterazione, probabilmente alcolica, è stato raggiunto dai Carabinieri nel greto del torrente Impero, vicino all'Argine Destro. I militari hanno estratto il taser e lo hanno ammanettato dopo che si era rifiutato di posare una bottiglia; la Polizia Locale ha gestito il traffico sull'argine e sul posto è intervenuta un'ambulanza della Croce Rossa. Secondo le prime informazioni l'uomo sarebbe accusato di un furto in un supermercato della zona. È stato accompagnato al Pronto Soccorso; non risultano feriti. Età ed esito giudiziario non indicati dalla fonte.",
+    "fonti": [
+      {
+        "nome": "Imperiapost",
+        "url": "https://imperiapost.it/837764/imperia-uomo-arrestato-dai-carabinieri-nel-greto-del-torrente-impero-le-immagini"
+      }
+    ],
+    "lat": 43.8979427,
+    "lon": 8.0306956,
+    "approssimato": true,
+    "precisione": "punto sull'Argine Destro (Argine Ferdinando Scajola) di Imperia geocodificato con Nominatim; il punto esatto del greto non è indicato. Fonte unica con dettagli limitati: l'accusa di furto è riportata come informazione preliminare, età e provvedimento formale (arresto/denuncia) non indicati"
+  },
+  {
+    "id": "savona-via-chiavella-furto-grondaie-rame-scuola-arrestato-42enne",
+    "comune": "Savona — via Chiavella (quartiere La Rocca), edificio scolastico",
+    "data": "settimana 16–22 novembre 2026 (giorno esatto non indicato)",
+    "dataISO": "2026-11-22",
+    "categoria": "altro",
+    "titolo": "Savona: sorpreso a smontare le grondaie di rame di una scuola in via Chiavella, arrestato un 42enne",
+    "descrizione": "Dopo una segnalazione al 112, i Carabinieri del Nucleo Operativo e Radiomobile di Savona hanno sorpreso un uomo di 42 anni mentre asportava le grondaie in rame dall'esterno di un edificio scolastico in via Chiavella. È stato arrestato in flagranza per furto aggravato.",
+    "fonti": [
+      {
+        "nome": "RedazioneNews (bilancio settimanale Carabinieri Savona)",
+        "url": "https://www.redazionenews.it/cronaca-savonese/2026/11/24/stazioni-carabinieri-savonesi-attivita-settimanale/"
+      }
+    ],
+    "lat": 44.3012535,
+    "lon": 8.4621813,
+    "approssimato": true,
+    "precisione": "coordinate di via Chiavella (Nominatim), numero civico e nome della scuola non indicati. Data: la fonte è un bilancio settimanale (16–22 novembre) senza il giorno esatto, dataISO fissata convenzionalmente al 22/11"
+  },
 ];
