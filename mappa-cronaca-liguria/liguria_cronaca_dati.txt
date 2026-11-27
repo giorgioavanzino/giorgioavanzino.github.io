@@ -5204,4 +5204,27 @@ window.INCIDENTS_DATA = [
     "approssimato": true,
     "precisione": "coordinate di via Chiavella (Nominatim), numero civico e nome della scuola non indicati. Data: la fonte è un bilancio settimanale (16–22 novembre) senza il giorno esatto, dataISO fissata convenzionalmente al 22/11"
   },
+  {
+    "id": "genova-valpolcevera-lite-familiare-notturna-figlio-colpisce-padre-50enne-denunciato-lesioni",
+    "comune": "Genova, Valpolcevera — abitazione privata (via e quartiere non indicati dalla fonte)",
+    "data": "26 novembre 2026 (notte, intorno alle 3)",
+    "dataISO": "2026-11-26",
+    "categoria": "violenze",
+    "titolo": "Genova, Valpolcevera: lite notturna in famiglia, un giovane colpisce al volto il padre 50enne; denunciato per lesioni",
+    "descrizione": "Intorno alle 3 di notte le Volanti della Polizia di Stato sono intervenute in un appartamento in Valpolcevera dopo una chiamata al 112 per una lite familiare. Un giovane ha colpito al volto il padre, un uomo di 50 anni, dopo aver appreso di gravi accuse nei suoi confronti riguardanti una minore, figlia della compagna, accuse ancora tutte da verificare e su cui indaga la Squadra Mobile. Il 50enne è stato trasportato in codice giallo al Pronto Soccorso del Villa Scassi, la minore al Gaslini per accertamenti. Il giovane è stato denunciato per lesioni; secondo la fonte non risultano al momento misure restrittive nei confronti del 50enne. Vale la presunzione di innocenza.",
+    "fonti": [
+      {
+        "nome": "Liguria Notizie",
+        "url": "https://www.ligurianotizie.it/genova-accusa-il-padre-di-abusi-su-una-bambina-e-lo-prende-a-pugni/2026/11/26/1289627/"
+      },
+      {
+        "nome": "Genova24",
+        "url": "https://www.genova24.it/2026/11/lite-in-famiglia-intervento-violenza-sessuale-su-bimba-482114/"
+      }
+    ],
+    "lat": 44.4605,
+    "lon": 8.901,
+    "approssimato": true,
+    "precisione": "coordinate indicative al centro della Valpolcevera (area di Bolzaneto), stimate manualmente senza geocoder: la fonte indica solo la zona, senza via né quartiere. Fatto avvenuto in ambito domestico, incluso per l'intervento delle forze dell'ordine con denuncia. Genova24 letta solo nel testo di anteprima del feed (articolo non raggiungibile in accesso diretto)"
+  },
 ];
